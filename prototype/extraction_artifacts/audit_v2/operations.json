@@ -1,0 +1,338 @@
+{
+  "runs": [
+    {
+      "source": "experiment_20260912T155758Z.json",
+      "sha256": "6ffc96c247051844f36bddf5c7a76ea5297fdb4c6438336d68335e46029af1de",
+      "logical_runs": 16,
+      "baseline_usable": 0,
+      "baseline_first_valid": 0,
+      "all_usable": 0,
+      "all_first_valid": 0,
+      "calls": 32,
+      "retries": 16,
+      "provider_failures": 32,
+      "empty_successful_responses": 0,
+      "prompt_tokens": 0,
+      "cached_tokens": 0,
+      "completion_tokens": 0,
+      "total_tokens": 0,
+      "estimated_cost_usd": 0.0,
+      "latency_mean": null,
+      "latency_median": null,
+      "recorded_evaluation_revision": null,
+      "errors": [
+        {
+          "case_id": "rep_user01",
+          "run_index": 1,
+          "attempt": 1,
+          "category": "PROVIDER_API_FAILURE"
+        },
+        {
+          "case_id": "rep_user01",
+          "run_index": 1,
+          "attempt": 2,
+          "category": "PROVIDER_API_FAILURE"
+        },
+        {
+          "case_id": "rep_user07",
+          "run_index": 1,
+          "attempt": 1,
+          "category": "PROVIDER_API_FAILURE"
+        },
+        {
+          "case_id": "rep_user07",
+          "run_index": 1,
+          "attempt": 2,
+          "category": "PROVIDER_API_FAILURE"
+        },
+        {
+          "case_id": "rep_user16",
+          "run_index": 1,
+          "attempt": 1,
+          "category": "PROVIDER_API_FAILURE"
+        },
+        {
+          "case_id": "rep_user16",
+          "run_index": 1,
+          "attempt": 2,
+          "category": "PROVIDER_API_FAILURE"
+        },
+        {
+          "case_id": "rep_user21",
+          "run_index": 1,
+          "attempt": 1,
+          "category": "PROVIDER_API_FAILURE"
+        },
+        {
+          "case_id": "rep_user21",
+          "run_index": 1,
+          "attempt": 2,
+          "category": "PROVIDER_API_FAILURE"
+        },
+        {
+          "case_id": "rep_user25",
+          "run_index": 1,
+          "attempt": 1,
+          "category": "PROVIDER_API_FAILURE"
+        },
+        {
+          "case_id": "rep_user25",
+          "run_index": 1,
+          "attempt": 2,
+          "category": "PROVIDER_API_FAILURE"
+        },
+        {
+          "case_id": "unused_real_image03",
+          "run_index": 1,
+          "attempt": 1,
+          "category": "PROVIDER_API_FAILURE"
+        },
+        {
+          "case_id": "unused_real_image03",
+          "run_index": 1,
+          "attempt": 2,
+          "category": "PROVIDER_API_FAILURE"
+        },
+        {
+          "case_id": "synthetic_unknown_obligation",
+          "run_index": 1,
+          "attempt": 1,
+          "category": "PROVIDER_API_FAILURE"
+        },
+        {
+          "case_id": "synthetic_unknown_obligation",
+          "run_index": 1,
+          "attempt": 2,
+          "category": "PROVIDER_API_FAILURE"
+        },
+        {
+          "case_id": "synthetic_possible_duplicate",
+          "run_index": 1,
+          "attempt": 1,
+          "category": "PROVIDER_API_FAILURE"
+        },
+        {
+          "case_id": "synthetic_possible_duplicate",
+          "run_index": 1,
+          "attempt": 2,
+          "category": "PROVIDER_API_FAILURE"
+        },
+        {
+          "case_id": "synthetic_conflict_two_streams",
+          "run_index": 1,
+          "attempt": 1,
+          "category": "PROVIDER_API_FAILURE"
+        },
+        {
+          "case_id": "synthetic_conflict_two_streams",
+          "run_index": 1,
+          "attempt": 2,
+          "category": "PROVIDER_API_FAILURE"
+        },
+        {
+          "case_id": "synthetic_adversarial_irrelevant",
+          "run_index": 1,
+          "attempt": 1,
+          "category": "PROVIDER_API_FAILURE"
+        },
+        {
+          "case_id": "synthetic_adversarial_irrelevant",
+          "run_index": 1,
+          "attempt": 2,
+          "category": "PROVIDER_API_FAILURE"
+        },
+        {
+          "case_id": "rep_user07",
+          "run_index": 2,
+          "attempt": 1,
+          "category": "PROVIDER_API_FAILURE"
+        },
+        {
+          "case_id": "rep_user07",
+          "run_index": 2,
+          "attempt": 2,
+          "category": "PROVIDER_API_FAILURE"
+        },
+        {
+          "case_id": "rep_user07",
+          "run_index": 3,
+          "attempt": 1,
+          "category": "PROVIDER_API_FAILURE"
+        },
+        {
+          "case_id": "rep_user07",
+          "run_index": 3,
+          "attempt": 2,
+          "category": "PROVIDER_API_FAILURE"
+        },
+        {
+          "case_id": "unused_real_image03",
+          "run_index": 2,
+          "attempt": 1,
+          "category": "PROVIDER_API_FAILURE"
+        },
+        {
+          "case_id": "unused_real_image03",
+          "run_index": 2,
+          "attempt": 2,
+          "category": "PROVIDER_API_FAILURE"
+        },
+        {
+          "case_id": "unused_real_image03",
+          "run_index": 3,
+          "attempt": 1,
+          "category": "PROVIDER_API_FAILURE"
+        },
+        {
+          "case_id": "unused_real_image03",
+          "run_index": 3,
+          "attempt": 2,
+          "category": "PROVIDER_API_FAILURE"
+        },
+        {
+          "case_id": "synthetic_unknown_obligation",
+          "run_index": 2,
+          "attempt": 1,
+          "category": "PROVIDER_API_FAILURE"
+        },
+        {
+          "case_id": "synthetic_unknown_obligation",
+          "run_index": 2,
+          "attempt": 2,
+          "category": "PROVIDER_API_FAILURE"
+        },
+        {
+          "case_id": "synthetic_unknown_obligation",
+          "run_index": 3,
+          "attempt": 1,
+          "category": "PROVIDER_API_FAILURE"
+        },
+        {
+          "case_id": "synthetic_unknown_obligation",
+          "run_index": 3,
+          "attempt": 2,
+          "category": "PROVIDER_API_FAILURE"
+        }
+      ]
+    },
+    {
+      "source": "experiment_20260912T155852Z.json",
+      "sha256": "44fa74afbd36158b189e509419dc73726164893f21e02db376c7d136bae3f4bd",
+      "logical_runs": 16,
+      "baseline_usable": 9,
+      "baseline_first_valid": 9,
+      "all_usable": 13,
+      "all_first_valid": 13,
+      "calls": 19,
+      "retries": 3,
+      "provider_failures": 1,
+      "empty_successful_responses": 5,
+      "prompt_tokens": 81709,
+      "cached_tokens": 13659,
+      "completion_tokens": 10989,
+      "total_tokens": 92698,
+      "estimated_cost_usd": 0.01611177,
+      "latency_mean": 11.575618511111315,
+      "latency_median": 9.433921350000674,
+      "recorded_evaluation_revision": null,
+      "errors": [
+        {
+          "case_id": "unused_real_image03",
+          "run_index": 1,
+          "attempt": 1,
+          "category": "EMPTY_OUTPUT"
+        },
+        {
+          "case_id": "unused_real_image03",
+          "run_index": 1,
+          "attempt": 2,
+          "category": "PROVIDER_API_FAILURE"
+        },
+        {
+          "case_id": "unused_real_image03",
+          "run_index": 2,
+          "attempt": 1,
+          "category": "EMPTY_OUTPUT"
+        },
+        {
+          "case_id": "unused_real_image03",
+          "run_index": 2,
+          "attempt": 2,
+          "category": "EMPTY_OUTPUT"
+        },
+        {
+          "case_id": "unused_real_image03",
+          "run_index": 3,
+          "attempt": 1,
+          "category": "EMPTY_OUTPUT"
+        },
+        {
+          "case_id": "unused_real_image03",
+          "run_index": 3,
+          "attempt": 2,
+          "category": "EMPTY_OUTPUT"
+        }
+      ]
+    },
+    {
+      "source": "experiment_20260912T160401Z.json",
+      "sha256": "3a4e8cd6aac1bccd7327a22ccc2ba1e07590545cd78961d733572f38f303c58f",
+      "logical_runs": 16,
+      "baseline_usable": 9,
+      "baseline_first_valid": 9,
+      "all_usable": 13,
+      "all_first_valid": 13,
+      "calls": 19,
+      "retries": 3,
+      "provider_failures": 0,
+      "empty_successful_responses": 6,
+      "prompt_tokens": 88352,
+      "cached_tokens": 42710,
+      "completion_tokens": 13238,
+      "total_tokens": 101590,
+      "estimated_cost_usd": 0.0147466,
+      "latency_mean": 15.200317789474004,
+      "latency_median": 11.970055000001594,
+      "recorded_evaluation_revision": "numeric-string and nullable-description semantic equivalence; empty HTTP success is SCHEMA_INVALID",
+      "errors": [
+        {
+          "case_id": "rep_user16",
+          "run_index": 1,
+          "attempt": 1,
+          "category": "EMPTY_OUTPUT"
+        },
+        {
+          "case_id": "rep_user16",
+          "run_index": 1,
+          "attempt": 2,
+          "category": "EMPTY_OUTPUT"
+        },
+        {
+          "case_id": "unused_real_image03",
+          "run_index": 2,
+          "attempt": 1,
+          "category": "EMPTY_OUTPUT"
+        },
+        {
+          "case_id": "unused_real_image03",
+          "run_index": 2,
+          "attempt": 2,
+          "category": "EMPTY_OUTPUT"
+        },
+        {
+          "case_id": "unused_real_image03",
+          "run_index": 3,
+          "attempt": 1,
+          "category": "EMPTY_OUTPUT"
+        },
+        {
+          "case_id": "unused_real_image03",
+          "run_index": 3,
+          "attempt": 2,
+          "category": "EMPTY_OUTPUT"
+        }
+      ]
+    }
+  ],
+  "billing_limit": "Recorded attempts only; smoke/diagnostic usage may be missing. Not session billing."
+}

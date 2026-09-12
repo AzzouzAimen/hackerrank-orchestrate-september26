@@ -122,3 +122,142 @@ Arithmetic and label-isolation checks pass, but 21 uncapped safe amounts remain 
 Tradeoff:
 The vertical prototype delays full-dataset coverage briefly, but produces an inspectable foundation and clearer failure taxonomy.
 
+## 2026-09-12 — Stop the verification gate on unconfirmed payroll persistence
+
+Decision:
+Complete the three-case audit and pause architecture implementation under the session's explicit stop instruction. Keep later amended paydays labeled as modeling policy rather than semantic facts.
+
+Reason:
+message_05 confirms September 23 but does not establish how long the payday change lasts. Continuing it indefinitely is plausible, not an explicitly confirmed schedule.
+
+Alternative:
+Promote the default persistent phase directly into the prototype, or revert to the earlier phase.
+
+Rejected because:
+Neither duration is established by the source; matching the October 23 label cannot settle the semantic question. The user explicitly requested stopping on unsupported assumptions.
+
+Evidence:
+Both phase diagnostics give user_07 safe amount INR 86,237.22, but earliest full-payment dates differ: October 23 versus October 15. The three ledgers replay exactly; six research tests pass. A separate hardcoded-day-15 bug in the one-cycle diagnostic was corrected using observed history.
+
+Tradeoff:
+The evidence contract and vertical prototype remain deferred until this modeling policy is resolved. Broad estimator tuning stays stopped: user_12 has an identified boundary bill, while user_21 has no evidence justifying extra occurrences.
+
+## 2026-09-12 — Accept explicit payroll persistence and resume the prototype
+
+Decision:
+Payroll amendment duration is unknown from evidence; the forecasting engine applies a documented persistence policy. Unknown-scope date changes persist through the horizon with MODELING_POLICY provenance. The user accepted this policy and released the earlier gate.
+
+Reason:
+Separate source meaning from a deterministic forecast convention without silently asserting duration.
+
+Alternative:
+Treat later amended dates as confirmed facts or continue blocking on this known uncertainty.
+
+Rejected because:
+The source does not confirm duration, while the user explicitly authorized proceeding with documented persistence.
+
+Evidence:
+The date-amendment fact retains scope unknown; the representative test checks September SEMANTIC_FACT and October MODELING_POLICY.
+
+Tradeoff:
+Later payroll timing remains a modeling assumption. No estimator, horizon or label-fitting research is reopened.
+
+## 2026-09-12 — Prove the financial path with reviewed semantic facts
+
+Decision:
+Use a strict seven-type evidence contract and replay five session-reviewed fact bundles through a separate Decimal prototype. Python owns all financial consequences and blocks unresolved amounts rather than converting them to zero.
+
+Reason:
+Provenance, unknown values, lifecycle handling and plan safety can be tested independently of automated extraction reliability.
+
+Alternative:
+Integrate a model API and broader extraction coverage before checking the financial boundary.
+
+Rejected because:
+It would combine extraction errors with implementation errors before either is auditable.
+
+Evidence:
+28 prototype tests pass; five cases produce validated outputs, three selected plans verify and two correctly carry no selected plan under the implemented assumptions. Image_02 fills an actual future INR 100,000 obligation. Independent extraction accuracy remains unmeasured.
+
+Tradeoff:
+This is a reviewed-fact replay, not an automated semantic API pipeline. First-job cadence and intraday ordering produce documented label regressions; no samples are patched. Expenses-before-income is an explicit conservative intraday convention, and sufficient recurrence history is required even for payroll.
+
+## 2026-09-12 — Harden the evidence boundary without expanding the schema
+
+Decision:
+Retain all seven fact types and fix only consequences exposed by synthetic boundary tests. Possible duplicates preserve history; unknown transfer scope, paid-only outstanding evidence and unquantified obligations block capacity. Explicit conflicts do not use fact order as precedence.
+
+Reason:
+Validly shaped semantic facts must not silently suppress obligations or broaden their targets. The existing fields represent the tested distinctions; transfer cash scope must come from trusted structured context, not the word internal.
+
+Alternative:
+Add more semantic types or connect model outputs before establishing deterministic boundary behavior.
+
+Rejected because:
+The observed failures were resolver consequences, not missing fact types for safe handling. Missing account-scope metadata can remain explicitly unresolved.
+
+Evidence:
+The first 16 challenge tests exposed 11 failures. After narrow fixes, 21 boundary tests plus all 28 existing prototype tests pass, including permutations and hand-calculated ledger assertions. The five representative output CSV hash is unchanged.
+
+Tradeoff:
+Account scope absent from the supplied dataset prevents internal-transfer exclusion. Some ambiguous targets/conflicts conservatively block; general stream identity and source precedence remain outside this experiment. No model API has been connected.
+
+## 2026-09-12 — Keep real-model facts in shadow mode
+
+Decision:
+Do not promote Featherless GLM-5.3-Flash output into the trusted resolver path. Keep the seven-fact contract and run one targeted prompt-only emission-rubric experiment next.
+
+Reason:
+The clean frozen baseline matched only 3 of 15 reviewed facts on all financially meaningful fields, emitted unsupported/redundant facts, converted uncertainty into certainty, and was inconsistent across all three repeated cases. Vision calls intermittently returned billed but empty final content.
+
+Alternative:
+Integrate now, redesign the contract, silently map malformed output to no facts, or immediately benchmark several models.
+
+Rejected because:
+The evidence points to model/prompt use of an expressive contract and intermittent output reliability. No case proves that the deterministic engine or seven fact types must change; permissive fallback would hide missing obligations.
+
+Evidence:
+Experiment `20260912T160401Z` used 10 baseline cases and 6 repeat runs. Baseline first-attempt validity was 9/10 and 0/3 repeated cases were meaning-equivalent. All 21 boundary, 28 prototype, 7 extraction-evaluator, and 6 ledger-audit tests pass; representative CSV SHA256 remains `2007B834DE8D1F0E6EED703D422FCF0A459C3EFE2B3B58525B4AB85A02E4D703`.
+
+Tradeoff:
+There is still no trusted automated extraction path. A single prompt experiment delays integration while isolating whether emission and uncertainty errors can be reduced without contract or engine changes.
+
+## 2026-09-12 — Supersede strict extraction metrics with evidence adjudication
+
+Decision:
+Keep saved model facts in shadow mode; replace automatic reference-equality headlines with versioned assistant claim reviews and propose a paired input-only rent-history experiment before prompt tuning.
+
+Reason:
+The scorer reused emissions, treated unmatched facts as unsupported, compared unrelated same-type facts, and confused missing output/serialization with semantic quality. user16 input omitted Monthly rent history required by its reference. All 63 saved emissions were audited without model calls.
+
+Alternative:
+Retain 3/15, 19 unsupported and 0/3 as semantic truth, tune the emission prompt immediately, or silently rewrite source scores.
+
+Rejected because:
+Those conclusions conflate supported extras, ambiguous annotations, partial meanings and operational failures. Missing context and unapproved annotation conventions should be resolved before attributing every mismatch to the model.
+
+Evidence:
+prototype/EVALUATION_AUDIT_V2.md and extraction_artifacts/audit_v2 contain source hashes, evidence snapshots and every claim. Latest baseline: 5 recovered, 4 partial, 1 missed, 1 incorrect, 3 unavailable and 1 ambiguous reference slot. One of two assessable repeat groups is semantically consistent; image consistency is unassessable.
+
+Tradeoff:
+Manual assistant judgments remain pending human review and do not establish population accuracy or resolver-equivalent bundles. No proposed experiment was executed; original response artifacts and trusted references are preserved.
+
+## 2026-09-12 — Promote deterministic components without behavior changes
+
+Decision:
+Move evidence.py, finance.py, plans.py and evidence.schema.json into code/buy_or_wait, with engine/boundary tests in its tests package and thin prototype compatibility imports. Retain research materials and runners in prototype.
+
+Reason:
+code is a Python standard-library module; buy_or_wait avoids that import collision. Existing code entry points were empty and remain untouched. A single shared implementation avoids engine drift.
+
+Alternative:
+Copy the engine, move all prototype research into code, or integrate the shadow model into a new submission runner.
+
+Rejected because:
+These expand scope or permit divergence and would violate the behavior-preserving/trusted-input boundary.
+
+Evidence:
+Three source modules and schema match pre-move hashes. All 74 unique regression/evaluator/ledger tests pass; both old commands and new package discovery pass. Representative output SHA256 remains 2007B834DE8D1F0E6EED703D422FCF0A459C3EFE2B3B58525B4AB85A02E4D703.
+
+Tradeoff:
+The main implementation is reusable under code, but code/main.py is still the original empty starter, not a full submission runner. No full-dataset prediction, packaging, commit or model integration occurred.

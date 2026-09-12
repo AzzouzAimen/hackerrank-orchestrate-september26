@@ -1,0 +1,696 @@
+{
+  "evaluator_version": "assistant-evidence-audit-v2.0",
+  "units": "Original reference slots, with defects and partial meanings explicit; not unquestionable ground truth.",
+  "references": [
+    {
+      "source_artifact": "experiment_20260912T155758Z.json",
+      "source_sha256": "6ffc96c247051844f36bddf5c7a76ea5297fdb4c6438336d68335e46029af1de",
+      "case_id": "rep_user01",
+      "run_index": 1,
+      "reference_id": "user_01.payroll",
+      "status": "output_unavailable",
+      "rationale": "No usable bundle; excluded from conditional semantic misses.",
+      "reviewer_provenance": "assistant audit; pending human review"
+    },
+    {
+      "source_artifact": "experiment_20260912T155758Z.json",
+      "source_sha256": "6ffc96c247051844f36bddf5c7a76ea5297fdb4c6438336d68335e46029af1de",
+      "case_id": "rep_user01",
+      "run_index": 1,
+      "reference_id": "prorated.event_25",
+      "status": "output_unavailable",
+      "rationale": "No usable bundle; excluded from conditional semantic misses.",
+      "reviewer_provenance": "assistant audit; pending human review"
+    },
+    {
+      "source_artifact": "experiment_20260912T155758Z.json",
+      "source_sha256": "6ffc96c247051844f36bddf5c7a76ea5297fdb4c6438336d68335e46029af1de",
+      "case_id": "rep_user01",
+      "run_index": 1,
+      "reference_id": "refund.event_99",
+      "status": "output_unavailable",
+      "rationale": "No usable bundle; excluded from conditional semantic misses.",
+      "reviewer_provenance": "assistant audit; pending human review"
+    },
+    {
+      "source_artifact": "experiment_20260912T155758Z.json",
+      "source_sha256": "6ffc96c247051844f36bddf5c7a76ea5297fdb4c6438336d68335e46029af1de",
+      "case_id": "rep_user01",
+      "run_index": 1,
+      "reference_id": "settlement.event_101",
+      "status": "output_unavailable",
+      "rationale": "No usable bundle; excluded from conditional semantic misses.",
+      "reviewer_provenance": "assistant audit; pending human review"
+    },
+    {
+      "source_artifact": "experiment_20260912T155758Z.json",
+      "source_sha256": "6ffc96c247051844f36bddf5c7a76ea5297fdb4c6438336d68335e46029af1de",
+      "case_id": "rep_user07",
+      "run_index": 1,
+      "reference_id": "user_07.payroll",
+      "status": "output_unavailable",
+      "rationale": "No usable bundle; excluded from conditional semantic misses.",
+      "reviewer_provenance": "assistant audit; pending human review"
+    },
+    {
+      "source_artifact": "experiment_20260912T155758Z.json",
+      "source_sha256": "6ffc96c247051844f36bddf5c7a76ea5297fdb4c6438336d68335e46029af1de",
+      "case_id": "rep_user07",
+      "run_index": 1,
+      "reference_id": "payday.message_05",
+      "status": "output_unavailable",
+      "rationale": "No usable bundle; excluded from conditional semantic misses.",
+      "reviewer_provenance": "assistant audit; pending human review"
+    },
+    {
+      "source_artifact": "experiment_20260912T155758Z.json",
+      "source_sha256": "6ffc96c247051844f36bddf5c7a76ea5297fdb4c6438336d68335e46029af1de",
+      "case_id": "rep_user16",
+      "run_index": 1,
+      "reference_id": "user_16.payroll",
+      "status": "output_unavailable",
+      "rationale": "No usable bundle; excluded from conditional semantic misses.",
+      "reviewer_provenance": "assistant audit; pending human review"
+    },
+    {
+      "source_artifact": "experiment_20260912T155758Z.json",
+      "source_sha256": "6ffc96c247051844f36bddf5c7a76ea5297fdb4c6438336d68335e46029af1de",
+      "case_id": "rep_user16",
+      "run_index": 1,
+      "reference_id": "rent.message_12",
+      "status": "output_unavailable",
+      "rationale": "No usable bundle; excluded from conditional semantic misses.",
+      "reviewer_provenance": "assistant audit; pending human review"
+    },
+    {
+      "source_artifact": "experiment_20260912T155758Z.json",
+      "source_sha256": "6ffc96c247051844f36bddf5c7a76ea5297fdb4c6438336d68335e46029af1de",
+      "case_id": "rep_user16",
+      "run_index": 1,
+      "reference_id": "rent.image_02",
+      "status": "output_unavailable",
+      "rationale": "No usable bundle; excluded from conditional semantic misses.",
+      "reviewer_provenance": "assistant audit; pending human review"
+    },
+    {
+      "source_artifact": "experiment_20260912T155758Z.json",
+      "source_sha256": "6ffc96c247051844f36bddf5c7a76ea5297fdb4c6438336d68335e46029af1de",
+      "case_id": "rep_user21",
+      "run_index": 1,
+      "reference_id": "user_21.payroll",
+      "status": "output_unavailable",
+      "rationale": "No usable bundle; excluded from conditional semantic misses.",
+      "reviewer_provenance": "assistant audit; pending human review"
+    },
+    {
+      "source_artifact": "experiment_20260912T155758Z.json",
+      "source_sha256": "6ffc96c247051844f36bddf5c7a76ea5297fdb4c6438336d68335e46029af1de",
+      "case_id": "rep_user25",
+      "run_index": 1,
+      "reference_id": "user_25.payroll",
+      "status": "output_unavailable",
+      "rationale": "No usable bundle; excluded from conditional semantic misses.",
+      "reviewer_provenance": "assistant audit; pending human review"
+    },
+    {
+      "source_artifact": "experiment_20260912T155758Z.json",
+      "source_sha256": "6ffc96c247051844f36bddf5c7a76ea5297fdb4c6438336d68335e46029af1de",
+      "case_id": "unused_real_image03",
+      "run_index": 1,
+      "reference_id": "review.image03.cash_paid",
+      "status": "output_unavailable",
+      "rationale": "No usable bundle; excluded from conditional semantic misses.",
+      "reviewer_provenance": "assistant audit; pending human review"
+    },
+    {
+      "source_artifact": "experiment_20260912T155758Z.json",
+      "source_sha256": "6ffc96c247051844f36bddf5c7a76ea5297fdb4c6438336d68335e46029af1de",
+      "case_id": "synthetic_unknown_obligation",
+      "run_index": 1,
+      "reference_id": "review.unknown",
+      "status": "output_unavailable",
+      "rationale": "No usable bundle; excluded from conditional semantic misses.",
+      "reviewer_provenance": "assistant audit; pending human review"
+    },
+    {
+      "source_artifact": "experiment_20260912T155758Z.json",
+      "source_sha256": "6ffc96c247051844f36bddf5c7a76ea5297fdb4c6438336d68335e46029af1de",
+      "case_id": "synthetic_possible_duplicate",
+      "run_index": 1,
+      "reference_id": "review.duplicate",
+      "status": "output_unavailable",
+      "rationale": "No usable bundle; excluded from conditional semantic misses.",
+      "reviewer_provenance": "assistant audit; pending human review"
+    },
+    {
+      "source_artifact": "experiment_20260912T155758Z.json",
+      "source_sha256": "6ffc96c247051844f36bddf5c7a76ea5297fdb4c6438336d68335e46029af1de",
+      "case_id": "synthetic_conflict_two_streams",
+      "run_index": 1,
+      "reference_id": "review.dinner",
+      "status": "output_unavailable",
+      "rationale": "No usable bundle; excluded from conditional semantic misses.",
+      "reviewer_provenance": "assistant audit; pending human review"
+    },
+    {
+      "source_artifact": "experiment_20260912T155758Z.json",
+      "source_sha256": "6ffc96c247051844f36bddf5c7a76ea5297fdb4c6438336d68335e46029af1de",
+      "case_id": "rep_user07",
+      "run_index": 2,
+      "reference_id": "user_07.payroll",
+      "status": "output_unavailable",
+      "rationale": "No usable bundle; excluded from conditional semantic misses.",
+      "reviewer_provenance": "assistant audit; pending human review"
+    },
+    {
+      "source_artifact": "experiment_20260912T155758Z.json",
+      "source_sha256": "6ffc96c247051844f36bddf5c7a76ea5297fdb4c6438336d68335e46029af1de",
+      "case_id": "rep_user07",
+      "run_index": 2,
+      "reference_id": "payday.message_05",
+      "status": "output_unavailable",
+      "rationale": "No usable bundle; excluded from conditional semantic misses.",
+      "reviewer_provenance": "assistant audit; pending human review"
+    },
+    {
+      "source_artifact": "experiment_20260912T155758Z.json",
+      "source_sha256": "6ffc96c247051844f36bddf5c7a76ea5297fdb4c6438336d68335e46029af1de",
+      "case_id": "rep_user07",
+      "run_index": 3,
+      "reference_id": "user_07.payroll",
+      "status": "output_unavailable",
+      "rationale": "No usable bundle; excluded from conditional semantic misses.",
+      "reviewer_provenance": "assistant audit; pending human review"
+    },
+    {
+      "source_artifact": "experiment_20260912T155758Z.json",
+      "source_sha256": "6ffc96c247051844f36bddf5c7a76ea5297fdb4c6438336d68335e46029af1de",
+      "case_id": "rep_user07",
+      "run_index": 3,
+      "reference_id": "payday.message_05",
+      "status": "output_unavailable",
+      "rationale": "No usable bundle; excluded from conditional semantic misses.",
+      "reviewer_provenance": "assistant audit; pending human review"
+    },
+    {
+      "source_artifact": "experiment_20260912T155758Z.json",
+      "source_sha256": "6ffc96c247051844f36bddf5c7a76ea5297fdb4c6438336d68335e46029af1de",
+      "case_id": "unused_real_image03",
+      "run_index": 2,
+      "reference_id": "review.image03.cash_paid",
+      "status": "output_unavailable",
+      "rationale": "No usable bundle; excluded from conditional semantic misses.",
+      "reviewer_provenance": "assistant audit; pending human review"
+    },
+    {
+      "source_artifact": "experiment_20260912T155758Z.json",
+      "source_sha256": "6ffc96c247051844f36bddf5c7a76ea5297fdb4c6438336d68335e46029af1de",
+      "case_id": "unused_real_image03",
+      "run_index": 3,
+      "reference_id": "review.image03.cash_paid",
+      "status": "output_unavailable",
+      "rationale": "No usable bundle; excluded from conditional semantic misses.",
+      "reviewer_provenance": "assistant audit; pending human review"
+    },
+    {
+      "source_artifact": "experiment_20260912T155758Z.json",
+      "source_sha256": "6ffc96c247051844f36bddf5c7a76ea5297fdb4c6438336d68335e46029af1de",
+      "case_id": "synthetic_unknown_obligation",
+      "run_index": 2,
+      "reference_id": "review.unknown",
+      "status": "output_unavailable",
+      "rationale": "No usable bundle; excluded from conditional semantic misses.",
+      "reviewer_provenance": "assistant audit; pending human review"
+    },
+    {
+      "source_artifact": "experiment_20260912T155758Z.json",
+      "source_sha256": "6ffc96c247051844f36bddf5c7a76ea5297fdb4c6438336d68335e46029af1de",
+      "case_id": "synthetic_unknown_obligation",
+      "run_index": 3,
+      "reference_id": "review.unknown",
+      "status": "output_unavailable",
+      "rationale": "No usable bundle; excluded from conditional semantic misses.",
+      "reviewer_provenance": "assistant audit; pending human review"
+    },
+    {
+      "source_artifact": "experiment_20260912T155852Z.json",
+      "source_sha256": "44fa74afbd36158b189e509419dc73726164893f21e02db376c7d136bae3f4bd",
+      "case_id": "rep_user01",
+      "run_index": 1,
+      "reference_id": "user_01.payroll",
+      "status": "reference_ambiguous",
+      "rationale": "One prorated payment and one confirmed future salary do not establish an ongoing stream; future confirmation is supported instead.",
+      "reviewer_provenance": "assistant audit; pending human review"
+    },
+    {
+      "source_artifact": "experiment_20260912T155852Z.json",
+      "source_sha256": "44fa74afbd36158b189e509419dc73726164893f21e02db376c7d136bae3f4bd",
+      "case_id": "rep_user01",
+      "run_index": 1,
+      "reference_id": "prorated.event_25",
+      "status": "missed",
+      "rationale": "Prorated first salary is a supported special one-time amount; no equivalent classification was emitted.",
+      "reviewer_provenance": "assistant audit; pending human review"
+    },
+    {
+      "source_artifact": "experiment_20260912T155852Z.json",
+      "source_sha256": "44fa74afbd36158b189e509419dc73726164893f21e02db376c7d136bae3f4bd",
+      "case_id": "rep_user01",
+      "run_index": 1,
+      "reference_id": "refund.event_99",
+      "status": "recovered",
+      "rationale": "Refund relationship recovered; inspect child target separately.",
+      "reviewer_provenance": "assistant audit; pending human review"
+    },
+    {
+      "source_artifact": "experiment_20260912T155852Z.json",
+      "source_sha256": "44fa74afbd36158b189e509419dc73726164893f21e02db376c7d136bae3f4bd",
+      "case_id": "rep_user01",
+      "run_index": 1,
+      "reference_id": "settlement.event_101",
+      "status": "incorrect",
+      "rationale": "Model emits retry_of; not the supported authorization settlement meaning.",
+      "reviewer_provenance": "assistant audit; pending human review"
+    },
+    {
+      "source_artifact": "experiment_20260912T155852Z.json",
+      "source_sha256": "44fa74afbd36158b189e509419dc73726164893f21e02db376c7d136bae3f4bd",
+      "case_id": "rep_user07",
+      "run_index": 1,
+      "reference_id": "user_07.payroll",
+      "status": "recovered",
+      "rationale": "Ongoing history recognized; uncertain confirmation differs materially from reference, whose certainty convention needs approval.",
+      "reviewer_provenance": "assistant audit; pending human review"
+    },
+    {
+      "source_artifact": "experiment_20260912T155852Z.json",
+      "source_sha256": "44fa74afbd36158b189e509419dc73726164893f21e02db376c7d136bae3f4bd",
+      "case_id": "rep_user07",
+      "run_index": 1,
+      "reference_id": "payday.message_05",
+      "status": "recovered",
+      "rationale": "Correct confirmed next date and stream; one_cycle is unsupported when emitted. Payment-date applicability bound remains a separate ambiguity.",
+      "reviewer_provenance": "assistant audit; pending human review"
+    },
+    {
+      "source_artifact": "experiment_20260912T155852Z.json",
+      "source_sha256": "44fa74afbd36158b189e509419dc73726164893f21e02db376c7d136bae3f4bd",
+      "case_id": "rep_user16",
+      "run_index": 1,
+      "reference_id": "user_16.payroll",
+      "status": "recovered",
+      "rationale": "Supported critical meaning recovered; see fact-level dimensions and source evidence.",
+      "reviewer_provenance": "assistant audit; pending human review"
+    },
+    {
+      "source_artifact": "experiment_20260912T155852Z.json",
+      "source_sha256": "44fa74afbd36158b189e509419dc73726164893f21e02db376c7d136bae3f4bd",
+      "case_id": "rep_user16",
+      "run_index": 1,
+      "reference_id": "rent.message_12",
+      "status": "input_limited",
+      "rationale": "12 percent recovered, but Monthly rent history needed for reference target was omitted; do not claim a counterfactual answer.",
+      "reviewer_provenance": "assistant audit; pending human review"
+    },
+    {
+      "source_artifact": "experiment_20260912T155852Z.json",
+      "source_sha256": "44fa74afbd36158b189e509419dc73726164893f21e02db376c7d136bae3f4bd",
+      "case_id": "rep_user16",
+      "run_index": 1,
+      "reference_id": "rent.image_02",
+      "status": "recovered",
+      "rationale": "Supported critical meaning recovered; see fact-level dimensions and source evidence.",
+      "reviewer_provenance": "assistant audit; pending human review"
+    },
+    {
+      "source_artifact": "experiment_20260912T155852Z.json",
+      "source_sha256": "44fa74afbd36158b189e509419dc73726164893f21e02db376c7d136bae3f4bd",
+      "case_id": "rep_user21",
+      "run_index": 1,
+      "reference_id": "user_21.payroll",
+      "status": "recovered",
+      "rationale": "Supported critical meaning recovered; see fact-level dimensions and source evidence.",
+      "reviewer_provenance": "assistant audit; pending human review"
+    },
+    {
+      "source_artifact": "experiment_20260912T155852Z.json",
+      "source_sha256": "44fa74afbd36158b189e509419dc73726164893f21e02db376c7d136bae3f4bd",
+      "case_id": "rep_user25",
+      "run_index": 1,
+      "reference_id": "user_25.payroll",
+      "status": "recovered",
+      "rationale": "Supported critical meaning recovered; see fact-level dimensions and source evidence.",
+      "reviewer_provenance": "assistant audit; pending human review"
+    },
+    {
+      "source_artifact": "experiment_20260912T155852Z.json",
+      "source_sha256": "44fa74afbd36158b189e509419dc73726164893f21e02db376c7d136bae3f4bd",
+      "case_id": "unused_real_image03",
+      "run_index": 1,
+      "reference_id": "review.image03.cash_paid",
+      "status": "output_unavailable",
+      "rationale": "No usable bundle; excluded from conditional semantic misses.",
+      "reviewer_provenance": "assistant audit; pending human review"
+    },
+    {
+      "source_artifact": "experiment_20260912T155852Z.json",
+      "source_sha256": "44fa74afbd36158b189e509419dc73726164893f21e02db376c7d136bae3f4bd",
+      "case_id": "synthetic_unknown_obligation",
+      "run_index": 1,
+      "reference_id": "review.unknown",
+      "status": "recovered",
+      "rationale": "Supported critical meaning recovered; see fact-level dimensions and source evidence.",
+      "reviewer_provenance": "assistant audit; pending human review"
+    },
+    {
+      "source_artifact": "experiment_20260912T155852Z.json",
+      "source_sha256": "44fa74afbd36158b189e509419dc73726164893f21e02db376c7d136bae3f4bd",
+      "case_id": "synthetic_possible_duplicate",
+      "run_index": 1,
+      "reference_id": "review.duplicate",
+      "status": "recovered",
+      "rationale": "Supported critical meaning recovered; see fact-level dimensions and source evidence.",
+      "reviewer_provenance": "assistant audit; pending human review"
+    },
+    {
+      "source_artifact": "experiment_20260912T155852Z.json",
+      "source_sha256": "44fa74afbd36158b189e509419dc73726164893f21e02db376c7d136bae3f4bd",
+      "case_id": "synthetic_conflict_two_streams",
+      "run_index": 1,
+      "reference_id": "review.dinner",
+      "status": "partial",
+      "rationale": "Amount, currency, one-cycle duration and Dinner identity recovered; explicit historical target versus open stream scope unresolved.",
+      "reviewer_provenance": "assistant audit; pending human review"
+    },
+    {
+      "source_artifact": "experiment_20260912T155852Z.json",
+      "source_sha256": "44fa74afbd36158b189e509419dc73726164893f21e02db376c7d136bae3f4bd",
+      "case_id": "rep_user07",
+      "run_index": 2,
+      "reference_id": "user_07.payroll",
+      "status": "partial",
+      "rationale": "Ongoing history recognized; uncertain confirmation differs materially from reference, whose certainty convention needs approval.",
+      "reviewer_provenance": "assistant audit; pending human review"
+    },
+    {
+      "source_artifact": "experiment_20260912T155852Z.json",
+      "source_sha256": "44fa74afbd36158b189e509419dc73726164893f21e02db376c7d136bae3f4bd",
+      "case_id": "rep_user07",
+      "run_index": 2,
+      "reference_id": "payday.message_05",
+      "status": "partial",
+      "rationale": "Correct confirmed next date and stream; one_cycle is unsupported when emitted. Payment-date applicability bound remains a separate ambiguity.",
+      "reviewer_provenance": "assistant audit; pending human review"
+    },
+    {
+      "source_artifact": "experiment_20260912T155852Z.json",
+      "source_sha256": "44fa74afbd36158b189e509419dc73726164893f21e02db376c7d136bae3f4bd",
+      "case_id": "rep_user07",
+      "run_index": 3,
+      "reference_id": "user_07.payroll",
+      "status": "recovered",
+      "rationale": "Ongoing history recognized; uncertain confirmation differs materially from reference, whose certainty convention needs approval.",
+      "reviewer_provenance": "assistant audit; pending human review"
+    },
+    {
+      "source_artifact": "experiment_20260912T155852Z.json",
+      "source_sha256": "44fa74afbd36158b189e509419dc73726164893f21e02db376c7d136bae3f4bd",
+      "case_id": "rep_user07",
+      "run_index": 3,
+      "reference_id": "payday.message_05",
+      "status": "partial",
+      "rationale": "Correct confirmed next date and stream; one_cycle is unsupported when emitted. Payment-date applicability bound remains a separate ambiguity.",
+      "reviewer_provenance": "assistant audit; pending human review"
+    },
+    {
+      "source_artifact": "experiment_20260912T155852Z.json",
+      "source_sha256": "44fa74afbd36158b189e509419dc73726164893f21e02db376c7d136bae3f4bd",
+      "case_id": "unused_real_image03",
+      "run_index": 2,
+      "reference_id": "review.image03.cash_paid",
+      "status": "output_unavailable",
+      "rationale": "No usable bundle; excluded from conditional semantic misses.",
+      "reviewer_provenance": "assistant audit; pending human review"
+    },
+    {
+      "source_artifact": "experiment_20260912T155852Z.json",
+      "source_sha256": "44fa74afbd36158b189e509419dc73726164893f21e02db376c7d136bae3f4bd",
+      "case_id": "unused_real_image03",
+      "run_index": 3,
+      "reference_id": "review.image03.cash_paid",
+      "status": "output_unavailable",
+      "rationale": "No usable bundle; excluded from conditional semantic misses.",
+      "reviewer_provenance": "assistant audit; pending human review"
+    },
+    {
+      "source_artifact": "experiment_20260912T155852Z.json",
+      "source_sha256": "44fa74afbd36158b189e509419dc73726164893f21e02db376c7d136bae3f4bd",
+      "case_id": "synthetic_unknown_obligation",
+      "run_index": 2,
+      "reference_id": "review.unknown",
+      "status": "recovered",
+      "rationale": "Supported critical meaning recovered; see fact-level dimensions and source evidence.",
+      "reviewer_provenance": "assistant audit; pending human review"
+    },
+    {
+      "source_artifact": "experiment_20260912T155852Z.json",
+      "source_sha256": "44fa74afbd36158b189e509419dc73726164893f21e02db376c7d136bae3f4bd",
+      "case_id": "synthetic_unknown_obligation",
+      "run_index": 3,
+      "reference_id": "review.unknown",
+      "status": "recovered",
+      "rationale": "Supported critical meaning recovered; see fact-level dimensions and source evidence.",
+      "reviewer_provenance": "assistant audit; pending human review"
+    },
+    {
+      "source_artifact": "experiment_20260912T160401Z.json",
+      "source_sha256": "3a4e8cd6aac1bccd7327a22ccc2ba1e07590545cd78961d733572f38f303c58f",
+      "case_id": "rep_user01",
+      "run_index": 1,
+      "reference_id": "user_01.payroll",
+      "status": "reference_ambiguous",
+      "rationale": "One prorated payment and one confirmed future salary do not establish an ongoing stream; future confirmation is supported instead.",
+      "reviewer_provenance": "assistant audit; pending human review"
+    },
+    {
+      "source_artifact": "experiment_20260912T160401Z.json",
+      "source_sha256": "3a4e8cd6aac1bccd7327a22ccc2ba1e07590545cd78961d733572f38f303c58f",
+      "case_id": "rep_user01",
+      "run_index": 1,
+      "reference_id": "prorated.event_25",
+      "status": "missed",
+      "rationale": "Prorated first salary is a supported special one-time amount; no equivalent classification was emitted.",
+      "reviewer_provenance": "assistant audit; pending human review"
+    },
+    {
+      "source_artifact": "experiment_20260912T160401Z.json",
+      "source_sha256": "3a4e8cd6aac1bccd7327a22ccc2ba1e07590545cd78961d733572f38f303c58f",
+      "case_id": "rep_user01",
+      "run_index": 1,
+      "reference_id": "refund.event_99",
+      "status": "partial",
+      "rationale": "Refund relationship recovered; inspect child target separately.",
+      "reviewer_provenance": "assistant audit; pending human review"
+    },
+    {
+      "source_artifact": "experiment_20260912T160401Z.json",
+      "source_sha256": "3a4e8cd6aac1bccd7327a22ccc2ba1e07590545cd78961d733572f38f303c58f",
+      "case_id": "rep_user01",
+      "run_index": 1,
+      "reference_id": "settlement.event_101",
+      "status": "incorrect",
+      "rationale": "Model emits retry_of; not the supported authorization settlement meaning.",
+      "reviewer_provenance": "assistant audit; pending human review"
+    },
+    {
+      "source_artifact": "experiment_20260912T160401Z.json",
+      "source_sha256": "3a4e8cd6aac1bccd7327a22ccc2ba1e07590545cd78961d733572f38f303c58f",
+      "case_id": "rep_user07",
+      "run_index": 1,
+      "reference_id": "user_07.payroll",
+      "status": "partial",
+      "rationale": "Ongoing history recognized; uncertain confirmation differs materially from reference, whose certainty convention needs approval.",
+      "reviewer_provenance": "assistant audit; pending human review"
+    },
+    {
+      "source_artifact": "experiment_20260912T160401Z.json",
+      "source_sha256": "3a4e8cd6aac1bccd7327a22ccc2ba1e07590545cd78961d733572f38f303c58f",
+      "case_id": "rep_user07",
+      "run_index": 1,
+      "reference_id": "payday.message_05",
+      "status": "partial",
+      "rationale": "Correct confirmed next date and stream; one_cycle is unsupported when emitted. Payment-date applicability bound remains a separate ambiguity.",
+      "reviewer_provenance": "assistant audit; pending human review"
+    },
+    {
+      "source_artifact": "experiment_20260912T160401Z.json",
+      "source_sha256": "3a4e8cd6aac1bccd7327a22ccc2ba1e07590545cd78961d733572f38f303c58f",
+      "case_id": "rep_user16",
+      "run_index": 1,
+      "reference_id": "user_16.payroll",
+      "status": "output_unavailable",
+      "rationale": "No usable bundle; excluded from conditional semantic misses.",
+      "reviewer_provenance": "assistant audit; pending human review"
+    },
+    {
+      "source_artifact": "experiment_20260912T160401Z.json",
+      "source_sha256": "3a4e8cd6aac1bccd7327a22ccc2ba1e07590545cd78961d733572f38f303c58f",
+      "case_id": "rep_user16",
+      "run_index": 1,
+      "reference_id": "rent.message_12",
+      "status": "output_unavailable",
+      "rationale": "No usable bundle; excluded from conditional semantic misses.",
+      "reviewer_provenance": "assistant audit; pending human review"
+    },
+    {
+      "source_artifact": "experiment_20260912T160401Z.json",
+      "source_sha256": "3a4e8cd6aac1bccd7327a22ccc2ba1e07590545cd78961d733572f38f303c58f",
+      "case_id": "rep_user16",
+      "run_index": 1,
+      "reference_id": "rent.image_02",
+      "status": "output_unavailable",
+      "rationale": "No usable bundle; excluded from conditional semantic misses.",
+      "reviewer_provenance": "assistant audit; pending human review"
+    },
+    {
+      "source_artifact": "experiment_20260912T160401Z.json",
+      "source_sha256": "3a4e8cd6aac1bccd7327a22ccc2ba1e07590545cd78961d733572f38f303c58f",
+      "case_id": "rep_user21",
+      "run_index": 1,
+      "reference_id": "user_21.payroll",
+      "status": "recovered",
+      "rationale": "Supported critical meaning recovered; see fact-level dimensions and source evidence.",
+      "reviewer_provenance": "assistant audit; pending human review"
+    },
+    {
+      "source_artifact": "experiment_20260912T160401Z.json",
+      "source_sha256": "3a4e8cd6aac1bccd7327a22ccc2ba1e07590545cd78961d733572f38f303c58f",
+      "case_id": "rep_user25",
+      "run_index": 1,
+      "reference_id": "user_25.payroll",
+      "status": "recovered",
+      "rationale": "Supported critical meaning recovered; see fact-level dimensions and source evidence.",
+      "reviewer_provenance": "assistant audit; pending human review"
+    },
+    {
+      "source_artifact": "experiment_20260912T160401Z.json",
+      "source_sha256": "3a4e8cd6aac1bccd7327a22ccc2ba1e07590545cd78961d733572f38f303c58f",
+      "case_id": "unused_real_image03",
+      "run_index": 1,
+      "reference_id": "review.image03.cash_paid",
+      "status": "recovered",
+      "rationale": "Supported critical meaning recovered; see fact-level dimensions and source evidence.",
+      "reviewer_provenance": "assistant audit; pending human review"
+    },
+    {
+      "source_artifact": "experiment_20260912T160401Z.json",
+      "source_sha256": "3a4e8cd6aac1bccd7327a22ccc2ba1e07590545cd78961d733572f38f303c58f",
+      "case_id": "synthetic_unknown_obligation",
+      "run_index": 1,
+      "reference_id": "review.unknown",
+      "status": "recovered",
+      "rationale": "Supported critical meaning recovered; see fact-level dimensions and source evidence.",
+      "reviewer_provenance": "assistant audit; pending human review"
+    },
+    {
+      "source_artifact": "experiment_20260912T160401Z.json",
+      "source_sha256": "3a4e8cd6aac1bccd7327a22ccc2ba1e07590545cd78961d733572f38f303c58f",
+      "case_id": "synthetic_possible_duplicate",
+      "run_index": 1,
+      "reference_id": "review.duplicate",
+      "status": "recovered",
+      "rationale": "Supported critical meaning recovered; see fact-level dimensions and source evidence.",
+      "reviewer_provenance": "assistant audit; pending human review"
+    },
+    {
+      "source_artifact": "experiment_20260912T160401Z.json",
+      "source_sha256": "3a4e8cd6aac1bccd7327a22ccc2ba1e07590545cd78961d733572f38f303c58f",
+      "case_id": "synthetic_conflict_two_streams",
+      "run_index": 1,
+      "reference_id": "review.dinner",
+      "status": "partial",
+      "rationale": "Amount, currency, one-cycle duration and Dinner identity recovered; explicit historical target versus open stream scope unresolved.",
+      "reviewer_provenance": "assistant audit; pending human review"
+    },
+    {
+      "source_artifact": "experiment_20260912T160401Z.json",
+      "source_sha256": "3a4e8cd6aac1bccd7327a22ccc2ba1e07590545cd78961d733572f38f303c58f",
+      "case_id": "rep_user07",
+      "run_index": 2,
+      "reference_id": "user_07.payroll",
+      "status": "partial",
+      "rationale": "Ongoing history recognized; uncertain confirmation differs materially from reference, whose certainty convention needs approval.",
+      "reviewer_provenance": "assistant audit; pending human review"
+    },
+    {
+      "source_artifact": "experiment_20260912T160401Z.json",
+      "source_sha256": "3a4e8cd6aac1bccd7327a22ccc2ba1e07590545cd78961d733572f38f303c58f",
+      "case_id": "rep_user07",
+      "run_index": 2,
+      "reference_id": "payday.message_05",
+      "status": "partial",
+      "rationale": "Correct confirmed next date and stream; one_cycle is unsupported when emitted. Payment-date applicability bound remains a separate ambiguity.",
+      "reviewer_provenance": "assistant audit; pending human review"
+    },
+    {
+      "source_artifact": "experiment_20260912T160401Z.json",
+      "source_sha256": "3a4e8cd6aac1bccd7327a22ccc2ba1e07590545cd78961d733572f38f303c58f",
+      "case_id": "rep_user07",
+      "run_index": 3,
+      "reference_id": "user_07.payroll",
+      "status": "partial",
+      "rationale": "Ongoing history recognized; uncertain confirmation differs materially from reference, whose certainty convention needs approval.",
+      "reviewer_provenance": "assistant audit; pending human review"
+    },
+    {
+      "source_artifact": "experiment_20260912T160401Z.json",
+      "source_sha256": "3a4e8cd6aac1bccd7327a22ccc2ba1e07590545cd78961d733572f38f303c58f",
+      "case_id": "rep_user07",
+      "run_index": 3,
+      "reference_id": "payday.message_05",
+      "status": "partial",
+      "rationale": "Correct confirmed next date and stream; one_cycle is unsupported when emitted. Payment-date applicability bound remains a separate ambiguity.",
+      "reviewer_provenance": "assistant audit; pending human review"
+    },
+    {
+      "source_artifact": "experiment_20260912T160401Z.json",
+      "source_sha256": "3a4e8cd6aac1bccd7327a22ccc2ba1e07590545cd78961d733572f38f303c58f",
+      "case_id": "unused_real_image03",
+      "run_index": 2,
+      "reference_id": "review.image03.cash_paid",
+      "status": "output_unavailable",
+      "rationale": "No usable bundle; excluded from conditional semantic misses.",
+      "reviewer_provenance": "assistant audit; pending human review"
+    },
+    {
+      "source_artifact": "experiment_20260912T160401Z.json",
+      "source_sha256": "3a4e8cd6aac1bccd7327a22ccc2ba1e07590545cd78961d733572f38f303c58f",
+      "case_id": "unused_real_image03",
+      "run_index": 3,
+      "reference_id": "review.image03.cash_paid",
+      "status": "output_unavailable",
+      "rationale": "No usable bundle; excluded from conditional semantic misses.",
+      "reviewer_provenance": "assistant audit; pending human review"
+    },
+    {
+      "source_artifact": "experiment_20260912T160401Z.json",
+      "source_sha256": "3a4e8cd6aac1bccd7327a22ccc2ba1e07590545cd78961d733572f38f303c58f",
+      "case_id": "synthetic_unknown_obligation",
+      "run_index": 2,
+      "reference_id": "review.unknown",
+      "status": "recovered",
+      "rationale": "Supported critical meaning recovered; see fact-level dimensions and source evidence.",
+      "reviewer_provenance": "assistant audit; pending human review"
+    },
+    {
+      "source_artifact": "experiment_20260912T160401Z.json",
+      "source_sha256": "3a4e8cd6aac1bccd7327a22ccc2ba1e07590545cd78961d733572f38f303c58f",
+      "case_id": "synthetic_unknown_obligation",
+      "run_index": 3,
+      "reference_id": "review.unknown",
+      "status": "recovered",
+      "rationale": "Supported critical meaning recovered; see fact-level dimensions and source evidence.",
+      "reviewer_provenance": "assistant audit; pending human review"
+    }
+  ]
+}

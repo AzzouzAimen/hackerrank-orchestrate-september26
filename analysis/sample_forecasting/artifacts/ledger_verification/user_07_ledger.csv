@@ -1,0 +1,30 @@
+date,source_event,direction,amount,running_balance,provenance,evidence_ids,policy
+2024-09-05,opening profile snapshot,opening,218945.56,218945.56,MODELING_POLICY,user_07,Profile treated as opening balance; historical cash not replayed.
+2024-09-08,recurring:utilities,debit,6789.44,212156.12,INFERRED_RECURRENCE,event_580,Observed cadence monthly; historical mean for variable amounts.
+2024-09-12,recurring:groceries,debit,7116.46,205039.66,INFERRED_RECURRENCE,event_596,Observed cadence 14; historical mean for variable amounts.
+2024-09-13,recurring:debt_repayment,debit,15650.0,189389.66,INFERRED_RECURRENCE,event_581,Observed cadence monthly; historical mean for variable amounts.
+2024-09-13,recurring:music_subscription,debit,1005.0,188384.66,INFERRED_RECURRENCE,event_582,Observed cadence monthly; historical mean for variable amounts.
+2024-09-16,recurring:dining,debit,5927.31,182457.35,INFERRED_RECURRENCE,event_614,Observed cadence 21; historical mean for variable amounts.
+2024-09-20,recurring:transport,debit,3220.13,179237.22,INFERRED_RECURRENCE,event_605,Observed cadence 21; historical mean for variable amounts.
+2024-09-23,recurring:salary,credit,149000.0,328237.22,SEMANTIC_FACT,event_578|message_05,Message supplies this payday; amount comes from payroll history.
+2024-09-26,recurring:groceries,debit,7116.46,321120.76,INFERRED_RECURRENCE,event_596,Observed cadence 14; historical mean for variable amounts.
+2024-10-04,recurring:rent,debit,34200.0,286920.76,INFERRED_RECURRENCE,event_583,Observed cadence monthly; historical mean for variable amounts.
+2024-10-07,recurring:dining,debit,5927.31,280993.45,INFERRED_RECURRENCE,event_614,Observed cadence 21; historical mean for variable amounts.
+2024-10-08,recurring:utilities,debit,6789.44,274204.01,INFERRED_RECURRENCE,event_580,Observed cadence monthly; historical mean for variable amounts.
+2024-10-10,recurring:groceries,debit,7116.46,267087.55,INFERRED_RECURRENCE,event_596,Observed cadence 14; historical mean for variable amounts.
+2024-10-11,recurring:transport,debit,3220.13,263867.42,INFERRED_RECURRENCE,event_605,Observed cadence 21; historical mean for variable amounts.
+2024-10-13,recurring:debt_repayment,debit,15650.0,248217.42,INFERRED_RECURRENCE,event_581,Observed cadence monthly; historical mean for variable amounts.
+2024-10-13,recurring:music_subscription,debit,1005.0,247212.42,INFERRED_RECURRENCE,event_582,Observed cadence monthly; historical mean for variable amounts.
+2024-10-23,recurring:salary,credit,149000.0,396212.42,MODELING_POLICY,event_578|message_05,UNRESOLVED: persist revised payday into later months; duration not stated.
+2024-10-24,recurring:groceries,debit,7116.46,389095.96,INFERRED_RECURRENCE,event_596,Observed cadence 14; historical mean for variable amounts.
+2024-10-28,recurring:dining,debit,5927.31,383168.65,INFERRED_RECURRENCE,event_614,Observed cadence 21; historical mean for variable amounts.
+2024-11-01,recurring:transport,debit,3220.13,379948.52,INFERRED_RECURRENCE,event_605,Observed cadence 21; historical mean for variable amounts.
+2024-11-04,recurring:rent,debit,34200.0,345748.52,INFERRED_RECURRENCE,event_583,Observed cadence monthly; historical mean for variable amounts.
+2024-11-07,recurring:groceries,debit,7116.46,338632.06,INFERRED_RECURRENCE,event_596,Observed cadence 14; historical mean for variable amounts.
+2024-11-08,recurring:utilities,debit,6789.44,331842.62,INFERRED_RECURRENCE,event_580,Observed cadence monthly; historical mean for variable amounts.
+2024-11-13,recurring:debt_repayment,debit,15650.0,316192.62,INFERRED_RECURRENCE,event_581,Observed cadence monthly; historical mean for variable amounts.
+2024-11-13,recurring:music_subscription,debit,1005.0,315187.62,INFERRED_RECURRENCE,event_582,Observed cadence monthly; historical mean for variable amounts.
+2024-11-18,recurring:dining,debit,5927.31,309260.31,INFERRED_RECURRENCE,event_614,Observed cadence 21; historical mean for variable amounts.
+2024-11-21,recurring:groceries,debit,7116.46,302143.85,INFERRED_RECURRENCE,event_596,Observed cadence 14; historical mean for variable amounts.
+2024-11-22,recurring:transport,debit,3220.13,298923.72,INFERRED_RECURRENCE,event_605,Observed cadence 21; historical mean for variable amounts.
+2024-11-23,recurring:salary,credit,149000.0,447923.72,MODELING_POLICY,event_578|message_05,UNRESOLVED: persist revised payday into later months; duration not stated.

@@ -1,0 +1,6 @@
+user,case,predicted_safe,labeled_safe,safe_error,normalized_absolute_error,predicted_earliest,labeled_earliest,earliest_match,recommendation,selected_plan_verified,schema_valid
+user_07,payroll amendment,86237.20,87170.56,-933.36,0.004728267477203647416413373860,2024-10-23,2024-10-23,True,installments,True,True
+user_16,future image-derived rent obligation,122500.00,122500,0.00,0.00,2023-08-12,2023-08-12,True,full_payment,True,True
+user_01,authorization/settlement and charge/refund lifecycle,8849.12,25256,-16406.88,0.6496230598669623059866962306,,2024-03-03,False,not_recommended,,True
+user_21,flexible spending permissions,1574.40,1543.35,31.05,0.01972179878048780487804878049,2026-04-03,2026-04-15,False,full_payment,True,True
+user_25,regular-payroll control with dated FX,0,1425000,-1425000,0.02355527638190954773869346734,,,True,not_recommended,,True

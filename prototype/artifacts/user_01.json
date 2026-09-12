@@ -1,0 +1,5456 @@
+{
+  "case_reason": "authorization/settlement and charge/refund lifecycle",
+  "facts": [
+    {
+      "schema_version": "1.0",
+      "fact_id": "prorated.event_25",
+      "evidence_ids": [
+        "event_25"
+      ],
+      "affected_event_ids": [
+        "event_25"
+      ],
+      "stream_selector": null,
+      "effective_from": null,
+      "effective_until": null,
+      "confirmation_state": "confirmed",
+      "unresolved_fields": [],
+      "fact_type": "stream_status",
+      "payload": {
+        "status": "one_time"
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "fact_id": "refund.event_99",
+      "evidence_ids": [
+        "event_98",
+        "event_99"
+      ],
+      "affected_event_ids": [
+        "event_99"
+      ],
+      "stream_selector": null,
+      "effective_from": null,
+      "effective_until": null,
+      "confirmation_state": "confirmed",
+      "unresolved_fields": [],
+      "fact_type": "lifecycle_relationship",
+      "payload": {
+        "relationship": "refund_of",
+        "related_event_id": "event_98"
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "fact_id": "settlement.event_101",
+      "evidence_ids": [
+        "event_100",
+        "event_101"
+      ],
+      "affected_event_ids": [
+        "event_101"
+      ],
+      "stream_selector": null,
+      "effective_from": null,
+      "effective_until": null,
+      "confirmation_state": "confirmed",
+      "unresolved_fields": [],
+      "fact_type": "lifecycle_relationship",
+      "payload": {
+        "relationship": "settlement_of",
+        "related_event_id": "event_100"
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "fact_id": "user_01.payroll",
+      "evidence_ids": [
+        "event_103"
+      ],
+      "affected_event_ids": [
+        "event_103"
+      ],
+      "stream_selector": {
+        "user_id": "user_01",
+        "category": "salary",
+        "direction": "credit",
+        "currency": "ZAR",
+        "description": "Next confirmed salary"
+      },
+      "effective_from": null,
+      "effective_until": null,
+      "confirmation_state": "confirmed",
+      "unresolved_fields": [
+        "effective_until"
+      ],
+      "fact_type": "stream_status",
+      "payload": {
+        "status": "ongoing"
+      }
+    }
+  ],
+  "resolved_events": [
+    {
+      "id": "event_01",
+      "user": "user_01",
+      "category": "rent",
+      "description": "Apartment rent transfer",
+      "direction": "debit",
+      "amount": "5148",
+      "currency": "ZAR",
+      "event_date": "2023-10-02",
+      "settlement": "2023-10-02",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_01"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_02",
+      "user": "user_01",
+      "category": "utilities",
+      "description": "Household utility payment",
+      "direction": "debit",
+      "amount": "1475.46",
+      "currency": "ZAR",
+      "event_date": "2023-10-06",
+      "settlement": "2023-10-06",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_02"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_03",
+      "user": "user_01",
+      "category": "education",
+      "description": "Professional training fee",
+      "direction": "debit",
+      "amount": "1821.6",
+      "currency": "ZAR",
+      "event_date": "2023-10-08",
+      "settlement": "2023-10-08",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_03"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_04",
+      "user": "user_01",
+      "category": "debt_repayment",
+      "description": "Education loan instalment",
+      "direction": "debit",
+      "amount": "3487",
+      "currency": "ZAR",
+      "event_date": "2023-10-11",
+      "settlement": "2023-10-11",
+      "status": "settled",
+      "event_type": "debt_payment",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_04"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_05",
+      "user": "user_01",
+      "category": "music_subscription",
+      "description": "Music service subscription",
+      "direction": "debit",
+      "amount": "235.4",
+      "currency": "ZAR",
+      "event_date": "2023-10-11",
+      "settlement": "2023-10-11",
+      "status": "settled",
+      "event_type": "subscription",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_05"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_06",
+      "user": "user_01",
+      "category": "delivery_membership",
+      "description": "Delivery service plan",
+      "direction": "debit",
+      "amount": "306.9",
+      "currency": "ZAR",
+      "event_date": "2023-10-13",
+      "settlement": "2023-10-13",
+      "status": "settled",
+      "event_type": "subscription",
+      "linked": "",
+      "flexibility": "stoppable",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_06"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_07",
+      "user": "user_01",
+      "category": "rent",
+      "description": "Apartment rent transfer",
+      "direction": "debit",
+      "amount": "5148",
+      "currency": "ZAR",
+      "event_date": "2023-11-02",
+      "settlement": "2023-11-02",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_07"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_08",
+      "user": "user_01",
+      "category": "utilities",
+      "description": "Household utility payment",
+      "direction": "debit",
+      "amount": "1483.81",
+      "currency": "ZAR",
+      "event_date": "2023-11-06",
+      "settlement": "2023-11-06",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_08"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_09",
+      "user": "user_01",
+      "category": "education",
+      "description": "Professional training fee",
+      "direction": "debit",
+      "amount": "1821.6",
+      "currency": "ZAR",
+      "event_date": "2023-11-08",
+      "settlement": "2023-11-08",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_09"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_10",
+      "user": "user_01",
+      "category": "debt_repayment",
+      "description": "Education loan instalment",
+      "direction": "debit",
+      "amount": "3487",
+      "currency": "ZAR",
+      "event_date": "2023-11-11",
+      "settlement": "2023-11-11",
+      "status": "settled",
+      "event_type": "debt_payment",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_10"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_11",
+      "user": "user_01",
+      "category": "music_subscription",
+      "description": "Music service subscription",
+      "direction": "debit",
+      "amount": "235.4",
+      "currency": "ZAR",
+      "event_date": "2023-11-11",
+      "settlement": "2023-11-11",
+      "status": "settled",
+      "event_type": "subscription",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_11"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_12",
+      "user": "user_01",
+      "category": "delivery_membership",
+      "description": "Delivery service plan",
+      "direction": "debit",
+      "amount": "306.9",
+      "currency": "ZAR",
+      "event_date": "2023-11-13",
+      "settlement": "2023-11-13",
+      "status": "settled",
+      "event_type": "subscription",
+      "linked": "",
+      "flexibility": "stoppable",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_12"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_13",
+      "user": "user_01",
+      "category": "rent",
+      "description": "Apartment rent transfer",
+      "direction": "debit",
+      "amount": "5148",
+      "currency": "ZAR",
+      "event_date": "2023-12-02",
+      "settlement": "2023-12-02",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_13"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_14",
+      "user": "user_01",
+      "category": "utilities",
+      "description": "Household utility payment",
+      "direction": "debit",
+      "amount": "1541.75",
+      "currency": "ZAR",
+      "event_date": "2023-12-06",
+      "settlement": "2023-12-06",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_14"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_15",
+      "user": "user_01",
+      "category": "education",
+      "description": "Professional training fee",
+      "direction": "debit",
+      "amount": "1821.6",
+      "currency": "ZAR",
+      "event_date": "2023-12-08",
+      "settlement": "2023-12-08",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_15"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_16",
+      "user": "user_01",
+      "category": "debt_repayment",
+      "description": "Education loan instalment",
+      "direction": "debit",
+      "amount": "3487",
+      "currency": "ZAR",
+      "event_date": "2023-12-11",
+      "settlement": "2023-12-11",
+      "status": "settled",
+      "event_type": "debt_payment",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_16"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_17",
+      "user": "user_01",
+      "category": "music_subscription",
+      "description": "Music service subscription",
+      "direction": "debit",
+      "amount": "235.4",
+      "currency": "ZAR",
+      "event_date": "2023-12-11",
+      "settlement": "2023-12-11",
+      "status": "settled",
+      "event_type": "subscription",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_17"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_18",
+      "user": "user_01",
+      "category": "delivery_membership",
+      "description": "Delivery service plan",
+      "direction": "debit",
+      "amount": "306.9",
+      "currency": "ZAR",
+      "event_date": "2023-12-13",
+      "settlement": "2023-12-13",
+      "status": "settled",
+      "event_type": "subscription",
+      "linked": "",
+      "flexibility": "stoppable",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_18"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_19",
+      "user": "user_01",
+      "category": "rent",
+      "description": "Apartment rent transfer",
+      "direction": "debit",
+      "amount": "5148",
+      "currency": "ZAR",
+      "event_date": "2024-01-02",
+      "settlement": "2024-01-02",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_19"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_20",
+      "user": "user_01",
+      "category": "utilities",
+      "description": "Household utility payment",
+      "direction": "debit",
+      "amount": "1651.81",
+      "currency": "ZAR",
+      "event_date": "2024-01-06",
+      "settlement": "2024-01-06",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_20"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_21",
+      "user": "user_01",
+      "category": "education",
+      "description": "Professional training fee",
+      "direction": "debit",
+      "amount": "1821.6",
+      "currency": "ZAR",
+      "event_date": "2024-01-08",
+      "settlement": "2024-01-08",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_21"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_22",
+      "user": "user_01",
+      "category": "debt_repayment",
+      "description": "Education loan instalment",
+      "direction": "debit",
+      "amount": "3487",
+      "currency": "ZAR",
+      "event_date": "2024-01-11",
+      "settlement": "2024-01-11",
+      "status": "settled",
+      "event_type": "debt_payment",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_22"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_23",
+      "user": "user_01",
+      "category": "music_subscription",
+      "description": "Music service subscription",
+      "direction": "debit",
+      "amount": "235.4",
+      "currency": "ZAR",
+      "event_date": "2024-01-11",
+      "settlement": "2024-01-11",
+      "status": "settled",
+      "event_type": "subscription",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_23"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_24",
+      "user": "user_01",
+      "category": "delivery_membership",
+      "description": "Delivery service plan",
+      "direction": "debit",
+      "amount": "306.9",
+      "currency": "ZAR",
+      "event_date": "2024-01-13",
+      "settlement": "2024-01-13",
+      "status": "settled",
+      "event_type": "subscription",
+      "linked": "",
+      "flexibility": "stoppable",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_24"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_25",
+      "user": "user_01",
+      "category": "salary",
+      "description": "Prorated first salary",
+      "direction": "credit",
+      "amount": "12826",
+      "currency": "ZAR",
+      "event_date": "2024-02-15",
+      "settlement": "2024-02-15",
+      "status": "settled",
+      "event_type": "income",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_25"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_26",
+      "user": "user_01",
+      "category": "rent",
+      "description": "Apartment rent transfer",
+      "direction": "debit",
+      "amount": "5148",
+      "currency": "ZAR",
+      "event_date": "2024-02-02",
+      "settlement": "2024-02-02",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_26"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_27",
+      "user": "user_01",
+      "category": "utilities",
+      "description": "Household utility payment",
+      "direction": "debit",
+      "amount": "1386.17",
+      "currency": "ZAR",
+      "event_date": "2024-02-06",
+      "settlement": "2024-02-06",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_27"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_28",
+      "user": "user_01",
+      "category": "education",
+      "description": "Professional training fee",
+      "direction": "debit",
+      "amount": "1821.6",
+      "currency": "ZAR",
+      "event_date": "2024-02-08",
+      "settlement": "2024-02-08",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_28"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_29",
+      "user": "user_01",
+      "category": "debt_repayment",
+      "description": "Education loan instalment",
+      "direction": "debit",
+      "amount": "3487",
+      "currency": "ZAR",
+      "event_date": "2024-02-11",
+      "settlement": "2024-02-11",
+      "status": "settled",
+      "event_type": "debt_payment",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_29"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_30",
+      "user": "user_01",
+      "category": "music_subscription",
+      "description": "Music service subscription",
+      "direction": "debit",
+      "amount": "235.4",
+      "currency": "ZAR",
+      "event_date": "2024-02-11",
+      "settlement": "2024-02-11",
+      "status": "settled",
+      "event_type": "subscription",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_30"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_31",
+      "user": "user_01",
+      "category": "delivery_membership",
+      "description": "Delivery service plan",
+      "direction": "debit",
+      "amount": "306.9",
+      "currency": "ZAR",
+      "event_date": "2024-02-13",
+      "settlement": "2024-02-13",
+      "status": "settled",
+      "event_type": "subscription",
+      "linked": "",
+      "flexibility": "stoppable",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_31"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_32",
+      "user": "user_01",
+      "category": "rent",
+      "description": "Apartment rent transfer",
+      "direction": "debit",
+      "amount": "5148",
+      "currency": "ZAR",
+      "event_date": "2024-03-02",
+      "settlement": "2024-03-02",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_32"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_33",
+      "user": "user_01",
+      "category": "groceries",
+      "description": "Neighbourhood grocer",
+      "direction": "debit",
+      "amount": "925.62",
+      "currency": "ZAR",
+      "event_date": "2023-09-08",
+      "settlement": "2023-09-08",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_33"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_34",
+      "user": "user_01",
+      "category": "groceries",
+      "description": "Neighbourhood grocer",
+      "direction": "debit",
+      "amount": "939.13",
+      "currency": "ZAR",
+      "event_date": "2023-09-15",
+      "settlement": "2023-09-15",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_34"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_35",
+      "user": "user_01",
+      "category": "groceries",
+      "description": "Bulk pantry shop",
+      "direction": "debit",
+      "amount": "707.36",
+      "currency": "ZAR",
+      "event_date": "2023-09-22",
+      "settlement": "2023-09-22",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_35"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_36",
+      "user": "user_01",
+      "category": "groceries",
+      "description": "Grocery delivery",
+      "direction": "debit",
+      "amount": "629.96",
+      "currency": "ZAR",
+      "event_date": "2023-09-29",
+      "settlement": "2023-09-29",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_36"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_37",
+      "user": "user_01",
+      "category": "groceries",
+      "description": "Local market purchase",
+      "direction": "debit",
+      "amount": "873.17",
+      "currency": "ZAR",
+      "event_date": "2023-10-06",
+      "settlement": "2023-10-06",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_37"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_38",
+      "user": "user_01",
+      "category": "groceries",
+      "description": "Bulk pantry shop",
+      "direction": "debit",
+      "amount": "915.12",
+      "currency": "ZAR",
+      "event_date": "2023-10-13",
+      "settlement": "2023-10-13",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_38"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_39",
+      "user": "user_01",
+      "category": "groceries",
+      "description": "Fresh food shop",
+      "direction": "debit",
+      "amount": "644.3",
+      "currency": "ZAR",
+      "event_date": "2023-10-20",
+      "settlement": "2023-10-20",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_39"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_40",
+      "user": "user_01",
+      "category": "groceries",
+      "description": "Fresh food shop",
+      "direction": "debit",
+      "amount": "663.27",
+      "currency": "ZAR",
+      "event_date": "2023-10-27",
+      "settlement": "2023-10-27",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_40"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_41",
+      "user": "user_01",
+      "category": "groceries",
+      "description": "Grocery delivery",
+      "direction": "debit",
+      "amount": "1030.1",
+      "currency": "ZAR",
+      "event_date": "2023-11-03",
+      "settlement": "2023-11-03",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_41"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_42",
+      "user": "user_01",
+      "category": "groceries",
+      "description": "Neighbourhood grocer",
+      "direction": "debit",
+      "amount": "672.37",
+      "currency": "ZAR",
+      "event_date": "2023-11-10",
+      "settlement": "2023-11-10",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_42"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_43",
+      "user": "user_01",
+      "category": "groceries",
+      "description": "Local market purchase",
+      "direction": "debit",
+      "amount": "803.55",
+      "currency": "ZAR",
+      "event_date": "2023-11-17",
+      "settlement": "2023-11-17",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_43"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_44",
+      "user": "user_01",
+      "category": "groceries",
+      "description": "Local market purchase",
+      "direction": "debit",
+      "amount": "644.43",
+      "currency": "ZAR",
+      "event_date": "2023-11-24",
+      "settlement": "2023-11-24",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_44"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_45",
+      "user": "user_01",
+      "category": "groceries",
+      "description": "Household groceries",
+      "direction": "debit",
+      "amount": "882.48",
+      "currency": "ZAR",
+      "event_date": "2023-12-01",
+      "settlement": "2023-12-01",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_45"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_46",
+      "user": "user_01",
+      "category": "groceries",
+      "description": "Bulk pantry shop",
+      "direction": "debit",
+      "amount": "602.87",
+      "currency": "ZAR",
+      "event_date": "2023-12-08",
+      "settlement": "2023-12-08",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_46"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_47",
+      "user": "user_01",
+      "category": "groceries",
+      "description": "Local market purchase",
+      "direction": "debit",
+      "amount": "765.64",
+      "currency": "ZAR",
+      "event_date": "2023-12-15",
+      "settlement": "2023-12-15",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_47"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_48",
+      "user": "user_01",
+      "category": "groceries",
+      "description": "Fresh food shop",
+      "direction": "debit",
+      "amount": "651.12",
+      "currency": "ZAR",
+      "event_date": "2023-12-22",
+      "settlement": "2023-12-22",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_48"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_49",
+      "user": "user_01",
+      "category": "groceries",
+      "description": "Fresh food shop",
+      "direction": "debit",
+      "amount": "899.04",
+      "currency": "ZAR",
+      "event_date": "2023-12-29",
+      "settlement": "2023-12-29",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_49"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_50",
+      "user": "user_01",
+      "category": "groceries",
+      "description": "Neighbourhood grocer",
+      "direction": "debit",
+      "amount": "961.46",
+      "currency": "ZAR",
+      "event_date": "2024-01-05",
+      "settlement": "2024-01-05",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_50"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_51",
+      "user": "user_01",
+      "category": "groceries",
+      "description": "Supermarket basket",
+      "direction": "debit",
+      "amount": "875.35",
+      "currency": "ZAR",
+      "event_date": "2024-01-12",
+      "settlement": "2024-01-12",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_51"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_52",
+      "user": "user_01",
+      "category": "groceries",
+      "description": "Household groceries",
+      "direction": "debit",
+      "amount": "756.39",
+      "currency": "ZAR",
+      "event_date": "2024-01-19",
+      "settlement": "2024-01-19",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_52"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_53",
+      "user": "user_01",
+      "category": "groceries",
+      "description": "Supermarket basket",
+      "direction": "debit",
+      "amount": "624.94",
+      "currency": "ZAR",
+      "event_date": "2024-01-26",
+      "settlement": "2024-01-26",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_53"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_54",
+      "user": "user_01",
+      "category": "groceries",
+      "description": "Household groceries",
+      "direction": "debit",
+      "amount": "719.51",
+      "currency": "ZAR",
+      "event_date": "2024-02-02",
+      "settlement": "2024-02-02",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_54"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_55",
+      "user": "user_01",
+      "category": "groceries",
+      "description": "Neighbourhood grocer",
+      "direction": "debit",
+      "amount": "755.11",
+      "currency": "ZAR",
+      "event_date": "2024-02-09",
+      "settlement": "2024-02-09",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_55"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_56",
+      "user": "user_01",
+      "category": "groceries",
+      "description": "Supermarket basket",
+      "direction": "debit",
+      "amount": "881.22",
+      "currency": "ZAR",
+      "event_date": "2024-02-16",
+      "settlement": "2024-02-16",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_56"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_57",
+      "user": "user_01",
+      "category": "groceries",
+      "description": "Grocery delivery",
+      "direction": "debit",
+      "amount": "626.01",
+      "currency": "ZAR",
+      "event_date": "2024-02-23",
+      "settlement": "2024-02-23",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_57"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_58",
+      "user": "user_01",
+      "category": "groceries",
+      "description": "Local market purchase",
+      "direction": "debit",
+      "amount": "964.05",
+      "currency": "ZAR",
+      "event_date": "2024-03-01",
+      "settlement": "2024-03-01",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_58"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_59",
+      "user": "user_01",
+      "category": "transport",
+      "description": "Commuter pass",
+      "direction": "debit",
+      "amount": "399.02",
+      "currency": "ZAR",
+      "event_date": "2023-09-09",
+      "settlement": "2023-09-09",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_59"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_60",
+      "user": "user_01",
+      "category": "transport",
+      "description": "Ride-hailing trip",
+      "direction": "debit",
+      "amount": "549.8",
+      "currency": "ZAR",
+      "event_date": "2023-09-16",
+      "settlement": "2023-09-16",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_60"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_61",
+      "user": "user_01",
+      "category": "transport",
+      "description": "Metro and bus fares",
+      "direction": "debit",
+      "amount": "468.47",
+      "currency": "ZAR",
+      "event_date": "2023-09-23",
+      "settlement": "2023-09-23",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_61"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_62",
+      "user": "user_01",
+      "category": "transport",
+      "description": "Ride-hailing trip",
+      "direction": "debit",
+      "amount": "428.92",
+      "currency": "ZAR",
+      "event_date": "2023-09-30",
+      "settlement": "2023-09-30",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_62"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_63",
+      "user": "user_01",
+      "category": "transport",
+      "description": "Metro and bus fares",
+      "direction": "debit",
+      "amount": "373.05",
+      "currency": "ZAR",
+      "event_date": "2023-10-07",
+      "settlement": "2023-10-07",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_63"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_64",
+      "user": "user_01",
+      "category": "transport",
+      "description": "Fuel refill",
+      "direction": "debit",
+      "amount": "503.02",
+      "currency": "ZAR",
+      "event_date": "2023-10-14",
+      "settlement": "2023-10-14",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_64"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_65",
+      "user": "user_01",
+      "category": "transport",
+      "description": "Local taxi",
+      "direction": "debit",
+      "amount": "351.49",
+      "currency": "ZAR",
+      "event_date": "2023-10-21",
+      "settlement": "2023-10-21",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_65"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_66",
+      "user": "user_01",
+      "category": "transport",
+      "description": "Metro and bus fares",
+      "direction": "debit",
+      "amount": "553.74",
+      "currency": "ZAR",
+      "event_date": "2023-10-28",
+      "settlement": "2023-10-28",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_66"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_67",
+      "user": "user_01",
+      "category": "transport",
+      "description": "Rail pass",
+      "direction": "debit",
+      "amount": "421.89",
+      "currency": "ZAR",
+      "event_date": "2023-11-04",
+      "settlement": "2023-11-04",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_67"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_68",
+      "user": "user_01",
+      "category": "transport",
+      "description": "Metro and bus fares",
+      "direction": "debit",
+      "amount": "347.86",
+      "currency": "ZAR",
+      "event_date": "2023-11-11",
+      "settlement": "2023-11-11",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_68"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_69",
+      "user": "user_01",
+      "category": "transport",
+      "description": "Commuter pass",
+      "direction": "debit",
+      "amount": "518.04",
+      "currency": "ZAR",
+      "event_date": "2023-11-18",
+      "settlement": "2023-11-18",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_69"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_70",
+      "user": "user_01",
+      "category": "transport",
+      "description": "Ride-hailing trip",
+      "direction": "debit",
+      "amount": "444.56",
+      "currency": "ZAR",
+      "event_date": "2023-11-25",
+      "settlement": "2023-11-25",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_70"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_71",
+      "user": "user_01",
+      "category": "transport",
+      "description": "Parking and tolls",
+      "direction": "debit",
+      "amount": "323.58",
+      "currency": "ZAR",
+      "event_date": "2023-12-02",
+      "settlement": "2023-12-02",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_71"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_72",
+      "user": "user_01",
+      "category": "transport",
+      "description": "Vehicle charging",
+      "direction": "debit",
+      "amount": "478.16",
+      "currency": "ZAR",
+      "event_date": "2023-12-09",
+      "settlement": "2023-12-09",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_72"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_73",
+      "user": "user_01",
+      "category": "transport",
+      "description": "Vehicle charging",
+      "direction": "debit",
+      "amount": "534.56",
+      "currency": "ZAR",
+      "event_date": "2023-12-16",
+      "settlement": "2023-12-16",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_73"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_74",
+      "user": "user_01",
+      "category": "transport",
+      "description": "Local taxi",
+      "direction": "debit",
+      "amount": "411.07",
+      "currency": "ZAR",
+      "event_date": "2023-12-23",
+      "settlement": "2023-12-23",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_74"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_75",
+      "user": "user_01",
+      "category": "transport",
+      "description": "Commuter pass",
+      "direction": "debit",
+      "amount": "374.6",
+      "currency": "ZAR",
+      "event_date": "2023-12-30",
+      "settlement": "2023-12-30",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_75"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_76",
+      "user": "user_01",
+      "category": "transport",
+      "description": "Ride-hailing trip",
+      "direction": "debit",
+      "amount": "358.85",
+      "currency": "ZAR",
+      "event_date": "2024-01-06",
+      "settlement": "2024-01-06",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_76"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_77",
+      "user": "user_01",
+      "category": "transport",
+      "description": "Fuel refill",
+      "direction": "debit",
+      "amount": "434.69",
+      "currency": "ZAR",
+      "event_date": "2024-01-13",
+      "settlement": "2024-01-13",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_77"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_78",
+      "user": "user_01",
+      "category": "transport",
+      "description": "Rail pass",
+      "direction": "debit",
+      "amount": "375.73",
+      "currency": "ZAR",
+      "event_date": "2024-01-20",
+      "settlement": "2024-01-20",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_78"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_79",
+      "user": "user_01",
+      "category": "transport",
+      "description": "Commuter pass",
+      "direction": "debit",
+      "amount": "560.21",
+      "currency": "ZAR",
+      "event_date": "2024-01-27",
+      "settlement": "2024-01-27",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_79"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_80",
+      "user": "user_01",
+      "category": "transport",
+      "description": "Metro and bus fares",
+      "direction": "debit",
+      "amount": "406.54",
+      "currency": "ZAR",
+      "event_date": "2024-02-03",
+      "settlement": "2024-02-03",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_80"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_81",
+      "user": "user_01",
+      "category": "transport",
+      "description": "Parking and tolls",
+      "direction": "debit",
+      "amount": "488.36",
+      "currency": "ZAR",
+      "event_date": "2024-02-10",
+      "settlement": "2024-02-10",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_81"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_82",
+      "user": "user_01",
+      "category": "transport",
+      "description": "Ride-hailing trip",
+      "direction": "debit",
+      "amount": "424.56",
+      "currency": "ZAR",
+      "event_date": "2024-02-17",
+      "settlement": "2024-02-17",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_82"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_83",
+      "user": "user_01",
+      "category": "transport",
+      "description": "Commuter pass",
+      "direction": "debit",
+      "amount": "549.05",
+      "currency": "ZAR",
+      "event_date": "2024-02-24",
+      "settlement": "2024-02-24",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_83"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_84",
+      "user": "user_01",
+      "category": "transport",
+      "description": "Local taxi",
+      "direction": "debit",
+      "amount": "339.29",
+      "currency": "ZAR",
+      "event_date": "2024-03-02",
+      "settlement": "2024-03-02",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_84"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_85",
+      "user": "user_01",
+      "category": "dining",
+      "description": "Bakery and snacks",
+      "direction": "debit",
+      "amount": "1213.78",
+      "currency": "ZAR",
+      "event_date": "2023-09-10",
+      "settlement": "2023-09-10",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "reducible",
+      "minimum": "489.5",
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_85"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_86",
+      "user": "user_01",
+      "category": "dining",
+      "description": "Bakery and snacks",
+      "direction": "debit",
+      "amount": "1243.56",
+      "currency": "ZAR",
+      "event_date": "2023-09-24",
+      "settlement": "2023-09-24",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "reducible",
+      "minimum": "489.5",
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_86"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_87",
+      "user": "user_01",
+      "category": "dining",
+      "description": "Lunch with colleagues",
+      "direction": "debit",
+      "amount": "1128.35",
+      "currency": "ZAR",
+      "event_date": "2023-10-08",
+      "settlement": "2023-10-08",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "reducible",
+      "minimum": "489.5",
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_87"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_88",
+      "user": "user_01",
+      "category": "dining",
+      "description": "Takeaway order",
+      "direction": "debit",
+      "amount": "1027.06",
+      "currency": "ZAR",
+      "event_date": "2023-10-22",
+      "settlement": "2023-10-22",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "reducible",
+      "minimum": "489.5",
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_88"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_89",
+      "user": "user_01",
+      "category": "dining",
+      "description": "Quick-service meal",
+      "direction": "debit",
+      "amount": "1070.17",
+      "currency": "ZAR",
+      "event_date": "2023-11-05",
+      "settlement": "2023-11-05",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "reducible",
+      "minimum": "489.5",
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_89"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_90",
+      "user": "user_01",
+      "category": "dining",
+      "description": "Weekend food delivery",
+      "direction": "debit",
+      "amount": "956.7",
+      "currency": "ZAR",
+      "event_date": "2023-11-19",
+      "settlement": "2023-11-19",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "reducible",
+      "minimum": "489.5",
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_90"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_91",
+      "user": "user_01",
+      "category": "dining",
+      "description": "Quick-service meal",
+      "direction": "debit",
+      "amount": "1160.42",
+      "currency": "ZAR",
+      "event_date": "2023-12-03",
+      "settlement": "2023-12-03",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "reducible",
+      "minimum": "489.5",
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_91"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_92",
+      "user": "user_01",
+      "category": "dining",
+      "description": "Coffee shop",
+      "direction": "debit",
+      "amount": "972.88",
+      "currency": "ZAR",
+      "event_date": "2023-12-17",
+      "settlement": "2023-12-17",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "reducible",
+      "minimum": "489.5",
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_92"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_93",
+      "user": "user_01",
+      "category": "dining",
+      "description": "Neighbourhood restaurant",
+      "direction": "debit",
+      "amount": "914.64",
+      "currency": "ZAR",
+      "event_date": "2023-12-31",
+      "settlement": "2023-12-31",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "reducible",
+      "minimum": "489.5",
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_93"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_94",
+      "user": "user_01",
+      "category": "dining",
+      "description": "Coffee shop",
+      "direction": "debit",
+      "amount": "1017.11",
+      "currency": "ZAR",
+      "event_date": "2024-01-14",
+      "settlement": "2024-01-14",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "reducible",
+      "minimum": "489.5",
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_94"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_95",
+      "user": "user_01",
+      "category": "dining",
+      "description": "Bakery and snacks",
+      "direction": "debit",
+      "amount": "1222.49",
+      "currency": "ZAR",
+      "event_date": "2024-01-28",
+      "settlement": "2024-01-28",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "reducible",
+      "minimum": "489.5",
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_95"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_96",
+      "user": "user_01",
+      "category": "dining",
+      "description": "Bakery and snacks",
+      "direction": "debit",
+      "amount": "1016.12",
+      "currency": "ZAR",
+      "event_date": "2024-02-11",
+      "settlement": "2024-02-11",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "reducible",
+      "minimum": "489.5",
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_96"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_97",
+      "user": "user_01",
+      "category": "dining",
+      "description": "Family dinner",
+      "direction": "debit",
+      "amount": "1216.17",
+      "currency": "ZAR",
+      "event_date": "2024-02-25",
+      "settlement": "2024-02-25",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "reducible",
+      "minimum": "489.5",
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_97"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_98",
+      "user": "user_01",
+      "category": "shopping",
+      "description": "Card charge later reversed",
+      "direction": "debit",
+      "amount": "583",
+      "currency": "ZAR",
+      "event_date": "2024-01-25",
+      "settlement": "2024-01-26",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": true,
+      "evidence": [
+        "event_98"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_99",
+      "user": "user_01",
+      "category": "shopping",
+      "description": "Settled card charge reversal",
+      "direction": "credit",
+      "amount": "583",
+      "currency": "ZAR",
+      "event_date": "2024-01-28",
+      "settlement": "2024-01-29",
+      "status": "settled",
+      "event_type": "refund",
+      "linked": "event_98",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": true,
+      "evidence": [
+        "event_99"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_100",
+      "user": "user_01",
+      "category": "shopping",
+      "description": "Card authorization",
+      "direction": "debit",
+      "amount": "816.2",
+      "currency": "ZAR",
+      "event_date": "2024-02-14",
+      "settlement": "2024-02-16",
+      "status": "cancelled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": "settlement_of:event_101",
+      "history_excluded": true,
+      "evidence": [
+        "event_100"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_101",
+      "user": "user_01",
+      "category": "shopping",
+      "description": "Settled card purchase",
+      "direction": "debit",
+      "amount": "816.2",
+      "currency": "ZAR",
+      "event_date": "2024-02-16",
+      "settlement": "2024-02-17",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "event_100",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": true,
+      "evidence": [
+        "event_101"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_102",
+      "user": "user_01",
+      "category": "transport",
+      "description": "Pending fuel authorization",
+      "direction": "debit",
+      "amount": "567.6",
+      "currency": "ZAR",
+      "event_date": "2024-03-02",
+      "settlement": "2024-03-05",
+      "status": "pending",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_102"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_103",
+      "user": "user_01",
+      "category": "salary",
+      "description": "Next confirmed salary",
+      "direction": "credit",
+      "amount": "23320",
+      "currency": "ZAR",
+      "event_date": "2024-03-15",
+      "settlement": "2024-03-15",
+      "status": "scheduled",
+      "event_type": "income",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_103"
+      ],
+      "facts": []
+    }
+  ],
+  "state_changes": [
+    "refund.event_99: lifecycle refund_of resolved by status",
+    "settlement.event_101: lifecycle settlement_of resolved by status",
+    "event_100: excluded (settlement_of:event_101)"
+  ],
+  "issues": [
+    "event_102/stream:event_84: overlap unestablished; both retained"
+  ],
+  "blockers": [],
+  "streams": [
+    {
+      "id": "stream:event_29",
+      "anchor": "event_29",
+      "amount": "3487",
+      "monthly": true,
+      "step": 31,
+      "dom": 11,
+      "eom": false
+    },
+    {
+      "id": "stream:event_31",
+      "anchor": "event_31",
+      "amount": "306.9",
+      "monthly": true,
+      "step": 31,
+      "dom": 13,
+      "eom": false
+    },
+    {
+      "id": "stream:event_97",
+      "anchor": "event_97",
+      "amount": "1089.188461538461538461538462",
+      "monthly": false,
+      "step": 14,
+      "dom": 10,
+      "eom": false
+    },
+    {
+      "id": "stream:event_28",
+      "anchor": "event_28",
+      "amount": "1821.6",
+      "monthly": true,
+      "step": 31,
+      "dom": 8,
+      "eom": false
+    },
+    {
+      "id": "stream:event_58",
+      "anchor": "event_58",
+      "amount": "785.1373076923076923076923077",
+      "monthly": false,
+      "step": 7,
+      "dom": 8,
+      "eom": false
+    },
+    {
+      "id": "stream:event_30",
+      "anchor": "event_30",
+      "amount": "235.4",
+      "monthly": true,
+      "step": 31,
+      "dom": 11,
+      "eom": false
+    },
+    {
+      "id": "stream:event_32",
+      "anchor": "event_32",
+      "amount": "5148",
+      "monthly": true,
+      "step": 31,
+      "dom": 2,
+      "eom": false
+    },
+    {
+      "id": "stream:event_84",
+      "anchor": "event_84",
+      "amount": "439.1965384615384615384615385",
+      "monthly": false,
+      "step": 7,
+      "dom": 9,
+      "eom": false
+    },
+    {
+      "id": "stream:event_27",
+      "anchor": "event_27",
+      "amount": "1507.80",
+      "monthly": true,
+      "step": 31,
+      "dom": 6,
+      "eom": false
+    }
+  ],
+  "ledger": [
+    {
+      "when": "2024-03-03",
+      "amount": "-567.6",
+      "source": "event_102",
+      "provenance": "STRUCTURED_EXPLICIT",
+      "evidence": [
+        "event_102"
+      ],
+      "policy": [
+        "reserve_pending_once"
+      ],
+      "stream_id": null,
+      "native_amount": "567.6",
+      "currency": "ZAR",
+      "fx_date": "2024-03-05"
+    },
+    {
+      "when": "2024-03-06",
+      "amount": "-1507.80",
+      "source": "stream:event_27",
+      "provenance": "INFERRED_RECURRENCE",
+      "evidence": [
+        "event_02",
+        "event_08",
+        "event_14",
+        "event_20",
+        "event_27"
+      ],
+      "policy": [
+        "observed_cadence",
+        "historical_mean"
+      ],
+      "stream_id": "stream:event_27",
+      "native_amount": "1507.80",
+      "currency": "ZAR",
+      "fx_date": "2024-03-06"
+    },
+    {
+      "when": "2024-03-08",
+      "amount": "-1821.6",
+      "source": "stream:event_28",
+      "provenance": "INFERRED_RECURRENCE",
+      "evidence": [
+        "event_03",
+        "event_09",
+        "event_15",
+        "event_21",
+        "event_28"
+      ],
+      "policy": [
+        "observed_cadence",
+        "historical_mean"
+      ],
+      "stream_id": "stream:event_28",
+      "native_amount": "1821.6",
+      "currency": "ZAR",
+      "fx_date": "2024-03-08"
+    },
+    {
+      "when": "2024-03-08",
+      "amount": "-785.1373076923076923076923077",
+      "source": "stream:event_58",
+      "provenance": "INFERRED_RECURRENCE",
+      "evidence": [
+        "event_33",
+        "event_34",
+        "event_35",
+        "event_36",
+        "event_37",
+        "event_38",
+        "event_39",
+        "event_40",
+        "event_41",
+        "event_42",
+        "event_43",
+        "event_44",
+        "event_45",
+        "event_46",
+        "event_47",
+        "event_48",
+        "event_49",
+        "event_50",
+        "event_51",
+        "event_52",
+        "event_53",
+        "event_54",
+        "event_55",
+        "event_56",
+        "event_57",
+        "event_58"
+      ],
+      "policy": [
+        "observed_cadence",
+        "historical_mean"
+      ],
+      "stream_id": "stream:event_58",
+      "native_amount": "785.1373076923076923076923077",
+      "currency": "ZAR",
+      "fx_date": "2024-03-08"
+    },
+    {
+      "when": "2024-03-09",
+      "amount": "-439.1965384615384615384615385",
+      "source": "stream:event_84",
+      "provenance": "INFERRED_RECURRENCE",
+      "evidence": [
+        "event_59",
+        "event_60",
+        "event_61",
+        "event_62",
+        "event_63",
+        "event_64",
+        "event_65",
+        "event_66",
+        "event_67",
+        "event_68",
+        "event_69",
+        "event_70",
+        "event_71",
+        "event_72",
+        "event_73",
+        "event_74",
+        "event_75",
+        "event_76",
+        "event_77",
+        "event_78",
+        "event_79",
+        "event_80",
+        "event_81",
+        "event_82",
+        "event_83",
+        "event_84"
+      ],
+      "policy": [
+        "observed_cadence",
+        "historical_mean"
+      ],
+      "stream_id": "stream:event_84",
+      "native_amount": "439.1965384615384615384615385",
+      "currency": "ZAR",
+      "fx_date": "2024-03-09"
+    },
+    {
+      "when": "2024-03-10",
+      "amount": "-1089.188461538461538461538462",
+      "source": "stream:event_97",
+      "provenance": "INFERRED_RECURRENCE",
+      "evidence": [
+        "event_85",
+        "event_86",
+        "event_87",
+        "event_88",
+        "event_89",
+        "event_90",
+        "event_91",
+        "event_92",
+        "event_93",
+        "event_94",
+        "event_95",
+        "event_96",
+        "event_97"
+      ],
+      "policy": [
+        "observed_cadence",
+        "historical_mean"
+      ],
+      "stream_id": "stream:event_97",
+      "native_amount": "1089.188461538461538461538462",
+      "currency": "ZAR",
+      "fx_date": "2024-03-10"
+    },
+    {
+      "when": "2024-03-11",
+      "amount": "-3487",
+      "source": "stream:event_29",
+      "provenance": "INFERRED_RECURRENCE",
+      "evidence": [
+        "event_04",
+        "event_10",
+        "event_16",
+        "event_22",
+        "event_29"
+      ],
+      "policy": [
+        "observed_cadence",
+        "historical_mean"
+      ],
+      "stream_id": "stream:event_29",
+      "native_amount": "3487",
+      "currency": "ZAR",
+      "fx_date": "2024-03-11"
+    },
+    {
+      "when": "2024-03-11",
+      "amount": "-235.4",
+      "source": "stream:event_30",
+      "provenance": "INFERRED_RECURRENCE",
+      "evidence": [
+        "event_05",
+        "event_11",
+        "event_17",
+        "event_23",
+        "event_30"
+      ],
+      "policy": [
+        "observed_cadence",
+        "historical_mean"
+      ],
+      "stream_id": "stream:event_30",
+      "native_amount": "235.4",
+      "currency": "ZAR",
+      "fx_date": "2024-03-11"
+    },
+    {
+      "when": "2024-03-13",
+      "amount": "-306.9",
+      "source": "stream:event_31",
+      "provenance": "INFERRED_RECURRENCE",
+      "evidence": [
+        "event_06",
+        "event_12",
+        "event_18",
+        "event_24",
+        "event_31"
+      ],
+      "policy": [
+        "observed_cadence",
+        "historical_mean"
+      ],
+      "stream_id": "stream:event_31",
+      "native_amount": "306.9",
+      "currency": "ZAR",
+      "fx_date": "2024-03-13"
+    },
+    {
+      "when": "2024-03-15",
+      "amount": "-785.1373076923076923076923077",
+      "source": "stream:event_58",
+      "provenance": "INFERRED_RECURRENCE",
+      "evidence": [
+        "event_33",
+        "event_34",
+        "event_35",
+        "event_36",
+        "event_37",
+        "event_38",
+        "event_39",
+        "event_40",
+        "event_41",
+        "event_42",
+        "event_43",
+        "event_44",
+        "event_45",
+        "event_46",
+        "event_47",
+        "event_48",
+        "event_49",
+        "event_50",
+        "event_51",
+        "event_52",
+        "event_53",
+        "event_54",
+        "event_55",
+        "event_56",
+        "event_57",
+        "event_58"
+      ],
+      "policy": [
+        "observed_cadence",
+        "historical_mean"
+      ],
+      "stream_id": "stream:event_58",
+      "native_amount": "785.1373076923076923076923077",
+      "currency": "ZAR",
+      "fx_date": "2024-03-15"
+    },
+    {
+      "when": "2024-03-15",
+      "amount": "23320",
+      "source": "event_103",
+      "provenance": "STRUCTURED_EXPLICIT",
+      "evidence": [
+        "event_103"
+      ],
+      "policy": [],
+      "stream_id": null,
+      "native_amount": "23320",
+      "currency": "ZAR",
+      "fx_date": "2024-03-15"
+    },
+    {
+      "when": "2024-03-16",
+      "amount": "-439.1965384615384615384615385",
+      "source": "stream:event_84",
+      "provenance": "INFERRED_RECURRENCE",
+      "evidence": [
+        "event_59",
+        "event_60",
+        "event_61",
+        "event_62",
+        "event_63",
+        "event_64",
+        "event_65",
+        "event_66",
+        "event_67",
+        "event_68",
+        "event_69",
+        "event_70",
+        "event_71",
+        "event_72",
+        "event_73",
+        "event_74",
+        "event_75",
+        "event_76",
+        "event_77",
+        "event_78",
+        "event_79",
+        "event_80",
+        "event_81",
+        "event_82",
+        "event_83",
+        "event_84"
+      ],
+      "policy": [
+        "observed_cadence",
+        "historical_mean"
+      ],
+      "stream_id": "stream:event_84",
+      "native_amount": "439.1965384615384615384615385",
+      "currency": "ZAR",
+      "fx_date": "2024-03-16"
+    },
+    {
+      "when": "2024-03-22",
+      "amount": "-785.1373076923076923076923077",
+      "source": "stream:event_58",
+      "provenance": "INFERRED_RECURRENCE",
+      "evidence": [
+        "event_33",
+        "event_34",
+        "event_35",
+        "event_36",
+        "event_37",
+        "event_38",
+        "event_39",
+        "event_40",
+        "event_41",
+        "event_42",
+        "event_43",
+        "event_44",
+        "event_45",
+        "event_46",
+        "event_47",
+        "event_48",
+        "event_49",
+        "event_50",
+        "event_51",
+        "event_52",
+        "event_53",
+        "event_54",
+        "event_55",
+        "event_56",
+        "event_57",
+        "event_58"
+      ],
+      "policy": [
+        "observed_cadence",
+        "historical_mean"
+      ],
+      "stream_id": "stream:event_58",
+      "native_amount": "785.1373076923076923076923077",
+      "currency": "ZAR",
+      "fx_date": "2024-03-22"
+    },
+    {
+      "when": "2024-03-23",
+      "amount": "-439.1965384615384615384615385",
+      "source": "stream:event_84",
+      "provenance": "INFERRED_RECURRENCE",
+      "evidence": [
+        "event_59",
+        "event_60",
+        "event_61",
+        "event_62",
+        "event_63",
+        "event_64",
+        "event_65",
+        "event_66",
+        "event_67",
+        "event_68",
+        "event_69",
+        "event_70",
+        "event_71",
+        "event_72",
+        "event_73",
+        "event_74",
+        "event_75",
+        "event_76",
+        "event_77",
+        "event_78",
+        "event_79",
+        "event_80",
+        "event_81",
+        "event_82",
+        "event_83",
+        "event_84"
+      ],
+      "policy": [
+        "observed_cadence",
+        "historical_mean"
+      ],
+      "stream_id": "stream:event_84",
+      "native_amount": "439.1965384615384615384615385",
+      "currency": "ZAR",
+      "fx_date": "2024-03-23"
+    },
+    {
+      "when": "2024-03-24",
+      "amount": "-1089.188461538461538461538462",
+      "source": "stream:event_97",
+      "provenance": "INFERRED_RECURRENCE",
+      "evidence": [
+        "event_85",
+        "event_86",
+        "event_87",
+        "event_88",
+        "event_89",
+        "event_90",
+        "event_91",
+        "event_92",
+        "event_93",
+        "event_94",
+        "event_95",
+        "event_96",
+        "event_97"
+      ],
+      "policy": [
+        "observed_cadence",
+        "historical_mean"
+      ],
+      "stream_id": "stream:event_97",
+      "native_amount": "1089.188461538461538461538462",
+      "currency": "ZAR",
+      "fx_date": "2024-03-24"
+    },
+    {
+      "when": "2024-03-29",
+      "amount": "-785.1373076923076923076923077",
+      "source": "stream:event_58",
+      "provenance": "INFERRED_RECURRENCE",
+      "evidence": [
+        "event_33",
+        "event_34",
+        "event_35",
+        "event_36",
+        "event_37",
+        "event_38",
+        "event_39",
+        "event_40",
+        "event_41",
+        "event_42",
+        "event_43",
+        "event_44",
+        "event_45",
+        "event_46",
+        "event_47",
+        "event_48",
+        "event_49",
+        "event_50",
+        "event_51",
+        "event_52",
+        "event_53",
+        "event_54",
+        "event_55",
+        "event_56",
+        "event_57",
+        "event_58"
+      ],
+      "policy": [
+        "observed_cadence",
+        "historical_mean"
+      ],
+      "stream_id": "stream:event_58",
+      "native_amount": "785.1373076923076923076923077",
+      "currency": "ZAR",
+      "fx_date": "2024-03-29"
+    },
+    {
+      "when": "2024-03-30",
+      "amount": "-439.1965384615384615384615385",
+      "source": "stream:event_84",
+      "provenance": "INFERRED_RECURRENCE",
+      "evidence": [
+        "event_59",
+        "event_60",
+        "event_61",
+        "event_62",
+        "event_63",
+        "event_64",
+        "event_65",
+        "event_66",
+        "event_67",
+        "event_68",
+        "event_69",
+        "event_70",
+        "event_71",
+        "event_72",
+        "event_73",
+        "event_74",
+        "event_75",
+        "event_76",
+        "event_77",
+        "event_78",
+        "event_79",
+        "event_80",
+        "event_81",
+        "event_82",
+        "event_83",
+        "event_84"
+      ],
+      "policy": [
+        "observed_cadence",
+        "historical_mean"
+      ],
+      "stream_id": "stream:event_84",
+      "native_amount": "439.1965384615384615384615385",
+      "currency": "ZAR",
+      "fx_date": "2024-03-30"
+    },
+    {
+      "when": "2024-04-02",
+      "amount": "-5148",
+      "source": "stream:event_32",
+      "provenance": "INFERRED_RECURRENCE",
+      "evidence": [
+        "event_01",
+        "event_07",
+        "event_13",
+        "event_19",
+        "event_26",
+        "event_32"
+      ],
+      "policy": [
+        "observed_cadence",
+        "historical_mean"
+      ],
+      "stream_id": "stream:event_32",
+      "native_amount": "5148",
+      "currency": "ZAR",
+      "fx_date": "2024-04-02"
+    },
+    {
+      "when": "2024-04-05",
+      "amount": "-785.1373076923076923076923077",
+      "source": "stream:event_58",
+      "provenance": "INFERRED_RECURRENCE",
+      "evidence": [
+        "event_33",
+        "event_34",
+        "event_35",
+        "event_36",
+        "event_37",
+        "event_38",
+        "event_39",
+        "event_40",
+        "event_41",
+        "event_42",
+        "event_43",
+        "event_44",
+        "event_45",
+        "event_46",
+        "event_47",
+        "event_48",
+        "event_49",
+        "event_50",
+        "event_51",
+        "event_52",
+        "event_53",
+        "event_54",
+        "event_55",
+        "event_56",
+        "event_57",
+        "event_58"
+      ],
+      "policy": [
+        "observed_cadence",
+        "historical_mean"
+      ],
+      "stream_id": "stream:event_58",
+      "native_amount": "785.1373076923076923076923077",
+      "currency": "ZAR",
+      "fx_date": "2024-04-05"
+    },
+    {
+      "when": "2024-04-06",
+      "amount": "-1507.80",
+      "source": "stream:event_27",
+      "provenance": "INFERRED_RECURRENCE",
+      "evidence": [
+        "event_02",
+        "event_08",
+        "event_14",
+        "event_20",
+        "event_27"
+      ],
+      "policy": [
+        "observed_cadence",
+        "historical_mean"
+      ],
+      "stream_id": "stream:event_27",
+      "native_amount": "1507.80",
+      "currency": "ZAR",
+      "fx_date": "2024-04-06"
+    },
+    {
+      "when": "2024-04-06",
+      "amount": "-439.1965384615384615384615385",
+      "source": "stream:event_84",
+      "provenance": "INFERRED_RECURRENCE",
+      "evidence": [
+        "event_59",
+        "event_60",
+        "event_61",
+        "event_62",
+        "event_63",
+        "event_64",
+        "event_65",
+        "event_66",
+        "event_67",
+        "event_68",
+        "event_69",
+        "event_70",
+        "event_71",
+        "event_72",
+        "event_73",
+        "event_74",
+        "event_75",
+        "event_76",
+        "event_77",
+        "event_78",
+        "event_79",
+        "event_80",
+        "event_81",
+        "event_82",
+        "event_83",
+        "event_84"
+      ],
+      "policy": [
+        "observed_cadence",
+        "historical_mean"
+      ],
+      "stream_id": "stream:event_84",
+      "native_amount": "439.1965384615384615384615385",
+      "currency": "ZAR",
+      "fx_date": "2024-04-06"
+    },
+    {
+      "when": "2024-04-07",
+      "amount": "-1089.188461538461538461538462",
+      "source": "stream:event_97",
+      "provenance": "INFERRED_RECURRENCE",
+      "evidence": [
+        "event_85",
+        "event_86",
+        "event_87",
+        "event_88",
+        "event_89",
+        "event_90",
+        "event_91",
+        "event_92",
+        "event_93",
+        "event_94",
+        "event_95",
+        "event_96",
+        "event_97"
+      ],
+      "policy": [
+        "observed_cadence",
+        "historical_mean"
+      ],
+      "stream_id": "stream:event_97",
+      "native_amount": "1089.188461538461538461538462",
+      "currency": "ZAR",
+      "fx_date": "2024-04-07"
+    },
+    {
+      "when": "2024-04-08",
+      "amount": "-1821.6",
+      "source": "stream:event_28",
+      "provenance": "INFERRED_RECURRENCE",
+      "evidence": [
+        "event_03",
+        "event_09",
+        "event_15",
+        "event_21",
+        "event_28"
+      ],
+      "policy": [
+        "observed_cadence",
+        "historical_mean"
+      ],
+      "stream_id": "stream:event_28",
+      "native_amount": "1821.6",
+      "currency": "ZAR",
+      "fx_date": "2024-04-08"
+    },
+    {
+      "when": "2024-04-11",
+      "amount": "-3487",
+      "source": "stream:event_29",
+      "provenance": "INFERRED_RECURRENCE",
+      "evidence": [
+        "event_04",
+        "event_10",
+        "event_16",
+        "event_22",
+        "event_29"
+      ],
+      "policy": [
+        "observed_cadence",
+        "historical_mean"
+      ],
+      "stream_id": "stream:event_29",
+      "native_amount": "3487",
+      "currency": "ZAR",
+      "fx_date": "2024-04-11"
+    },
+    {
+      "when": "2024-04-11",
+      "amount": "-235.4",
+      "source": "stream:event_30",
+      "provenance": "INFERRED_RECURRENCE",
+      "evidence": [
+        "event_05",
+        "event_11",
+        "event_17",
+        "event_23",
+        "event_30"
+      ],
+      "policy": [
+        "observed_cadence",
+        "historical_mean"
+      ],
+      "stream_id": "stream:event_30",
+      "native_amount": "235.4",
+      "currency": "ZAR",
+      "fx_date": "2024-04-11"
+    },
+    {
+      "when": "2024-04-12",
+      "amount": "-785.1373076923076923076923077",
+      "source": "stream:event_58",
+      "provenance": "INFERRED_RECURRENCE",
+      "evidence": [
+        "event_33",
+        "event_34",
+        "event_35",
+        "event_36",
+        "event_37",
+        "event_38",
+        "event_39",
+        "event_40",
+        "event_41",
+        "event_42",
+        "event_43",
+        "event_44",
+        "event_45",
+        "event_46",
+        "event_47",
+        "event_48",
+        "event_49",
+        "event_50",
+        "event_51",
+        "event_52",
+        "event_53",
+        "event_54",
+        "event_55",
+        "event_56",
+        "event_57",
+        "event_58"
+      ],
+      "policy": [
+        "observed_cadence",
+        "historical_mean"
+      ],
+      "stream_id": "stream:event_58",
+      "native_amount": "785.1373076923076923076923077",
+      "currency": "ZAR",
+      "fx_date": "2024-04-12"
+    },
+    {
+      "when": "2024-04-13",
+      "amount": "-306.9",
+      "source": "stream:event_31",
+      "provenance": "INFERRED_RECURRENCE",
+      "evidence": [
+        "event_06",
+        "event_12",
+        "event_18",
+        "event_24",
+        "event_31"
+      ],
+      "policy": [
+        "observed_cadence",
+        "historical_mean"
+      ],
+      "stream_id": "stream:event_31",
+      "native_amount": "306.9",
+      "currency": "ZAR",
+      "fx_date": "2024-04-13"
+    },
+    {
+      "when": "2024-04-13",
+      "amount": "-439.1965384615384615384615385",
+      "source": "stream:event_84",
+      "provenance": "INFERRED_RECURRENCE",
+      "evidence": [
+        "event_59",
+        "event_60",
+        "event_61",
+        "event_62",
+        "event_63",
+        "event_64",
+        "event_65",
+        "event_66",
+        "event_67",
+        "event_68",
+        "event_69",
+        "event_70",
+        "event_71",
+        "event_72",
+        "event_73",
+        "event_74",
+        "event_75",
+        "event_76",
+        "event_77",
+        "event_78",
+        "event_79",
+        "event_80",
+        "event_81",
+        "event_82",
+        "event_83",
+        "event_84"
+      ],
+      "policy": [
+        "observed_cadence",
+        "historical_mean"
+      ],
+      "stream_id": "stream:event_84",
+      "native_amount": "439.1965384615384615384615385",
+      "currency": "ZAR",
+      "fx_date": "2024-04-13"
+    },
+    {
+      "when": "2024-04-19",
+      "amount": "-785.1373076923076923076923077",
+      "source": "stream:event_58",
+      "provenance": "INFERRED_RECURRENCE",
+      "evidence": [
+        "event_33",
+        "event_34",
+        "event_35",
+        "event_36",
+        "event_37",
+        "event_38",
+        "event_39",
+        "event_40",
+        "event_41",
+        "event_42",
+        "event_43",
+        "event_44",
+        "event_45",
+        "event_46",
+        "event_47",
+        "event_48",
+        "event_49",
+        "event_50",
+        "event_51",
+        "event_52",
+        "event_53",
+        "event_54",
+        "event_55",
+        "event_56",
+        "event_57",
+        "event_58"
+      ],
+      "policy": [
+        "observed_cadence",
+        "historical_mean"
+      ],
+      "stream_id": "stream:event_58",
+      "native_amount": "785.1373076923076923076923077",
+      "currency": "ZAR",
+      "fx_date": "2024-04-19"
+    },
+    {
+      "when": "2024-04-20",
+      "amount": "-439.1965384615384615384615385",
+      "source": "stream:event_84",
+      "provenance": "INFERRED_RECURRENCE",
+      "evidence": [
+        "event_59",
+        "event_60",
+        "event_61",
+        "event_62",
+        "event_63",
+        "event_64",
+        "event_65",
+        "event_66",
+        "event_67",
+        "event_68",
+        "event_69",
+        "event_70",
+        "event_71",
+        "event_72",
+        "event_73",
+        "event_74",
+        "event_75",
+        "event_76",
+        "event_77",
+        "event_78",
+        "event_79",
+        "event_80",
+        "event_81",
+        "event_82",
+        "event_83",
+        "event_84"
+      ],
+      "policy": [
+        "observed_cadence",
+        "historical_mean"
+      ],
+      "stream_id": "stream:event_84",
+      "native_amount": "439.1965384615384615384615385",
+      "currency": "ZAR",
+      "fx_date": "2024-04-20"
+    },
+    {
+      "when": "2024-04-21",
+      "amount": "-1089.188461538461538461538462",
+      "source": "stream:event_97",
+      "provenance": "INFERRED_RECURRENCE",
+      "evidence": [
+        "event_85",
+        "event_86",
+        "event_87",
+        "event_88",
+        "event_89",
+        "event_90",
+        "event_91",
+        "event_92",
+        "event_93",
+        "event_94",
+        "event_95",
+        "event_96",
+        "event_97"
+      ],
+      "policy": [
+        "observed_cadence",
+        "historical_mean"
+      ],
+      "stream_id": "stream:event_97",
+      "native_amount": "1089.188461538461538461538462",
+      "currency": "ZAR",
+      "fx_date": "2024-04-21"
+    },
+    {
+      "when": "2024-04-26",
+      "amount": "-785.1373076923076923076923077",
+      "source": "stream:event_58",
+      "provenance": "INFERRED_RECURRENCE",
+      "evidence": [
+        "event_33",
+        "event_34",
+        "event_35",
+        "event_36",
+        "event_37",
+        "event_38",
+        "event_39",
+        "event_40",
+        "event_41",
+        "event_42",
+        "event_43",
+        "event_44",
+        "event_45",
+        "event_46",
+        "event_47",
+        "event_48",
+        "event_49",
+        "event_50",
+        "event_51",
+        "event_52",
+        "event_53",
+        "event_54",
+        "event_55",
+        "event_56",
+        "event_57",
+        "event_58"
+      ],
+      "policy": [
+        "observed_cadence",
+        "historical_mean"
+      ],
+      "stream_id": "stream:event_58",
+      "native_amount": "785.1373076923076923076923077",
+      "currency": "ZAR",
+      "fx_date": "2024-04-26"
+    },
+    {
+      "when": "2024-04-27",
+      "amount": "-439.1965384615384615384615385",
+      "source": "stream:event_84",
+      "provenance": "INFERRED_RECURRENCE",
+      "evidence": [
+        "event_59",
+        "event_60",
+        "event_61",
+        "event_62",
+        "event_63",
+        "event_64",
+        "event_65",
+        "event_66",
+        "event_67",
+        "event_68",
+        "event_69",
+        "event_70",
+        "event_71",
+        "event_72",
+        "event_73",
+        "event_74",
+        "event_75",
+        "event_76",
+        "event_77",
+        "event_78",
+        "event_79",
+        "event_80",
+        "event_81",
+        "event_82",
+        "event_83",
+        "event_84"
+      ],
+      "policy": [
+        "observed_cadence",
+        "historical_mean"
+      ],
+      "stream_id": "stream:event_84",
+      "native_amount": "439.1965384615384615384615385",
+      "currency": "ZAR",
+      "fx_date": "2024-04-27"
+    },
+    {
+      "when": "2024-05-02",
+      "amount": "-5148",
+      "source": "stream:event_32",
+      "provenance": "INFERRED_RECURRENCE",
+      "evidence": [
+        "event_01",
+        "event_07",
+        "event_13",
+        "event_19",
+        "event_26",
+        "event_32"
+      ],
+      "policy": [
+        "observed_cadence",
+        "historical_mean"
+      ],
+      "stream_id": "stream:event_32",
+      "native_amount": "5148",
+      "currency": "ZAR",
+      "fx_date": "2024-05-02"
+    },
+    {
+      "when": "2024-05-03",
+      "amount": "-785.1373076923076923076923077",
+      "source": "stream:event_58",
+      "provenance": "INFERRED_RECURRENCE",
+      "evidence": [
+        "event_33",
+        "event_34",
+        "event_35",
+        "event_36",
+        "event_37",
+        "event_38",
+        "event_39",
+        "event_40",
+        "event_41",
+        "event_42",
+        "event_43",
+        "event_44",
+        "event_45",
+        "event_46",
+        "event_47",
+        "event_48",
+        "event_49",
+        "event_50",
+        "event_51",
+        "event_52",
+        "event_53",
+        "event_54",
+        "event_55",
+        "event_56",
+        "event_57",
+        "event_58"
+      ],
+      "policy": [
+        "observed_cadence",
+        "historical_mean"
+      ],
+      "stream_id": "stream:event_58",
+      "native_amount": "785.1373076923076923076923077",
+      "currency": "ZAR",
+      "fx_date": "2024-05-03"
+    },
+    {
+      "when": "2024-05-04",
+      "amount": "-439.1965384615384615384615385",
+      "source": "stream:event_84",
+      "provenance": "INFERRED_RECURRENCE",
+      "evidence": [
+        "event_59",
+        "event_60",
+        "event_61",
+        "event_62",
+        "event_63",
+        "event_64",
+        "event_65",
+        "event_66",
+        "event_67",
+        "event_68",
+        "event_69",
+        "event_70",
+        "event_71",
+        "event_72",
+        "event_73",
+        "event_74",
+        "event_75",
+        "event_76",
+        "event_77",
+        "event_78",
+        "event_79",
+        "event_80",
+        "event_81",
+        "event_82",
+        "event_83",
+        "event_84"
+      ],
+      "policy": [
+        "observed_cadence",
+        "historical_mean"
+      ],
+      "stream_id": "stream:event_84",
+      "native_amount": "439.1965384615384615384615385",
+      "currency": "ZAR",
+      "fx_date": "2024-05-04"
+    },
+    {
+      "when": "2024-05-05",
+      "amount": "-1089.188461538461538461538462",
+      "source": "stream:event_97",
+      "provenance": "INFERRED_RECURRENCE",
+      "evidence": [
+        "event_85",
+        "event_86",
+        "event_87",
+        "event_88",
+        "event_89",
+        "event_90",
+        "event_91",
+        "event_92",
+        "event_93",
+        "event_94",
+        "event_95",
+        "event_96",
+        "event_97"
+      ],
+      "policy": [
+        "observed_cadence",
+        "historical_mean"
+      ],
+      "stream_id": "stream:event_97",
+      "native_amount": "1089.188461538461538461538462",
+      "currency": "ZAR",
+      "fx_date": "2024-05-05"
+    },
+    {
+      "when": "2024-05-06",
+      "amount": "-1507.80",
+      "source": "stream:event_27",
+      "provenance": "INFERRED_RECURRENCE",
+      "evidence": [
+        "event_02",
+        "event_08",
+        "event_14",
+        "event_20",
+        "event_27"
+      ],
+      "policy": [
+        "observed_cadence",
+        "historical_mean"
+      ],
+      "stream_id": "stream:event_27",
+      "native_amount": "1507.80",
+      "currency": "ZAR",
+      "fx_date": "2024-05-06"
+    },
+    {
+      "when": "2024-05-08",
+      "amount": "-1821.6",
+      "source": "stream:event_28",
+      "provenance": "INFERRED_RECURRENCE",
+      "evidence": [
+        "event_03",
+        "event_09",
+        "event_15",
+        "event_21",
+        "event_28"
+      ],
+      "policy": [
+        "observed_cadence",
+        "historical_mean"
+      ],
+      "stream_id": "stream:event_28",
+      "native_amount": "1821.6",
+      "currency": "ZAR",
+      "fx_date": "2024-05-08"
+    },
+    {
+      "when": "2024-05-10",
+      "amount": "-785.1373076923076923076923077",
+      "source": "stream:event_58",
+      "provenance": "INFERRED_RECURRENCE",
+      "evidence": [
+        "event_33",
+        "event_34",
+        "event_35",
+        "event_36",
+        "event_37",
+        "event_38",
+        "event_39",
+        "event_40",
+        "event_41",
+        "event_42",
+        "event_43",
+        "event_44",
+        "event_45",
+        "event_46",
+        "event_47",
+        "event_48",
+        "event_49",
+        "event_50",
+        "event_51",
+        "event_52",
+        "event_53",
+        "event_54",
+        "event_55",
+        "event_56",
+        "event_57",
+        "event_58"
+      ],
+      "policy": [
+        "observed_cadence",
+        "historical_mean"
+      ],
+      "stream_id": "stream:event_58",
+      "native_amount": "785.1373076923076923076923077",
+      "currency": "ZAR",
+      "fx_date": "2024-05-10"
+    },
+    {
+      "when": "2024-05-11",
+      "amount": "-3487",
+      "source": "stream:event_29",
+      "provenance": "INFERRED_RECURRENCE",
+      "evidence": [
+        "event_04",
+        "event_10",
+        "event_16",
+        "event_22",
+        "event_29"
+      ],
+      "policy": [
+        "observed_cadence",
+        "historical_mean"
+      ],
+      "stream_id": "stream:event_29",
+      "native_amount": "3487",
+      "currency": "ZAR",
+      "fx_date": "2024-05-11"
+    },
+    {
+      "when": "2024-05-11",
+      "amount": "-235.4",
+      "source": "stream:event_30",
+      "provenance": "INFERRED_RECURRENCE",
+      "evidence": [
+        "event_05",
+        "event_11",
+        "event_17",
+        "event_23",
+        "event_30"
+      ],
+      "policy": [
+        "observed_cadence",
+        "historical_mean"
+      ],
+      "stream_id": "stream:event_30",
+      "native_amount": "235.4",
+      "currency": "ZAR",
+      "fx_date": "2024-05-11"
+    },
+    {
+      "when": "2024-05-11",
+      "amount": "-439.1965384615384615384615385",
+      "source": "stream:event_84",
+      "provenance": "INFERRED_RECURRENCE",
+      "evidence": [
+        "event_59",
+        "event_60",
+        "event_61",
+        "event_62",
+        "event_63",
+        "event_64",
+        "event_65",
+        "event_66",
+        "event_67",
+        "event_68",
+        "event_69",
+        "event_70",
+        "event_71",
+        "event_72",
+        "event_73",
+        "event_74",
+        "event_75",
+        "event_76",
+        "event_77",
+        "event_78",
+        "event_79",
+        "event_80",
+        "event_81",
+        "event_82",
+        "event_83",
+        "event_84"
+      ],
+      "policy": [
+        "observed_cadence",
+        "historical_mean"
+      ],
+      "stream_id": "stream:event_84",
+      "native_amount": "439.1965384615384615384615385",
+      "currency": "ZAR",
+      "fx_date": "2024-05-11"
+    },
+    {
+      "when": "2024-05-13",
+      "amount": "-306.9",
+      "source": "stream:event_31",
+      "provenance": "INFERRED_RECURRENCE",
+      "evidence": [
+        "event_06",
+        "event_12",
+        "event_18",
+        "event_24",
+        "event_31"
+      ],
+      "policy": [
+        "observed_cadence",
+        "historical_mean"
+      ],
+      "stream_id": "stream:event_31",
+      "native_amount": "306.9",
+      "currency": "ZAR",
+      "fx_date": "2024-05-13"
+    },
+    {
+      "when": "2024-05-17",
+      "amount": "-785.1373076923076923076923077",
+      "source": "stream:event_58",
+      "provenance": "INFERRED_RECURRENCE",
+      "evidence": [
+        "event_33",
+        "event_34",
+        "event_35",
+        "event_36",
+        "event_37",
+        "event_38",
+        "event_39",
+        "event_40",
+        "event_41",
+        "event_42",
+        "event_43",
+        "event_44",
+        "event_45",
+        "event_46",
+        "event_47",
+        "event_48",
+        "event_49",
+        "event_50",
+        "event_51",
+        "event_52",
+        "event_53",
+        "event_54",
+        "event_55",
+        "event_56",
+        "event_57",
+        "event_58"
+      ],
+      "policy": [
+        "observed_cadence",
+        "historical_mean"
+      ],
+      "stream_id": "stream:event_58",
+      "native_amount": "785.1373076923076923076923077",
+      "currency": "ZAR",
+      "fx_date": "2024-05-17"
+    },
+    {
+      "when": "2024-05-18",
+      "amount": "-439.1965384615384615384615385",
+      "source": "stream:event_84",
+      "provenance": "INFERRED_RECURRENCE",
+      "evidence": [
+        "event_59",
+        "event_60",
+        "event_61",
+        "event_62",
+        "event_63",
+        "event_64",
+        "event_65",
+        "event_66",
+        "event_67",
+        "event_68",
+        "event_69",
+        "event_70",
+        "event_71",
+        "event_72",
+        "event_73",
+        "event_74",
+        "event_75",
+        "event_76",
+        "event_77",
+        "event_78",
+        "event_79",
+        "event_80",
+        "event_81",
+        "event_82",
+        "event_83",
+        "event_84"
+      ],
+      "policy": [
+        "observed_cadence",
+        "historical_mean"
+      ],
+      "stream_id": "stream:event_84",
+      "native_amount": "439.1965384615384615384615385",
+      "currency": "ZAR",
+      "fx_date": "2024-05-18"
+    },
+    {
+      "when": "2024-05-19",
+      "amount": "-1089.188461538461538461538462",
+      "source": "stream:event_97",
+      "provenance": "INFERRED_RECURRENCE",
+      "evidence": [
+        "event_85",
+        "event_86",
+        "event_87",
+        "event_88",
+        "event_89",
+        "event_90",
+        "event_91",
+        "event_92",
+        "event_93",
+        "event_94",
+        "event_95",
+        "event_96",
+        "event_97"
+      ],
+      "policy": [
+        "observed_cadence",
+        "historical_mean"
+      ],
+      "stream_id": "stream:event_97",
+      "native_amount": "1089.188461538461538461538462",
+      "currency": "ZAR",
+      "fx_date": "2024-05-19"
+    },
+    {
+      "when": "2024-05-24",
+      "amount": "-785.1373076923076923076923077",
+      "source": "stream:event_58",
+      "provenance": "INFERRED_RECURRENCE",
+      "evidence": [
+        "event_33",
+        "event_34",
+        "event_35",
+        "event_36",
+        "event_37",
+        "event_38",
+        "event_39",
+        "event_40",
+        "event_41",
+        "event_42",
+        "event_43",
+        "event_44",
+        "event_45",
+        "event_46",
+        "event_47",
+        "event_48",
+        "event_49",
+        "event_50",
+        "event_51",
+        "event_52",
+        "event_53",
+        "event_54",
+        "event_55",
+        "event_56",
+        "event_57",
+        "event_58"
+      ],
+      "policy": [
+        "observed_cadence",
+        "historical_mean"
+      ],
+      "stream_id": "stream:event_58",
+      "native_amount": "785.1373076923076923076923077",
+      "currency": "ZAR",
+      "fx_date": "2024-05-24"
+    },
+    {
+      "when": "2024-05-25",
+      "amount": "-439.1965384615384615384615385",
+      "source": "stream:event_84",
+      "provenance": "INFERRED_RECURRENCE",
+      "evidence": [
+        "event_59",
+        "event_60",
+        "event_61",
+        "event_62",
+        "event_63",
+        "event_64",
+        "event_65",
+        "event_66",
+        "event_67",
+        "event_68",
+        "event_69",
+        "event_70",
+        "event_71",
+        "event_72",
+        "event_73",
+        "event_74",
+        "event_75",
+        "event_76",
+        "event_77",
+        "event_78",
+        "event_79",
+        "event_80",
+        "event_81",
+        "event_82",
+        "event_83",
+        "event_84"
+      ],
+      "policy": [
+        "observed_cadence",
+        "historical_mean"
+      ],
+      "stream_id": "stream:event_84",
+      "native_amount": "439.1965384615384615384615385",
+      "currency": "ZAR",
+      "fx_date": "2024-05-25"
+    },
+    {
+      "when": "2024-05-31",
+      "amount": "-785.1373076923076923076923077",
+      "source": "stream:event_58",
+      "provenance": "INFERRED_RECURRENCE",
+      "evidence": [
+        "event_33",
+        "event_34",
+        "event_35",
+        "event_36",
+        "event_37",
+        "event_38",
+        "event_39",
+        "event_40",
+        "event_41",
+        "event_42",
+        "event_43",
+        "event_44",
+        "event_45",
+        "event_46",
+        "event_47",
+        "event_48",
+        "event_49",
+        "event_50",
+        "event_51",
+        "event_52",
+        "event_53",
+        "event_54",
+        "event_55",
+        "event_56",
+        "event_57",
+        "event_58"
+      ],
+      "policy": [
+        "observed_cadence",
+        "historical_mean"
+      ],
+      "stream_id": "stream:event_58",
+      "native_amount": "785.1373076923076923076923077",
+      "currency": "ZAR",
+      "fx_date": "2024-05-31"
+    }
+  ],
+  "daily": [
+    {
+      "date": "2024-03-03",
+      "balance": "57913.5",
+      "minimum": "57913.5"
+    },
+    {
+      "date": "2024-03-04",
+      "balance": "57913.5",
+      "minimum": "57913.5"
+    },
+    {
+      "date": "2024-03-05",
+      "balance": "57913.5",
+      "minimum": "57913.5"
+    },
+    {
+      "date": "2024-03-06",
+      "balance": "56405.70",
+      "minimum": "56405.70"
+    },
+    {
+      "date": "2024-03-07",
+      "balance": "56405.70",
+      "minimum": "56405.70"
+    },
+    {
+      "date": "2024-03-08",
+      "balance": "53798.96269230769230769230769",
+      "minimum": "53798.96269230769230769230769"
+    },
+    {
+      "date": "2024-03-09",
+      "balance": "53359.76615384615384615384615",
+      "minimum": "53359.76615384615384615384615"
+    },
+    {
+      "date": "2024-03-10",
+      "balance": "52270.57769230769230769230769",
+      "minimum": "52270.57769230769230769230769"
+    },
+    {
+      "date": "2024-03-11",
+      "balance": "48548.17769230769230769230769",
+      "minimum": "48548.17769230769230769230769"
+    },
+    {
+      "date": "2024-03-12",
+      "balance": "48548.17769230769230769230769",
+      "minimum": "48548.17769230769230769230769"
+    },
+    {
+      "date": "2024-03-13",
+      "balance": "48241.27769230769230769230769",
+      "minimum": "48241.27769230769230769230769"
+    },
+    {
+      "date": "2024-03-14",
+      "balance": "48241.27769230769230769230769",
+      "minimum": "48241.27769230769230769230769"
+    },
+    {
+      "date": "2024-03-15",
+      "balance": "70776.14038461538461538461538",
+      "minimum": "47456.14038461538461538461538"
+    },
+    {
+      "date": "2024-03-16",
+      "balance": "70336.94384615384615384615384",
+      "minimum": "70336.94384615384615384615384"
+    },
+    {
+      "date": "2024-03-17",
+      "balance": "70336.94384615384615384615384",
+      "minimum": "70336.94384615384615384615384"
+    },
+    {
+      "date": "2024-03-18",
+      "balance": "70336.94384615384615384615384",
+      "minimum": "70336.94384615384615384615384"
+    },
+    {
+      "date": "2024-03-19",
+      "balance": "70336.94384615384615384615384",
+      "minimum": "70336.94384615384615384615384"
+    },
+    {
+      "date": "2024-03-20",
+      "balance": "70336.94384615384615384615384",
+      "minimum": "70336.94384615384615384615384"
+    },
+    {
+      "date": "2024-03-21",
+      "balance": "70336.94384615384615384615384",
+      "minimum": "70336.94384615384615384615384"
+    },
+    {
+      "date": "2024-03-22",
+      "balance": "69551.80653846153846153846153",
+      "minimum": "69551.80653846153846153846153"
+    },
+    {
+      "date": "2024-03-23",
+      "balance": "69112.60999999999999999999999",
+      "minimum": "69112.60999999999999999999999"
+    },
+    {
+      "date": "2024-03-24",
+      "balance": "68023.42153846153846153846153",
+      "minimum": "68023.42153846153846153846153"
+    },
+    {
+      "date": "2024-03-25",
+      "balance": "68023.42153846153846153846153",
+      "minimum": "68023.42153846153846153846153"
+    },
+    {
+      "date": "2024-03-26",
+      "balance": "68023.42153846153846153846153",
+      "minimum": "68023.42153846153846153846153"
+    },
+    {
+      "date": "2024-03-27",
+      "balance": "68023.42153846153846153846153",
+      "minimum": "68023.42153846153846153846153"
+    },
+    {
+      "date": "2024-03-28",
+      "balance": "68023.42153846153846153846153",
+      "minimum": "68023.42153846153846153846153"
+    },
+    {
+      "date": "2024-03-29",
+      "balance": "67238.28423076923076923076922",
+      "minimum": "67238.28423076923076923076922"
+    },
+    {
+      "date": "2024-03-30",
+      "balance": "66799.08769230769230769230768",
+      "minimum": "66799.08769230769230769230768"
+    },
+    {
+      "date": "2024-03-31",
+      "balance": "66799.08769230769230769230768",
+      "minimum": "66799.08769230769230769230768"
+    },
+    {
+      "date": "2024-04-01",
+      "balance": "66799.08769230769230769230768",
+      "minimum": "66799.08769230769230769230768"
+    },
+    {
+      "date": "2024-04-02",
+      "balance": "61651.08769230769230769230768",
+      "minimum": "61651.08769230769230769230768"
+    },
+    {
+      "date": "2024-04-03",
+      "balance": "61651.08769230769230769230768",
+      "minimum": "61651.08769230769230769230768"
+    },
+    {
+      "date": "2024-04-04",
+      "balance": "61651.08769230769230769230768",
+      "minimum": "61651.08769230769230769230768"
+    },
+    {
+      "date": "2024-04-05",
+      "balance": "60865.95038461538461538461537",
+      "minimum": "60865.95038461538461538461537"
+    },
+    {
+      "date": "2024-04-06",
+      "balance": "58918.95384615384615384615383",
+      "minimum": "58918.95384615384615384615383"
+    },
+    {
+      "date": "2024-04-07",
+      "balance": "57829.76538461538461538461537",
+      "minimum": "57829.76538461538461538461537"
+    },
+    {
+      "date": "2024-04-08",
+      "balance": "56008.16538461538461538461537",
+      "minimum": "56008.16538461538461538461537"
+    },
+    {
+      "date": "2024-04-09",
+      "balance": "56008.16538461538461538461537",
+      "minimum": "56008.16538461538461538461537"
+    },
+    {
+      "date": "2024-04-10",
+      "balance": "56008.16538461538461538461537",
+      "minimum": "56008.16538461538461538461537"
+    },
+    {
+      "date": "2024-04-11",
+      "balance": "52285.76538461538461538461537",
+      "minimum": "52285.76538461538461538461537"
+    },
+    {
+      "date": "2024-04-12",
+      "balance": "51500.62807692307692307692306",
+      "minimum": "51500.62807692307692307692306"
+    },
+    {
+      "date": "2024-04-13",
+      "balance": "50754.53153846153846153846152",
+      "minimum": "50754.53153846153846153846152"
+    },
+    {
+      "date": "2024-04-14",
+      "balance": "50754.53153846153846153846152",
+      "minimum": "50754.53153846153846153846152"
+    },
+    {
+      "date": "2024-04-15",
+      "balance": "50754.53153846153846153846152",
+      "minimum": "50754.53153846153846153846152"
+    },
+    {
+      "date": "2024-04-16",
+      "balance": "50754.53153846153846153846152",
+      "minimum": "50754.53153846153846153846152"
+    },
+    {
+      "date": "2024-04-17",
+      "balance": "50754.53153846153846153846152",
+      "minimum": "50754.53153846153846153846152"
+    },
+    {
+      "date": "2024-04-18",
+      "balance": "50754.53153846153846153846152",
+      "minimum": "50754.53153846153846153846152"
+    },
+    {
+      "date": "2024-04-19",
+      "balance": "49969.39423076923076923076921",
+      "minimum": "49969.39423076923076923076921"
+    },
+    {
+      "date": "2024-04-20",
+      "balance": "49530.19769230769230769230767",
+      "minimum": "49530.19769230769230769230767"
+    },
+    {
+      "date": "2024-04-21",
+      "balance": "48441.00923076923076923076921",
+      "minimum": "48441.00923076923076923076921"
+    },
+    {
+      "date": "2024-04-22",
+      "balance": "48441.00923076923076923076921",
+      "minimum": "48441.00923076923076923076921"
+    },
+    {
+      "date": "2024-04-23",
+      "balance": "48441.00923076923076923076921",
+      "minimum": "48441.00923076923076923076921"
+    },
+    {
+      "date": "2024-04-24",
+      "balance": "48441.00923076923076923076921",
+      "minimum": "48441.00923076923076923076921"
+    },
+    {
+      "date": "2024-04-25",
+      "balance": "48441.00923076923076923076921",
+      "minimum": "48441.00923076923076923076921"
+    },
+    {
+      "date": "2024-04-26",
+      "balance": "47655.87192307692307692307690",
+      "minimum": "47655.87192307692307692307690"
+    },
+    {
+      "date": "2024-04-27",
+      "balance": "47216.67538461538461538461536",
+      "minimum": "47216.67538461538461538461536"
+    },
+    {
+      "date": "2024-04-28",
+      "balance": "47216.67538461538461538461536",
+      "minimum": "47216.67538461538461538461536"
+    },
+    {
+      "date": "2024-04-29",
+      "balance": "47216.67538461538461538461536",
+      "minimum": "47216.67538461538461538461536"
+    },
+    {
+      "date": "2024-04-30",
+      "balance": "47216.67538461538461538461536",
+      "minimum": "47216.67538461538461538461536"
+    },
+    {
+      "date": "2024-05-01",
+      "balance": "47216.67538461538461538461536",
+      "minimum": "47216.67538461538461538461536"
+    },
+    {
+      "date": "2024-05-02",
+      "balance": "42068.67538461538461538461536",
+      "minimum": "42068.67538461538461538461536"
+    },
+    {
+      "date": "2024-05-03",
+      "balance": "41283.53807692307692307692305",
+      "minimum": "41283.53807692307692307692305"
+    },
+    {
+      "date": "2024-05-04",
+      "balance": "40844.34153846153846153846151",
+      "minimum": "40844.34153846153846153846151"
+    },
+    {
+      "date": "2024-05-05",
+      "balance": "39755.15307692307692307692305",
+      "minimum": "39755.15307692307692307692305"
+    },
+    {
+      "date": "2024-05-06",
+      "balance": "38247.35307692307692307692305",
+      "minimum": "38247.35307692307692307692305"
+    },
+    {
+      "date": "2024-05-07",
+      "balance": "38247.35307692307692307692305",
+      "minimum": "38247.35307692307692307692305"
+    },
+    {
+      "date": "2024-05-08",
+      "balance": "36425.75307692307692307692305",
+      "minimum": "36425.75307692307692307692305"
+    },
+    {
+      "date": "2024-05-09",
+      "balance": "36425.75307692307692307692305",
+      "minimum": "36425.75307692307692307692305"
+    },
+    {
+      "date": "2024-05-10",
+      "balance": "35640.61576923076923076923074",
+      "minimum": "35640.61576923076923076923074"
+    },
+    {
+      "date": "2024-05-11",
+      "balance": "31479.01923076923076923076920",
+      "minimum": "31479.01923076923076923076920"
+    },
+    {
+      "date": "2024-05-12",
+      "balance": "31479.01923076923076923076920",
+      "minimum": "31479.01923076923076923076920"
+    },
+    {
+      "date": "2024-05-13",
+      "balance": "31172.11923076923076923076920",
+      "minimum": "31172.11923076923076923076920"
+    },
+    {
+      "date": "2024-05-14",
+      "balance": "31172.11923076923076923076920",
+      "minimum": "31172.11923076923076923076920"
+    },
+    {
+      "date": "2024-05-15",
+      "balance": "31172.11923076923076923076920",
+      "minimum": "31172.11923076923076923076920"
+    },
+    {
+      "date": "2024-05-16",
+      "balance": "31172.11923076923076923076920",
+      "minimum": "31172.11923076923076923076920"
+    },
+    {
+      "date": "2024-05-17",
+      "balance": "30386.98192307692307692307689",
+      "minimum": "30386.98192307692307692307689"
+    },
+    {
+      "date": "2024-05-18",
+      "balance": "29947.78538461538461538461535",
+      "minimum": "29947.78538461538461538461535"
+    },
+    {
+      "date": "2024-05-19",
+      "balance": "28858.59692307692307692307689",
+      "minimum": "28858.59692307692307692307689"
+    },
+    {
+      "date": "2024-05-20",
+      "balance": "28858.59692307692307692307689",
+      "minimum": "28858.59692307692307692307689"
+    },
+    {
+      "date": "2024-05-21",
+      "balance": "28858.59692307692307692307689",
+      "minimum": "28858.59692307692307692307689"
+    },
+    {
+      "date": "2024-05-22",
+      "balance": "28858.59692307692307692307689",
+      "minimum": "28858.59692307692307692307689"
+    },
+    {
+      "date": "2024-05-23",
+      "balance": "28858.59692307692307692307689",
+      "minimum": "28858.59692307692307692307689"
+    },
+    {
+      "date": "2024-05-24",
+      "balance": "28073.45961538461538461538458",
+      "minimum": "28073.45961538461538461538458"
+    },
+    {
+      "date": "2024-05-25",
+      "balance": "27634.26307692307692307692304",
+      "minimum": "27634.26307692307692307692304"
+    },
+    {
+      "date": "2024-05-26",
+      "balance": "27634.26307692307692307692304",
+      "minimum": "27634.26307692307692307692304"
+    },
+    {
+      "date": "2024-05-27",
+      "balance": "27634.26307692307692307692304",
+      "minimum": "27634.26307692307692307692304"
+    },
+    {
+      "date": "2024-05-28",
+      "balance": "27634.26307692307692307692304",
+      "minimum": "27634.26307692307692307692304"
+    },
+    {
+      "date": "2024-05-29",
+      "balance": "27634.26307692307692307692304",
+      "minimum": "27634.26307692307692307692304"
+    },
+    {
+      "date": "2024-05-30",
+      "balance": "27634.26307692307692307692304",
+      "minimum": "27634.26307692307692307692304"
+    },
+    {
+      "date": "2024-05-31",
+      "balance": "26849.12576923076923076923073",
+      "minimum": "26849.12576923076923076923073"
+    }
+  ],
+  "minimum": "26849.12576923076923076923073",
+  "selected": null,
+  "verified_minimum": null,
+  "candidates": [
+    {
+      "candidate": {
+        "method": "installments",
+        "payments": [
+          [
+            "2024-03-06",
+            "1852.11"
+          ],
+          [
+            "2024-04-05",
+            "1852.11"
+          ],
+          [
+            "2024-05-05",
+            "1852.11"
+          ],
+          [
+            "2024-06-04",
+            "1852.11"
+          ],
+          [
+            "2024-07-04",
+            "1852.11"
+          ],
+          [
+            "2024-08-03",
+            "1852.11"
+          ],
+          [
+            "2024-09-02",
+            "1852.11"
+          ],
+          [
+            "2024-10-02",
+            "1852.11"
+          ],
+          [
+            "2024-11-01",
+            "1852.11"
+          ],
+          [
+            "2024-12-01",
+            "1852.11"
+          ],
+          [
+            "2024-12-31",
+            "1852.11"
+          ],
+          [
+            "2025-01-30",
+            "1852.11"
+          ],
+          [
+            "2025-03-01",
+            "1852.11"
+          ],
+          [
+            "2025-03-31",
+            "1852.11"
+          ],
+          [
+            "2025-04-30",
+            "1852.11"
+          ]
+        ],
+        "changes": [],
+        "option_id": "payment_option_02"
+      },
+      "valid": false,
+      "result": "Deadline/horizon violation"
+    },
+    {
+      "candidate": {
+        "method": "installments",
+        "payments": [
+          [
+            "2024-03-10",
+            "4546.08"
+          ],
+          [
+            "2024-04-10",
+            "4546.08"
+          ],
+          [
+            "2024-05-11",
+            "4546.08"
+          ],
+          [
+            "2024-06-11",
+            "4546.08"
+          ],
+          [
+            "2024-07-12",
+            "4546.08"
+          ],
+          [
+            "2024-08-12",
+            "4546.08"
+          ]
+        ],
+        "changes": [],
+        "option_id": "payment_option_03"
+      },
+      "valid": false,
+      "result": "Deadline/horizon violation"
+    },
+    {
+      "candidate": {
+        "method": "installments",
+        "payments": [
+          [
+            "2024-03-17",
+            "1283.85"
+          ],
+          [
+            "2024-04-14",
+            "1283.85"
+          ],
+          [
+            "2024-05-12",
+            "1283.85"
+          ],
+          [
+            "2024-06-09",
+            "1283.85"
+          ],
+          [
+            "2024-07-07",
+            "1283.85"
+          ],
+          [
+            "2024-08-04",
+            "1283.85"
+          ],
+          [
+            "2024-09-01",
+            "1283.85"
+          ],
+          [
+            "2024-09-29",
+            "1283.85"
+          ],
+          [
+            "2024-10-27",
+            "1283.85"
+          ],
+          [
+            "2024-11-24",
+            "1283.85"
+          ],
+          [
+            "2024-12-22",
+            "1283.85"
+          ],
+          [
+            "2025-01-19",
+            "1283.85"
+          ],
+          [
+            "2025-02-16",
+            "1283.85"
+          ],
+          [
+            "2025-03-16",
+            "1283.85"
+          ],
+          [
+            "2025-04-13",
+            "1283.85"
+          ],
+          [
+            "2025-05-11",
+            "1283.85"
+          ],
+          [
+            "2025-06-08",
+            "1283.85"
+          ],
+          [
+            "2025-07-06",
+            "1283.85"
+          ],
+          [
+            "2025-08-03",
+            "1283.85"
+          ],
+          [
+            "2025-08-31",
+            "1283.85"
+          ],
+          [
+            "2025-09-28",
+            "1283.85"
+          ],
+          [
+            "2025-10-26",
+            "1283.85"
+          ],
+          [
+            "2025-11-23",
+            "1283.85"
+          ],
+          [
+            "2025-12-21",
+            "1283.85"
+          ]
+        ],
+        "changes": [],
+        "option_id": "payment_option_04"
+      },
+      "valid": false,
+      "result": "Deadline/horizon violation"
+    },
+    {
+      "candidate": {
+        "method": "installments",
+        "payments": [
+          [
+            "2024-03-06",
+            "1852.11"
+          ],
+          [
+            "2024-04-05",
+            "1852.11"
+          ],
+          [
+            "2024-05-05",
+            "1852.11"
+          ],
+          [
+            "2024-06-04",
+            "1852.11"
+          ],
+          [
+            "2024-07-04",
+            "1852.11"
+          ],
+          [
+            "2024-08-03",
+            "1852.11"
+          ],
+          [
+            "2024-09-02",
+            "1852.11"
+          ],
+          [
+            "2024-10-02",
+            "1852.11"
+          ],
+          [
+            "2024-11-01",
+            "1852.11"
+          ],
+          [
+            "2024-12-01",
+            "1852.11"
+          ],
+          [
+            "2024-12-31",
+            "1852.11"
+          ],
+          [
+            "2025-01-30",
+            "1852.11"
+          ],
+          [
+            "2025-03-01",
+            "1852.11"
+          ],
+          [
+            "2025-03-31",
+            "1852.11"
+          ],
+          [
+            "2025-04-30",
+            "1852.11"
+          ]
+        ],
+        "changes": [
+          [
+            "event_31",
+            "stop",
+            "0"
+          ]
+        ],
+        "option_id": "payment_option_02"
+      },
+      "valid": false,
+      "result": "Deadline/horizon violation"
+    },
+    {
+      "candidate": {
+        "method": "installments",
+        "payments": [
+          [
+            "2024-03-10",
+            "4546.08"
+          ],
+          [
+            "2024-04-10",
+            "4546.08"
+          ],
+          [
+            "2024-05-11",
+            "4546.08"
+          ],
+          [
+            "2024-06-11",
+            "4546.08"
+          ],
+          [
+            "2024-07-12",
+            "4546.08"
+          ],
+          [
+            "2024-08-12",
+            "4546.08"
+          ]
+        ],
+        "changes": [
+          [
+            "event_31",
+            "stop",
+            "0"
+          ]
+        ],
+        "option_id": "payment_option_03"
+      },
+      "valid": false,
+      "result": "Deadline/horizon violation"
+    },
+    {
+      "candidate": {
+        "method": "installments",
+        "payments": [
+          [
+            "2024-03-17",
+            "1283.85"
+          ],
+          [
+            "2024-04-14",
+            "1283.85"
+          ],
+          [
+            "2024-05-12",
+            "1283.85"
+          ],
+          [
+            "2024-06-09",
+            "1283.85"
+          ],
+          [
+            "2024-07-07",
+            "1283.85"
+          ],
+          [
+            "2024-08-04",
+            "1283.85"
+          ],
+          [
+            "2024-09-01",
+            "1283.85"
+          ],
+          [
+            "2024-09-29",
+            "1283.85"
+          ],
+          [
+            "2024-10-27",
+            "1283.85"
+          ],
+          [
+            "2024-11-24",
+            "1283.85"
+          ],
+          [
+            "2024-12-22",
+            "1283.85"
+          ],
+          [
+            "2025-01-19",
+            "1283.85"
+          ],
+          [
+            "2025-02-16",
+            "1283.85"
+          ],
+          [
+            "2025-03-16",
+            "1283.85"
+          ],
+          [
+            "2025-04-13",
+            "1283.85"
+          ],
+          [
+            "2025-05-11",
+            "1283.85"
+          ],
+          [
+            "2025-06-08",
+            "1283.85"
+          ],
+          [
+            "2025-07-06",
+            "1283.85"
+          ],
+          [
+            "2025-08-03",
+            "1283.85"
+          ],
+          [
+            "2025-08-31",
+            "1283.85"
+          ],
+          [
+            "2025-09-28",
+            "1283.85"
+          ],
+          [
+            "2025-10-26",
+            "1283.85"
+          ],
+          [
+            "2025-11-23",
+            "1283.85"
+          ],
+          [
+            "2025-12-21",
+            "1283.85"
+          ]
+        ],
+        "changes": [
+          [
+            "event_31",
+            "stop",
+            "0"
+          ]
+        ],
+        "option_id": "payment_option_04"
+      },
+      "valid": false,
+      "result": "Deadline/horizon violation"
+    },
+    {
+      "candidate": {
+        "method": "installments",
+        "payments": [
+          [
+            "2024-03-06",
+            "1852.11"
+          ],
+          [
+            "2024-04-05",
+            "1852.11"
+          ],
+          [
+            "2024-05-05",
+            "1852.11"
+          ],
+          [
+            "2024-06-04",
+            "1852.11"
+          ],
+          [
+            "2024-07-04",
+            "1852.11"
+          ],
+          [
+            "2024-08-03",
+            "1852.11"
+          ],
+          [
+            "2024-09-02",
+            "1852.11"
+          ],
+          [
+            "2024-10-02",
+            "1852.11"
+          ],
+          [
+            "2024-11-01",
+            "1852.11"
+          ],
+          [
+            "2024-12-01",
+            "1852.11"
+          ],
+          [
+            "2024-12-31",
+            "1852.11"
+          ],
+          [
+            "2025-01-30",
+            "1852.11"
+          ],
+          [
+            "2025-03-01",
+            "1852.11"
+          ],
+          [
+            "2025-03-31",
+            "1852.11"
+          ],
+          [
+            "2025-04-30",
+            "1852.11"
+          ]
+        ],
+        "changes": [
+          [
+            "event_97",
+            "reduce_to",
+            "489.5"
+          ]
+        ],
+        "option_id": "payment_option_02"
+      },
+      "valid": false,
+      "result": "Deadline/horizon violation"
+    },
+    {
+      "candidate": {
+        "method": "installments",
+        "payments": [
+          [
+            "2024-03-10",
+            "4546.08"
+          ],
+          [
+            "2024-04-10",
+            "4546.08"
+          ],
+          [
+            "2024-05-11",
+            "4546.08"
+          ],
+          [
+            "2024-06-11",
+            "4546.08"
+          ],
+          [
+            "2024-07-12",
+            "4546.08"
+          ],
+          [
+            "2024-08-12",
+            "4546.08"
+          ]
+        ],
+        "changes": [
+          [
+            "event_97",
+            "reduce_to",
+            "489.5"
+          ]
+        ],
+        "option_id": "payment_option_03"
+      },
+      "valid": false,
+      "result": "Deadline/horizon violation"
+    },
+    {
+      "candidate": {
+        "method": "installments",
+        "payments": [
+          [
+            "2024-03-17",
+            "1283.85"
+          ],
+          [
+            "2024-04-14",
+            "1283.85"
+          ],
+          [
+            "2024-05-12",
+            "1283.85"
+          ],
+          [
+            "2024-06-09",
+            "1283.85"
+          ],
+          [
+            "2024-07-07",
+            "1283.85"
+          ],
+          [
+            "2024-08-04",
+            "1283.85"
+          ],
+          [
+            "2024-09-01",
+            "1283.85"
+          ],
+          [
+            "2024-09-29",
+            "1283.85"
+          ],
+          [
+            "2024-10-27",
+            "1283.85"
+          ],
+          [
+            "2024-11-24",
+            "1283.85"
+          ],
+          [
+            "2024-12-22",
+            "1283.85"
+          ],
+          [
+            "2025-01-19",
+            "1283.85"
+          ],
+          [
+            "2025-02-16",
+            "1283.85"
+          ],
+          [
+            "2025-03-16",
+            "1283.85"
+          ],
+          [
+            "2025-04-13",
+            "1283.85"
+          ],
+          [
+            "2025-05-11",
+            "1283.85"
+          ],
+          [
+            "2025-06-08",
+            "1283.85"
+          ],
+          [
+            "2025-07-06",
+            "1283.85"
+          ],
+          [
+            "2025-08-03",
+            "1283.85"
+          ],
+          [
+            "2025-08-31",
+            "1283.85"
+          ],
+          [
+            "2025-09-28",
+            "1283.85"
+          ],
+          [
+            "2025-10-26",
+            "1283.85"
+          ],
+          [
+            "2025-11-23",
+            "1283.85"
+          ],
+          [
+            "2025-12-21",
+            "1283.85"
+          ]
+        ],
+        "changes": [
+          [
+            "event_97",
+            "reduce_to",
+            "489.5"
+          ]
+        ],
+        "option_id": "payment_option_04"
+      },
+      "valid": false,
+      "result": "Deadline/horizon violation"
+    },
+    {
+      "candidate": {
+        "method": "installments",
+        "payments": [
+          [
+            "2024-03-06",
+            "1852.11"
+          ],
+          [
+            "2024-04-05",
+            "1852.11"
+          ],
+          [
+            "2024-05-05",
+            "1852.11"
+          ],
+          [
+            "2024-06-04",
+            "1852.11"
+          ],
+          [
+            "2024-07-04",
+            "1852.11"
+          ],
+          [
+            "2024-08-03",
+            "1852.11"
+          ],
+          [
+            "2024-09-02",
+            "1852.11"
+          ],
+          [
+            "2024-10-02",
+            "1852.11"
+          ],
+          [
+            "2024-11-01",
+            "1852.11"
+          ],
+          [
+            "2024-12-01",
+            "1852.11"
+          ],
+          [
+            "2024-12-31",
+            "1852.11"
+          ],
+          [
+            "2025-01-30",
+            "1852.11"
+          ],
+          [
+            "2025-03-01",
+            "1852.11"
+          ],
+          [
+            "2025-03-31",
+            "1852.11"
+          ],
+          [
+            "2025-04-30",
+            "1852.11"
+          ]
+        ],
+        "changes": [
+          [
+            "event_31",
+            "stop",
+            "0"
+          ],
+          [
+            "event_97",
+            "reduce_to",
+            "489.5"
+          ]
+        ],
+        "option_id": "payment_option_02"
+      },
+      "valid": false,
+      "result": "Deadline/horizon violation"
+    },
+    {
+      "candidate": {
+        "method": "installments",
+        "payments": [
+          [
+            "2024-03-10",
+            "4546.08"
+          ],
+          [
+            "2024-04-10",
+            "4546.08"
+          ],
+          [
+            "2024-05-11",
+            "4546.08"
+          ],
+          [
+            "2024-06-11",
+            "4546.08"
+          ],
+          [
+            "2024-07-12",
+            "4546.08"
+          ],
+          [
+            "2024-08-12",
+            "4546.08"
+          ]
+        ],
+        "changes": [
+          [
+            "event_31",
+            "stop",
+            "0"
+          ],
+          [
+            "event_97",
+            "reduce_to",
+            "489.5"
+          ]
+        ],
+        "option_id": "payment_option_03"
+      },
+      "valid": false,
+      "result": "Deadline/horizon violation"
+    },
+    {
+      "candidate": {
+        "method": "installments",
+        "payments": [
+          [
+            "2024-03-17",
+            "1283.85"
+          ],
+          [
+            "2024-04-14",
+            "1283.85"
+          ],
+          [
+            "2024-05-12",
+            "1283.85"
+          ],
+          [
+            "2024-06-09",
+            "1283.85"
+          ],
+          [
+            "2024-07-07",
+            "1283.85"
+          ],
+          [
+            "2024-08-04",
+            "1283.85"
+          ],
+          [
+            "2024-09-01",
+            "1283.85"
+          ],
+          [
+            "2024-09-29",
+            "1283.85"
+          ],
+          [
+            "2024-10-27",
+            "1283.85"
+          ],
+          [
+            "2024-11-24",
+            "1283.85"
+          ],
+          [
+            "2024-12-22",
+            "1283.85"
+          ],
+          [
+            "2025-01-19",
+            "1283.85"
+          ],
+          [
+            "2025-02-16",
+            "1283.85"
+          ],
+          [
+            "2025-03-16",
+            "1283.85"
+          ],
+          [
+            "2025-04-13",
+            "1283.85"
+          ],
+          [
+            "2025-05-11",
+            "1283.85"
+          ],
+          [
+            "2025-06-08",
+            "1283.85"
+          ],
+          [
+            "2025-07-06",
+            "1283.85"
+          ],
+          [
+            "2025-08-03",
+            "1283.85"
+          ],
+          [
+            "2025-08-31",
+            "1283.85"
+          ],
+          [
+            "2025-09-28",
+            "1283.85"
+          ],
+          [
+            "2025-10-26",
+            "1283.85"
+          ],
+          [
+            "2025-11-23",
+            "1283.85"
+          ],
+          [
+            "2025-12-21",
+            "1283.85"
+          ]
+        ],
+        "changes": [
+          [
+            "event_31",
+            "stop",
+            "0"
+          ],
+          [
+            "event_97",
+            "reduce_to",
+            "489.5"
+          ]
+        ],
+        "option_id": "payment_option_04"
+      },
+      "valid": false,
+      "result": "Deadline/horizon violation"
+    }
+  ],
+  "output": {
+    "request_id": "request_01",
+    "amount_safe_to_pay": "8849.12",
+    "affordability_status": "not_affordable",
+    "recommended_payment_method": "not_recommended",
+    "payment_plan": "none",
+    "earliest_date_for_full_payment": "",
+    "spending_changes_needed": "none",
+    "decision_explanation": "No eligible plan passes the deadline and reserve checks."
+  }
+}

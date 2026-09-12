@@ -1,0 +1,37 @@
+date,source_event,direction,amount,running_balance,provenance,evidence_ids,policy
+2026-04-03,opening profile snapshot,opening,3911.35,3911.35,MODELING_POLICY,user_21,Profile treated as opening balance; historical cash not replayed.
+2026-04-05,event_1857,debit,53.0,3858.35,STRUCTURED_EXPLICIT,event_1857,Cash on settlement date; pending debit charged once in this trace.
+2026-04-06,recurring:utilities,debit,121.18,3737.17,INFERRED_RECURRENCE,event_1814,Observed cadence monthly; historical mean for variable amounts.
+2026-04-06,recurring:groceries,debit,83.63,3653.54,INFERRED_RECURRENCE,event_1836,Observed cadence 10; historical mean for variable amounts.
+2026-04-09,recurring:streaming,debit,47.0,3606.54,INFERRED_RECURRENCE,event_1816,Observed cadence monthly; historical mean for variable amounts.
+2026-04-12,recurring:shopping,debit,122.41,3484.13,INFERRED_RECURRENCE,event_1817,Observed cadence monthly; historical mean for variable amounts.
+2026-04-12,recurring:cloud_storage,debit,11.0,3473.13,INFERRED_RECURRENCE,event_1815,Observed cadence monthly; historical mean for variable amounts.
+2026-04-15,recurring:salary,credit,2256.0,5729.13,STRUCTURED_EXPLICIT,event_1858,"Scheduled salary emitted via salary loop, once; source is explicit."
+2026-04-16,recurring:groceries,debit,83.63,5645.50,INFERRED_RECURRENCE,event_1836,Observed cadence 10; historical mean for variable amounts.
+2026-04-16,recurring:transport,debit,41.2,5604.30,INFERRED_RECURRENCE,event_1845,Observed cadence 21; historical mean for variable amounts.
+2026-04-17,recurring:dining,debit,83.44,5520.86,INFERRED_RECURRENCE,event_1854,Observed cadence 21; historical mean for variable amounts.
+2026-04-26,recurring:groceries,debit,83.63,5437.23,INFERRED_RECURRENCE,event_1836,Observed cadence 10; historical mean for variable amounts.
+2026-05-02,recurring:rent,debit,718.8,4718.43,INFERRED_RECURRENCE,event_1818,Observed cadence monthly; historical mean for variable amounts.
+2026-05-06,recurring:utilities,debit,121.18,4597.25,INFERRED_RECURRENCE,event_1814,Observed cadence monthly; historical mean for variable amounts.
+2026-05-06,recurring:groceries,debit,83.63,4513.62,INFERRED_RECURRENCE,event_1836,Observed cadence 10; historical mean for variable amounts.
+2026-05-07,recurring:transport,debit,41.2,4472.42,INFERRED_RECURRENCE,event_1845,Observed cadence 21; historical mean for variable amounts.
+2026-05-08,recurring:dining,debit,83.44,4388.98,INFERRED_RECURRENCE,event_1854,Observed cadence 21; historical mean for variable amounts.
+2026-05-09,recurring:streaming,debit,47.0,4341.98,INFERRED_RECURRENCE,event_1816,Observed cadence monthly; historical mean for variable amounts.
+2026-05-12,recurring:shopping,debit,122.41,4219.57,INFERRED_RECURRENCE,event_1817,Observed cadence monthly; historical mean for variable amounts.
+2026-05-12,recurring:cloud_storage,debit,11.0,4208.57,INFERRED_RECURRENCE,event_1815,Observed cadence monthly; historical mean for variable amounts.
+2026-05-15,recurring:salary,credit,2256.0,6464.57,INFERRED_RECURRENCE,event_1858,Observed cadence monthly; historical mean for variable amounts.
+2026-05-16,recurring:groceries,debit,83.63,6380.94,INFERRED_RECURRENCE,event_1836,Observed cadence 10; historical mean for variable amounts.
+2026-05-26,recurring:groceries,debit,83.63,6297.31,INFERRED_RECURRENCE,event_1836,Observed cadence 10; historical mean for variable amounts.
+2026-05-28,recurring:transport,debit,41.2,6256.11,INFERRED_RECURRENCE,event_1845,Observed cadence 21; historical mean for variable amounts.
+2026-05-29,recurring:dining,debit,83.44,6172.67,INFERRED_RECURRENCE,event_1854,Observed cadence 21; historical mean for variable amounts.
+2026-06-02,recurring:rent,debit,718.8,5453.87,INFERRED_RECURRENCE,event_1818,Observed cadence monthly; historical mean for variable amounts.
+2026-06-05,recurring:groceries,debit,83.63,5370.24,INFERRED_RECURRENCE,event_1836,Observed cadence 10; historical mean for variable amounts.
+2026-06-06,recurring:utilities,debit,121.18,5249.06,INFERRED_RECURRENCE,event_1814,Observed cadence monthly; historical mean for variable amounts.
+2026-06-09,recurring:streaming,debit,47.0,5202.06,INFERRED_RECURRENCE,event_1816,Observed cadence monthly; historical mean for variable amounts.
+2026-06-12,recurring:shopping,debit,122.41,5079.65,INFERRED_RECURRENCE,event_1817,Observed cadence monthly; historical mean for variable amounts.
+2026-06-12,recurring:cloud_storage,debit,11.0,5068.65,INFERRED_RECURRENCE,event_1815,Observed cadence monthly; historical mean for variable amounts.
+2026-06-15,recurring:groceries,debit,83.63,4985.02,INFERRED_RECURRENCE,event_1836,Observed cadence 10; historical mean for variable amounts.
+2026-06-15,recurring:salary,credit,2256.0,7241.02,INFERRED_RECURRENCE,event_1858,Observed cadence monthly; historical mean for variable amounts.
+2026-06-18,recurring:transport,debit,41.2,7199.82,INFERRED_RECURRENCE,event_1845,Observed cadence 21; historical mean for variable amounts.
+2026-06-19,recurring:dining,debit,83.44,7116.38,INFERRED_RECURRENCE,event_1854,Observed cadence 21; historical mean for variable amounts.
+2026-06-25,recurring:groceries,debit,83.63,7032.75,INFERRED_RECURRENCE,event_1836,Observed cadence 10; historical mean for variable amounts.

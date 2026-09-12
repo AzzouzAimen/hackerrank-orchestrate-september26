@@ -1,0 +1,86 @@
+{
+  "evaluator_version": "assistant-evidence-audit-v2.0",
+  "reviews": [
+    {
+      "source_artifact": "experiment_20260912T155758Z.json",
+      "case_id": "rep_user07",
+      "total_runs": 3,
+      "usable_runs": 0,
+      "semantic_consistency": "not_assessable",
+      "reviewer_provenance": "assistant audit; pending human review",
+      "rationale": "Fewer than two usable outputs; null failures cannot establish consistency."
+    },
+    {
+      "source_artifact": "experiment_20260912T155758Z.json",
+      "case_id": "unused_real_image03",
+      "total_runs": 3,
+      "usable_runs": 0,
+      "semantic_consistency": "not_assessable",
+      "reviewer_provenance": "assistant audit; pending human review",
+      "rationale": "Fewer than two usable outputs; null failures cannot establish consistency."
+    },
+    {
+      "source_artifact": "experiment_20260912T155758Z.json",
+      "case_id": "synthetic_unknown_obligation",
+      "total_runs": 3,
+      "usable_runs": 0,
+      "semantic_consistency": "not_assessable",
+      "reviewer_provenance": "assistant audit; pending human review",
+      "rationale": "Fewer than two usable outputs; null failures cannot establish consistency."
+    },
+    {
+      "source_artifact": "experiment_20260912T155852Z.json",
+      "case_id": "rep_user07",
+      "total_runs": 3,
+      "usable_runs": 3,
+      "semantic_consistency": "inconsistent",
+      "reviewer_provenance": "assistant audit; pending human review",
+      "rationale": "Confirmed future amount versus null changes; certainty/cash classification/effective applicability also differ across these saved runs. These are material assertions, not formatting."
+    },
+    {
+      "source_artifact": "experiment_20260912T155852Z.json",
+      "case_id": "unused_real_image03",
+      "total_runs": 3,
+      "usable_runs": 0,
+      "semantic_consistency": "not_assessable",
+      "reviewer_provenance": "assistant audit; pending human review",
+      "rationale": "Fewer than two usable outputs; null failures cannot establish consistency."
+    },
+    {
+      "source_artifact": "experiment_20260912T155852Z.json",
+      "case_id": "synthetic_unknown_obligation",
+      "total_runs": 3,
+      "usable_runs": 3,
+      "semantic_consistency": "consistent",
+      "reviewer_provenance": "assistant audit; pending human review",
+      "rationale": "Confirmed obligation, null amount/date, USD debit target are identical financial meanings; extra null amendments are redundant, not guaranteed resolver-equivalent."
+    },
+    {
+      "source_artifact": "experiment_20260912T160401Z.json",
+      "case_id": "rep_user07",
+      "total_runs": 3,
+      "usable_runs": 3,
+      "semantic_consistency": "inconsistent",
+      "reviewer_provenance": "assistant audit; pending human review",
+      "rationale": "Confirmed future amount versus null changes; certainty/cash classification/effective applicability also differ across these saved runs. These are material assertions, not formatting."
+    },
+    {
+      "source_artifact": "experiment_20260912T160401Z.json",
+      "case_id": "unused_real_image03",
+      "total_runs": 3,
+      "usable_runs": 1,
+      "semantic_consistency": "not_assessable",
+      "reviewer_provenance": "assistant audit; pending human review",
+      "rationale": "Fewer than two usable outputs; null failures cannot establish consistency."
+    },
+    {
+      "source_artifact": "experiment_20260912T160401Z.json",
+      "case_id": "synthetic_unknown_obligation",
+      "total_runs": 3,
+      "usable_runs": 3,
+      "semantic_consistency": "consistent",
+      "reviewer_provenance": "assistant audit; pending human review",
+      "rationale": "Confirmed obligation, null amount/date, USD debit target are identical financial meanings; extra null amendments are redundant, not guaranteed resolver-equivalent."
+    }
+  ]
+}

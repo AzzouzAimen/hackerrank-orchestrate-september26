@@ -1,0 +1,92 @@
+{
+  "facts": [
+    {
+      "schema_version": "1.0",
+      "fact_id": "user_01.payroll",
+      "fact_type": "stream_status",
+      "evidence_ids": [
+        "event_103"
+      ],
+      "affected_event_ids": [
+        "event_103"
+      ],
+      "stream_selector": {
+        "user_id": "user_01",
+        "category": "salary",
+        "direction": "credit",
+        "currency": "ZAR",
+        "description": "Next confirmed salary"
+      },
+      "effective_from": null,
+      "effective_until": null,
+      "confirmation_state": "confirmed",
+      "unresolved_fields": [
+        "effective_until"
+      ],
+      "payload": {
+        "status": "ongoing"
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "fact_id": "prorated.event_25",
+      "fact_type": "stream_status",
+      "evidence_ids": [
+        "event_25"
+      ],
+      "affected_event_ids": [
+        "event_25"
+      ],
+      "stream_selector": null,
+      "effective_from": null,
+      "effective_until": null,
+      "confirmation_state": "confirmed",
+      "unresolved_fields": [],
+      "payload": {
+        "status": "one_time"
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "fact_id": "refund.event_99",
+      "fact_type": "lifecycle_relationship",
+      "evidence_ids": [
+        "event_98",
+        "event_99"
+      ],
+      "affected_event_ids": [
+        "event_99"
+      ],
+      "stream_selector": null,
+      "effective_from": null,
+      "effective_until": null,
+      "confirmation_state": "confirmed",
+      "unresolved_fields": [],
+      "payload": {
+        "relationship": "refund_of",
+        "related_event_id": "event_98"
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "fact_id": "settlement.event_101",
+      "fact_type": "lifecycle_relationship",
+      "evidence_ids": [
+        "event_100",
+        "event_101"
+      ],
+      "affected_event_ids": [
+        "event_101"
+      ],
+      "stream_selector": null,
+      "effective_from": null,
+      "effective_until": null,
+      "confirmation_state": "confirmed",
+      "unresolved_fields": [],
+      "payload": {
+        "relationship": "settlement_of",
+        "related_event_id": "event_100"
+      }
+    }
+  ]
+}

@@ -126,6 +126,10 @@ def simulate(r, rule='mean', timing='settlement', include_today=True,
     if regular and not ended:
         latest=regular[-1];a=float(latest['amount']) if latest['amount'] else IMAGE_FACTS[IMAGES[latest['event_id']]]['amount']; currency=latest['currency']
         hist=[e for e in regular if e['status']=='settled']
+        # A one-cycle diagnostic returns to the observed historical phase, not
+        # a universal payday. No prior observations means that phase is unknown.
+        historical_days=Counter(day(e['settlement_date']).day for e in hist)
+        historical_dom=historical_days.most_common(1)[0][0] if historical_days else None
         dom=day(latest['settlement_date'] if timing=='settlement' else latest['event_date']).day
         d=day(latest['settlement_date']) if latest['status']=='scheduled' else month_next(day(latest['settlement_date']),dom)
         if salary_mode=='mean':a=mean(float(e['amount']) if e['amount'] else IMAGE_FACTS[IMAGES[e['event_id']]]['amount'] for e in regular)
@@ -147,7 +151,10 @@ def simulate(r, rule='mean', timing='settlement', include_today=True,
         while d<=end:
             cash=a if currency==home else a*RATES[(d.isoformat(),currency,home)]
             post(d,cash,'recurring:salary')
-            d=month_next(d,dom if (delay_persists or not shift) else 15)
+            if shift and not delay_persists and historical_dom is None:
+                warnings.append('Prior payroll phase unknown; one-cycle diagnostic cannot extrapolate.')
+                break
+            d=month_next(d,dom if (delay_persists or not shift) else historical_dom)
     bal=float(p['current_available_balance']); floor=float(p['minimum_balance_to_keep']); requested=float(r['requested_amount'])
     path=[]
     for i in range(horizon+1):

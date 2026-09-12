@@ -1,0 +1,6 @@
+request_id,amount_safe_to_pay,affordability_status,recommended_payment_method,payment_plan,earliest_date_for_full_payment,spending_changes_needed,decision_explanation
+request_07,86237.20,affordable_with_plan,installments,2024-09-12:68432|2024-10-10:68432|2024-11-07:68432,2024-10-23,none,Verified supplied schedule and 90-day reserve.
+request_16,122500.00,affordable_now,full_payment,2023-08-12:122500,2023-08-12,none,Verified payments against the 90-day ledger and reserve.
+request_01,8849.12,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_21,1574.40,affordable_now,full_payment,2026-04-03:1574.4,2026-04-03,none,Verified payments against the 90-day ledger and reserve.
+request_25,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.

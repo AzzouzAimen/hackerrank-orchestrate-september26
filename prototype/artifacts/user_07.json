@@ -1,0 +1,3100 @@
+{
+  "case_reason": "payroll amendment",
+  "facts": [
+    {
+      "schema_version": "1.0",
+      "fact_id": "payday.message_05",
+      "evidence_ids": [
+        "message_05"
+      ],
+      "affected_event_ids": [],
+      "stream_selector": {
+        "user_id": "user_07",
+        "category": "salary",
+        "direction": "credit",
+        "currency": "INR",
+        "description": null
+      },
+      "effective_from": null,
+      "effective_until": null,
+      "confirmation_state": "confirmed",
+      "unresolved_fields": [
+        "effective_until",
+        "payload.scope"
+      ],
+      "fact_type": "date_or_schedule_amendment",
+      "payload": {
+        "payment_date": "2024-09-23",
+        "cadence": null,
+        "interval_days": null,
+        "scope": "unknown"
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "fact_id": "user_07.payroll",
+      "evidence_ids": [
+        "event_558",
+        "event_563",
+        "event_568",
+        "event_573",
+        "event_578"
+      ],
+      "affected_event_ids": [
+        "event_558",
+        "event_563",
+        "event_568",
+        "event_573",
+        "event_578"
+      ],
+      "stream_selector": {
+        "user_id": "user_07",
+        "category": "salary",
+        "direction": "credit",
+        "currency": "INR",
+        "description": null
+      },
+      "effective_from": null,
+      "effective_until": null,
+      "confirmation_state": "confirmed",
+      "unresolved_fields": [
+        "effective_until"
+      ],
+      "fact_type": "stream_status",
+      "payload": {
+        "status": "ongoing"
+      }
+    }
+  ],
+  "resolved_events": [
+    {
+      "id": "event_558",
+      "user": "user_07",
+      "category": "salary",
+      "description": "Payroll credit",
+      "direction": "credit",
+      "amount": "149000",
+      "currency": "INR",
+      "event_date": "2024-04-15",
+      "settlement": "2024-04-15",
+      "status": "settled",
+      "event_type": "income",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_558"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_559",
+      "user": "user_07",
+      "category": "rent",
+      "description": "Monthly rent",
+      "direction": "debit",
+      "amount": "34200",
+      "currency": "INR",
+      "event_date": "2024-04-04",
+      "settlement": "2024-04-04",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_559"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_560",
+      "user": "user_07",
+      "category": "utilities",
+      "description": "Electricity bill",
+      "direction": "debit",
+      "amount": "7219.31",
+      "currency": "INR",
+      "event_date": "2024-04-08",
+      "settlement": "2024-04-08",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_560"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_561",
+      "user": "user_07",
+      "category": "debt_repayment",
+      "description": "Personal loan payment",
+      "direction": "debit",
+      "amount": "15650",
+      "currency": "INR",
+      "event_date": "2024-04-13",
+      "settlement": "2024-04-13",
+      "status": "settled",
+      "event_type": "debt_payment",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_561"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_562",
+      "user": "user_07",
+      "category": "music_subscription",
+      "description": "Music subscription",
+      "direction": "debit",
+      "amount": "1005",
+      "currency": "INR",
+      "event_date": "2024-04-13",
+      "settlement": "2024-04-13",
+      "status": "settled",
+      "event_type": "subscription",
+      "linked": "",
+      "flexibility": "stoppable",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_562"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_563",
+      "user": "user_07",
+      "category": "salary",
+      "description": "Payroll credit",
+      "direction": "credit",
+      "amount": "149000",
+      "currency": "INR",
+      "event_date": "2024-05-15",
+      "settlement": "2024-05-15",
+      "status": "settled",
+      "event_type": "income",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_563"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_564",
+      "user": "user_07",
+      "category": "rent",
+      "description": "Monthly rent",
+      "direction": "debit",
+      "amount": "34200",
+      "currency": "INR",
+      "event_date": "2024-05-04",
+      "settlement": "2024-05-04",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_564"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_565",
+      "user": "user_07",
+      "category": "utilities",
+      "description": "Electricity bill",
+      "direction": "debit",
+      "amount": "7049.68",
+      "currency": "INR",
+      "event_date": "2024-05-08",
+      "settlement": "2024-05-08",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_565"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_566",
+      "user": "user_07",
+      "category": "debt_repayment",
+      "description": "Personal loan payment",
+      "direction": "debit",
+      "amount": "15650",
+      "currency": "INR",
+      "event_date": "2024-05-13",
+      "settlement": "2024-05-13",
+      "status": "settled",
+      "event_type": "debt_payment",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_566"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_567",
+      "user": "user_07",
+      "category": "music_subscription",
+      "description": "Music subscription",
+      "direction": "debit",
+      "amount": "1005",
+      "currency": "INR",
+      "event_date": "2024-05-13",
+      "settlement": "2024-05-13",
+      "status": "settled",
+      "event_type": "subscription",
+      "linked": "",
+      "flexibility": "stoppable",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_567"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_568",
+      "user": "user_07",
+      "category": "salary",
+      "description": "Payroll credit",
+      "direction": "credit",
+      "amount": "149000",
+      "currency": "INR",
+      "event_date": "2024-06-15",
+      "settlement": "2024-06-15",
+      "status": "settled",
+      "event_type": "income",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_568"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_569",
+      "user": "user_07",
+      "category": "rent",
+      "description": "Monthly rent",
+      "direction": "debit",
+      "amount": "34200",
+      "currency": "INR",
+      "event_date": "2024-06-04",
+      "settlement": "2024-06-04",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_569"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_570",
+      "user": "user_07",
+      "category": "utilities",
+      "description": "Electricity bill",
+      "direction": "debit",
+      "amount": "7387.41",
+      "currency": "INR",
+      "event_date": "2024-06-08",
+      "settlement": "2024-06-08",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_570"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_571",
+      "user": "user_07",
+      "category": "debt_repayment",
+      "description": "Personal loan payment",
+      "direction": "debit",
+      "amount": "15650",
+      "currency": "INR",
+      "event_date": "2024-06-13",
+      "settlement": "2024-06-13",
+      "status": "settled",
+      "event_type": "debt_payment",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_571"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_572",
+      "user": "user_07",
+      "category": "music_subscription",
+      "description": "Music subscription",
+      "direction": "debit",
+      "amount": "1005",
+      "currency": "INR",
+      "event_date": "2024-06-13",
+      "settlement": "2024-06-13",
+      "status": "settled",
+      "event_type": "subscription",
+      "linked": "",
+      "flexibility": "stoppable",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_572"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_573",
+      "user": "user_07",
+      "category": "salary",
+      "description": "Payroll credit",
+      "direction": "credit",
+      "amount": "149000",
+      "currency": "INR",
+      "event_date": "2024-07-15",
+      "settlement": "2024-07-15",
+      "status": "settled",
+      "event_type": "income",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_573"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_574",
+      "user": "user_07",
+      "category": "rent",
+      "description": "Monthly rent",
+      "direction": "debit",
+      "amount": "34200",
+      "currency": "INR",
+      "event_date": "2024-07-04",
+      "settlement": "2024-07-04",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_574"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_575",
+      "user": "user_07",
+      "category": "utilities",
+      "description": "Electricity bill",
+      "direction": "debit",
+      "amount": "6081.25",
+      "currency": "INR",
+      "event_date": "2024-07-08",
+      "settlement": "2024-07-08",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_575"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_576",
+      "user": "user_07",
+      "category": "debt_repayment",
+      "description": "Personal loan payment",
+      "direction": "debit",
+      "amount": "15650",
+      "currency": "INR",
+      "event_date": "2024-07-13",
+      "settlement": "2024-07-13",
+      "status": "settled",
+      "event_type": "debt_payment",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_576"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_577",
+      "user": "user_07",
+      "category": "music_subscription",
+      "description": "Music subscription",
+      "direction": "debit",
+      "amount": "1005",
+      "currency": "INR",
+      "event_date": "2024-07-13",
+      "settlement": "2024-07-13",
+      "status": "settled",
+      "event_type": "subscription",
+      "linked": "",
+      "flexibility": "stoppable",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_577"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_578",
+      "user": "user_07",
+      "category": "salary",
+      "description": "Payroll credit",
+      "direction": "credit",
+      "amount": "149000",
+      "currency": "INR",
+      "event_date": "2024-08-15",
+      "settlement": "2024-08-23",
+      "status": "settled",
+      "event_type": "income",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_578"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_579",
+      "user": "user_07",
+      "category": "rent",
+      "description": "Monthly rent",
+      "direction": "debit",
+      "amount": "34200",
+      "currency": "INR",
+      "event_date": "2024-08-04",
+      "settlement": "2024-08-04",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_579"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_580",
+      "user": "user_07",
+      "category": "utilities",
+      "description": "Electricity bill",
+      "direction": "debit",
+      "amount": "6209.57",
+      "currency": "INR",
+      "event_date": "2024-08-08",
+      "settlement": "2024-08-08",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_580"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_581",
+      "user": "user_07",
+      "category": "debt_repayment",
+      "description": "Personal loan payment",
+      "direction": "debit",
+      "amount": "15650",
+      "currency": "INR",
+      "event_date": "2024-08-13",
+      "settlement": "2024-08-13",
+      "status": "settled",
+      "event_type": "debt_payment",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_581"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_582",
+      "user": "user_07",
+      "category": "music_subscription",
+      "description": "Music subscription",
+      "direction": "debit",
+      "amount": "1005",
+      "currency": "INR",
+      "event_date": "2024-08-13",
+      "settlement": "2024-08-13",
+      "status": "settled",
+      "event_type": "subscription",
+      "linked": "",
+      "flexibility": "stoppable",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_582"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_583",
+      "user": "user_07",
+      "category": "rent",
+      "description": "Monthly rent",
+      "direction": "debit",
+      "amount": "34200",
+      "currency": "INR",
+      "event_date": "2024-09-04",
+      "settlement": "2024-09-04",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_583"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_584",
+      "user": "user_07",
+      "category": "groceries",
+      "description": "Weekly produce market",
+      "direction": "debit",
+      "amount": "8380.73",
+      "currency": "INR",
+      "event_date": "2024-03-14",
+      "settlement": "2024-03-14",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_584"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_585",
+      "user": "user_07",
+      "category": "groceries",
+      "description": "Weekly produce market",
+      "direction": "debit",
+      "amount": "6433.29",
+      "currency": "INR",
+      "event_date": "2024-03-28",
+      "settlement": "2024-03-28",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_585"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_586",
+      "user": "user_07",
+      "category": "groceries",
+      "description": "Household groceries",
+      "direction": "debit",
+      "amount": "6022.17",
+      "currency": "INR",
+      "event_date": "2024-04-11",
+      "settlement": "2024-04-11",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_586"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_587",
+      "user": "user_07",
+      "category": "groceries",
+      "description": "Fresh food shop",
+      "direction": "debit",
+      "amount": "6789.05",
+      "currency": "INR",
+      "event_date": "2024-04-25",
+      "settlement": "2024-04-25",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_587"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_588",
+      "user": "user_07",
+      "category": "groceries",
+      "description": "Supermarket basket",
+      "direction": "debit",
+      "amount": "8280.58",
+      "currency": "INR",
+      "event_date": "2024-05-09",
+      "settlement": "2024-05-09",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_588"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_589",
+      "user": "user_07",
+      "category": "groceries",
+      "description": "Bulk pantry shop",
+      "direction": "debit",
+      "amount": "7329.91",
+      "currency": "INR",
+      "event_date": "2024-05-23",
+      "settlement": "2024-05-23",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_589"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_590",
+      "user": "user_07",
+      "category": "groceries",
+      "description": "Neighbourhood grocer",
+      "direction": "debit",
+      "amount": "7849.54",
+      "currency": "INR",
+      "event_date": "2024-06-06",
+      "settlement": "2024-06-06",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_590"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_591",
+      "user": "user_07",
+      "category": "groceries",
+      "description": "Household groceries",
+      "direction": "debit",
+      "amount": "7968.39",
+      "currency": "INR",
+      "event_date": "2024-06-20",
+      "settlement": "2024-06-20",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_591"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_592",
+      "user": "user_07",
+      "category": "groceries",
+      "description": "Supermarket basket",
+      "direction": "debit",
+      "amount": "6889.87",
+      "currency": "INR",
+      "event_date": "2024-07-04",
+      "settlement": "2024-07-04",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_592"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_593",
+      "user": "user_07",
+      "category": "groceries",
+      "description": "Grocery delivery",
+      "direction": "debit",
+      "amount": "5665.77",
+      "currency": "INR",
+      "event_date": "2024-07-18",
+      "settlement": "2024-07-18",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_593"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_594",
+      "user": "user_07",
+      "category": "groceries",
+      "description": "Household groceries",
+      "direction": "debit",
+      "amount": "7913.81",
+      "currency": "INR",
+      "event_date": "2024-08-01",
+      "settlement": "2024-08-01",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_594"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_595",
+      "user": "user_07",
+      "category": "groceries",
+      "description": "Local market purchase",
+      "direction": "debit",
+      "amount": "7280.22",
+      "currency": "INR",
+      "event_date": "2024-08-15",
+      "settlement": "2024-08-15",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_595"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_596",
+      "user": "user_07",
+      "category": "groceries",
+      "description": "Household groceries",
+      "direction": "debit",
+      "amount": "5710.65",
+      "currency": "INR",
+      "event_date": "2024-08-29",
+      "settlement": "2024-08-29",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_596"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_597",
+      "user": "user_07",
+      "category": "transport",
+      "description": "Metro and bus fares",
+      "direction": "debit",
+      "amount": "3690.82",
+      "currency": "INR",
+      "event_date": "2024-03-15",
+      "settlement": "2024-03-15",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_597"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_598",
+      "user": "user_07",
+      "category": "transport",
+      "description": "Commuter pass",
+      "direction": "debit",
+      "amount": "3465.99",
+      "currency": "INR",
+      "event_date": "2024-04-05",
+      "settlement": "2024-04-05",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_598"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_599",
+      "user": "user_07",
+      "category": "transport",
+      "description": "Vehicle charging",
+      "direction": "debit",
+      "amount": "2786.58",
+      "currency": "INR",
+      "event_date": "2024-04-26",
+      "settlement": "2024-04-26",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_599"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_600",
+      "user": "user_07",
+      "category": "transport",
+      "description": "Metro and bus fares",
+      "direction": "debit",
+      "amount": "3104.36",
+      "currency": "INR",
+      "event_date": "2024-05-17",
+      "settlement": "2024-05-17",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_600"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_601",
+      "user": "user_07",
+      "category": "transport",
+      "description": "Fuel refill",
+      "direction": "debit",
+      "amount": "2439.43",
+      "currency": "INR",
+      "event_date": "2024-06-07",
+      "settlement": "2024-06-07",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_601"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_602",
+      "user": "user_07",
+      "category": "transport",
+      "description": "Rail pass",
+      "direction": "debit",
+      "amount": "3822.62",
+      "currency": "INR",
+      "event_date": "2024-06-28",
+      "settlement": "2024-06-28",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_602"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_603",
+      "user": "user_07",
+      "category": "transport",
+      "description": "Rail pass",
+      "direction": "debit",
+      "amount": "2751.86",
+      "currency": "INR",
+      "event_date": "2024-07-19",
+      "settlement": "2024-07-19",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_603"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_604",
+      "user": "user_07",
+      "category": "transport",
+      "description": "Rail pass",
+      "direction": "debit",
+      "amount": "3773.92",
+      "currency": "INR",
+      "event_date": "2024-08-09",
+      "settlement": "2024-08-09",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_604"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_605",
+      "user": "user_07",
+      "category": "transport",
+      "description": "Commuter pass",
+      "direction": "debit",
+      "amount": "3145.62",
+      "currency": "INR",
+      "event_date": "2024-08-30",
+      "settlement": "2024-08-30",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "fixed",
+      "minimum": null,
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_605"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_606",
+      "user": "user_07",
+      "category": "dining",
+      "description": "Quick-service meal",
+      "direction": "debit",
+      "amount": "7246.72",
+      "currency": "INR",
+      "event_date": "2024-03-11",
+      "settlement": "2024-03-11",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "reducible",
+      "minimum": "2835",
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_606"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_607",
+      "user": "user_07",
+      "category": "dining",
+      "description": "Neighbourhood restaurant",
+      "direction": "debit",
+      "amount": "4111.12",
+      "currency": "INR",
+      "event_date": "2024-04-01",
+      "settlement": "2024-04-01",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "reducible",
+      "minimum": "2835",
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_607"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_608",
+      "user": "user_07",
+      "category": "dining",
+      "description": "Family dinner",
+      "direction": "debit",
+      "amount": "6371.55",
+      "currency": "INR",
+      "event_date": "2024-04-22",
+      "settlement": "2024-04-22",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "reducible",
+      "minimum": "2835",
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_608"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_609",
+      "user": "user_07",
+      "category": "dining",
+      "description": "Bakery and snacks",
+      "direction": "debit",
+      "amount": "6313.91",
+      "currency": "INR",
+      "event_date": "2024-05-13",
+      "settlement": "2024-05-13",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "reducible",
+      "minimum": "2835",
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_609"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_610",
+      "user": "user_07",
+      "category": "dining",
+      "description": "Family dinner",
+      "direction": "debit",
+      "amount": "5802.49",
+      "currency": "INR",
+      "event_date": "2024-06-03",
+      "settlement": "2024-06-03",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "reducible",
+      "minimum": "2835",
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_610"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_611",
+      "user": "user_07",
+      "category": "dining",
+      "description": "Family dinner",
+      "direction": "debit",
+      "amount": "4541.62",
+      "currency": "INR",
+      "event_date": "2024-06-24",
+      "settlement": "2024-06-24",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "reducible",
+      "minimum": "2835",
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_611"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_612",
+      "user": "user_07",
+      "category": "dining",
+      "description": "Weekend food delivery",
+      "direction": "debit",
+      "amount": "6664.9",
+      "currency": "INR",
+      "event_date": "2024-07-15",
+      "settlement": "2024-07-15",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "reducible",
+      "minimum": "2835",
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_612"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_613",
+      "user": "user_07",
+      "category": "dining",
+      "description": "Takeaway order",
+      "direction": "debit",
+      "amount": "5799.66",
+      "currency": "INR",
+      "event_date": "2024-08-05",
+      "settlement": "2024-08-05",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "reducible",
+      "minimum": "2835",
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_613"
+      ],
+      "facts": []
+    },
+    {
+      "id": "event_614",
+      "user": "user_07",
+      "category": "dining",
+      "description": "Bakery and snacks",
+      "direction": "debit",
+      "amount": "6493.86",
+      "currency": "INR",
+      "event_date": "2024-08-26",
+      "settlement": "2024-08-26",
+      "status": "settled",
+      "event_type": "expense",
+      "linked": "",
+      "flexibility": "reducible",
+      "minimum": "2835",
+      "excluded": null,
+      "history_excluded": false,
+      "evidence": [
+        "event_614"
+      ],
+      "facts": []
+    }
+  ],
+  "state_changes": [],
+  "issues": [],
+  "blockers": [],
+  "streams": [
+    {
+      "id": "stream:event_581",
+      "anchor": "event_581",
+      "amount": "15650",
+      "monthly": true,
+      "step": 30,
+      "dom": 13,
+      "eom": false
+    },
+    {
+      "id": "stream:event_614",
+      "anchor": "event_614",
+      "amount": "5927.314444444444444444444444",
+      "monthly": false,
+      "step": 21,
+      "dom": 11,
+      "eom": false
+    },
+    {
+      "id": "stream:event_596",
+      "anchor": "event_596",
+      "amount": "7116.46",
+      "monthly": false,
+      "step": 14,
+      "dom": 14,
+      "eom": false
+    },
+    {
+      "id": "stream:event_582",
+      "anchor": "event_582",
+      "amount": "1005",
+      "monthly": true,
+      "step": 30,
+      "dom": 13,
+      "eom": false
+    },
+    {
+      "id": "stream:event_583",
+      "anchor": "event_583",
+      "amount": "34200",
+      "monthly": true,
+      "step": 31,
+      "dom": 4,
+      "eom": false
+    },
+    {
+      "id": "stream:event_578",
+      "anchor": "event_578",
+      "amount": "149000",
+      "monthly": true,
+      "step": 30,
+      "dom": 23,
+      "eom": false
+    },
+    {
+      "id": "stream:event_605",
+      "anchor": "event_605",
+      "amount": "3220.133333333333333333333333",
+      "monthly": false,
+      "step": 21,
+      "dom": 15,
+      "eom": false
+    },
+    {
+      "id": "stream:event_580",
+      "anchor": "event_580",
+      "amount": "6789.444",
+      "monthly": true,
+      "step": 30,
+      "dom": 8,
+      "eom": false
+    }
+  ],
+  "ledger": [
+    {
+      "when": "2024-09-08",
+      "amount": "-6789.444",
+      "source": "stream:event_580",
+      "provenance": "INFERRED_RECURRENCE",
+      "evidence": [
+        "event_560",
+        "event_565",
+        "event_570",
+        "event_575",
+        "event_580"
+      ],
+      "policy": [
+        "observed_cadence",
+        "historical_mean"
+      ],
+      "stream_id": "stream:event_580",
+      "native_amount": "6789.444",
+      "currency": "INR",
+      "fx_date": "2024-09-08"
+    },
+    {
+      "when": "2024-09-12",
+      "amount": "-7116.46",
+      "source": "stream:event_596",
+      "provenance": "INFERRED_RECURRENCE",
+      "evidence": [
+        "event_584",
+        "event_585",
+        "event_586",
+        "event_587",
+        "event_588",
+        "event_589",
+        "event_590",
+        "event_591",
+        "event_592",
+        "event_593",
+        "event_594",
+        "event_595",
+        "event_596"
+      ],
+      "policy": [
+        "observed_cadence",
+        "historical_mean"
+      ],
+      "stream_id": "stream:event_596",
+      "native_amount": "7116.46",
+      "currency": "INR",
+      "fx_date": "2024-09-12"
+    },
+    {
+      "when": "2024-09-13",
+      "amount": "-15650",
+      "source": "stream:event_581",
+      "provenance": "INFERRED_RECURRENCE",
+      "evidence": [
+        "event_561",
+        "event_566",
+        "event_571",
+        "event_576",
+        "event_581"
+      ],
+      "policy": [
+        "observed_cadence",
+        "historical_mean"
+      ],
+      "stream_id": "stream:event_581",
+      "native_amount": "15650",
+      "currency": "INR",
+      "fx_date": "2024-09-13"
+    },
+    {
+      "when": "2024-09-13",
+      "amount": "-1005",
+      "source": "stream:event_582",
+      "provenance": "INFERRED_RECURRENCE",
+      "evidence": [
+        "event_562",
+        "event_567",
+        "event_572",
+        "event_577",
+        "event_582"
+      ],
+      "policy": [
+        "observed_cadence",
+        "historical_mean"
+      ],
+      "stream_id": "stream:event_582",
+      "native_amount": "1005",
+      "currency": "INR",
+      "fx_date": "2024-09-13"
+    },
+    {
+      "when": "2024-09-16",
+      "amount": "-5927.314444444444444444444444",
+      "source": "stream:event_614",
+      "provenance": "INFERRED_RECURRENCE",
+      "evidence": [
+        "event_606",
+        "event_607",
+        "event_608",
+        "event_609",
+        "event_610",
+        "event_611",
+        "event_612",
+        "event_613",
+        "event_614"
+      ],
+      "policy": [
+        "observed_cadence",
+        "historical_mean"
+      ],
+      "stream_id": "stream:event_614",
+      "native_amount": "5927.314444444444444444444444",
+      "currency": "INR",
+      "fx_date": "2024-09-16"
+    },
+    {
+      "when": "2024-09-20",
+      "amount": "-3220.133333333333333333333333",
+      "source": "stream:event_605",
+      "provenance": "INFERRED_RECURRENCE",
+      "evidence": [
+        "event_597",
+        "event_598",
+        "event_599",
+        "event_600",
+        "event_601",
+        "event_602",
+        "event_603",
+        "event_604",
+        "event_605"
+      ],
+      "policy": [
+        "observed_cadence",
+        "historical_mean"
+      ],
+      "stream_id": "stream:event_605",
+      "native_amount": "3220.133333333333333333333333",
+      "currency": "INR",
+      "fx_date": "2024-09-20"
+    },
+    {
+      "when": "2024-09-23",
+      "amount": "149000",
+      "source": "stream:event_578",
+      "provenance": "SEMANTIC_FACT",
+      "evidence": [
+        "event_558",
+        "event_563",
+        "event_568",
+        "event_573",
+        "event_578",
+        "message_05"
+      ],
+      "policy": [
+        "observed_cadence",
+        "last_contractual_pay"
+      ],
+      "stream_id": "stream:event_578",
+      "native_amount": "149000",
+      "currency": "INR",
+      "fx_date": "2024-09-23"
+    },
+    {
+      "when": "2024-09-26",
+      "amount": "-7116.46",
+      "source": "stream:event_596",
+      "provenance": "INFERRED_RECURRENCE",
+      "evidence": [
+        "event_584",
+        "event_585",
+        "event_586",
+        "event_587",
+        "event_588",
+        "event_589",
+        "event_590",
+        "event_591",
+        "event_592",
+        "event_593",
+        "event_594",
+        "event_595",
+        "event_596"
+      ],
+      "policy": [
+        "observed_cadence",
+        "historical_mean"
+      ],
+      "stream_id": "stream:event_596",
+      "native_amount": "7116.46",
+      "currency": "INR",
+      "fx_date": "2024-09-26"
+    },
+    {
+      "when": "2024-10-04",
+      "amount": "-34200",
+      "source": "stream:event_583",
+      "provenance": "INFERRED_RECURRENCE",
+      "evidence": [
+        "event_559",
+        "event_564",
+        "event_569",
+        "event_574",
+        "event_579",
+        "event_583"
+      ],
+      "policy": [
+        "observed_cadence",
+        "historical_mean"
+      ],
+      "stream_id": "stream:event_583",
+      "native_amount": "34200",
+      "currency": "INR",
+      "fx_date": "2024-10-04"
+    },
+    {
+      "when": "2024-10-07",
+      "amount": "-5927.314444444444444444444444",
+      "source": "stream:event_614",
+      "provenance": "INFERRED_RECURRENCE",
+      "evidence": [
+        "event_606",
+        "event_607",
+        "event_608",
+        "event_609",
+        "event_610",
+        "event_611",
+        "event_612",
+        "event_613",
+        "event_614"
+      ],
+      "policy": [
+        "observed_cadence",
+        "historical_mean"
+      ],
+      "stream_id": "stream:event_614",
+      "native_amount": "5927.314444444444444444444444",
+      "currency": "INR",
+      "fx_date": "2024-10-07"
+    },
+    {
+      "when": "2024-10-08",
+      "amount": "-6789.444",
+      "source": "stream:event_580",
+      "provenance": "INFERRED_RECURRENCE",
+      "evidence": [
+        "event_560",
+        "event_565",
+        "event_570",
+        "event_575",
+        "event_580"
+      ],
+      "policy": [
+        "observed_cadence",
+        "historical_mean"
+      ],
+      "stream_id": "stream:event_580",
+      "native_amount": "6789.444",
+      "currency": "INR",
+      "fx_date": "2024-10-08"
+    },
+    {
+      "when": "2024-10-10",
+      "amount": "-7116.46",
+      "source": "stream:event_596",
+      "provenance": "INFERRED_RECURRENCE",
+      "evidence": [
+        "event_584",
+        "event_585",
+        "event_586",
+        "event_587",
+        "event_588",
+        "event_589",
+        "event_590",
+        "event_591",
+        "event_592",
+        "event_593",
+        "event_594",
+        "event_595",
+        "event_596"
+      ],
+      "policy": [
+        "observed_cadence",
+        "historical_mean"
+      ],
+      "stream_id": "stream:event_596",
+      "native_amount": "7116.46",
+      "currency": "INR",
+      "fx_date": "2024-10-10"
+    },
+    {
+      "when": "2024-10-11",
+      "amount": "-3220.133333333333333333333333",
+      "source": "stream:event_605",
+      "provenance": "INFERRED_RECURRENCE",
+      "evidence": [
+        "event_597",
+        "event_598",
+        "event_599",
+        "event_600",
+        "event_601",
+        "event_602",
+        "event_603",
+        "event_604",
+        "event_605"
+      ],
+      "policy": [
+        "observed_cadence",
+        "historical_mean"
+      ],
+      "stream_id": "stream:event_605",
+      "native_amount": "3220.133333333333333333333333",
+      "currency": "INR",
+      "fx_date": "2024-10-11"
+    },
+    {
+      "when": "2024-10-13",
+      "amount": "-15650",
+      "source": "stream:event_581",
+      "provenance": "INFERRED_RECURRENCE",
+      "evidence": [
+        "event_561",
+        "event_566",
+        "event_571",
+        "event_576",
+        "event_581"
+      ],
+      "policy": [
+        "observed_cadence",
+        "historical_mean"
+      ],
+      "stream_id": "stream:event_581",
+      "native_amount": "15650",
+      "currency": "INR",
+      "fx_date": "2024-10-13"
+    },
+    {
+      "when": "2024-10-13",
+      "amount": "-1005",
+      "source": "stream:event_582",
+      "provenance": "INFERRED_RECURRENCE",
+      "evidence": [
+        "event_562",
+        "event_567",
+        "event_572",
+        "event_577",
+        "event_582"
+      ],
+      "policy": [
+        "observed_cadence",
+        "historical_mean"
+      ],
+      "stream_id": "stream:event_582",
+      "native_amount": "1005",
+      "currency": "INR",
+      "fx_date": "2024-10-13"
+    },
+    {
+      "when": "2024-10-23",
+      "amount": "149000",
+      "source": "stream:event_578",
+      "provenance": "MODELING_POLICY",
+      "evidence": [
+        "event_558",
+        "event_563",
+        "event_568",
+        "event_573",
+        "event_578",
+        "message_05"
+      ],
+      "policy": [
+        "observed_cadence",
+        "last_contractual_pay",
+        "persist_payday_phase"
+      ],
+      "stream_id": "stream:event_578",
+      "native_amount": "149000",
+      "currency": "INR",
+      "fx_date": "2024-10-23"
+    },
+    {
+      "when": "2024-10-24",
+      "amount": "-7116.46",
+      "source": "stream:event_596",
+      "provenance": "INFERRED_RECURRENCE",
+      "evidence": [
+        "event_584",
+        "event_585",
+        "event_586",
+        "event_587",
+        "event_588",
+        "event_589",
+        "event_590",
+        "event_591",
+        "event_592",
+        "event_593",
+        "event_594",
+        "event_595",
+        "event_596"
+      ],
+      "policy": [
+        "observed_cadence",
+        "historical_mean"
+      ],
+      "stream_id": "stream:event_596",
+      "native_amount": "7116.46",
+      "currency": "INR",
+      "fx_date": "2024-10-24"
+    },
+    {
+      "when": "2024-10-28",
+      "amount": "-5927.314444444444444444444444",
+      "source": "stream:event_614",
+      "provenance": "INFERRED_RECURRENCE",
+      "evidence": [
+        "event_606",
+        "event_607",
+        "event_608",
+        "event_609",
+        "event_610",
+        "event_611",
+        "event_612",
+        "event_613",
+        "event_614"
+      ],
+      "policy": [
+        "observed_cadence",
+        "historical_mean"
+      ],
+      "stream_id": "stream:event_614",
+      "native_amount": "5927.314444444444444444444444",
+      "currency": "INR",
+      "fx_date": "2024-10-28"
+    },
+    {
+      "when": "2024-11-01",
+      "amount": "-3220.133333333333333333333333",
+      "source": "stream:event_605",
+      "provenance": "INFERRED_RECURRENCE",
+      "evidence": [
+        "event_597",
+        "event_598",
+        "event_599",
+        "event_600",
+        "event_601",
+        "event_602",
+        "event_603",
+        "event_604",
+        "event_605"
+      ],
+      "policy": [
+        "observed_cadence",
+        "historical_mean"
+      ],
+      "stream_id": "stream:event_605",
+      "native_amount": "3220.133333333333333333333333",
+      "currency": "INR",
+      "fx_date": "2024-11-01"
+    },
+    {
+      "when": "2024-11-04",
+      "amount": "-34200",
+      "source": "stream:event_583",
+      "provenance": "INFERRED_RECURRENCE",
+      "evidence": [
+        "event_559",
+        "event_564",
+        "event_569",
+        "event_574",
+        "event_579",
+        "event_583"
+      ],
+      "policy": [
+        "observed_cadence",
+        "historical_mean"
+      ],
+      "stream_id": "stream:event_583",
+      "native_amount": "34200",
+      "currency": "INR",
+      "fx_date": "2024-11-04"
+    },
+    {
+      "when": "2024-11-07",
+      "amount": "-7116.46",
+      "source": "stream:event_596",
+      "provenance": "INFERRED_RECURRENCE",
+      "evidence": [
+        "event_584",
+        "event_585",
+        "event_586",
+        "event_587",
+        "event_588",
+        "event_589",
+        "event_590",
+        "event_591",
+        "event_592",
+        "event_593",
+        "event_594",
+        "event_595",
+        "event_596"
+      ],
+      "policy": [
+        "observed_cadence",
+        "historical_mean"
+      ],
+      "stream_id": "stream:event_596",
+      "native_amount": "7116.46",
+      "currency": "INR",
+      "fx_date": "2024-11-07"
+    },
+    {
+      "when": "2024-11-08",
+      "amount": "-6789.444",
+      "source": "stream:event_580",
+      "provenance": "INFERRED_RECURRENCE",
+      "evidence": [
+        "event_560",
+        "event_565",
+        "event_570",
+        "event_575",
+        "event_580"
+      ],
+      "policy": [
+        "observed_cadence",
+        "historical_mean"
+      ],
+      "stream_id": "stream:event_580",
+      "native_amount": "6789.444",
+      "currency": "INR",
+      "fx_date": "2024-11-08"
+    },
+    {
+      "when": "2024-11-13",
+      "amount": "-15650",
+      "source": "stream:event_581",
+      "provenance": "INFERRED_RECURRENCE",
+      "evidence": [
+        "event_561",
+        "event_566",
+        "event_571",
+        "event_576",
+        "event_581"
+      ],
+      "policy": [
+        "observed_cadence",
+        "historical_mean"
+      ],
+      "stream_id": "stream:event_581",
+      "native_amount": "15650",
+      "currency": "INR",
+      "fx_date": "2024-11-13"
+    },
+    {
+      "when": "2024-11-13",
+      "amount": "-1005",
+      "source": "stream:event_582",
+      "provenance": "INFERRED_RECURRENCE",
+      "evidence": [
+        "event_562",
+        "event_567",
+        "event_572",
+        "event_577",
+        "event_582"
+      ],
+      "policy": [
+        "observed_cadence",
+        "historical_mean"
+      ],
+      "stream_id": "stream:event_582",
+      "native_amount": "1005",
+      "currency": "INR",
+      "fx_date": "2024-11-13"
+    },
+    {
+      "when": "2024-11-18",
+      "amount": "-5927.314444444444444444444444",
+      "source": "stream:event_614",
+      "provenance": "INFERRED_RECURRENCE",
+      "evidence": [
+        "event_606",
+        "event_607",
+        "event_608",
+        "event_609",
+        "event_610",
+        "event_611",
+        "event_612",
+        "event_613",
+        "event_614"
+      ],
+      "policy": [
+        "observed_cadence",
+        "historical_mean"
+      ],
+      "stream_id": "stream:event_614",
+      "native_amount": "5927.314444444444444444444444",
+      "currency": "INR",
+      "fx_date": "2024-11-18"
+    },
+    {
+      "when": "2024-11-21",
+      "amount": "-7116.46",
+      "source": "stream:event_596",
+      "provenance": "INFERRED_RECURRENCE",
+      "evidence": [
+        "event_584",
+        "event_585",
+        "event_586",
+        "event_587",
+        "event_588",
+        "event_589",
+        "event_590",
+        "event_591",
+        "event_592",
+        "event_593",
+        "event_594",
+        "event_595",
+        "event_596"
+      ],
+      "policy": [
+        "observed_cadence",
+        "historical_mean"
+      ],
+      "stream_id": "stream:event_596",
+      "native_amount": "7116.46",
+      "currency": "INR",
+      "fx_date": "2024-11-21"
+    },
+    {
+      "when": "2024-11-22",
+      "amount": "-3220.133333333333333333333333",
+      "source": "stream:event_605",
+      "provenance": "INFERRED_RECURRENCE",
+      "evidence": [
+        "event_597",
+        "event_598",
+        "event_599",
+        "event_600",
+        "event_601",
+        "event_602",
+        "event_603",
+        "event_604",
+        "event_605"
+      ],
+      "policy": [
+        "observed_cadence",
+        "historical_mean"
+      ],
+      "stream_id": "stream:event_605",
+      "native_amount": "3220.133333333333333333333333",
+      "currency": "INR",
+      "fx_date": "2024-11-22"
+    },
+    {
+      "when": "2024-11-23",
+      "amount": "149000",
+      "source": "stream:event_578",
+      "provenance": "MODELING_POLICY",
+      "evidence": [
+        "event_558",
+        "event_563",
+        "event_568",
+        "event_573",
+        "event_578",
+        "message_05"
+      ],
+      "policy": [
+        "observed_cadence",
+        "last_contractual_pay",
+        "persist_payday_phase"
+      ],
+      "stream_id": "stream:event_578",
+      "native_amount": "149000",
+      "currency": "INR",
+      "fx_date": "2024-11-23"
+    }
+  ],
+  "daily": [
+    {
+      "date": "2024-09-05",
+      "balance": "218945.56",
+      "minimum": "218945.56"
+    },
+    {
+      "date": "2024-09-06",
+      "balance": "218945.56",
+      "minimum": "218945.56"
+    },
+    {
+      "date": "2024-09-07",
+      "balance": "218945.56",
+      "minimum": "218945.56"
+    },
+    {
+      "date": "2024-09-08",
+      "balance": "212156.116",
+      "minimum": "212156.116"
+    },
+    {
+      "date": "2024-09-09",
+      "balance": "212156.116",
+      "minimum": "212156.116"
+    },
+    {
+      "date": "2024-09-10",
+      "balance": "212156.116",
+      "minimum": "212156.116"
+    },
+    {
+      "date": "2024-09-11",
+      "balance": "212156.116",
+      "minimum": "212156.116"
+    },
+    {
+      "date": "2024-09-12",
+      "balance": "205039.656",
+      "minimum": "205039.656"
+    },
+    {
+      "date": "2024-09-13",
+      "balance": "188384.656",
+      "minimum": "188384.656"
+    },
+    {
+      "date": "2024-09-14",
+      "balance": "188384.656",
+      "minimum": "188384.656"
+    },
+    {
+      "date": "2024-09-15",
+      "balance": "188384.656",
+      "minimum": "188384.656"
+    },
+    {
+      "date": "2024-09-16",
+      "balance": "182457.3415555555555555555556",
+      "minimum": "182457.3415555555555555555556"
+    },
+    {
+      "date": "2024-09-17",
+      "balance": "182457.3415555555555555555556",
+      "minimum": "182457.3415555555555555555556"
+    },
+    {
+      "date": "2024-09-18",
+      "balance": "182457.3415555555555555555556",
+      "minimum": "182457.3415555555555555555556"
+    },
+    {
+      "date": "2024-09-19",
+      "balance": "182457.3415555555555555555556",
+      "minimum": "182457.3415555555555555555556"
+    },
+    {
+      "date": "2024-09-20",
+      "balance": "179237.2082222222222222222223",
+      "minimum": "179237.2082222222222222222223"
+    },
+    {
+      "date": "2024-09-21",
+      "balance": "179237.2082222222222222222223",
+      "minimum": "179237.2082222222222222222223"
+    },
+    {
+      "date": "2024-09-22",
+      "balance": "179237.2082222222222222222223",
+      "minimum": "179237.2082222222222222222223"
+    },
+    {
+      "date": "2024-09-23",
+      "balance": "328237.2082222222222222222223",
+      "minimum": "179237.2082222222222222222223"
+    },
+    {
+      "date": "2024-09-24",
+      "balance": "328237.2082222222222222222223",
+      "minimum": "328237.2082222222222222222223"
+    },
+    {
+      "date": "2024-09-25",
+      "balance": "328237.2082222222222222222223",
+      "minimum": "328237.2082222222222222222223"
+    },
+    {
+      "date": "2024-09-26",
+      "balance": "321120.7482222222222222222223",
+      "minimum": "321120.7482222222222222222223"
+    },
+    {
+      "date": "2024-09-27",
+      "balance": "321120.7482222222222222222223",
+      "minimum": "321120.7482222222222222222223"
+    },
+    {
+      "date": "2024-09-28",
+      "balance": "321120.7482222222222222222223",
+      "minimum": "321120.7482222222222222222223"
+    },
+    {
+      "date": "2024-09-29",
+      "balance": "321120.7482222222222222222223",
+      "minimum": "321120.7482222222222222222223"
+    },
+    {
+      "date": "2024-09-30",
+      "balance": "321120.7482222222222222222223",
+      "minimum": "321120.7482222222222222222223"
+    },
+    {
+      "date": "2024-10-01",
+      "balance": "321120.7482222222222222222223",
+      "minimum": "321120.7482222222222222222223"
+    },
+    {
+      "date": "2024-10-02",
+      "balance": "321120.7482222222222222222223",
+      "minimum": "321120.7482222222222222222223"
+    },
+    {
+      "date": "2024-10-03",
+      "balance": "321120.7482222222222222222223",
+      "minimum": "321120.7482222222222222222223"
+    },
+    {
+      "date": "2024-10-04",
+      "balance": "286920.7482222222222222222223",
+      "minimum": "286920.7482222222222222222223"
+    },
+    {
+      "date": "2024-10-05",
+      "balance": "286920.7482222222222222222223",
+      "minimum": "286920.7482222222222222222223"
+    },
+    {
+      "date": "2024-10-06",
+      "balance": "286920.7482222222222222222223",
+      "minimum": "286920.7482222222222222222223"
+    },
+    {
+      "date": "2024-10-07",
+      "balance": "280993.4337777777777777777779",
+      "minimum": "280993.4337777777777777777779"
+    },
+    {
+      "date": "2024-10-08",
+      "balance": "274203.9897777777777777777779",
+      "minimum": "274203.9897777777777777777779"
+    },
+    {
+      "date": "2024-10-09",
+      "balance": "274203.9897777777777777777779",
+      "minimum": "274203.9897777777777777777779"
+    },
+    {
+      "date": "2024-10-10",
+      "balance": "267087.5297777777777777777779",
+      "minimum": "267087.5297777777777777777779"
+    },
+    {
+      "date": "2024-10-11",
+      "balance": "263867.3964444444444444444446",
+      "minimum": "263867.3964444444444444444446"
+    },
+    {
+      "date": "2024-10-12",
+      "balance": "263867.3964444444444444444446",
+      "minimum": "263867.3964444444444444444446"
+    },
+    {
+      "date": "2024-10-13",
+      "balance": "247212.3964444444444444444446",
+      "minimum": "247212.3964444444444444444446"
+    },
+    {
+      "date": "2024-10-14",
+      "balance": "247212.3964444444444444444446",
+      "minimum": "247212.3964444444444444444446"
+    },
+    {
+      "date": "2024-10-15",
+      "balance": "247212.3964444444444444444446",
+      "minimum": "247212.3964444444444444444446"
+    },
+    {
+      "date": "2024-10-16",
+      "balance": "247212.3964444444444444444446",
+      "minimum": "247212.3964444444444444444446"
+    },
+    {
+      "date": "2024-10-17",
+      "balance": "247212.3964444444444444444446",
+      "minimum": "247212.3964444444444444444446"
+    },
+    {
+      "date": "2024-10-18",
+      "balance": "247212.3964444444444444444446",
+      "minimum": "247212.3964444444444444444446"
+    },
+    {
+      "date": "2024-10-19",
+      "balance": "247212.3964444444444444444446",
+      "minimum": "247212.3964444444444444444446"
+    },
+    {
+      "date": "2024-10-20",
+      "balance": "247212.3964444444444444444446",
+      "minimum": "247212.3964444444444444444446"
+    },
+    {
+      "date": "2024-10-21",
+      "balance": "247212.3964444444444444444446",
+      "minimum": "247212.3964444444444444444446"
+    },
+    {
+      "date": "2024-10-22",
+      "balance": "247212.3964444444444444444446",
+      "minimum": "247212.3964444444444444444446"
+    },
+    {
+      "date": "2024-10-23",
+      "balance": "396212.3964444444444444444446",
+      "minimum": "247212.3964444444444444444446"
+    },
+    {
+      "date": "2024-10-24",
+      "balance": "389095.9364444444444444444446",
+      "minimum": "389095.9364444444444444444446"
+    },
+    {
+      "date": "2024-10-25",
+      "balance": "389095.9364444444444444444446",
+      "minimum": "389095.9364444444444444444446"
+    },
+    {
+      "date": "2024-10-26",
+      "balance": "389095.9364444444444444444446",
+      "minimum": "389095.9364444444444444444446"
+    },
+    {
+      "date": "2024-10-27",
+      "balance": "389095.9364444444444444444446",
+      "minimum": "389095.9364444444444444444446"
+    },
+    {
+      "date": "2024-10-28",
+      "balance": "383168.6220000000000000000002",
+      "minimum": "383168.6220000000000000000002"
+    },
+    {
+      "date": "2024-10-29",
+      "balance": "383168.6220000000000000000002",
+      "minimum": "383168.6220000000000000000002"
+    },
+    {
+      "date": "2024-10-30",
+      "balance": "383168.6220000000000000000002",
+      "minimum": "383168.6220000000000000000002"
+    },
+    {
+      "date": "2024-10-31",
+      "balance": "383168.6220000000000000000002",
+      "minimum": "383168.6220000000000000000002"
+    },
+    {
+      "date": "2024-11-01",
+      "balance": "379948.4886666666666666666669",
+      "minimum": "379948.4886666666666666666669"
+    },
+    {
+      "date": "2024-11-02",
+      "balance": "379948.4886666666666666666669",
+      "minimum": "379948.4886666666666666666669"
+    },
+    {
+      "date": "2024-11-03",
+      "balance": "379948.4886666666666666666669",
+      "minimum": "379948.4886666666666666666669"
+    },
+    {
+      "date": "2024-11-04",
+      "balance": "345748.4886666666666666666669",
+      "minimum": "345748.4886666666666666666669"
+    },
+    {
+      "date": "2024-11-05",
+      "balance": "345748.4886666666666666666669",
+      "minimum": "345748.4886666666666666666669"
+    },
+    {
+      "date": "2024-11-06",
+      "balance": "345748.4886666666666666666669",
+      "minimum": "345748.4886666666666666666669"
+    },
+    {
+      "date": "2024-11-07",
+      "balance": "338632.0286666666666666666669",
+      "minimum": "338632.0286666666666666666669"
+    },
+    {
+      "date": "2024-11-08",
+      "balance": "331842.5846666666666666666669",
+      "minimum": "331842.5846666666666666666669"
+    },
+    {
+      "date": "2024-11-09",
+      "balance": "331842.5846666666666666666669",
+      "minimum": "331842.5846666666666666666669"
+    },
+    {
+      "date": "2024-11-10",
+      "balance": "331842.5846666666666666666669",
+      "minimum": "331842.5846666666666666666669"
+    },
+    {
+      "date": "2024-11-11",
+      "balance": "331842.5846666666666666666669",
+      "minimum": "331842.5846666666666666666669"
+    },
+    {
+      "date": "2024-11-12",
+      "balance": "331842.5846666666666666666669",
+      "minimum": "331842.5846666666666666666669"
+    },
+    {
+      "date": "2024-11-13",
+      "balance": "315187.5846666666666666666669",
+      "minimum": "315187.5846666666666666666669"
+    },
+    {
+      "date": "2024-11-14",
+      "balance": "315187.5846666666666666666669",
+      "minimum": "315187.5846666666666666666669"
+    },
+    {
+      "date": "2024-11-15",
+      "balance": "315187.5846666666666666666669",
+      "minimum": "315187.5846666666666666666669"
+    },
+    {
+      "date": "2024-11-16",
+      "balance": "315187.5846666666666666666669",
+      "minimum": "315187.5846666666666666666669"
+    },
+    {
+      "date": "2024-11-17",
+      "balance": "315187.5846666666666666666669",
+      "minimum": "315187.5846666666666666666669"
+    },
+    {
+      "date": "2024-11-18",
+      "balance": "309260.2702222222222222222225",
+      "minimum": "309260.2702222222222222222225"
+    },
+    {
+      "date": "2024-11-19",
+      "balance": "309260.2702222222222222222225",
+      "minimum": "309260.2702222222222222222225"
+    },
+    {
+      "date": "2024-11-20",
+      "balance": "309260.2702222222222222222225",
+      "minimum": "309260.2702222222222222222225"
+    },
+    {
+      "date": "2024-11-21",
+      "balance": "302143.8102222222222222222225",
+      "minimum": "302143.8102222222222222222225"
+    },
+    {
+      "date": "2024-11-22",
+      "balance": "298923.6768888888888888888892",
+      "minimum": "298923.6768888888888888888892"
+    },
+    {
+      "date": "2024-11-23",
+      "balance": "447923.6768888888888888888892",
+      "minimum": "298923.6768888888888888888892"
+    },
+    {
+      "date": "2024-11-24",
+      "balance": "447923.6768888888888888888892",
+      "minimum": "447923.6768888888888888888892"
+    },
+    {
+      "date": "2024-11-25",
+      "balance": "447923.6768888888888888888892",
+      "minimum": "447923.6768888888888888888892"
+    },
+    {
+      "date": "2024-11-26",
+      "balance": "447923.6768888888888888888892",
+      "minimum": "447923.6768888888888888888892"
+    },
+    {
+      "date": "2024-11-27",
+      "balance": "447923.6768888888888888888892",
+      "minimum": "447923.6768888888888888888892"
+    },
+    {
+      "date": "2024-11-28",
+      "balance": "447923.6768888888888888888892",
+      "minimum": "447923.6768888888888888888892"
+    },
+    {
+      "date": "2024-11-29",
+      "balance": "447923.6768888888888888888892",
+      "minimum": "447923.6768888888888888888892"
+    },
+    {
+      "date": "2024-11-30",
+      "balance": "447923.6768888888888888888892",
+      "minimum": "447923.6768888888888888888892"
+    },
+    {
+      "date": "2024-12-01",
+      "balance": "447923.6768888888888888888892",
+      "minimum": "447923.6768888888888888888892"
+    },
+    {
+      "date": "2024-12-02",
+      "balance": "447923.6768888888888888888892",
+      "minimum": "447923.6768888888888888888892"
+    },
+    {
+      "date": "2024-12-03",
+      "balance": "447923.6768888888888888888892",
+      "minimum": "447923.6768888888888888888892"
+    }
+  ],
+  "minimum": "179237.2082222222222222222223",
+  "selected": {
+    "method": "installments",
+    "payments": [
+      [
+        "2024-09-12",
+        "68432"
+      ],
+      [
+        "2024-10-10",
+        "68432"
+      ],
+      [
+        "2024-11-07",
+        "68432"
+      ]
+    ],
+    "changes": [],
+    "option_id": "payment_option_19"
+  },
+  "verified_minimum": "93627.67688888888888888888917",
+  "candidates": [
+    {
+      "candidate": {
+        "method": "partial_payment",
+        "payments": [
+          [
+            "2024-09-05",
+            "86237.20"
+          ],
+          [
+            "2024-10-23",
+            "111162.80"
+          ]
+        ],
+        "changes": [],
+        "option_id": ""
+      },
+      "valid": false,
+      "result": "Method not accepted"
+    },
+    {
+      "candidate": {
+        "method": "installments",
+        "payments": [
+          [
+            "2024-09-12",
+            "68432"
+          ],
+          [
+            "2024-10-10",
+            "68432"
+          ],
+          [
+            "2024-11-07",
+            "68432"
+          ]
+        ],
+        "changes": [],
+        "option_id": "payment_option_19"
+      },
+      "valid": true,
+      "result": "93627.67688888888888888888917"
+    },
+    {
+      "candidate": {
+        "method": "installments",
+        "payments": [
+          [
+            "2024-09-19",
+            "14476"
+          ],
+          [
+            "2024-10-19",
+            "14476"
+          ],
+          [
+            "2024-11-18",
+            "14476"
+          ],
+          [
+            "2024-12-18",
+            "14476"
+          ],
+          [
+            "2025-01-17",
+            "14476"
+          ],
+          [
+            "2025-02-16",
+            "14476"
+          ],
+          [
+            "2025-03-18",
+            "14476"
+          ],
+          [
+            "2025-04-17",
+            "14476"
+          ],
+          [
+            "2025-05-17",
+            "14476"
+          ],
+          [
+            "2025-06-16",
+            "14476"
+          ],
+          [
+            "2025-07-16",
+            "14476"
+          ],
+          [
+            "2025-08-15",
+            "14476"
+          ],
+          [
+            "2025-09-14",
+            "14476"
+          ],
+          [
+            "2025-10-14",
+            "14476"
+          ],
+          [
+            "2025-11-13",
+            "14476"
+          ]
+        ],
+        "changes": [],
+        "option_id": "payment_option_21"
+      },
+      "valid": false,
+      "result": "Deadline/horizon violation"
+    },
+    {
+      "candidate": {
+        "method": "wait",
+        "payments": [
+          [
+            "2024-10-23",
+            "197400"
+          ]
+        ],
+        "changes": [],
+        "option_id": ""
+      },
+      "valid": false,
+      "result": "Invalid wait"
+    },
+    {
+      "candidate": {
+        "method": "partial_payment",
+        "payments": [
+          [
+            "2024-09-05",
+            "86237.20"
+          ],
+          [
+            "2024-10-23",
+            "111162.80"
+          ]
+        ],
+        "changes": [
+          [
+            "event_614",
+            "reduce_to",
+            "2835"
+          ]
+        ],
+        "option_id": ""
+      },
+      "valid": false,
+      "result": "Method not accepted"
+    },
+    {
+      "candidate": {
+        "method": "installments",
+        "payments": [
+          [
+            "2024-09-12",
+            "68432"
+          ],
+          [
+            "2024-10-10",
+            "68432"
+          ],
+          [
+            "2024-11-07",
+            "68432"
+          ]
+        ],
+        "changes": [
+          [
+            "event_614",
+            "reduce_to",
+            "2835"
+          ]
+        ],
+        "option_id": "payment_option_19"
+      },
+      "valid": true,
+      "result": "105996.9346666666666666666668"
+    },
+    {
+      "candidate": {
+        "method": "installments",
+        "payments": [
+          [
+            "2024-09-19",
+            "14476"
+          ],
+          [
+            "2024-10-19",
+            "14476"
+          ],
+          [
+            "2024-11-18",
+            "14476"
+          ],
+          [
+            "2024-12-18",
+            "14476"
+          ],
+          [
+            "2025-01-17",
+            "14476"
+          ],
+          [
+            "2025-02-16",
+            "14476"
+          ],
+          [
+            "2025-03-18",
+            "14476"
+          ],
+          [
+            "2025-04-17",
+            "14476"
+          ],
+          [
+            "2025-05-17",
+            "14476"
+          ],
+          [
+            "2025-06-16",
+            "14476"
+          ],
+          [
+            "2025-07-16",
+            "14476"
+          ],
+          [
+            "2025-08-15",
+            "14476"
+          ],
+          [
+            "2025-09-14",
+            "14476"
+          ],
+          [
+            "2025-10-14",
+            "14476"
+          ],
+          [
+            "2025-11-13",
+            "14476"
+          ]
+        ],
+        "changes": [
+          [
+            "event_614",
+            "reduce_to",
+            "2835"
+          ]
+        ],
+        "option_id": "payment_option_21"
+      },
+      "valid": false,
+      "result": "Deadline/horizon violation"
+    },
+    {
+      "candidate": {
+        "method": "partial_payment",
+        "payments": [
+          [
+            "2024-09-05",
+            "86237.20"
+          ],
+          [
+            "2024-10-23",
+            "111162.80"
+          ]
+        ],
+        "changes": [
+          [
+            "event_582",
+            "stop",
+            "0"
+          ]
+        ],
+        "option_id": ""
+      },
+      "valid": false,
+      "result": "Method not accepted"
+    },
+    {
+      "candidate": {
+        "method": "installments",
+        "payments": [
+          [
+            "2024-09-12",
+            "68432"
+          ],
+          [
+            "2024-10-10",
+            "68432"
+          ],
+          [
+            "2024-11-07",
+            "68432"
+          ]
+        ],
+        "changes": [
+          [
+            "event_582",
+            "stop",
+            "0"
+          ]
+        ],
+        "option_id": "payment_option_19"
+      },
+      "valid": true,
+      "result": "96642.67688888888888888888917"
+    },
+    {
+      "candidate": {
+        "method": "installments",
+        "payments": [
+          [
+            "2024-09-19",
+            "14476"
+          ],
+          [
+            "2024-10-19",
+            "14476"
+          ],
+          [
+            "2024-11-18",
+            "14476"
+          ],
+          [
+            "2024-12-18",
+            "14476"
+          ],
+          [
+            "2025-01-17",
+            "14476"
+          ],
+          [
+            "2025-02-16",
+            "14476"
+          ],
+          [
+            "2025-03-18",
+            "14476"
+          ],
+          [
+            "2025-04-17",
+            "14476"
+          ],
+          [
+            "2025-05-17",
+            "14476"
+          ],
+          [
+            "2025-06-16",
+            "14476"
+          ],
+          [
+            "2025-07-16",
+            "14476"
+          ],
+          [
+            "2025-08-15",
+            "14476"
+          ],
+          [
+            "2025-09-14",
+            "14476"
+          ],
+          [
+            "2025-10-14",
+            "14476"
+          ],
+          [
+            "2025-11-13",
+            "14476"
+          ]
+        ],
+        "changes": [
+          [
+            "event_582",
+            "stop",
+            "0"
+          ]
+        ],
+        "option_id": "payment_option_21"
+      },
+      "valid": false,
+      "result": "Deadline/horizon violation"
+    },
+    {
+      "candidate": {
+        "method": "partial_payment",
+        "payments": [
+          [
+            "2024-09-05",
+            "86237.20"
+          ],
+          [
+            "2024-10-23",
+            "111162.80"
+          ]
+        ],
+        "changes": [
+          [
+            "event_614",
+            "reduce_to",
+            "2835"
+          ],
+          [
+            "event_582",
+            "stop",
+            "0"
+          ]
+        ],
+        "option_id": ""
+      },
+      "valid": false,
+      "result": "Method not accepted"
+    },
+    {
+      "candidate": {
+        "method": "installments",
+        "payments": [
+          [
+            "2024-09-12",
+            "68432"
+          ],
+          [
+            "2024-10-10",
+            "68432"
+          ],
+          [
+            "2024-11-07",
+            "68432"
+          ]
+        ],
+        "changes": [
+          [
+            "event_614",
+            "reduce_to",
+            "2835"
+          ],
+          [
+            "event_582",
+            "stop",
+            "0"
+          ]
+        ],
+        "option_id": "payment_option_19"
+      },
+      "valid": true,
+      "result": "109011.9346666666666666666668"
+    },
+    {
+      "candidate": {
+        "method": "installments",
+        "payments": [
+          [
+            "2024-09-19",
+            "14476"
+          ],
+          [
+            "2024-10-19",
+            "14476"
+          ],
+          [
+            "2024-11-18",
+            "14476"
+          ],
+          [
+            "2024-12-18",
+            "14476"
+          ],
+          [
+            "2025-01-17",
+            "14476"
+          ],
+          [
+            "2025-02-16",
+            "14476"
+          ],
+          [
+            "2025-03-18",
+            "14476"
+          ],
+          [
+            "2025-04-17",
+            "14476"
+          ],
+          [
+            "2025-05-17",
+            "14476"
+          ],
+          [
+            "2025-06-16",
+            "14476"
+          ],
+          [
+            "2025-07-16",
+            "14476"
+          ],
+          [
+            "2025-08-15",
+            "14476"
+          ],
+          [
+            "2025-09-14",
+            "14476"
+          ],
+          [
+            "2025-10-14",
+            "14476"
+          ],
+          [
+            "2025-11-13",
+            "14476"
+          ]
+        ],
+        "changes": [
+          [
+            "event_614",
+            "reduce_to",
+            "2835"
+          ],
+          [
+            "event_582",
+            "stop",
+            "0"
+          ]
+        ],
+        "option_id": "payment_option_21"
+      },
+      "valid": false,
+      "result": "Deadline/horizon violation"
+    }
+  ],
+  "output": {
+    "request_id": "request_07",
+    "amount_safe_to_pay": "86237.20",
+    "affordability_status": "affordable_with_plan",
+    "recommended_payment_method": "installments",
+    "payment_plan": "2024-09-12:68432|2024-10-10:68432|2024-11-07:68432",
+    "earliest_date_for_full_payment": "2024-10-23",
+    "spending_changes_needed": "none",
+    "decision_explanation": "Verified supplied schedule and 90-day reserve."
+  }
+}
