@@ -1,0 +1,14 @@
+candidate,safe_exact,date_exact,normalized_MAE
+baseline_mean,3,19,0.032969
+exclude_request_day,3,17,0.039354
+event_date_without_messages,3,17,0.04584
+settlement_without_messages,3,18,0.044365
+one_cycle_salary_delay,3,18,0.032969
+all_salary_category_recurs,4,17,0.123619
+salary_history_mean,3,19,0.032969
+image_purchases_in_history,3,19,0.030854
+description_grouping,4,12,0.130836
+all_variable_weekly,2,14,0.138246
+all_variable_fortnightly,3,18,0.065535
+90_days_after_request_inclusive,2,18,0.065584
+three_calendar_months,4,22,0.030307

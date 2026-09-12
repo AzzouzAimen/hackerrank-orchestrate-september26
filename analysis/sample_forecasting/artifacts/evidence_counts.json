@@ -1,0 +1,61 @@
+{
+  "sample_events": 2288,
+  "sample_messages": 17,
+  "sample_statuses": {
+    "settled": 2265,
+    "cancelled": 2,
+    "pending": 9,
+    "scheduled": 8,
+    "failed": 2,
+    "unrealized": 2
+  },
+  "all_statuses": {
+    "settled": 25148,
+    "cancelled": 22,
+    "pending": 71,
+    "scheduled": 70,
+    "failed": 21,
+    "unrealized": 10
+  },
+  "sample_expense_cadences": {
+    "monthly": 153,
+    "7": 25,
+    "14": 19,
+    "10": 11,
+    "21": 13,
+    "5": 3
+  },
+  "sample_link_pairs": {
+    "settled -> settled / refund": 2,
+    "cancelled -> settled / expense": 1,
+    "settled -> pending / refund": 1,
+    "settled -> unrealized / investment_valuation": 2
+  },
+  "all_link_pairs": {
+    "settled -> settled / refund": 14,
+    "cancelled -> settled / expense": 8,
+    "settled -> pending / refund": 8,
+    "settled -> unrealized / investment_valuation": 10,
+    "failed -> scheduled / debt_payment": 7,
+    "settled -> settled / investment_sale": 5,
+    "settled -> pending / expense": 6
+  },
+  "settled_on_request_day": 0,
+  "fx_distinct_rates_by_pair": {
+    "('EUR', 'ZAR')": [
+      20.0
+    ],
+    "('USD', 'EUR')": [
+      0.92
+    ],
+    "('USD', 'INR')": [
+      83.33
+    ],
+    "('USD', 'IDR')": [
+      15833.33
+    ],
+    "('EUR', 'USD')": [
+      1.09
+    ]
+  }
+}

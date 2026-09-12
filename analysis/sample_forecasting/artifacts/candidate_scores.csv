@@ -1,0 +1,14 @@
+candidate,safe_exact,date_exact,normalized_MAE
+mean,3,19,0.032969
+median,3,20,0.034921
+recent2,3,19,0.037103
+recent3,3,19,0.033251
+recent4,3,19,0.036918
+recent5,3,19,0.038143
+recent6,3,19,0.035708
+recent8,3,19,0.033613
+recent90,3,19,0.034484
+trimmed_mean,3,19,0.033805
+p75,1,13,0.052714
+last,3,20,0.0391
+max,1,11,0.097048

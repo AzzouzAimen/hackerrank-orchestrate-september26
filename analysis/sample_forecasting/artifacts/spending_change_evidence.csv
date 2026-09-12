@@ -1,0 +1,5 @@
+request_id,action,category,anchor_amount,minimum_allowed,allowed,anchor_is_latest
+request_06,stop:event_476,streaming,19,,True,True
+request_11,reduce_to:event_989:665950,dining,1163530.49,665950,True,True
+request_21,stop:event_1815,cloud_storage,11,,True,True
+request_21,reduce_to:event_1816:23.50,streaming,47,23.5,True,True

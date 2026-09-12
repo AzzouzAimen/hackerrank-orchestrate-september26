@@ -155,6 +155,12 @@ parent_agent=<parent_name_or_none>
 - Sensitive PII.
 - Full contents of large files or binary blobs. Reference by path instead.
 
+### 5.5 Decision And Hackathon Notes
+
+- `DECISIONS.md` is the lightweight record of major architectural, forecasting, validation, and submission decisions. Add a new dated entry using the fields `Decision`, `Reason`, `Alternative`, `Rejected because`, `Evidence`, and `Tradeoff`. Append entries; do not rewrite prior decisions.
+- `HACKATHON_LOG.md` is a concise chronological record for project review and interview preparation. Each entry should capture the date, action, result, and next step. Keep it brief and exclude secrets, sensitive PII, and large file contents.
+- Update both files when a major decision changes the direction of the work. Routine commands and per-turn summaries still belong in `log.txt` under §5.2.
+
 ---
 
 ## 6. Project Contract

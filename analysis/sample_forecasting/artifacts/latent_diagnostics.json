@@ -1,0 +1,8 @@
+{
+  "variable_streams": 126,
+  "median_cv": 0.1298441136205507,
+  "median_abs_half_drift": 0.044201254420608765,
+  "median_sig2_change": 0.005376972210515354,
+  "positive_residuals": 10,
+  "negative_residuals": 11
+}
