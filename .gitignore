@@ -1,5 +1,3 @@
 log.txt
 .env
-analysis/**/__pycache__/
-prototype/**/__pycache__/
 code/**/__pycache__/

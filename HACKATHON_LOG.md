@@ -89,3 +89,10 @@ Concise project history for review and interview preparation. Record the action,
 - Action: Moved the shared schema/models, resolver, Decimal engine, plans and their tests to code/buy_or_wait; preserved compatibility commands and original empty entry points.
 - Verification: 74 unique tests pass. Modules/schema are byte-preserved and representative CSV hash remains 2007B834DE8D1F0E6EED703D422FCF0A459C3EFE2B3B58525B4AB85A02E4D703. Source responses and reviewed facts were not overwritten; no new model calls.
 - Next: Review v2 claim/reference annotations and the single-variable rent-history proposal. The proposal is not executed; prompt tuning, full-dataset runs, packaging and submission remain outside this task.
+
+## 2026-09-12 — Repository layout tidy-up
+
+- Action: Moved analysis/ and prototype/ beneath code/, flattened the single shared implementation and tests directly into code/, and updated imports, dataset paths, current reproduction commands, and Git ignore paths.
+- Result: code/main.py replays five reviewed cases; code/evaluation/main.py reads saved audit usage/availability. The final usage report is a clearly marked pending template. No online evaluation or full-dataset runner was added.
+- Verification: 74 unique tests pass. Existing fact bundles, saved API artifacts, analysis artifacts, and the five-case representative CSV retain their pre-move hashes. Offline audit regeneration succeeds without model calls.
+- Next: Continue from the organized code layout; review the previously prepared evidence annotations before the separate proposed input-only experiment.

@@ -261,3 +261,23 @@ Three source modules and schema match pre-move hashes. All 74 unique regression/
 
 Tradeoff:
 The main implementation is reusable under code, but code/main.py is still the original empty starter, not a full submission runner. No full-dataset prediction, packaging, commit or model integration occurred.
+
+## 2026-09-12 — Flatten the code layout and relocate research folders
+
+Decision:
+Place the canonical seven-fact schema/models, deterministic financial engine, plan logic, and their tests directly under code/. Move the existing prototype/ and analysis/ trees to code/prototype/ and code/analysis/. Use code/main.py for the already-reviewed representative replay and code/evaluation/main.py for read-only saved-experiment summaries.
+
+Reason:
+The user requested one coherent code directory with working entry points. Python's standard-library code module makes a nested importable code package inappropriate. The existing full-dataset and final usage stages are not implemented yet, so the entry points expose only completed behavior and clearly reserve later evaluation.
+
+Alternative:
+Keep a nested buy_or_wait package, duplicate the engine, leave both entry points empty, or build a full-dataset/online evaluator now.
+
+Rejected because:
+A nested package and empty entry points do not match the requested organization; duplication risks drift; full-dataset and model integration exceed the current tidy-up scope.
+
+Evidence:
+The 49 engine/boundary, 19 extraction/audit, and 6 ledger tests pass after relocation. The representative CSV SHA256 remains 2007B834DE8D1F0E6EED703D422FCF0A459C3EFE2B3B58525B4AB85A02E4D703. All saved research artifacts and fact bundles match pre-move hashes. The offline audit regenerates identically. No model calls were made.
+
+Tradeoff:
+Old root-level research import paths and commands are replaced by code/ paths. Git displays the unstaged moves as deletions plus new paths until a later stage/commit; historical artifacts remain byte-preserved and no final prediction runner is claimed.

@@ -1,47 +1,45 @@
-# Shared Buy or Wait implementation
+# Buy or Wait code and research
 
-`buy_or_wait/` is the single implementation of the strict seven-fact evidence model,
-deterministic resolver/Decimal financial engine, and payment-plan generation,
-verification, ranking, and output validation. These modules were moved byte-for-byte
-from `prototype/`; the arithmetic, policy, recurrence, and trusted facts are unchanged.
+The shared implementation lives directly in this directory: `evidence.py` defines
+the seven semantic fact types, `finance.py` resolves evidence and projects cash with
+Decimal, and `plans.py` builds, checks, and ranks payment plans. `evidence.schema.json`
+is the canonical exported contract. Python already has a standard-library module
+named `code`, so import these modules from a process launched in this directory (or
+with this directory on `PYTHONPATH`), rather than importing a `code` package.
 
-The package is named `buy_or_wait` because `code` is a Python standard-library module.
-Do not add `code/__init__.py` or import `code.finance`. The existing empty `main.py`,
-`evaluation/main.py`, and `evaluation/usage_report.md` starter files remain untouched.
-This relocation does not create a full-dataset or submission runner.
+`main.py` currently offers an explicit replay of the five reviewed representative
+cases. It uses the trusted bundles in `prototype/facts/` and writes research artifacts
+only. The full-dataset prediction command and model integration belong to later work.
+
+`evaluation/main.py` gives a read-only summary of saved shadow experiments. The final
+full-run usage report remains pending in `evaluation/usage_report.md` until that run
+exists; no costs or metrics have been fabricated for it.
 
 From the repository root:
 
 ```text
 python -m pip install -r code/requirements.txt
-python -m unittest discover -s code/buy_or_wait/tests -t code -v
-python -m unittest prototype.test_extraction_experiment prototype.test_evaluation_audit -v
-python -m prototype.run
+python code/main.py --help
+python code/main.py representative
+python code/evaluation/main.py saved-summary
+python -m unittest discover -s code/tests -t code -v
 ```
 
-The representative runner reads the five existing assistant-reviewed reference bundles
-from `prototype/facts/`. It remains a research runner; sample labels are used only in
-its comparison report. Model-generated facts remain exclusively in evaluation artifacts.
-The final command regenerates only representative research artifacts, not output.csv.
-
-The old test command still works through thin compatibility imports:
+Research and audit tests run from `code/`:
 
 ```text
-python -m unittest prototype.test_prototype prototype.test_boundary prototype.test_extraction_experiment prototype.test_evaluation_audit -v
+cd code
+python -m unittest prototype.test_extraction_experiment prototype.test_evaluation_audit -v
 ```
 
-Ledger-audit tests remain separate; from `analysis/sample_forecasting/scripts`:
+The independent ledger-audit tests run from `code/analysis/sample_forecasting/scripts`:
 
 ```text
 python -m unittest test_ledger_verification -v
 ```
 
-For an application launched from `code/`, use `from buy_or_wait.finance import resolve`.
-Root-level research commands add the sibling `code/` directory via `prototype/__init__.py`.
-There is one class/module identity and no second engine implementation in `prototype/`.
-The schema artifact is `buy_or_wait/evidence.schema.json`; it is not rewritten by runs.
-
-Reports, reviewed references, representative runner/artifacts, saved model responses,
-extraction harness, and annotations stay in `prototype/`. See
-[the corrected audit](../prototype/EVALUATION_AUDIT_V2.md) and
-[the unexecuted next-experiment proposal](../prototype/NEXT_EXPERIMENT_V2.md).
+`prototype/` holds reviewed fact bundles, representative and extraction research
+runners, reports, annotations, and saved API responses. `analysis/` holds sample
+forecasting research. The original source-response artifacts, trusted facts, and
+representative output remain unchanged. See the [corrected extraction audit](prototype/reports/EVALUATION_AUDIT_V2.md)
+and [unexecuted next-experiment proposal](prototype/reports/NEXT_EXPERIMENT_V2.md).

@@ -35,13 +35,14 @@ Your solution must:
 - Generate one prediction for every request
 - Write the final predictions to `output.csv` in the repository root
 
-Run the starter Python entry point with:
+The current Python entry point can replay five reviewed research cases:
 
 ```bash
-python3 code/main.py
+python code/main.py representative
 ```
 
-After running your solution, confirm that `output.csv` exists in the repository root and contains the required columns and one row for every request.
+This replay writes only research artifacts. Full-dataset prediction and a root-level
+`output.csv` remain later implementation steps; see [code/README.md](code/README.md).
 
 ## Important File Locations
 
