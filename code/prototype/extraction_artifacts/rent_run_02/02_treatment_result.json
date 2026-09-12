@@ -1,0 +1,229 @@
+{
+  "arm": "treatment",
+  "logical_run": 2,
+  "run": {
+    "usable": true,
+    "bundle": {
+      "facts": [
+        {
+          "schema_version": "1.0",
+          "fact_id": "fact_user16_salary_stream_status",
+          "evidence_ids": [
+            "event_1336",
+            "event_1343",
+            "event_1350",
+            "event_1357",
+            "event_1364"
+          ],
+          "affected_event_ids": [
+            "event_1336",
+            "event_1343",
+            "event_1350",
+            "event_1357",
+            "event_1364"
+          ],
+          "stream_selector": {
+            "user_id": "user_16",
+            "category": "salary",
+            "direction": "credit",
+            "currency": "INR",
+            "description": "Payroll credit"
+          },
+          "effective_from": "2023-03-15",
+          "effective_until": null,
+          "confirmation_state": "uncertain",
+          "unresolved_fields": [
+            "end_date"
+          ],
+          "fact_type": "stream_status",
+          "payload": {
+            "status": "ongoing"
+          }
+        },
+        {
+          "schema_version": "1.0",
+          "fact_id": "fact_user16_rent_stream_status",
+          "evidence_ids": [
+            "event_1337",
+            "event_1344",
+            "event_1351",
+            "event_1358",
+            "event_1365",
+            "event_1371",
+            "message_12"
+          ],
+          "affected_event_ids": [
+            "event_1337",
+            "event_1344",
+            "event_1351",
+            "event_1358",
+            "event_1365",
+            "event_1371"
+          ],
+          "stream_selector": {
+            "user_id": "user_16",
+            "category": "rent",
+            "direction": "debit",
+            "currency": "INR",
+            "description": "Monthly rent"
+          },
+          "effective_from": "2023-03-01",
+          "effective_until": null,
+          "confirmation_state": "confirmed",
+          "unresolved_fields": [],
+          "fact_type": "stream_status",
+          "payload": {
+            "status": "ongoing"
+          }
+        },
+        {
+          "schema_version": "1.0",
+          "fact_id": "fact_user16_rent_increase_12pct",
+          "evidence_ids": [
+            "message_12"
+          ],
+          "affected_event_ids": [],
+          "stream_selector": {
+            "user_id": "user_16",
+            "category": "rent",
+            "direction": "debit",
+            "currency": "INR",
+            "description": "Monthly rent"
+          },
+          "effective_from": null,
+          "effective_until": null,
+          "confirmation_state": "confirmed",
+          "unresolved_fields": [
+            "new_amount",
+            "effective_from",
+            "affected_event_ids",
+            "scope"
+          ],
+          "fact_type": "amount_amendment",
+          "payload": {
+            "money": null,
+            "percent_increase": "12",
+            "scope": "unknown"
+          }
+        },
+        {
+          "schema_version": "1.0",
+          "fact_id": "fact_user16_outstanding_rent_future",
+          "evidence_ids": [
+            "event_1442"
+          ],
+          "affected_event_ids": [
+            "event_1442"
+          ],
+          "stream_selector": null,
+          "effective_from": null,
+          "effective_until": null,
+          "confirmation_state": "confirmed",
+          "unresolved_fields": [
+            "amount"
+          ],
+          "fact_type": "future_event_confirmation",
+          "payload": {
+            "money": {
+              "value": null,
+              "currency": "INR"
+            },
+            "payment_date": "2023-08-16",
+            "direction": "debit"
+          }
+        },
+        {
+          "schema_version": "1.0",
+          "fact_id": "fact_user16_receipt_total_due",
+          "evidence_ids": [
+            "image_02"
+          ],
+          "affected_event_ids": [
+            "event_1442"
+          ],
+          "stream_selector": null,
+          "effective_from": null,
+          "effective_until": null,
+          "confirmation_state": "confirmed",
+          "unresolved_fields": [],
+          "fact_type": "image_financial_value",
+          "payload": {
+            "value_type": "current_amount_due",
+            "money": {
+              "value": "200000.00",
+              "currency": "INR"
+            },
+            "image_id": "image_02",
+            "selected_field": "Total Amount to be Received"
+          }
+        },
+        {
+          "schema_version": "1.0",
+          "fact_id": "fact_user16_receipt_amount_paid",
+          "evidence_ids": [
+            "image_02"
+          ],
+          "affected_event_ids": [
+            "event_1442"
+          ],
+          "stream_selector": null,
+          "effective_from": null,
+          "effective_until": null,
+          "confirmation_state": "confirmed",
+          "unresolved_fields": [],
+          "fact_type": "image_financial_value",
+          "payload": {
+            "value_type": "amount_paid",
+            "money": {
+              "value": "100000.00",
+              "currency": "INR"
+            },
+            "image_id": "image_02",
+            "selected_field": "Amount Received"
+          }
+        },
+        {
+          "schema_version": "1.0",
+          "fact_id": "fact_user16_receipt_balance_due",
+          "evidence_ids": [
+            "image_02"
+          ],
+          "affected_event_ids": [
+            "event_1442"
+          ],
+          "stream_selector": null,
+          "effective_from": null,
+          "effective_until": null,
+          "confirmation_state": "confirmed",
+          "unresolved_fields": [],
+          "fact_type": "image_financial_value",
+          "payload": {
+            "value_type": "balance_due",
+            "money": {
+              "value": "100000.00",
+              "currency": "INR"
+            },
+            "image_id": "image_02",
+            "selected_field": "Balance Due"
+          }
+        }
+      ]
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "latency_seconds": 286.7282919999998,
+        "usage": {
+          "prompt_tokens": 7282,
+          "completion_tokens": 2454,
+          "total_tokens": 9736,
+          "cached_tokens": 7282
+        },
+        "finish_reason": "stop",
+        "raw_content": "{\"facts\":[{\"schema_version\":\"1.0\",\"fact_id\":\"fact_user16_salary_stream_status\",\"evidence_ids\":[\"event_1336\",\"event_1343\",\"event_1350\",\"event_1357\",\"event_1364\"],\"affected_event_ids\":[\"event_1336\",\"event_1343\",\"event_1350\",\"event_1357\",\"event_1364\"],\"stream_selector\":{\"user_id\":\"user_16\",\"category\":\"salary\",\"direction\":\"credit\",\"currency\":\"INR\",\"description\":\"Payroll credit\"},\"effective_from\":\"2023-03-15\",\"effective_until\":null,\"confirmation_state\":\"uncertain\",\"unresolved_fields\":[\"end_date\"],\"fact_type\":\"stream_status\",\"payload\":{\"status\":\"ongoing\"}},{\"schema_version\":\"1.0\",\"fact_id\":\"fact_user16_rent_stream_status\",\"evidence_ids\":[\"event_1337\",\"event_1344\",\"event_1351\",\"event_1358\",\"event_1365\",\"event_1371\",\"message_12\"],\"affected_event_ids\":[\"event_1337\",\"event_1344\",\"event_1351\",\"event_1358\",\"event_1365\",\"event_1371\"],\"stream_selector\":{\"user_id\":\"user_16\",\"category\":\"rent\",\"direction\":\"debit\",\"currency\":\"INR\",\"description\":\"Monthly rent\"},\"effective_from\":\"2023-03-01\",\"effective_until\":null,\"confirmation_state\":\"confirmed\",\"unresolved_fields\":[],\"fact_type\":\"stream_status\",\"payload\":{\"status\":\"ongoing\"}},{\"schema_version\":\"1.0\",\"fact_id\":\"fact_user16_rent_increase_12pct\",\"evidence_ids\":[\"message_12\"],\"affected_event_ids\":[],\"stream_selector\":{\"user_id\":\"user_16\",\"category\":\"rent\",\"direction\":\"debit\",\"currency\":\"INR\",\"description\":\"Monthly rent\"},\"effective_from\":null,\"effective_until\":null,\"confirmation_state\":\"confirmed\",\"unresolved_fields\":[\"new_amount\",\"effective_from\",\"affected_event_ids\",\"scope\"],\"fact_type\":\"amount_amendment\",\"payload\":{\"money\":null,\"percent_increase\":\"12\",\"scope\":\"unknown\"}},{\"schema_version\":\"1.0\",\"fact_id\":\"fact_user16_outstanding_rent_future\",\"evidence_ids\":[\"event_1442\"],\"affected_event_ids\":[\"event_1442\"],\"stream_selector\":null,\"effective_from\":null,\"effective_until\":null,\"confirmation_state\":\"confirmed\",\"unresolved_fields\":[\"amount\"],\"fact_type\":\"future_event_confirmation\",\"payload\":{\"money\":{\"value\":null,\"currency\":\"INR\"},\"payment_date\":\"2023-08-16\",\"direction\":\"debit\"}},{\"schema_version\":\"1.0\",\"fact_id\":\"fact_user16_receipt_total_due\",\"evidence_ids\":[\"image_02\"],\"affected_event_ids\":[\"event_1442\"],\"stream_selector\":null,\"effective_from\":null,\"effective_until\":null,\"confirmation_state\":\"confirmed\",\"unresolved_fields\":[],\"fact_type\":\"image_financial_value\",\"payload\":{\"value_type\":\"current_amount_due\",\"money\":{\"value\":\"200000.00\",\"currency\":\"INR\"},\"image_id\":\"image_02\",\"selected_field\":\"Total Amount to be Received\"}},{\"schema_version\":\"1.0\",\"fact_id\":\"fact_user16_receipt_amount_paid\",\"evidence_ids\":[\"image_02\"],\"affected_event_ids\":[\"event_1442\"],\"stream_selector\":null,\"effective_from\":null,\"effective_until\":null,\"confirmation_state\":\"confirmed\",\"unresolved_fields\":[],\"fact_type\":\"image_financial_value\",\"payload\":{\"value_type\":\"amount_paid\",\"money\":{\"value\":\"100000.00\",\"currency\":\"INR\"},\"image_id\":\"image_02\",\"selected_field\":\"Amount Received\"}},{\"schema_version\":\"1.0\",\"fact_id\":\"fact_user16_receipt_balance_due\",\"evidence_ids\":[\"image_02\"],\"affected_event_ids\":[\"event_1442\"],\"stream_selector\":null,\"effective_from\":null,\"effective_until\":null,\"confirmation_state\":\"confirmed\",\"unresolved_fields\":[],\"fact_type\":\"image_financial_value\",\"payload\":{\"value_type\":\"balance_due\",\"money\":{\"value\":\"100000.00\",\"currency\":\"INR\"},\"image_id\":\"image_02\",\"selected_field\":\"Balance Due\"}}]}",
+        "schema_valid": true,
+        "validation_error": null
+      }
+    ]
+  }
+}

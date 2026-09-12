@@ -1,0 +1,27 @@
+{
+  "response": {
+    "id": "372373da-daca-4938-aab5-02271722304f",
+    "object": "chat.completion",
+    "created": 1789234045,
+    "model": "zai-org/GLM-5.3-Flash",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "reasoning": "Extract facts: image shows rent receipt with balance due 1,00,000 INR, amount received 1,00,000, total 2,00,000. Image linked to event_1442 (outstanding rent balance, scheduled, amount empty). So image_financial_value facts: balance_due 100000 INR, amount_paid 100000 INR. Also amount_amendment: 12% rent increase from message_12, effective next rent payment — scope uncertain? Message says \"renewed lease increases monthly rent by 12%. The new amount will be used for the next rent payment.\" That suggests ongoing? \"Renewed lease\" implies ongoing, but conservatively scope could be \"ongoing\" — renewed lease increase is ongoing. Confirmation state: confirmed (service provider message). Effective from: next rent payment — event_1442 is scheduled 2023-08-11. Effective_from could be null or 2023-08-11? The message sent 2023-08-01 says new amount used for next rent payment. event_1442 dated 2023-08-11. I'll set effective_from null and scope ongoing, affected event event_1442. Actually percent_increase \"12\", money null (don't calculate 57100*1.12).\n\nAlso future_event_confirmation for event_1442? It's scheduled, amount empty; image gives balance due 100000. Could add future confirmation with money 100000, payment_date 2023-08-16 (settlement date), direction debit. That's supported: event_1442 scheduled, image shows balance due. Hmm, but image balance due is for April-Sept 2022 rent per receipt... The receipt date 11/08/23, rent for April 2022 to September 2022 — odd. The image is linked to event_1442. I'll include image facts and possibly future confirmation. To be safe, include future_event_confirmation with money 100000 INR, payment_date 2023-08-16, direction debit, evidence image_02 and event_1442? Evidence IDs must be supplied IDs — event_1442 is an event ID, allowed (\"only supplied event IDs\"). Confirmation state uncertain? The event is scheduled; image shows balance due. I'll mark confirmed? Conservative: uncertain since amount on event is empty. I'll use uncertain with unresolved_fields [\"amount\"].\n\nAlso lifecycle: event_1442 \"Outstanding rent balance\" possibly related to monthly rent stream — possible_duplicate_of? Not clear. Skip.\n\nFacts:\n1. amount_amendment: 12% increase, evidence message_12, affected event_1442, scope ongoing, confirmed.\n2. image_financial_value balance_due 100000 INR, image_02, selected_field \"Balance Due\", affected event_1442.\n3. image_financial_value amount_paid 100000 INR, selected_field \"Amount Received\".\n4. future_event_confirmation: money 100000, payment_date 2023-08-16, debit, evidence image_02 + event_1442, uncertain.\n\nMaybe also total amount to be received 200000 — value_type options: net_pay, balance_due, current_amount_due, amount_paid. Total 2,00,000 could be current_amount_due. Include it? It's \"Total Amount to be Received\" 2,00,000.00. Could be current_amount_due. I'll include as current_amount_due. Hmm, risk of over-extraction; but it's a financial value on the image. I'll include it.\n\nKeep it moderate: include balance_due, amount_paid, andcurrent_amount_due.",
+          "content": ""
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "system_fingerprint": "fp1-nst-nes",
+    "usage": {
+      "prompt_tokens": 7315,
+      "completion_tokens": 431,
+      "total_tokens": 7746,
+      "cached_tokens": 0
+    }
+  },
+  "latency_seconds": 17.217435200000182
+}

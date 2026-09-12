@@ -1,0 +1,38 @@
+{
+  "arm": "treatment",
+  "logical_run": 4,
+  "run": {
+    "usable": false,
+    "bundle": null,
+    "attempts": [
+      {
+        "attempt": 1,
+        "latency_seconds": 28.133765700000367,
+        "usage": {
+          "prompt_tokens": 7283,
+          "completion_tokens": 1095,
+          "total_tokens": 8378,
+          "cached_tokens": 0
+        },
+        "finish_reason": "stop",
+        "raw_content": "",
+        "schema_valid": false,
+        "validation_error": "Expecting value: line 1 column 1 (char 0)"
+      },
+      {
+        "attempt": 2,
+        "latency_seconds": 17.217435200000182,
+        "usage": {
+          "prompt_tokens": 7315,
+          "completion_tokens": 431,
+          "total_tokens": 7746,
+          "cached_tokens": 0
+        },
+        "finish_reason": "stop",
+        "raw_content": "",
+        "schema_valid": false,
+        "validation_error": "Expecting value: line 1 column 1 (char 0)"
+      }
+    ]
+  }
+}

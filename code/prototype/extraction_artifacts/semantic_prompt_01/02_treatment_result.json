@@ -1,0 +1,167 @@
+{
+  "arm": "treatment",
+  "logical_run": 2,
+  "run": {
+    "usable": true,
+    "bundle": {
+      "facts": [
+        {
+          "schema_version": "1.0",
+          "fact_id": "img_02_balance_due",
+          "evidence_ids": [
+            "image_02"
+          ],
+          "affected_event_ids": [
+            "event_1442"
+          ],
+          "stream_selector": null,
+          "effective_from": "2023-08-11",
+          "effective_until": null,
+          "confirmation_state": "confirmed",
+          "unresolved_fields": [],
+          "fact_type": "image_financial_value",
+          "payload": {
+            "value_type": "balance_due",
+            "money": {
+              "value": "100000.00",
+              "currency": "INR"
+            },
+            "image_id": "image_02",
+            "selected_field": "Balance Due"
+          }
+        },
+        {
+          "schema_version": "1.0",
+          "fact_id": "img_02_amount_paid",
+          "evidence_ids": [
+            "image_02"
+          ],
+          "affected_event_ids": [
+            "event_1442"
+          ],
+          "stream_selector": null,
+          "effective_from": "2023-08-11",
+          "effective_until": null,
+          "confirmation_state": "confirmed",
+          "unresolved_fields": [],
+          "fact_type": "image_financial_value",
+          "payload": {
+            "value_type": "amount_paid",
+            "money": {
+              "value": "100000.00",
+              "currency": "INR"
+            },
+            "image_id": "image_02",
+            "selected_field": "Amount Received"
+          }
+        },
+        {
+          "schema_version": "1.0",
+          "fact_id": "amt_amend_rent_increase_12pct",
+          "evidence_ids": [
+            "message_12"
+          ],
+          "affected_event_ids": [],
+          "stream_selector": {
+            "user_id": "user_16",
+            "category": "rent",
+            "direction": "debit",
+            "currency": "INR",
+            "description": "Monthly rent"
+          },
+          "effective_from": null,
+          "effective_until": null,
+          "confirmation_state": "confirmed",
+          "unresolved_fields": [
+            "money",
+            "effective_from",
+            "scope"
+          ],
+          "fact_type": "amount_amendment",
+          "payload": {
+            "money": null,
+            "percent_increase": "12",
+            "scope": "unknown"
+          }
+        },
+        {
+          "schema_version": "1.0",
+          "fact_id": "future_event_1442_settlement",
+          "evidence_ids": [
+            "event_1442"
+          ],
+          "affected_event_ids": [
+            "event_1442"
+          ],
+          "stream_selector": null,
+          "effective_from": null,
+          "effective_until": null,
+          "confirmation_state": "uncertain",
+          "unresolved_fields": [
+            "money"
+          ],
+          "fact_type": "future_event_confirmation",
+          "payload": {
+            "money": {
+              "value": null,
+              "currency": "INR"
+            },
+            "payment_date": "2023-08-16",
+            "direction": "debit"
+          }
+        },
+        {
+          "schema_version": "1.0",
+          "fact_id": "stream_status_monthly_rent_ongoing",
+          "evidence_ids": [
+            "event_1337",
+            "event_1344",
+            "event_1351",
+            "event_1358",
+            "event_1365",
+            "event_1371"
+          ],
+          "affected_event_ids": [
+            "event_1337",
+            "event_1344",
+            "event_1351",
+            "event_1358",
+            "event_1365",
+            "event_1371"
+          ],
+          "stream_selector": {
+            "user_id": "user_16",
+            "category": "rent",
+            "direction": "debit",
+            "currency": "INR",
+            "description": "Monthly rent"
+          },
+          "effective_from": "2023-03-01",
+          "effective_until": null,
+          "confirmation_state": "confirmed",
+          "unresolved_fields": [],
+          "fact_type": "stream_status",
+          "payload": {
+            "status": "ongoing"
+          }
+        }
+      ]
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "latency_seconds": 18.558182799999486,
+        "usage": {
+          "prompt_tokens": 7322,
+          "completion_tokens": 1667,
+          "total_tokens": 8989,
+          "cached_tokens": 0
+        },
+        "finish_reason": "stop",
+        "raw_content": "{\n  \"facts\": [\n    {\n      \"schema_version\": \"1.0\",\n      \"fact_id\": \"img_02_balance_due\",\n      \"evidence_ids\": [\"image_02\"],\n      \"affected_event_ids\": [\"event_1442\"],\n      \"stream_selector\": null,\n      \"effective_from\": \"2023-08-11\",\n      \"effective_until\": null,\n      \"confirmation_state\": \"confirmed\",\n      \"unresolved_fields\": [],\n      \"fact_type\": \"image_financial_value\",\n      \"payload\": {\n        \"value_type\": \"balance_due\",\n        \"money\": {\n          \"value\": \"100000.00\",\n          \"currency\": \"INR\"\n        },\n        \"image_id\": \"image_02\",\n        \"selected_field\": \"Balance Due\"\n      }\n    },\n    {\n      \"schema_version\": \"1.0\",\n      \"fact_id\": \"img_02_amount_paid\",\n      \"evidence_ids\": [\"image_02\"],\n      \"affected_event_ids\": [\"event_1442\"],\n      \"stream_selector\": null,\n      \"effective_from\": \"2023-08-11\",\n      \"effective_until\": null,\n      \"confirmation_state\": \"confirmed\",\n      \"unresolved_fields\": [],\n      \"fact_type\": \"image_financial_value\",\n      \"payload\": {\n        \"value_type\": \"amount_paid\",\n        \"money\": {\n          \"value\": \"100000.00\",\n          \"currency\": \"INR\"\n        },\n        \"image_id\": \"image_02\",\n        \"selected_field\": \"Amount Received\"\n      }\n    },\n    {\n      \"schema_version\": \"1.0\",\n      \"fact_id\": \"amt_amend_rent_increase_12pct\",\n      \"evidence_ids\": [\"message_12\"],\n      \"affected_event_ids\": [],\n      \"stream_selector\": {\n        \"user_id\": \"user_16\",\n        \"category\": \"rent\",\n        \"direction\": \"debit\",\n        \"currency\": \"INR\",\n        \"description\": \"Monthly rent\"\n      },\n      \"effective_from\": null,\n      \"effective_until\": null,\n      \"confirmation_state\": \"confirmed\",\n      \"unresolved_fields\": [\"money\", \"effective_from\", \"scope\"],\n      \"fact_type\": \"amount_amendment\",\n      \"payload\": {\n        \"money\": null,\n        \"percent_increase\": \"12\",\n        \"scope\": \"unknown\"\n      }\n    },\n    {\n      \"schema_version\": \"1.0\",\n      \"fact_id\": \"future_event_1442_settlement\",\n      \"evidence_ids\": [\"event_1442\"],\n      \"affected_event_ids\": [\"event_1442\"],\n      \"stream_selector\": null,\n      \"effective_from\": null,\n      \"effective_until\": null,\n      \"confirmation_state\": \"uncertain\",\n      \"unresolved_fields\": [\"money\"],\n      \"fact_type\": \"future_event_confirmation\",\n      \"payload\": {\n        \"money\": {\n          \"value\": null,\n          \"currency\": \"INR\"\n        },\n        \"payment_date\": \"2023-08-16\",\n        \"direction\": \"debit\"\n      }\n    },\n    {\n      \"schema_version\": \"1.0\",\n      \"fact_id\": \"stream_status_monthly_rent_ongoing\",\n      \"evidence_ids\": [\"event_1337\", \"event_1344\", \"event_1351\", \"event_1358\", \"event_1365\", \"event_1371\"],\n      \"affected_event_ids\": [\"event_1337\", \"event_1344\", \"event_1351\", \"event_1358\", \"event_1365\", \"event_1371\"],\n      \"stream_selector\": {\n        \"user_id\": \"user_16\",\n        \"category\": \"rent\",\n        \"direction\": \"debit\",\n        \"currency\": \"INR\",\n        \"description\": \"Monthly rent\"\n      },\n      \"effective_from\": \"2023-03-01\",\n      \"effective_until\": null,\n      \"confirmation_state\": \"confirmed\",\n      \"unresolved_fields\": [],\n      \"fact_type\": \"stream_status\",\n      \"payload\": {\n        \"status\": \"ongoing\"\n      }\n    }\n  ]\n}",
+        "schema_valid": true,
+        "validation_error": null
+      }
+    ]
+  }
+}

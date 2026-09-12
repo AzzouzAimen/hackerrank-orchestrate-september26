@@ -1,0 +1,38 @@
+{
+  "arm": "treatment",
+  "logical_run": 4,
+  "run": {
+    "usable": false,
+    "bundle": null,
+    "attempts": [
+      {
+        "attempt": 1,
+        "latency_seconds": 36.0729810000048,
+        "usage": {
+          "prompt_tokens": 7323,
+          "completion_tokens": 1964,
+          "total_tokens": 9287,
+          "cached_tokens": 0
+        },
+        "finish_reason": "stop",
+        "raw_content": "{\"facts\":[{\"schema_version\":\"1.0\",\"fact_id\":\"amt_amend_rent_12pct_message_12\",\"evidence_ids\":[\"message_12\"],\"affected_event_ids\":[],\"stream_selector\":{\"user_id\":\"user_16\",\"category\":\"rent\",\"direction\":\"debit\",\"currency\":\"INR\",\"description\":\"Monthly rent\"},\"effective_from\":null,\"effective_until\":null,\"confirmation_state\":\"confirmed\",\"unresolved_fields\":[\"money\",\"effective_from\",\"scope\"],\"fact_type\":\"amount_amendment\",\"payload\":{\"money\":{\"value\":null,\"currency\":\"INR\"},\"percent_increase\":\"12\",\"scope\":\"unknown\"}},{\"schema_version\":\"1.0\",\"fact_id\":\"stream_status_monthly_rent_ongoing\",\"evidence_ids\":[\"event_1337\",\"event_1344\",\"event_1351\",\"event_1358\",\"event_1365\",\"event_1371\",\"message_12\"],\"affected_event_ids\":[\"event_1337\",\"event_1344\",\"event_1351\",\"event_1358\",\"event_1365\",\"event_1371\"],\"stream_selector\":{\"user_id\":\"user_16\",\"category\":\"rent\",\"direction\":\"debit\",\"currency\":\"INR\",\"description\":\"Monthly rent\"},\"effective_from\":\"2023-03-01\",\"effective_until\":null,\"confirmation_state\":\"confirmed\",\"unresolved_fields\":[],\"fact_type\":\"stream_status\",\"payload\":{\"status\":\"ongoing\"}},{\"schema_version\":\"1.0\",\"fact_id\":\"future_confirm_outstanding_rent_event_1442\",\"evidence_ids\":[\"event_1442\",\"image_02\"],\"affected_event_ids\":[\"event_1442\"],\"stream_selector\":{\"user_id\":\"user_16\",\"category\":\"rent\",\"direction\":\"debit\",\"currency\":\"INR\",\"description\":\"Outstanding rent balance\"},\"effective_from\":null,\"effective_until\":null,\"confirmation_state\":\"confirmed\",\"unresolved_fields\":[],\"fact_type\":\"future_event_confirmation\",\"payload\":{\"money\":{\"value\":\"100000\",\"currency\":\"INR\"},\"payment_date\":\"2023-08-16\",\"direction\":\"debit\"}},{\"schema_version\":\"1.0\",\"fact_id\":\"image_02_balance_due\",\"evidence_ids\":[\"image_02\"],\"affected_event_ids\":[\"event_1442\"],\"stream_selector\":null,\"effective_from\":null,\"effective_until\":null,\"confirmation_state\":\"confirmed\",\"unresolved_fields\":[],\"fact_type\":\"image_financial_value\",\"payload\":{\"value_type\":\"balance_due\",\"money\":{\"value\":\"100000\",\"currency\":\"INR\"},\"image_id\":\"image_02\",\"selected_field\":\"Balance Due: 1,00,000.00\"}},{\"schema_version\":\"1.0\",\"fact_id\":\"image_02_amount_paid\",\"evidence_ids\":[\"image_02\"],\"affected_event_ids\":[\"event_1442\"],\"stream_selector\":null,\"effective_from\":null,\"effective_until\":null,\"confirmation_state\":\"confirmed\",\"unresolved_fields\":[],\"fact_type\":\"image_financial_value\",\"payload\":{\"value_type\":\"amount_paid\",\"money\":{\"value\":\"100000\",\"currency\":\"INR\"},\"image_id\":\"image_02\",\"selected_field\":\"Amount Received: 1,00,000.00\"}},{\"schema_version\":\"1.0\",\"fact_id\":\"image_02_current_amount_due\",\"evidence_ids\":[\"image_02\"],\"affected_event_ids\":[\"event_1442\"],\"stream_selector\":null,\"effective_from\":null,\"effective_until\":null,\"confirmation_state\":\"confirmed\",\"unresolved_fields\":[],\"fact_type\":\"image_financial_value\",\"payload\":{\"value_type\":\"current_amount_due\",\"money\":{\"value\":\"200000\",\"currency\":\"INR\"},\"image_id\":\"image_02\",\"selected_field\":\"Total Amount to be Received: 2,00,000.00\"}}]}",
+        "schema_valid": false,
+        "validation_error": "1 validation error for EvidenceBundle\nfacts.0.amount_amendment.payload\n  Value error, Supply an absolute amount OR a percentage [type=value_error, input_value={'money': {'value': None,...12', 'scope': 'unknown'}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/value_error"
+      },
+      {
+        "attempt": 2,
+        "latency_seconds": 35.36718800000381,
+        "usage": {
+          "prompt_tokens": 7412,
+          "completion_tokens": 1841,
+          "total_tokens": 9253,
+          "cached_tokens": 0
+        },
+        "finish_reason": "stop",
+        "raw_content": "{\n  \"facts\": [\n    {\n      \"schema_version\": \"1.0\",\n      \"fact_id\": \"fact_amount_amendment_rent_12pct\",\n      \"evidence_ids\": [\"message_12\"],\n      \"affected_event_ids\": [],\n      \"stream_selector\": {\n        \"user_id\": \"user_16\",\n        \"category\": \"rent\",\n        \"direction\": \"debit\",\n        \"currency\": \"INR\",\n        \"description\": \"Monthly rent\"\n      },\n      \"effective_from\": null,\n      \"effective_until\": null,\n      \"confirmation_state\": \"confirmed\",\n      \"unresolved_fields\": [\"effective_from\", \"new_absolute_amount\", \"scope_duration\"],\n      \"fact_type\": \"amount_amendment\",\n      \"payload\": {\n        \"money\": null,\n        \"percent_increase\": \"12\",\n        \"scope\": \"unknown\"\n      }\n    },\n    {\n      \"schema_version\": \"1.0\",\n      \"fact_id\": \"fact_image_balance_due_event_1442\",\n      \"evidence_ids\": [\"image_02\", \"event_1442\"],\n      \"affected_event_ids\": [\"event_1442\"],\n      \"stream_selector\": null,\n      \"effective_from\": null,\n      \"effective_until\": null,\n      \"confirmation_state\": \"confirmed\",\n      \"unresolved_fields\": [],\n      \"fact_type\": \"image_financial_value\",\n      \"payload\": {\n        \"value_type\": \"balance_due\",\n        \"money\": {\n          \"value\": \"100000.00\",\n          \"currency\": \"INR\"\n        },\n        \"image_id\": \"image_02\",\n        \"selected_field\": \"Balance Due\"\n      }\n    },\n    {\n      \"schema_version\": \"1.0\",\n      \"fact_id\": \"fact_image_amount_paid_event_1442\",\n      \"evidence_ids\": [\"image_02\", \"event_1442\"],\n      \"affected_event_ids\": [\"event_1442\"],\n      \"stream_selector\": null,\n      \"effective_from\": null,\n      \"effective_until\": null,\n      \"confirmation_state\": \"confirmed\",\n      \"unresolved_fields\": [],\n      \"fact_type\": \"image_financial_value\",\n      \"payload\": {\n        \"value_type\": \"amount_paid\",\n        \"money\": {\n          \"value\": \"100000.00\",\n          \"currency\": \"INR\"\n        },\n        \"image_02\": null,\n        \"image_id\": \"image_02\",\n        \"selected_field\": \"Amount Received\"\n      }\n    },\n    {\n      \"schema_version\": \"1.0\",\n      \"fact_id\": \"fact_future_confirmation_outstanding_rent\",\n      \"evidence_ids\": [\"event_1442\", \"image_02\"],\n      \"affected_event_ids\": [\"event_1442\"],\n      \"stream_selector\": null,\n      \"effective_from\": null,\n      \"effective_until\": null,\n      \"confirmation_state\": \"uncertain\",\n      \"unresolved_fields\": [\"confirmation_of_payment\"],\n      \"fact_type\": \"future_event_confirmation\",\n      \"payload\": {\n        \"money\": {\n          \"value\": \"100000.00\",\n          \"currency\": \"INR\"\n        },\n        \"payment_date\": \"2023-08-16\",\n        \"direction\": \"debit\"\n      }\n    }\n  ]\n}",
+        "schema_valid": false,
+        "validation_error": "1 validation error for EvidenceBundle\nfacts.2.image_financial_value.payload.image_02\n  Extra inputs are not permitted [type=extra_forbidden, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.13/v/extra_forbidden"
+      }
+    ]
+  }
+}

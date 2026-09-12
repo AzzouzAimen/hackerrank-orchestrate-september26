@@ -1,0 +1,49 @@
+{
+  "control": {
+    "logical_runs": 3,
+    "first_attempt_usable": 2,
+    "final_usable": 3,
+    "retry_recoveries": 1,
+    "attempts": 4,
+    "empty_outputs": 0,
+    "provider_failures": 0,
+    "schema_invalid_nonempty": 1,
+    "latencies_seconds": [
+      22.543547299999773,
+      25.429956899999524,
+      18.167478200000915,
+      15.803505199997744
+    ],
+    "mean_latency_seconds": 20.48612189999949,
+    "median_latency_seconds": 20.355512750000344,
+    "usage": {
+      "prompt_tokens": 26529,
+      "completion_tokens": 8156,
+      "total_tokens": 34685,
+      "cached_tokens": 13220
+    }
+  },
+  "treatment": {
+    "logical_runs": 3,
+    "first_attempt_usable": 3,
+    "final_usable": 3,
+    "retry_recoveries": 0,
+    "attempts": 3,
+    "empty_outputs": 0,
+    "provider_failures": 0,
+    "schema_invalid_nonempty": 0,
+    "latencies_seconds": [
+      286.7282919999998,
+      18.165670800000953,
+      33.172003899999254
+    ],
+    "mean_latency_seconds": 112.68865556666667,
+    "median_latency_seconds": 33.172003899999254,
+    "usage": {
+      "prompt_tokens": 21846,
+      "completion_tokens": 6106,
+      "total_tokens": 27952,
+      "cached_tokens": 7282
+    }
+  }
+}

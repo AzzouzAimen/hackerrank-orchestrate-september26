@@ -1,0 +1,15 @@
+{
+  "started_at": "2026-09-12T17:39:38.245730+00:00",
+  "source": "code\\prototype\\extraction_artifacts\\rent_run_01\\01_control_attempt1_request.json",
+  "source_sha256": "d75a1df6d01c54134df807434a2160e7a3d1291af39132b9893f11c838be7409",
+  "sequence": [
+    "json_mode",
+    "plain_mode",
+    "json_mode",
+    "plain_mode"
+  ],
+  "calls": 4,
+  "retries": 0,
+  "support_source": "https://featherless.ai/docs/completions",
+  "decision_rule": "32768 output tokens, 600-second timeout. Compare JSON mode versus omitted response_format, same high reasoning and exact messages. Four calls, no retries; no semantic prompt changes."
+}

@@ -1,0 +1,45 @@
+{
+  "control": {
+    "logical_runs": 3,
+    "first_attempt_usable": 3,
+    "retry_recoveries": 0,
+    "final_usable": 3,
+    "attempts": 3,
+    "empty_outputs": 0,
+    "schema_invalid_nonempty": 0,
+    "provider_exceptions": 0,
+    "latencies_seconds": [
+      59.992261899998994,
+      115.4191925999985,
+      33.34496279999439
+    ],
+    "usage": {
+      "prompt_tokens": 21846,
+      "completion_tokens": 7719,
+      "total_tokens": 29565,
+      "cached_tokens": 7232
+    }
+  },
+  "treatment": {
+    "logical_runs": 3,
+    "first_attempt_usable": 2,
+    "retry_recoveries": 0,
+    "final_usable": 2,
+    "attempts": 4,
+    "empty_outputs": 0,
+    "schema_invalid_nonempty": 2,
+    "provider_exceptions": 0,
+    "latencies_seconds": [
+      50.19340449999436,
+      36.0729810000048,
+      35.36718800000381,
+      29.611518600002455
+    ],
+    "usage": {
+      "prompt_tokens": 29381,
+      "completion_tokens": 7750,
+      "total_tokens": 37131,
+      "cached_tokens": 7323
+    }
+  }
+}

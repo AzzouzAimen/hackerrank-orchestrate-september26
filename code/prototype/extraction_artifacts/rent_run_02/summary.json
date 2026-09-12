@@ -1,0 +1,22 @@
+{
+  "control": {
+    "logical_runs": 3,
+    "first_attempt_usable": 2,
+    "final_usable": 3,
+    "retry_recoveries": 1,
+    "attempts": 4,
+    "empty_outputs": 0,
+    "provider_failures": 0
+  },
+  "treatment": {
+    "logical_runs": 3,
+    "first_attempt_usable": 3,
+    "final_usable": 3,
+    "retry_recoveries": 0,
+    "attempts": 3,
+    "empty_outputs": 0,
+    "provider_failures": 0
+  },
+  "comparison_status": "awaiting semantic review",
+  "warning": "Availability is not semantic correctness. Three runs per arm are descriptive only."
+}

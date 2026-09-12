@@ -1,0 +1,4250 @@
+{
+  "version": "semantic-inventory-01",
+  "source_files": {
+    "financial_events.csv": "b6c3f43a8ad3a80ca11c72cce6f2818eea06621a3582d2851886fd9127b1229d",
+    "messages.csv": "7b9db27a4546a850a76d3475ebf65de80fb9fe374e26d469586f62f537eac9a6",
+    "images.csv": "6b5428565ca98e4b71e182f8a8fa3fd3013727399bdea847f3e4a3d2c129dfc9"
+  },
+  "counts": {
+    "events": 25342,
+    "messages": 215,
+    "images": 16
+  },
+  "cases": [
+    {
+      "case_id": "case_user_02",
+      "user_id": "user_02",
+      "message_ids": [
+        "message_01"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "salary_change"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Rincian penggajian Anda di Cobalt Systems telah berubah. Gaji bulanan Anda naik menjadi IDR {n}. Perubahan ini berlaku m",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Rincian penggajian Anda di Cobalt Systems telah berubah. Gaji bulanan Anda naik menjadi IDR 42750000. Perubahan ini berlaku mulai 2025-08-15. Jumlah yang diperbarui akan terlihat pada slip gaji berikutnya. Ref payroll EM"
+    },
+    {
+      "case_id": "case_user_03",
+      "user_id": "user_03",
+      "message_ids": [
+        "message_02"
+      ],
+      "image_ids": [
+        "image_01"
+      ],
+      "linked_event_ids": [
+        "event_253"
+      ],
+      "families": [
+        "salary_change"
+      ],
+      "modalities": [
+        "message",
+        "image"
+      ],
+      "template_family": "Tim payroll BrightPath Media telah mengirim pembaruan. Gaji rutin untuk penggajian berikutnya sudah dikonfirmasi. Slip g",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Tim payroll BrightPath Media telah mengirim pembaruan. Gaji rutin untuk penggajian berikutnya sudah dikonfirmasi. Slip gaji berikutnya akan menampilkan gaji rutin dan penyesuaian satu kali secara terpisah. Ref payroll EM"
+    },
+    {
+      "case_id": "case_user_04",
+      "user_id": "user_04",
+      "message_ids": [
+        "message_03"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "salary_change",
+        "pending_income"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Rincian penggajian Anda di Greenfield Foods telah berubah. Bonus kuartalan Anda masih menunggu hasil akhir penilaian kin",
+      "contamination": false,
+      "difficulty": "high",
+      "description": "Rincian penggajian Anda di Greenfield Foods telah berubah. Bonus kuartalan Anda masih menunggu hasil akhir penilaian kinerja. Jumlah akhir dan tanggal pembayaran belum disetujui. Kami akan mengirim pembaruan setelah tim "
+    },
+    {
+      "case_id": "case_user_06",
+      "user_id": "user_06",
+      "message_ids": [
+        "message_04"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "temporary_pay"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Here’s the latest payroll information from Northstar Labs. Your temporary monthly pay is EUR {n}.{n}. The reduced amount",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Here’s the latest payroll information from Northstar Labs. Your temporary monthly pay is EUR 1037.52. The reduced amount continues for the next payroll. This is the amount currently scheduled for the affected pay cycle. "
+    },
+    {
+      "case_id": "case_user_07",
+      "user_id": "user_07",
+      "message_ids": [
+        "message_05"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "other"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "BrightPath Media has updated your payroll record. Your confirmed salary is now expected on {n}-{n}-{n}. This replaces th",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "BrightPath Media has updated your payroll record. Your confirmed salary is now expected on 2024-09-23. This replaces the payroll date shown in the earlier update. Please use the revised date for anything you normally pay"
+    },
+    {
+      "case_id": "case_user_08",
+      "user_id": "user_08",
+      "message_ids": [
+        "message_06"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "temporary_pay"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Hi, Greenfield Foods payroll here. Your next salary is reduced to EUR {n}.{n}. The adjustment is due to approved unpaid ",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Hi, Greenfield Foods payroll here. Your next salary is reduced to EUR 1422.85. The adjustment is due to approved unpaid leave. The adjustment will be visible on your next payslip. Payroll ref EMP-0006."
+    },
+    {
+      "case_id": "case_user_10",
+      "user_id": "user_10",
+      "message_ids": [
+        "message_07"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "pending_income"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Here’s the latest service update from QuickCrew. The next QuickCrew payout is still pending. The weekly earnings shown i",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Here’s the latest service update from QuickCrew. The next QuickCrew payout is still pending. The weekly earnings shown in the QuickCrew app can change until the payout is closed. The balance isn’t withdrawable until the "
+    },
+    {
+      "case_id": "case_user_11",
+      "user_id": "user_11",
+      "message_ids": [
+        "message_08"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "salary_change",
+        "pending_income"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Berikut informasi penggajian terbaru dari Greenfield Foods. Gaji pokok yang dikonfirmasi adalah IDR {n}. Komisi dari tra",
+      "contamination": false,
+      "difficulty": "high",
+      "description": "Berikut informasi penggajian terbaru dari Greenfield Foods. Gaji pokok yang dikonfirmasi adalah IDR 38760000. Komisi dari transaksi yang masih berjalan belum disetujui. Transaksi yang masih berjalan tidak masuk pembayara"
+    },
+    {
+      "case_id": "case_user_12",
+      "user_id": "user_12",
+      "message_ids": [
+        "message_09"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "ended_income"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "A note from Cobalt Systems about your upcoming pay. The current seasonal contract has ended. No off-season income or ren",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "A note from Cobalt Systems about your upcoming pay. The current seasonal contract has ended. No off-season income or renewal has been confirmed. We’ll contact you separately if another shift block or contract is approved"
+    },
+    {
+      "case_id": "case_user_14",
+      "user_id": "user_14",
+      "message_ids": [
+        "message_10"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "other"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Here’s the latest payroll information from HarborWorks. Regular salary of EUR {n} resumes on {n}-{n}-{n}. A new recurrin",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Here’s the latest payroll information from HarborWorks. Regular salary of EUR 2717 resumes on 2025-08-15. A new recurring childcare payment begins in the same month. The updated pay and deductions will appear from the ne"
+    },
+    {
+      "case_id": "case_user_15",
+      "user_id": "user_15",
+      "message_ids": [
+        "message_11"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "salary_change"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "A quick update from the payroll team at Riverline Retail. Your first salary will be EUR {n}. The confirmed credit date i",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "A quick update from the payroll team at Riverline Retail. Your first salary will be EUR 1661. The confirmed credit date is 2026-01-15. The money will appear after the bank posts the credit. Payroll ref EMP-0011."
+    },
+    {
+      "case_id": "case_user_16",
+      "user_id": "user_16",
+      "message_ids": [
+        "message_12"
+      ],
+      "image_ids": [
+        "image_02"
+      ],
+      "linked_event_ids": [
+        "event_1442"
+      ],
+      "families": [
+        "rent"
+      ],
+      "modalities": [
+        "message",
+        "image"
+      ],
+      "template_family": "StayLedger wanted to let you know about a change on your account. The renewed lease increases monthly rent by {n}%. The ",
+      "contamination": true,
+      "difficulty": "high",
+      "description": "StayLedger wanted to let you know about a change on your account. The renewed lease increases monthly rent by 12%. The new amount will be used for the next rent payment. Case ref SER-0012."
+    },
+    {
+      "case_id": "case_user_18",
+      "user_id": "user_18",
+      "message_ids": [
+        "message_13"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "transfer"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "There’s an update from Summit Bank on your recent account activity. The matching debit and credit came from a transfer b",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "There’s an update from Summit Bank on your recent account activity. The matching debit and credit came from a transfer between your two accounts. Both accounts are registered under the same account holder. Both entries w"
+    },
+    {
+      "case_id": "case_user_20",
+      "user_id": "user_20",
+      "message_ids": [
+        "message_14"
+      ],
+      "image_ids": [
+        "image_05"
+      ],
+      "linked_event_ids": [
+        "event_1785",
+        "event_1786"
+      ],
+      "families": [
+        "refund"
+      ],
+      "modalities": [
+        "message",
+        "image"
+      ],
+      "template_family": "CartLane has new information about your payment or refund. Your refund has been initiated but has not reached your accou",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "CartLane has new information about your payment or refund. Your refund has been initiated but has not reached your account yet. We’ll send another update when the credit is completed. Order ref MER-0014."
+    },
+    {
+      "case_id": "case_user_22",
+      "user_id": "user_22",
+      "message_ids": [
+        "message_15"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [
+        "event_1960"
+      ],
+      "families": [
+        "salary_change",
+        "investment_noncash"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Here’s the latest account information from ClearFund. Your portfolio’s displayed market value has increased substantiall",
+      "contamination": false,
+      "difficulty": "high",
+      "description": "Here’s the latest account information from ClearFund. Your portfolio’s displayed market value has increased substantially. No units have been sold and no cash proceeds have been generated. The displayed value will contin"
+    },
+    {
+      "case_id": "case_user_23",
+      "user_id": "user_23",
+      "message_ids": [
+        "message_16"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "pending_income",
+        "prize"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Here’s the latest account information from DrawPay. Your prize claim has been verified and is still in payment processin",
+      "contamination": false,
+      "difficulty": "high",
+      "description": "Here’s the latest account information from DrawPay. Your prize claim has been verified and is still in payment processing. The payment has not been credited to your account yet. We’ll confirm again if and when the money "
+    },
+    {
+      "case_id": "case_user_24",
+      "user_id": "user_24",
+      "message_ids": [
+        "message_17"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [
+        "event_2165"
+      ],
+      "families": [
+        "prize"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Here’s the latest account information from PrizeTrack. The prize proceeds have reached your account after withholding. T",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Here’s the latest account information from PrizeTrack. The prize proceeds have reached your account after withholding. The claim is now closed and there are no further scheduled payments. There won’t be another payment u"
+    },
+    {
+      "case_id": "case_user_26",
+      "user_id": "user_26",
+      "message_ids": [
+        "message_18"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "other"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Halo, ini InvoiceFlow. Klien menyetujui pembayaran faktur sebesar IDR {n}. Penyelesaian diperkirakan pada {n}-{n}-{n}; f",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Halo, ini InvoiceFlow. Klien menyetujui pembayaran faktur sebesar IDR 30780000. Penyelesaian diperkirakan pada 2025-08-15; faktur lain yang diajukan masih menunggu persetujuan. Hanya faktur yang sudah dikonfirmasi yang d"
+    },
+    {
+      "case_id": "case_user_27",
+      "user_id": "user_27",
+      "message_ids": [
+        "message_19"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "pending_income"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Hi, TaskLoop here. The next TaskLoop payout is still pending. The weekly earnings shown in the TaskLoop app can change u",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Hi, TaskLoop here. The next TaskLoop payout is still pending. The weekly earnings shown in the TaskLoop app can change until the payout is closed. The balance isn’t withdrawable until the payout shows as completed. Case "
+    },
+    {
+      "case_id": "case_user_28",
+      "user_id": "user_28",
+      "message_ids": [
+        "message_20"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "arrears"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "A quick update from the payroll team at Cedar Health. Your regular salary for the next payroll is EUR {n}. The same payr",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "A quick update from the payroll team at Cedar Health. Your regular salary for the next payroll is EUR 1452. The same payroll includes a one-time arrears adjustment of EUR 653.40. Your next payslip will show the regular p"
+    },
+    {
+      "case_id": "case_user_29",
+      "user_id": "user_29",
+      "message_ids": [
+        "message_21"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "ended_income"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Here’s the latest payroll information from Riverline Retail. The current seasonal contract has ended. No off-season inco",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Here’s the latest payroll information from Riverline Retail. The current seasonal contract has ended. No off-season income or renewal has been confirmed. We’ll contact you separately if another shift block or contract is"
+    },
+    {
+      "case_id": "case_user_32",
+      "user_id": "user_32",
+      "message_ids": [
+        "message_22"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "salary_change"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "BrightPath Media has updated your payroll record. Your first salary will be ZAR {n}. The confirmed credit date is {n}-{n",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "BrightPath Media has updated your payroll record. Your first salary will be ZAR 54120. The confirmed credit date is 2025-02-15. The money will appear after the bank posts the credit. Payroll ref EMP-0022."
+    },
+    {
+      "case_id": "case_user_33",
+      "user_id": "user_33",
+      "message_ids": [
+        "message_23"
+      ],
+      "image_ids": [
+        "image_06"
+      ],
+      "linked_event_ids": [
+        "event_3051"
+      ],
+      "families": [
+        "transfer"
+      ],
+      "modalities": [
+        "message",
+        "image"
+      ],
+      "template_family": "Cedar Bank has reviewed the transaction on your account. The matching debit and credit came from a transfer between your",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Cedar Bank has reviewed the transaction on your account. The matching debit and credit came from a transfer between your two accounts. Both entries will remain visible in your transaction history. Txn ref BAN-0023."
+    },
+    {
+      "case_id": "case_user_34",
+      "user_id": "user_34",
+      "message_ids": [
+        "message_24"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "invoice"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Hi, InvoiceLane here. The client approved an invoice payment of INR {n}. Settlement is expected on {n}-{n}-{n}; the othe",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Hi, InvoiceLane here. The client approved an invoice payment of INR 196000. Settlement is expected on 2024-12-15; the other submitted invoices are still awaiting approval. Only invoices marked as confirmed should be incl"
+    },
+    {
+      "case_id": "case_user_35",
+      "user_id": "user_35",
+      "message_ids": [
+        "message_25"
+      ],
+      "image_ids": [
+        "image_07"
+      ],
+      "linked_event_ids": [
+        "event_3230",
+        "event_3231"
+      ],
+      "families": [
+        "refund"
+      ],
+      "modalities": [
+        "message",
+        "image"
+      ],
+      "template_family": "Here’s the latest payment status from Everyday Store. Your refund has been initiated but has not reached your account ye",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Here’s the latest payment status from Everyday Store. Your refund has been initiated but has not reached your account yet. We’ll send another update when the credit is completed. Order ref MER-0025."
+    },
+    {
+      "case_id": "case_user_36",
+      "user_id": "user_36",
+      "message_ids": [
+        "message_26"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "salary_change"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Hi, Northstar Labs payroll here. Your monthly salary has increased to USD {n}. The change applies from {n}-{n}-{n}. The ",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Hi, Northstar Labs payroll here. Your monthly salary has increased to USD 2988. The change applies from 2026-07-15. The revised amount will appear on your next payslip. Payroll ref EMP-0026."
+    },
+    {
+      "case_id": "case_user_37",
+      "user_id": "user_37",
+      "message_ids": [
+        "message_27"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "arrears"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Cedar Health telah memperbarui catatan penggajian Anda. Gaji rutin Anda untuk penggajian berikutnya adalah IDR {n}. Peng",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Cedar Health telah memperbarui catatan penggajian Anda. Gaji rutin Anda untuk penggajian berikutnya adalah IDR 21090000. Penggajian yang sama mencakup penyesuaian tunggakan satu kali sebesar IDR 9490500. Slip gaji beriku"
+    },
+    {
+      "case_id": "case_user_38",
+      "user_id": "user_38",
+      "message_ids": [
+        "message_28"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [
+        "event_3491"
+      ],
+      "families": [
+        "prize"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Hi, Rewards Desk here. The prize proceeds have reached your account after withholding. The claim is now closed and there",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Hi, Rewards Desk here. The prize proceeds have reached your account after withholding. The claim is now closed and there are no further scheduled payments. There won’t be another payment unless a separate prize is confir"
+    },
+    {
+      "case_id": "case_user_40",
+      "user_id": "user_40",
+      "message_ids": [
+        "message_29"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "salary_change"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Your payroll details at BrightPath Media have changed. Your first salary will be EUR {n}. The confirmed credit date is {",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Your payroll details at BrightPath Media have changed. Your first salary will be EUR 1760. The confirmed credit date is 2024-06-15. The money will appear after the bank posts the credit. Payroll ref EMP-0029."
+    },
+    {
+      "case_id": "case_user_42",
+      "user_id": "user_42",
+      "message_ids": [
+        "message_30"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "ended_income"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "A quick update from the payroll team at Greenfield Foods. One household employment record has ended. The remaining confi",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "A quick update from the payroll team at Greenfield Foods. One household employment record has ended. The remaining confirmed monthly salary is INR 148000. Any income that has ended should be removed from future estimates"
+    },
+    {
+      "case_id": "case_user_43",
+      "user_id": "user_43",
+      "message_ids": [
+        "message_31"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "salary_change"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Ada pembaruan singkat dari tim payroll HarborWorks. Gaji pertama dari perusahaan baru adalah IDR {n}. Pembayaran sudah d",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Ada pembaruan singkat dari tim payroll HarborWorks. Gaji pertama dari perusahaan baru adalah IDR 32870000. Pembayaran sudah dikonfirmasi untuk 2024-09-15. Pemrosesan bank dapat memerlukan waktu seperti biasa setelah gaji"
+    },
+    {
+      "case_id": "case_user_44",
+      "user_id": "user_44",
+      "message_ids": [
+        "message_32"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "salary_change"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "A note from Riverline Retail about your upcoming pay. Your first salary will be INR {n}. The confirmed credit date is {n",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "A note from Riverline Retail about your upcoming pay. Your first salary will be INR 115000. The confirmed credit date is 2025-02-15. The money will appear after the bank posts the credit. Payroll ref EMP-0032."
+    },
+    {
+      "case_id": "case_user_45",
+      "user_id": "user_45",
+      "message_ids": [
+        "message_33"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "salary_change"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Ada pembaruan singkat dari tim payroll Northstar Labs. Gaji bulanan Anda naik menjadi IDR {n}. Perubahan ini berlaku mul",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Ada pembaruan singkat dari tim payroll Northstar Labs. Gaji bulanan Anda naik menjadi IDR 17290000. Perubahan ini berlaku mulai 2026-07-15. Jumlah yang diperbarui akan terlihat pada slip gaji berikutnya. Ref payroll EMP-"
+    },
+    {
+      "case_id": "case_user_47",
+      "user_id": "user_47",
+      "message_ids": [
+        "message_34"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "salary_change"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "RideGrid ingin memberi tahu Anda tentang perubahan pada akun. Pembayaran berikutnya dari RideGrid masih tertunda. Pengha",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "RideGrid ingin memberi tahu Anda tentang perubahan pada akun. Pembayaran berikutnya dari RideGrid masih tertunda. Penghasilan mingguan di aplikasi RideGrid masih dapat berubah sampai pembayaran diselesaikan. Saldo belum "
+    },
+    {
+      "case_id": "case_user_48",
+      "user_id": "user_48",
+      "message_ids": [
+        "message_35"
+      ],
+      "image_ids": [
+        "image_08"
+      ],
+      "linked_event_ids": [
+        "event_4535",
+        "event_4535"
+      ],
+      "families": [
+        "receipt"
+      ],
+      "modalities": [
+        "message",
+        "image"
+      ],
+      "template_family": "Your property maintenance payment was received on {n} July {n}. The receipt has the final INR amount and the original du",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Your property maintenance payment was received on 24 July 2026. The receipt has the final INR amount and the original due date. Payment ref SER-0035."
+    },
+    {
+      "case_id": "case_user_49",
+      "user_id": "user_49",
+      "message_ids": [
+        "message_36"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "salary_change",
+        "temporary_pay"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Rincian penggajian Anda di Greenfield Foods telah berubah. Gaji bulanan sementara Anda adalah IDR {n}. Jumlah yang lebih",
+      "contamination": false,
+      "difficulty": "high",
+      "description": "Rincian penggajian Anda di Greenfield Foods telah berubah. Gaji bulanan sementara Anda adalah IDR 31464000. Jumlah yang lebih rendah masih berlaku untuk penggajian berikutnya. Inilah jumlah yang saat ini dijadwalkan untu"
+    },
+    {
+      "case_id": "case_user_50",
+      "user_id": "user_50",
+      "message_ids": [
+        "message_37"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "ended_income"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Greenfield Foods has updated your payroll record. One household employment record has ended. The remaining confirmed mon",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Greenfield Foods has updated your payroll record. One household employment record has ended. The remaining confirmed monthly salary is INR 126000. Any income that has ended should be removed from future estimates. Payrol"
+    },
+    {
+      "case_id": "case_user_52",
+      "user_id": "user_52",
+      "message_ids": [
+        "message_38"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "salary_change"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "HarborWorks has updated your payroll record. Your first salary from the new employer is INR {n}. It is confirmed for {n}",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "HarborWorks has updated your payroll record. Your first salary from the new employer is INR 69000. It is confirmed for 2024-06-15. Bank processing may take the usual time after the payroll is released. Payroll ref EMP-00"
+    },
+    {
+      "case_id": "case_user_53",
+      "user_id": "user_53",
+      "message_ids": [
+        "message_39"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [
+        "event_4994"
+      ],
+      "families": [
+        "refund"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Hi, Everyday Store here with an update on your payment. Your refund has been initiated but has not reached your account ",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Hi, Everyday Store here with an update on your payment. Your refund has been initiated but has not reached your account yet. Most refunds are completed within ten business days. We’ll send another update when the credit "
+    },
+    {
+      "case_id": "case_user_54",
+      "user_id": "user_54",
+      "message_ids": [
+        "message_40"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "salary_change"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Northstar Labs has updated your payroll record. Your monthly salary has increased to ZAR {n}. The change applies from {n",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Northstar Labs has updated your payroll record. Your monthly salary has increased to ZAR 42460. The change applies from 2026-07-15. The revised amount will appear on your next payslip. Payroll ref EMP-0040."
+    },
+    {
+      "case_id": "case_user_57",
+      "user_id": "user_57",
+      "message_ids": [
+        "message_41"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "transfer"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Here’s the latest transaction update from Summit Bank. The matching debit and credit came from a transfer between your t",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Here’s the latest transaction update from Summit Bank. The matching debit and credit came from a transfer between your two accounts. Both accounts are registered under the same account holder. Both entries will remain vi"
+    },
+    {
+      "case_id": "case_user_58",
+      "user_id": "user_58",
+      "message_ids": [
+        "message_42"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "salary_change",
+        "ended_income"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Rincian penggajian Anda di Cedar Health telah berubah. Salah satu sumber pendapatan kerja rumah tangga telah berakhir. S",
+      "contamination": false,
+      "difficulty": "high",
+      "description": "Rincian penggajian Anda di Cedar Health telah berubah. Salah satu sumber pendapatan kerja rumah tangga telah berakhir. Sisa gaji bulanan yang dikonfirmasi adalah IDR 25840000. Pendapatan yang sudah berakhir harus dikelua"
+    },
+    {
+      "case_id": "case_user_59",
+      "user_id": "user_59",
+      "message_ids": [
+        "message_43"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "pending_income"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "A quick update about your WorkDash account. The next WorkDash payout is still pending. The weekly earnings shown in the ",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "A quick update about your WorkDash account. The next WorkDash payout is still pending. The weekly earnings shown in the WorkDash app can change until the payout is closed. The balance isn’t withdrawable until the payout "
+    },
+    {
+      "case_id": "case_user_60",
+      "user_id": "user_60",
+      "message_ids": [
+        "message_44"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "temporary_pay"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Here’s the latest payroll information from Northstar Labs. Your next salary is reduced to USD {n}.{n}. The adjustment is",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Here’s the latest payroll information from Northstar Labs. Your next salary is reduced to USD 530.40. The adjustment is due to approved unpaid leave. The adjustment will be visible on your next payslip. Payroll ref EMP-0"
+    },
+    {
+      "case_id": "case_user_61",
+      "user_id": "user_61",
+      "message_ids": [
+        "message_45"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "ended_income"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Greenfield Foods has updated your payroll record. The current seasonal contract has ended. No off-season income or renew",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Greenfield Foods has updated your payroll record. The current seasonal contract has ended. No off-season income or renewal has been confirmed. We’ll contact you separately if another shift block or contract is approved. "
+    },
+    {
+      "case_id": "case_user_62",
+      "user_id": "user_62",
+      "message_ids": [
+        "message_46"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "invoice"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "InvoiceFlow has new information about your next payment. The client approved an invoice payment of USD {n}. Settlement i",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "InvoiceFlow has new information about your next payment. The client approved an invoice payment of USD 2112. Settlement is expected on 2025-08-15; the other submitted invoices are still awaiting approval. Only invoices m"
+    },
+    {
+      "case_id": "case_user_64",
+      "user_id": "user_64",
+      "message_ids": [
+        "message_47"
+      ],
+      "image_ids": [
+        "image_10"
+      ],
+      "linked_event_ids": [
+        "event_6033"
+      ],
+      "families": [
+        "fx"
+      ],
+      "modalities": [
+        "message",
+        "image"
+      ],
+      "template_family": "There’s a new payment update from UrbanCart. The foreign-currency refund is still processing. The home-currency credit m",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "There’s a new payment update from UrbanCart. The foreign-currency refund is still processing. The home-currency credit may change with the settlement-date rate. Order ref MER-0047."
+    },
+    {
+      "case_id": "case_user_65",
+      "user_id": "user_65",
+      "message_ids": [
+        "message_48"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "salary_change"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Your payroll details at Northstar Labs have changed. Your quarterly bonus is still subject to the final performance revi",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Your payroll details at Northstar Labs have changed. Your quarterly bonus is still subject to the final performance review. The final amount and payment date have not been approved yet. We’ll send another update once pay"
+    },
+    {
+      "case_id": "case_user_66",
+      "user_id": "user_66",
+      "message_ids": [
+        "message_49"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "invoice"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "PayPilot has new information about your next payment. The client approved an invoice payment of INR {n}. Settlement is e",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "PayPilot has new information about your next payment. The client approved an invoice payment of INR 116000. Settlement is expected on 2026-04-15; the other submitted invoices are still awaiting approval. Only invoices ma"
+    },
+    {
+      "case_id": "case_user_68",
+      "user_id": "user_68",
+      "message_ids": [
+        "message_50"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "other"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Riverline Retail has updated your payroll record. Your confirmed salary is now expected on {n}-{n}-{n}. This replaces th",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Riverline Retail has updated your payroll record. Your confirmed salary is now expected on 2025-02-23. This replaces the payroll date shown in the earlier update. Please use the revised date for anything you normally pay"
+    },
+    {
+      "case_id": "case_user_69",
+      "user_id": "user_69",
+      "message_ids": [
+        "message_51"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "rent"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "There’s a new account update from RentNest. The renewed lease increases monthly rent by {n}%. The new amount applies fro",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "There’s a new account update from RentNest. The renewed lease increases monthly rent by 12%. The new amount applies from the next rent payment. The new amount will be used for the next rent payment. Case ref SER-0051."
+    },
+    {
+      "case_id": "case_user_70",
+      "user_id": "user_70",
+      "message_ids": [
+        "message_52"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [
+        "event_6532"
+      ],
+      "families": [
+        "salary_change",
+        "investment_noncash"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "A new notice is available for your PocketVest account. Your portfolio’s displayed market value has increased substantial",
+      "contamination": false,
+      "difficulty": "high",
+      "description": "A new notice is available for your PocketVest account. Your portfolio’s displayed market value has increased substantially. No units have been sold and no cash proceeds have been generated. The displayed value will conti"
+    },
+    {
+      "case_id": "case_user_71",
+      "user_id": "user_71",
+      "message_ids": [
+        "message_53"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "salary_change"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Greenfield Foods telah memperbarui catatan penggajian Anda. Gaji sebesar USD {n} dikonfirmasi untuk {n}-{n}-{n}. Bank pe",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Greenfield Foods telah memperbarui catatan penggajian Anda. Gaji sebesar USD 696 dikonfirmasi untuk 2025-05-15. Bank penerima akan mengonversinya dengan kurs pada tanggal penyelesaian. Jumlah yang diterima dalam mata uan"
+    },
+    {
+      "case_id": "case_user_72",
+      "user_id": "user_72",
+      "message_ids": [
+        "message_54"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "salary_change"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Hi, Cedar Health payroll here. Your first salary will be ZAR {n}. The confirmed credit date is {n}-{n}-{n}. The money wi",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Hi, Cedar Health payroll here. Your first salary will be ZAR 18700. The confirmed credit date is 2026-07-15. The money will appear after the bank posts the credit. Payroll ref EMP-0054."
+    },
+    {
+      "case_id": "case_user_73",
+      "user_id": "user_73",
+      "message_ids": [
+        "message_55"
+      ],
+      "image_ids": [
+        "image_11"
+      ],
+      "linked_event_ids": [
+        "event_6859"
+      ],
+      "families": [
+        "rent"
+      ],
+      "modalities": [
+        "message",
+        "image"
+      ],
+      "template_family": "There’s a new account update from RentTrack. The renewed lease increases monthly rent by {n}%. The new amount will be us",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "There’s a new account update from RentTrack. The renewed lease increases monthly rent by 12%. The new amount will be used for the next rent payment. Case ref SER-0055."
+    },
+    {
+      "case_id": "case_user_74",
+      "user_id": "user_74",
+      "message_ids": [
+        "message_56"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "invoice"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Here’s the latest service update from PayPilot. The client approved an invoice payment of ZAR {n}. Settlement is expecte",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Here’s the latest service update from PayPilot. The client approved an invoice payment of ZAR 26180. Settlement is expected on 2025-08-15; the other submitted invoices are still awaiting approval. Only invoices marked as"
+    },
+    {
+      "case_id": "case_user_75",
+      "user_id": "user_75",
+      "message_ids": [
+        "message_57"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "ended_income"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "A quick update from the payroll team at Northstar Labs. Your employment has ended. There are no regular salary payments ",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "A quick update from the payroll team at Northstar Labs. Your employment has ended. There are no regular salary payments scheduled after the final settlement. Details of any final settlement will be sent separately. Payro"
+    },
+    {
+      "case_id": "case_user_76",
+      "user_id": "user_76",
+      "message_ids": [
+        "message_58"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "pending_income"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Here’s the latest payroll information from BrightPath Media. Your confirmed base salary is USD {n}. The commission shown",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Here’s the latest payroll information from BrightPath Media. Your confirmed base salary is USD 3072. The commission shown for open deals is still pending approval. Open deals will stay out of the payout until the commiss"
+    },
+    {
+      "case_id": "case_user_77",
+      "user_id": "user_77",
+      "message_ids": [
+        "message_59"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [
+        "event_7186"
+      ],
+      "families": [
+        "refund"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "A quick update from BuyBox about your recent order. Your refund has been initiated but has not reached your account yet.",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "A quick update from BuyBox about your recent order. Your refund has been initiated but has not reached your account yet. Most refunds are completed within ten business days. We’ll send another update when the credit is c"
+    },
+    {
+      "case_id": "case_user_80",
+      "user_id": "user_80",
+      "message_ids": [
+        "message_60"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "pending_income"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Hi, Northstar Labs payroll here. Your confirmed base salary is INR {n}. The commission shown for open deals is still pen",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Hi, Northstar Labs payroll here. Your confirmed base salary is INR 158000. The commission shown for open deals is still pending approval. Open deals will stay out of the payout until the commission is marked as earned. P"
+    },
+    {
+      "case_id": "case_user_81",
+      "user_id": "user_81",
+      "message_ids": [
+        "message_61"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "rent"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "StayLedger wanted to let you know about a change on your account. The renewed lease increases monthly rent by {n}%. The ",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "StayLedger wanted to let you know about a change on your account. The renewed lease increases monthly rent by 12%. The new amount applies from the next rent payment. The new amount will be used for the next rent payment."
+    },
+    {
+      "case_id": "case_user_82",
+      "user_id": "user_82",
+      "message_ids": [
+        "message_62"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "arrears"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Hi, Cedar Health payroll here. Your regular salary for the next payroll is USD {n}. The same payroll includes a one-time",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Hi, Cedar Health payroll here. Your regular salary for the next payroll is USD 1752. The same payroll includes a one-time arrears adjustment of USD 788.40. Your next payslip will show the regular pay and any one-off adju"
+    },
+    {
+      "case_id": "case_user_83",
+      "user_id": "user_83",
+      "message_ids": [
+        "message_63"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "other"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Hi, Cobalt Systems payroll here. Regular salary of INR {n} resumes on {n}-{n}-{n}. A new recurring childcare payment beg",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Hi, Cobalt Systems payroll here. Regular salary of INR 62000 resumes on 2025-05-15. A new recurring childcare payment begins in the same month. The updated pay and deductions will appear from the next cycle. Payroll ref "
+    },
+    {
+      "case_id": "case_user_84",
+      "user_id": "user_84",
+      "message_ids": [
+        "message_64"
+      ],
+      "image_ids": [
+        "image_13"
+      ],
+      "linked_event_ids": [
+        "event_7941",
+        "event_7941"
+      ],
+      "families": [
+        "receipt"
+      ],
+      "modalities": [
+        "message",
+        "image"
+      ],
+      "template_family": "BuyBox confirmed that the tote bag order was paid in INR on {n} April {n}. The receipt has the final amount. Order ref M",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "BuyBox confirmed that the tote bag order was paid in INR on 3 April 2026. The receipt has the final amount. Order ref MER-0064."
+    },
+    {
+      "case_id": "case_user_85",
+      "user_id": "user_85",
+      "message_ids": [
+        "message_65"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "temporary_pay"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Halo, ini tim payroll BrightPath Media. Gaji bulanan sementara Anda adalah IDR {n}. Jumlah yang lebih rendah masih berla",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Halo, ini tim payroll BrightPath Media. Gaji bulanan sementara Anda adalah IDR 8618400. Jumlah yang lebih rendah masih berlaku untuk penggajian berikutnya. Inilah jumlah yang saat ini dijadwalkan untuk periode penggajian"
+    },
+    {
+      "case_id": "case_user_87",
+      "user_id": "user_87",
+      "message_ids": [
+        "message_66"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "other"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Hi, HarborWorks payroll here. Regular salary of INR {n} resumes on {n}-{n}-{n}. A new recurring childcare payment begins",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Hi, HarborWorks payroll here. Regular salary of INR 251000 resumes on 2026-01-15. A new recurring childcare payment begins in the same month. The updated pay and deductions will appear from the next cycle. Payroll ref EM"
+    },
+    {
+      "case_id": "case_user_88",
+      "user_id": "user_88",
+      "message_ids": [
+        "message_67"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "other"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "A note from QuickPrize about your recent financial activity. Congratulations! You’ve been selected for a cash prize. Pay",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "A note from QuickPrize about your recent financial activity. Congratulations! You’ve been selected for a cash prize. Pay the release charge today to receive the funds immediately. Pay the processing charge now to avoid l"
+    },
+    {
+      "case_id": "case_user_90",
+      "user_id": "user_90",
+      "message_ids": [
+        "message_68"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "invoice"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Hi, ClientDesk here. The client approved an invoice payment of ZAR {n}. Settlement is expected on {n}-{n}-{n}; the other",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Hi, ClientDesk here. The client approved an invoice payment of ZAR 13420. Settlement is expected on 2026-07-15; the other submitted invoices are still awaiting approval. Only invoices marked as confirmed should be includ"
+    },
+    {
+      "case_id": "case_user_91",
+      "user_id": "user_91",
+      "message_ids": [
+        "message_69"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [
+        "event_8575"
+      ],
+      "families": [
+        "failed_retry"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Cedar Bank has new information about one of your transactions. The previous debit attempt failed. The bill is still outs",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Cedar Bank has new information about one of your transactions. The previous debit attempt failed. The bill is still outstanding and another debit will be attempted. The bill is still open and another debit may be attempt"
+    },
+    {
+      "case_id": "case_user_92",
+      "user_id": "user_92",
+      "message_ids": [
+        "message_70"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "pending_income"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "A quick update from the payroll team at Cobalt Systems. Your confirmed base salary is ZAR {n}. The commission shown for ",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "A quick update from the payroll team at Cobalt Systems. Your confirmed base salary is ZAR 49280. The commission shown for open deals is still pending approval. Open deals will stay out of the payout until the commission "
+    },
+    {
+      "case_id": "case_user_93",
+      "user_id": "user_93",
+      "message_ids": [
+        "message_71"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "pending_income",
+        "prize"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "A note from WinPoint about your recent financial activity. Your prize claim has been verified and is still in payment pr",
+      "contamination": false,
+      "difficulty": "high",
+      "description": "A note from WinPoint about your recent financial activity. Your prize claim has been verified and is still in payment processing. The payment has not been credited to your account yet. We’ll confirm again if and when the"
+    },
+    {
+      "case_id": "case_user_94",
+      "user_id": "user_94",
+      "message_ids": [
+        "message_72"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "invoice"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Hi, ProjectPay here. The client approved an invoice payment of EUR {n}. Settlement is expected on {n}-{n}-{n}; the other",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Hi, ProjectPay here. The client approved an invoice payment of EUR 924. Settlement is expected on 2024-12-15; the other submitted invoices are still awaiting approval. Only invoices marked as confirmed should be included"
+    },
+    {
+      "case_id": "case_user_95",
+      "user_id": "user_95",
+      "message_ids": [
+        "message_73"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "other"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Cobalt Systems payroll has posted a new update. Your confirmed salary is now expected on {n}-{n}-{n}. This replaces the ",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Cobalt Systems payroll has posted a new update. Your confirmed salary is now expected on 2025-05-23. This replaces the payroll date shown in the earlier update. Please use the revised date for anything you normally pay a"
+    },
+    {
+      "case_id": "case_user_98",
+      "user_id": "user_98",
+      "message_ids": [
+        "message_74"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "salary_change"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Greenfield Foods payroll has posted a new update. Your salary of EUR {n} is confirmed for {n}-{n}-{n}. The receiving ban",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Greenfield Foods payroll has posted a new update. Your salary of EUR 1804 is confirmed for 2025-08-15. The receiving bank will convert it using the rate applied on the settlement date. The amount received in your home cu"
+    },
+    {
+      "case_id": "case_user_101",
+      "user_id": "user_101",
+      "message_ids": [
+        "message_75"
+      ],
+      "image_ids": [
+        "image_14"
+      ],
+      "linked_event_ids": [
+        "event_9420",
+        "event_9421"
+      ],
+      "families": [
+        "prize"
+      ],
+      "modalities": [
+        "message",
+        "image"
+      ],
+      "template_family": "A note from ClaimDesk about your recent financial activity. The prize proceeds have reached your account after withholdi",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "A note from ClaimDesk about your recent financial activity. The prize proceeds have reached your account after withholding. There won’t be another payment unless a separate prize is confirmed. Account ref FIN-0075."
+    },
+    {
+      "case_id": "case_user_102",
+      "user_id": "user_102",
+      "message_ids": [
+        "message_76"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "invoice"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "There’s a new account update from WorkPort. The client approved an invoice payment of EUR {n}. Settlement is expected on",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "There’s a new account update from WorkPort. The client approved an invoice payment of EUR 1419. Settlement is expected on 2026-04-15; the other submitted invoices are still awaiting approval. Only invoices marked as conf"
+    },
+    {
+      "case_id": "case_user_103",
+      "user_id": "user_103",
+      "message_ids": [
+        "message_77"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "temporary_pay"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Cobalt Systems has updated your payroll record. Your temporary monthly pay is INR {n}. The reduced amount continues for ",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Cobalt Systems has updated your payroll record. Your temporary monthly pay is INR 164880. The reduced amount continues for the next payroll. This is the amount currently scheduled for the affected pay cycle. Payroll ref "
+    },
+    {
+      "case_id": "case_user_104",
+      "user_id": "user_104",
+      "message_ids": [
+        "message_78"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "pending_income"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Greenfield Foods has updated your payroll record. Your confirmed base salary is ZAR {n}. The commission shown for open d",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Greenfield Foods has updated your payroll record. Your confirmed base salary is ZAR 35860. The commission shown for open deals is still pending approval. Open deals will stay out of the payout until the commission is mar"
+    },
+    {
+      "case_id": "case_user_105",
+      "user_id": "user_105",
+      "message_ids": [
+        "message_79"
+      ],
+      "image_ids": [
+        "image_15"
+      ],
+      "linked_event_ids": [
+        "event_9805",
+        "event_9806"
+      ],
+      "families": [
+        "salary_change"
+      ],
+      "modalities": [
+        "message",
+        "image"
+      ],
+      "template_family": "Hi, Nova Securities here. Your portfolio’s displayed market value has increased substantially. The displayed value will ",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Hi, Nova Securities here. Your portfolio’s displayed market value has increased substantially. The displayed value will continue to move with market prices. Account ref FIN-0079."
+    },
+    {
+      "case_id": "case_user_106",
+      "user_id": "user_106",
+      "message_ids": [
+        "message_80"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "salary_change"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "A quick update from the payroll team at HarborWorks. Your first salary from the new employer is EUR {n}. It is confirmed",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "A quick update from the payroll team at HarborWorks. Your first salary from the new employer is EUR 1815. It is confirmed for 2024-12-15. Bank processing may take the usual time after the payroll is released. Payroll ref"
+    },
+    {
+      "case_id": "case_user_107",
+      "user_id": "user_107",
+      "message_ids": [
+        "message_81"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "other"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Greenfield Foods payroll has posted a new update. Your first salary of EUR {n} is scheduled for {n}-{n}-{n}. Payroll has",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Greenfield Foods payroll has posted a new update. Your first salary of EUR 2123 is scheduled for 2025-05-15. Payroll has approved the payment and sent it for processing. The credit will show only after the bank processes"
+    },
+    {
+      "case_id": "case_user_108",
+      "user_id": "user_108",
+      "message_ids": [
+        "message_82"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "salary_change",
+        "pending_income"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Your payroll details at Riverline Retail have changed. Your confirmed base salary is ZAR {n}. The commission shown for o",
+      "contamination": false,
+      "difficulty": "high",
+      "description": "Your payroll details at Riverline Retail have changed. Your confirmed base salary is ZAR 33440. The commission shown for open deals is still pending approval. Open deals will stay out of the payout until the commission i"
+    },
+    {
+      "case_id": "case_user_110",
+      "user_id": "user_110",
+      "message_ids": [
+        "message_83"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "invoice"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "WorkPort wanted to let you know about a change on your account. The client approved an invoice payment of ZAR {n}. Settl",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "WorkPort wanted to let you know about a change on your account. The client approved an invoice payment of ZAR 16720. Settlement is expected on 2025-08-15; the other submitted invoices are still awaiting approval. Only in"
+    },
+    {
+      "case_id": "case_user_111",
+      "user_id": "user_111",
+      "message_ids": [
+        "message_84"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "other"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Ada informasi baru dari HarborWorks tentang gaji Anda. Hubungan kerja Anda telah berakhir. Tidak ada pembayaran gaji rut",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Ada informasi baru dari HarborWorks tentang gaji Anda. Hubungan kerja Anda telah berakhir. Tidak ada pembayaran gaji rutin yang dijadwalkan setelah penyelesaian akhir. Rincian penyelesaian akhir akan dikirim secara terpi"
+    },
+    {
+      "case_id": "case_user_112",
+      "user_id": "user_112",
+      "message_ids": [
+        "message_85"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "salary_change"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "A note from BrightPath Media about your upcoming pay. Your first salary will be EUR {n}. The confirmed credit date is {n",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "A note from BrightPath Media about your upcoming pay. Your first salary will be EUR 627. The confirmed credit date is 2024-06-15. The money will appear after the bank posts the credit. Payroll ref EMP-0085."
+    },
+    {
+      "case_id": "case_user_113",
+      "user_id": "user_113",
+      "message_ids": [
+        "message_86"
+      ],
+      "image_ids": [
+        "image_16"
+      ],
+      "linked_event_ids": [
+        "event_10521",
+        "event_10521"
+      ],
+      "families": [
+        "receipt"
+      ],
+      "modalities": [
+        "message",
+        "image"
+      ],
+      "template_family": "MoneyHub account update: Your wallet was charged for the session at Charge Point {n} in Krishnagiri on {n} September {n}",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "MoneyHub account update: Your wallet was charged for the session at Charge Point 1110 in Krishnagiri on 3 September 2026 at 12:35 a.m. The receipt contains the final INR amount. Your employer has confirmed a USD 1296 sal"
+    },
+    {
+      "case_id": "case_user_114",
+      "user_id": "user_114",
+      "message_ids": [
+        "message_87"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "temporary_pay"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Riverline Retail payroll has posted a new update. Your next salary is reduced to INR {n}. The adjustment is due to appro",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Riverline Retail payroll has posted a new update. Your next salary is reduced to INR 148200. The adjustment is due to approved unpaid leave. The adjustment will be visible on your next payslip. Payroll ref EMP-0087."
+    },
+    {
+      "case_id": "case_user_115",
+      "user_id": "user_115",
+      "message_ids": [
+        "message_88"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [
+        "event_10699"
+      ],
+      "families": [
+        "prize"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "There’s a new account update from RewardLane. The prize proceeds have reached your account after withholding. The claim ",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "There’s a new account update from RewardLane. The prize proceeds have reached your account after withholding. The claim is now closed and there are no further scheduled payments. There won’t be another payment unless a s"
+    },
+    {
+      "case_id": "case_user_117",
+      "user_id": "user_117",
+      "message_ids": [
+        "message_89"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "salary_change"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Northstar Labs has updated your payroll record. Your monthly salary has increased to EUR {n}. The change applies from {n",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Northstar Labs has updated your payroll record. Your monthly salary has increased to EUR 1188. The change applies from 2026-07-15. The revised amount will appear on your next payslip. Payroll ref EMP-0089."
+    },
+    {
+      "case_id": "case_user_118",
+      "user_id": "user_118",
+      "message_ids": [
+        "message_90"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "arrears"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "A note from Cedar Health about your upcoming pay. Your regular salary for the next payroll is EUR {n}. The same payroll ",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "A note from Cedar Health about your upcoming pay. Your regular salary for the next payroll is EUR 759. The same payroll includes a one-time arrears adjustment of EUR 341.55. Your next payslip will show the regular pay an"
+    },
+    {
+      "case_id": "case_user_119",
+      "user_id": "user_119",
+      "message_ids": [
+        "message_91"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "other"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "A note from Cobalt Systems about your upcoming pay. Regular salary of INR {n} resumes on {n}-{n}-{n}. A new recurring ch",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "A note from Cobalt Systems about your upcoming pay. Regular salary of INR 176000 resumes on 2025-05-15. A new recurring childcare payment begins in the same month. The updated pay and deductions will appear from the next"
+    },
+    {
+      "case_id": "case_user_120",
+      "user_id": "user_120",
+      "message_ids": [
+        "message_92"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [
+        "event_11129"
+      ],
+      "families": [
+        "other"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Halo, ini Arbor Invest. Hasil penjualan investasi Anda sudah masuk ke rekening tunai. Perintah penjualan sudah selesai d",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Halo, ini Arbor Invest. Hasil penjualan investasi Anda sudah masuk ke rekening tunai. Perintah penjualan sudah selesai dan tidak ada hasil penjualan yang masih tertunda. Riwayat transaksi menunjukkan jumlah yang benar-be"
+    },
+    {
+      "case_id": "case_user_122",
+      "user_id": "user_122",
+      "message_ids": [
+        "message_93"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "other"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Ada pembaruan singkat untuk akun ProjectPay Anda. Klien menyetujui pembayaran faktur sebesar IDR {n}. Penyelesaian diper",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Ada pembaruan singkat untuk akun ProjectPay Anda. Klien menyetujui pembayaran faktur sebesar IDR 15390000. Penyelesaian diperkirakan pada 2025-08-15; faktur lain yang diajukan masih menunggu persetujuan. Hanya faktur yan"
+    },
+    {
+      "case_id": "case_user_123",
+      "user_id": "user_123",
+      "message_ids": [
+        "message_94"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "salary_change"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Ada pembaruan singkat untuk akun TaskSprint Anda. Pembayaran berikutnya dari TaskSprint masih tertunda. Penghasilan ming",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Ada pembaruan singkat untuk akun TaskSprint Anda. Pembayaran berikutnya dari TaskSprint masih tertunda. Penghasilan mingguan di aplikasi TaskSprint masih dapat berubah sampai pembayaran diselesaikan. Saldo belum dapat di"
+    },
+    {
+      "case_id": "case_user_125",
+      "user_id": "user_125",
+      "message_ids": [
+        "message_95"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "salary_change"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "A quick update from the payroll team at Greenfield Foods. Your salary of EUR {n} is confirmed for {n}-{n}-{n}. The recei",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "A quick update from the payroll team at Greenfield Foods. Your salary of EUR 748 is confirmed for 2025-11-15. The receiving bank will convert it using the rate applied on the settlement date. The amount received in your "
+    },
+    {
+      "case_id": "case_user_126",
+      "user_id": "user_126",
+      "message_ids": [
+        "message_96"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "invoice"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "ClientDesk has new information about your next payment. The client approved an invoice payment of INR {n}. Settlement is",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "ClientDesk has new information about your next payment. The client approved an invoice payment of INR 152000. Settlement is expected on 2026-07-15; the other submitted invoices are still awaiting approval. Only invoices "
+    },
+    {
+      "case_id": "case_user_127",
+      "user_id": "user_127",
+      "message_ids": [
+        "message_97"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "other"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Cedar Health payroll has posted a new update. Regular salary of ZAR {n} resumes on {n}-{n}-{n}. A new recurring childcar",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Cedar Health payroll has posted a new update. Regular salary of ZAR 50160 resumes on 2024-09-15. A new recurring childcare payment begins in the same month. The updated pay and deductions will appear from the next cycle."
+    },
+    {
+      "case_id": "case_user_128",
+      "user_id": "user_128",
+      "message_ids": [
+        "message_98"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "salary_change"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Your payroll details at Riverline Retail have changed. Your quarterly bonus is still subject to the final performance re",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Your payroll details at Riverline Retail have changed. Your quarterly bonus is still subject to the final performance review. The final amount and payment date have not been approved yet. We’ll send another update once p"
+    },
+    {
+      "case_id": "case_user_129",
+      "user_id": "user_129",
+      "message_ids": [
+        "message_99"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [
+        "event_11925"
+      ],
+      "families": [
+        "prize"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "A new notice is available for your WinPoint account. The prize proceeds have reached your account after withholding. The",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "A new notice is available for your WinPoint account. The prize proceeds have reached your account after withholding. The claim is now closed and there are no further scheduled payments. There won’t be another payment unl"
+    },
+    {
+      "case_id": "case_user_130",
+      "user_id": "user_130",
+      "message_ids": [
+        "message_100"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "temporary_pay"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "BrightPath Media payroll has posted a new update. Your temporary monthly pay is USD {n}.{n}. The reduced amount continue",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "BrightPath Media payroll has posted a new update. Your temporary monthly pay is USD 2177.28. The reduced amount continues for the next payroll. This is the amount currently scheduled for the affected pay cycle. Payroll r"
+    },
+    {
+      "case_id": "case_user_131",
+      "user_id": "user_131",
+      "message_ids": [
+        "message_101"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "other"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Cobalt Systems has updated your payroll record. Your confirmed salary is now expected on {n}-{n}-{n}. This replaces the ",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Cobalt Systems has updated your payroll record. Your confirmed salary is now expected on 2025-05-23. This replaces the payroll date shown in the earlier update. Please use the revised date for anything you normally pay a"
+    },
+    {
+      "case_id": "case_user_132",
+      "user_id": "user_132",
+      "message_ids": [
+        "message_102"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "temporary_pay"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Hi, Cedar Health payroll here. Your next salary is reduced to USD {n}.{n}. The adjustment is due to approved unpaid leav",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Hi, Cedar Health payroll here. Your next salary is reduced to USD 1193.40. The adjustment is due to approved unpaid leave. The adjustment will be visible on your next payslip. Payroll ref EMP-0102."
+    },
+    {
+      "case_id": "case_user_133",
+      "user_id": "user_133",
+      "message_ids": [
+        "message_103"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "salary_change"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Rincian penggajian Anda di HarborWorks telah berubah. Kontrak musiman saat ini telah berakhir. Belum ada pendapatan di l",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Rincian penggajian Anda di HarborWorks telah berubah. Kontrak musiman saat ini telah berakhir. Belum ada pendapatan di luar musim atau perpanjangan kontrak yang dikonfirmasi. Kami akan menghubungi Anda jika jadwal kerja "
+    },
+    {
+      "case_id": "case_user_135",
+      "user_id": "user_135",
+      "message_ids": [
+        "message_104"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "salary_change"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "A note from Riverline Retail about your upcoming pay. Your monthly salary has increased to USD {n}. The change applies f",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "A note from Riverline Retail about your upcoming pay. Your monthly salary has increased to USD 828. The change applies from 2026-07-15. The revised amount will appear on your next payslip. Payroll ref EMP-0104."
+    },
+    {
+      "case_id": "case_user_137",
+      "user_id": "user_137",
+      "message_ids": [
+        "message_105"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "rent"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "There’s a new account update from HomePortal. The renewed lease increases monthly rent by {n}%. The new amount applies f",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "There’s a new account update from HomePortal. The renewed lease increases monthly rent by 12%. The new amount applies from the next rent payment. The new amount will be used for the next rent payment. Case ref SER-0105."
+    },
+    {
+      "case_id": "case_user_138",
+      "user_id": "user_138",
+      "message_ids": [
+        "message_106"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [
+        "event_12709"
+      ],
+      "families": [
+        "other"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Here’s the latest transaction update from Summit Bank. The extra card charge is still being investigated. A reversal has",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Here’s the latest transaction update from Summit Bank. The extra card charge is still being investigated. A reversal has not been posted to the account yet. The dispute is open and no reversal has been posted yet. Txn re"
+    },
+    {
+      "case_id": "case_user_140",
+      "user_id": "user_140",
+      "message_ids": [
+        "message_107"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "salary_change"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Hi, HarborWorks payroll here. Your first salary will be ZAR {n}. The confirmed credit date is {n}-{n}-{n}. The money wil",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Hi, HarborWorks payroll here. Your first salary will be ZAR 31900. The confirmed credit date is 2025-02-15. The money will appear after the bank posts the credit. Payroll ref EMP-0107."
+    },
+    {
+      "case_id": "case_user_141",
+      "user_id": "user_141",
+      "message_ids": [
+        "message_108"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [
+        "event_13032"
+      ],
+      "families": [
+        "other"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "ClearFund has updated the latest account activity. The proceeds from your investment sale have settled in the cash accou",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "ClearFund has updated the latest account activity. The proceeds from your investment sale have settled in the cash account. The sale order is complete and there are no remaining proceeds pending. The transaction history "
+    },
+    {
+      "case_id": "case_user_142",
+      "user_id": "user_142",
+      "message_ids": [
+        "message_109"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "invoice"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "A note from InvoiceFlow about recent activity on your account. The client approved an invoice payment of USD {n}. Settle",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "A note from InvoiceFlow about recent activity on your account. The client approved an invoice payment of USD 2040. Settlement is expected on 2024-12-15; the other submitted invoices are still awaiting approval. Only invo"
+    },
+    {
+      "case_id": "case_user_143",
+      "user_id": "user_143",
+      "message_ids": [
+        "message_110"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [
+        "event_13207"
+      ],
+      "families": [
+        "prize"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "ClaimDesk has shared an update about your funds. The prize proceeds have reached your account after withholding. The cla",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "ClaimDesk has shared an update about your funds. The prize proceeds have reached your account after withholding. The claim is now closed and there are no further scheduled payments. There won’t be another payment unless "
+    },
+    {
+      "case_id": "case_user_144",
+      "user_id": "user_144",
+      "message_ids": [
+        "message_111"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "salary_change"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "A quick update from the payroll team at Cobalt Systems. Your first salary will be USD {n}. The confirmed credit date is ",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "A quick update from the payroll team at Cobalt Systems. Your first salary will be USD 864. The confirmed credit date is 2026-07-15. The money will appear after the bank posts the credit. Payroll ref EMP-0111."
+    },
+    {
+      "case_id": "case_user_145",
+      "user_id": "user_145",
+      "message_ids": [
+        "message_112"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "arrears"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Hi, Cobalt Systems payroll here. Your regular salary for the next payroll is INR {n}. The same payroll includes a one-ti",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Hi, Cobalt Systems payroll here. Your regular salary for the next payroll is INR 258000. The same payroll includes a one-time arrears adjustment of INR 116100. Your next payslip will show the regular pay and any one-off "
+    },
+    {
+      "case_id": "case_user_147",
+      "user_id": "user_147",
+      "message_ids": [
+        "message_113"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "other"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Hi, Greenfield Foods payroll here. Regular salary of EUR {n} resumes on {n}-{n}-{n}. A new recurring childcare payment b",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Hi, Greenfield Foods payroll here. Regular salary of EUR 1529 resumes on 2026-04-15. A new recurring childcare payment begins in the same month. The updated pay and deductions will appear from the next cycle. Payroll ref"
+    },
+    {
+      "case_id": "case_user_148",
+      "user_id": "user_148",
+      "message_ids": [
+        "message_114"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [
+        "event_13663"
+      ],
+      "families": [
+        "other"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "A new notice is available for your StackWealth account. The proceeds from your investment sale have settled in the cash ",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "A new notice is available for your StackWealth account. The proceeds from your investment sale have settled in the cash account. The sale order is complete and there are no remaining proceeds pending. The transaction his"
+    },
+    {
+      "case_id": "case_user_150",
+      "user_id": "user_150",
+      "message_ids": [
+        "message_115"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "temporary_pay"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Riverline Retail has updated your payroll record. Your next salary is reduced to EUR {n}.{n}. The adjustment is due to a",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Riverline Retail has updated your payroll record. Your next salary is reduced to EUR 893.75. The adjustment is due to approved unpaid leave. The adjustment will be visible on your next payslip. Payroll ref EMP-0115."
+    },
+    {
+      "case_id": "case_user_151",
+      "user_id": "user_151",
+      "message_ids": [
+        "message_116"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "salary_change"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Halo, ini tim payroll Northstar Labs. Gaji pertama dari perusahaan baru adalah IDR {n}. Pembayaran sudah dikonfirmasi un",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Halo, ini tim payroll Northstar Labs. Gaji pertama dari perusahaan baru adalah IDR 46170000. Pembayaran sudah dikonfirmasi untuk 2024-09-15. Pemrosesan bank dapat memerlukan waktu seperti biasa setelah gaji dikirim. Ref "
+    },
+    {
+      "case_id": "case_user_152",
+      "user_id": "user_152",
+      "message_ids": [
+        "message_117"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [
+        "event_14026"
+      ],
+      "families": [
+        "salary_change"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Your payroll details at Greenfield Foods have changed. The latest employer credit is the reimbursement for your earlier ",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Your payroll details at Greenfield Foods have changed. The latest employer credit is the reimbursement for your earlier work expense. The claim is now closed and no additional reimbursement is scheduled. This payment is "
+    },
+    {
+      "case_id": "case_user_153",
+      "user_id": "user_153",
+      "message_ids": [
+        "message_118"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "other"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Hi, ShopNest here with an update on your payment. The bill was charged in a foreign currency. Your bank will confirm the",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Hi, ShopNest here with an update on your payment. The bill was charged in a foreign currency. Your bank will confirm the final home-currency amount when the transaction settles. The final home-currency amount will use th"
+    },
+    {
+      "case_id": "case_user_154",
+      "user_id": "user_154",
+      "message_ids": [
+        "message_119"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "ended_income"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Hi, Cedar Health payroll here. One household employment record has ended. The remaining confirmed monthly salary is EUR ",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Hi, Cedar Health payroll here. One household employment record has ended. The remaining confirmed monthly salary is EUR 1628. Any income that has ended should be removed from future estimates. Payroll ref EMP-0119."
+    },
+    {
+      "case_id": "case_user_155",
+      "user_id": "user_155",
+      "message_ids": [
+        "message_120"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "other"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "A quick update from the payroll team at Greenfield Foods. Regular salary of INR {n} resumes on {n}-{n}-{n}. A new recurr",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "A quick update from the payroll team at Greenfield Foods. Regular salary of INR 84000 resumes on 2025-05-15. A new recurring childcare payment begins in the same month. The updated pay and deductions will appear from the"
+    },
+    {
+      "case_id": "case_user_156",
+      "user_id": "user_156",
+      "message_ids": [
+        "message_121"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [
+        "event_14399"
+      ],
+      "families": [
+        "other"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Hi, Northfield Bank here. The extra card charge is still being investigated. A reversal has not been posted to the accou",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Hi, Northfield Bank here. The extra card charge is still being investigated. A reversal has not been posted to the account yet. The dispute is open and no reversal has been posted yet. Txn ref BAN-0121."
+    },
+    {
+      "case_id": "case_user_157",
+      "user_id": "user_157",
+      "message_ids": [
+        "message_122"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "temporary_pay"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Ada pembaruan singkat dari tim payroll HarborWorks. Gaji bulanan sementara Anda adalah IDR {n}. Jumlah yang lebih rendah",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Ada pembaruan singkat dari tim payroll HarborWorks. Gaji bulanan sementara Anda adalah IDR 23940000. Jumlah yang lebih rendah masih berlaku untuk penggajian berikutnya. Inilah jumlah yang saat ini dijadwalkan untuk perio"
+    },
+    {
+      "case_id": "case_user_159",
+      "user_id": "user_159",
+      "message_ids": [
+        "message_123"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "pending_income"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "There’s a new account update from ShiftPay. The next ShiftPay payout is still pending. The weekly earnings shown in the ",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "There’s a new account update from ShiftPay. The next ShiftPay payout is still pending. The weekly earnings shown in the ShiftPay app can change until the payout is closed. The balance isn’t withdrawable until the payout "
+    },
+    {
+      "case_id": "case_user_160",
+      "user_id": "user_160",
+      "message_ids": [
+        "message_124"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "salary_change"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "A quick update from the payroll team at Riverline Retail. Your first salary from the new employer is EUR {n}. It is conf",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "A quick update from the payroll team at Riverline Retail. Your first salary from the new employer is EUR 1672. It is confirmed for 2024-06-15. Bank processing may take the usual time after the payroll is released. Payrol"
+    },
+    {
+      "case_id": "case_user_161",
+      "user_id": "user_161",
+      "message_ids": [
+        "message_125"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "other"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Ada informasi baru dari HarborWorks tentang gaji Anda. Gaji pertama Anda sebesar IDR {n} dijadwalkan pada {n}-{n}-{n}. T",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Ada informasi baru dari HarborWorks tentang gaji Anda. Gaji pertama Anda sebesar IDR 26790000 dijadwalkan pada 2025-11-15. Tim payroll sudah menyetujui pembayaran dan mengirimkannya untuk diproses. Dana baru akan terliha"
+    },
+    {
+      "case_id": "case_user_162",
+      "user_id": "user_162",
+      "message_ids": [
+        "message_126"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "salary_change"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Halo, ini tim payroll Cedar Health. Gaji bulanan Anda naik menjadi IDR {n}. Perubahan ini berlaku mulai {n}-{n}-{n}. Jum",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Halo, ini tim payroll Cedar Health. Gaji bulanan Anda naik menjadi IDR 29070000. Perubahan ini berlaku mulai 2026-07-15. Jumlah yang diperbarui akan terlihat pada slip gaji berikutnya. Ref payroll EMP-0126."
+    },
+    {
+      "case_id": "case_user_163",
+      "user_id": "user_163",
+      "message_ids": [
+        "message_127"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "arrears"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Greenfield Foods telah memperbarui catatan penggajian Anda. Gaji rutin Anda untuk penggajian berikutnya adalah IDR {n}. ",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Greenfield Foods telah memperbarui catatan penggajian Anda. Gaji rutin Anda untuk penggajian berikutnya adalah IDR 30400000. Penggajian yang sama mencakup penyesuaian tunggakan satu kali sebesar IDR 13680000. Slip gaji b"
+    },
+    {
+      "case_id": "case_user_164",
+      "user_id": "user_164",
+      "message_ids": [
+        "message_128"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "salary_change",
+        "pending_income"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "BrightPath Media telah memperbarui catatan penggajian Anda. Gaji pokok yang dikonfirmasi adalah IDR {n}. Komisi dari tra",
+      "contamination": false,
+      "difficulty": "high",
+      "description": "BrightPath Media telah memperbarui catatan penggajian Anda. Gaji pokok yang dikonfirmasi adalah IDR 44270000. Komisi dari transaksi yang masih berjalan belum disetujui. Transaksi yang masih berjalan tidak masuk pembayara"
+    },
+    {
+      "case_id": "case_user_165",
+      "user_id": "user_165",
+      "message_ids": [
+        "message_129"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "ended_income"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "A note from Cedar Health about your upcoming pay. Your employment has ended. There are no regular salary payments schedu",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "A note from Cedar Health about your upcoming pay. Your employment has ended. There are no regular salary payments scheduled after the final settlement. Details of any final settlement will be sent separately. Payroll ref"
+    },
+    {
+      "case_id": "case_user_166",
+      "user_id": "user_166",
+      "message_ids": [
+        "message_130"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "invoice"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "InvoiceFlow wanted to let you know about a change on your account. The client approved an invoice payment of USD {n}. Se",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "InvoiceFlow wanted to let you know about a change on your account. The client approved an invoice payment of USD 2340. Settlement is expected on 2024-12-15; the other submitted invoices are still awaiting approval. Only "
+    },
+    {
+      "case_id": "case_user_167",
+      "user_id": "user_167",
+      "message_ids": [
+        "message_131"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "other"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Here’s the latest payroll information from BrightPath Media. Your confirmed salary is now expected on {n}-{n}-{n}. This ",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Here’s the latest payroll information from BrightPath Media. Your confirmed salary is now expected on 2025-05-23. This replaces the payroll date shown in the earlier update. Please use the revised date for anything you n"
+    },
+    {
+      "case_id": "case_user_168",
+      "user_id": "user_168",
+      "message_ids": [
+        "message_132"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "temporary_pay"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "A note from Greenfield Foods about your upcoming pay. Your next salary is reduced to INR {n}. The adjustment is due to a",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "A note from Greenfield Foods about your upcoming pay. Your next salary is reduced to INR 137150. The adjustment is due to approved unpaid leave. The adjustment will be visible on your next payslip. Payroll ref EMP-0132."
+    },
+    {
+      "case_id": "case_user_169",
+      "user_id": "user_169",
+      "message_ids": [
+        "message_133"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "fx"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Hi, CartLane here with an update on your payment. The foreign-currency refund is still processing. The final home-curren",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Hi, CartLane here with an update on your payment. The foreign-currency refund is still processing. The final home-currency credit will be calculated when the refund settles. The home-currency credit may change with the s"
+    },
+    {
+      "case_id": "case_user_170",
+      "user_id": "user_170",
+      "message_ids": [
+        "message_134"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "prize"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Ada pembaruan baru untuk akun WinPoint Anda. Klaim hadiah Anda sudah diverifikasi dan masih dalam proses pembayaran. Pem",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Ada pembaruan baru untuk akun WinPoint Anda. Klaim hadiah Anda sudah diverifikasi dan masih dalam proses pembayaran. Pembayaran tersebut belum masuk ke rekening Anda. Kami akan mengonfirmasi kembali jika dana benar-benar"
+    },
+    {
+      "case_id": "case_user_171",
+      "user_id": "user_171",
+      "message_ids": [
+        "message_135"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "transfer"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Cedar Bank has new information about one of your transactions. The matching debit and credit came from a transfer betwee",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Cedar Bank has new information about one of your transactions. The matching debit and credit came from a transfer between your two accounts. Both accounts are registered under the same account holder. Both entries will r"
+    },
+    {
+      "case_id": "case_user_172",
+      "user_id": "user_172",
+      "message_ids": [
+        "message_136"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "other"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Hi, Summit Bank here. There are minimum payments due on two separate card accounts this month. A payment to one card wil",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Hi, Summit Bank here. There are minimum payments due on two separate card accounts this month. A payment to one card will not cover the amount due on the other card. The minimums belong to separate accounts, so one payme"
+    },
+    {
+      "case_id": "case_user_173",
+      "user_id": "user_173",
+      "message_ids": [
+        "message_137"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "salary_change"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Hi, Greenfield Foods payroll here. Your salary of USD {n} is confirmed for {n}-{n}-{n}. The receiving bank will convert ",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Hi, Greenfield Foods payroll here. Your salary of USD 1284 is confirmed for 2025-11-15. The receiving bank will convert it using the rate applied on the settlement date. The amount received in your home currency will dep"
+    },
+    {
+      "case_id": "case_user_175",
+      "user_id": "user_175",
+      "message_ids": [
+        "message_138"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "temporary_pay"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "A note from Riverline Retail about your upcoming pay. Your temporary monthly pay is EUR {n}.{n}. The reduced amount cont",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "A note from Riverline Retail about your upcoming pay. Your temporary monthly pay is EUR 1924.56. The reduced amount continues for the next payroll. This is the amount currently scheduled for the affected pay cycle. Payro"
+    },
+    {
+      "case_id": "case_user_176",
+      "user_id": "user_176",
+      "message_ids": [
+        "message_139"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "pending_income"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "A note from Cedar Health about your upcoming pay. Your confirmed base salary is EUR {n}. The commission shown for open d",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "A note from Cedar Health about your upcoming pay. Your confirmed base salary is EUR 847. The commission shown for open deals is still pending approval. Open deals will stay out of the payout until the commission is marke"
+    },
+    {
+      "case_id": "case_user_177",
+      "user_id": "user_177",
+      "message_ids": [
+        "message_140"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "temporary_pay"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "BrightPath Media payroll has posted a new update. Your next salary is reduced to USD {n}.{n}. The adjustment is due to a",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "BrightPath Media payroll has posted a new update. Your next salary is reduced to USD 1731.60. The adjustment is due to approved unpaid leave. The adjustment will be visible on your next payslip. Payroll ref EMP-0140."
+    },
+    {
+      "case_id": "case_user_178",
+      "user_id": "user_178",
+      "message_ids": [
+        "message_141"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "invoice"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "A quick update about your FreelanceHub account. The client approved an invoice payment of EUR {n}. Settlement is expecte",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "A quick update about your FreelanceHub account. The client approved an invoice payment of EUR 2376. Settlement is expected on 2024-12-15; the other submitted invoices are still awaiting approval. Only invoices marked as "
+    },
+    {
+      "case_id": "case_user_179",
+      "user_id": "user_179",
+      "message_ids": [
+        "message_142"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "prize"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Pemberitahuan baru tersedia untuk akun RewardNow Anda. Selamat! Anda terpilih untuk menerima hadiah uang tunai. Bayar bi",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Pemberitahuan baru tersedia untuk akun RewardNow Anda. Selamat! Anda terpilih untuk menerima hadiah uang tunai. Bayar biaya pencairan hari ini agar dana segera diterima. Bayar biaya pemrosesan sekarang agar klaim tidak h"
+    },
+    {
+      "case_id": "case_user_180",
+      "user_id": "user_180",
+      "message_ids": [
+        "message_143"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "salary_change"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Here’s the latest payroll information from Northstar Labs. Your first salary will be INR {n}. The confirmed credit date ",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Here’s the latest payroll information from Northstar Labs. Your first salary will be INR 59000. The confirmed credit date is 2026-07-15. The money will appear after the bank posts the credit. Payroll ref EMP-0143."
+    },
+    {
+      "case_id": "case_user_182",
+      "user_id": "user_182",
+      "message_ids": [
+        "message_144"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "other"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "BrightPath Media has updated your payroll record. Your quarterly bonus is still subject to the final performance review.",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "BrightPath Media has updated your payroll record. Your quarterly bonus is still subject to the final performance review. The final amount and payment date have not been approved yet. We’ll send another update once payrol"
+    },
+    {
+      "case_id": "case_user_183",
+      "user_id": "user_183",
+      "message_ids": [
+        "message_145"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "refund",
+        "fx"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "CartLane memiliki informasi baru tentang pembayaran atau pengembalian dana Anda. Tagihan dikenakan dalam mata uang asing",
+      "contamination": false,
+      "difficulty": "high",
+      "description": "CartLane memiliki informasi baru tentang pembayaran atau pengembalian dana Anda. Tagihan dikenakan dalam mata uang asing. Bank Anda akan mengonfirmasi jumlah akhir dalam mata uang utama saat transaksi selesai. Jumlah akh"
+    },
+    {
+      "case_id": "case_user_184",
+      "user_id": "user_184",
+      "message_ids": [
+        "message_146"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "fx"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "There’s a new payment update from BrightBasket. The foreign-currency refund is still processing. The final home-currency",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "There’s a new payment update from BrightBasket. The foreign-currency refund is still processing. The final home-currency credit will be calculated when the refund settles. The home-currency credit may change with the set"
+    },
+    {
+      "case_id": "case_user_185",
+      "user_id": "user_185",
+      "message_ids": [
+        "message_147"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "rent"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Hi, HomePortal here. The renewed lease increases monthly rent by {n}%. The new amount applies from the next rent payment",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Hi, HomePortal here. The renewed lease increases monthly rent by 12%. The new amount applies from the next rent payment. The new amount will be used for the next rent payment. Case ref SER-0147."
+    },
+    {
+      "case_id": "case_user_186",
+      "user_id": "user_186",
+      "message_ids": [
+        "message_148"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "temporary_pay"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Here’s the latest payroll information from HarborWorks. Your next salary is reduced to ZAR {n}. The adjustment is due to",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Here’s the latest payroll information from HarborWorks. Your next salary is reduced to ZAR 31889. The adjustment is due to approved unpaid leave. The adjustment will be visible on your next payslip. Payroll ref EMP-0148."
+    },
+    {
+      "case_id": "case_user_187",
+      "user_id": "user_187",
+      "message_ids": [
+        "message_149"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "salary_change"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "A note from BrightPath Media about your upcoming pay. Your first salary from the new employer is INR {n}. It is confirme",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "A note from BrightPath Media about your upcoming pay. Your first salary from the new employer is INR 145000. It is confirmed for 2024-09-15. Bank processing may take the usual time after the payroll is released. Payroll "
+    },
+    {
+      "case_id": "case_user_188",
+      "user_id": "user_188",
+      "message_ids": [
+        "message_150"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [
+        "event_17401"
+      ],
+      "families": [
+        "other"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "A quick update from the payroll team at Cedar Health. The latest employer credit is the reimbursement for your earlier w",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "A quick update from the payroll team at Cedar Health. The latest employer credit is the reimbursement for your earlier work expense. The claim is now closed and no additional reimbursement is scheduled. This payment is l"
+    },
+    {
+      "case_id": "case_user_189",
+      "user_id": "user_189",
+      "message_ids": [
+        "message_151"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "salary_change"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Your payroll details at HarborWorks have changed. Your monthly salary has increased to EUR {n}. The change applies from ",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Your payroll details at HarborWorks have changed. Your monthly salary has increased to EUR 627. The change applies from 2026-07-15. The revised amount will appear on your next payslip. Payroll ref EMP-0151."
+    },
+    {
+      "case_id": "case_user_191",
+      "user_id": "user_191",
+      "message_ids": [
+        "message_152"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [
+        "event_17662"
+      ],
+      "families": [
+        "refund"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "UrbanCart has received an update from the payment processor. Your refund has been initiated but has not reached your acc",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "UrbanCart has received an update from the payment processor. Your refund has been initiated but has not reached your account yet. Most refunds are completed within ten business days. We’ll send another update when the cr"
+    },
+    {
+      "case_id": "case_user_193",
+      "user_id": "user_193",
+      "message_ids": [
+        "message_153"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "temporary_pay"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Here’s the latest payroll information from Cedar Health. Your temporary monthly pay is EUR {n}.{n}. The reduced amount c",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Here’s the latest payroll information from Cedar Health. Your temporary monthly pay is EUR 1750.32. The reduced amount continues for the next payroll. This is the amount currently scheduled for the affected pay cycle. Pa"
+    },
+    {
+      "case_id": "case_user_194",
+      "user_id": "user_194",
+      "message_ids": [
+        "message_154"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "salary_change"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Your payroll details at Northstar Labs have changed. Your confirmed salary is now expected on {n}-{n}-{n}. This replaces",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Your payroll details at Northstar Labs have changed. Your confirmed salary is now expected on 2025-08-23. This replaces the payroll date shown in the earlier update. Please use the revised date for anything you normally "
+    },
+    {
+      "case_id": "case_user_195",
+      "user_id": "user_195",
+      "message_ids": [
+        "message_155"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "temporary_pay"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Hi, HarborWorks payroll here. Your next salary is reduced to EUR {n}.{n}. The adjustment is due to approved unpaid leave",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Hi, HarborWorks payroll here. Your next salary is reduced to EUR 1222.65. The adjustment is due to approved unpaid leave. The adjustment will be visible on your next payslip. Payroll ref EMP-0155."
+    },
+    {
+      "case_id": "case_user_197",
+      "user_id": "user_197",
+      "message_ids": [
+        "message_156"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "other"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Cedar Health telah memperbarui catatan penggajian Anda. Gaji pertama Anda sebesar IDR {n} dijadwalkan pada {n}-{n}-{n}. ",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Cedar Health telah memperbarui catatan penggajian Anda. Gaji pertama Anda sebesar IDR 38190000 dijadwalkan pada 2025-11-15. Tim payroll sudah menyetujui pembayaran dan mengirimkannya untuk diproses. Dana baru akan terlih"
+    },
+    {
+      "case_id": "case_user_198",
+      "user_id": "user_198",
+      "message_ids": [
+        "message_157"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [
+        "event_18269"
+      ],
+      "families": [
+        "other"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Here’s the latest transaction update from BluePeak Bank. The extra card charge is still being investigated. A reversal h",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Here’s the latest transaction update from BluePeak Bank. The extra card charge is still being investigated. A reversal has not been posted to the account yet. The dispute is open and no reversal has been posted yet. Txn "
+    },
+    {
+      "case_id": "case_user_199",
+      "user_id": "user_199",
+      "message_ids": [
+        "message_158"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "salary_change"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Ada pemberitahuan dari ShiftPay tentang aktivitas akun terbaru. Pembayaran berikutnya dari ShiftPay masih tertunda. Peng",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Ada pemberitahuan dari ShiftPay tentang aktivitas akun terbaru. Pembayaran berikutnya dari ShiftPay masih tertunda. Penghasilan mingguan di aplikasi ShiftPay masih dapat berubah sampai pembayaran diselesaikan. Saldo belu"
+    },
+    {
+      "case_id": "case_user_200",
+      "user_id": "user_200",
+      "message_ids": [
+        "message_159"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "pending_income"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Ada informasi baru dari HarborWorks tentang gaji Anda. Bonus kuartalan Anda masih menunggu hasil akhir penilaian kinerja",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Ada informasi baru dari HarborWorks tentang gaji Anda. Bonus kuartalan Anda masih menunggu hasil akhir penilaian kinerja. Jumlah akhir dan tanggal pembayaran belum disetujui. Kami akan mengirim pembaruan setelah tim payr"
+    },
+    {
+      "case_id": "case_user_201",
+      "user_id": "user_201",
+      "message_ids": [
+        "message_160"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "other"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Tim payroll Northstar Labs telah mengirim pembaruan. Kontrak musiman saat ini telah berakhir. Belum ada pendapatan di lu",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Tim payroll Northstar Labs telah mengirim pembaruan. Kontrak musiman saat ini telah berakhir. Belum ada pendapatan di luar musim atau perpanjangan kontrak yang dikonfirmasi. Kami akan menghubungi Anda jika jadwal kerja a"
+    },
+    {
+      "case_id": "case_user_202",
+      "user_id": "user_202",
+      "message_ids": [
+        "message_161"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "other"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Harbor Bank has new information about one of your transactions. There are minimum payments due on two separate card acco",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Harbor Bank has new information about one of your transactions. There are minimum payments due on two separate card accounts this month. A payment to one card will not cover the amount due on the other card. The minimums"
+    },
+    {
+      "case_id": "case_user_204",
+      "user_id": "user_204",
+      "message_ids": [
+        "message_162"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "salary_change"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "A quick update from the payroll team at BrightPath Media. Your first salary will be EUR {n}. The confirmed credit date i",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "A quick update from the payroll team at BrightPath Media. Your first salary will be EUR 2024. The confirmed credit date is 2026-01-15. The money will appear after the bank posts the credit. Payroll ref EMP-0162."
+    },
+    {
+      "case_id": "case_user_208",
+      "user_id": "user_208",
+      "message_ids": [
+        "message_163"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [
+        "event_19182"
+      ],
+      "families": [
+        "salary_change",
+        "investment_noncash"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Berikut informasi akun terbaru dari Nova Securities. Nilai investasi yang ditampilkan telah turun. Investasi tersebut be",
+      "contamination": false,
+      "difficulty": "high",
+      "description": "Berikut informasi akun terbaru dari Nova Securities. Nilai investasi yang ditampilkan telah turun. Investasi tersebut belum dijual dan tidak ada transaksi tunai. Nilai yang ditampilkan akan terus berubah mengikuti harga "
+    },
+    {
+      "case_id": "case_user_210",
+      "user_id": "user_210",
+      "message_ids": [
+        "message_164"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [
+        "event_19334"
+      ],
+      "families": [
+        "other"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "A note from BluePeak Bank about recent activity on your account. The extra card charge is still being investigated. A re",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "A note from BluePeak Bank about recent activity on your account. The extra card charge is still being investigated. A reversal has not been posted to the account yet. The dispute is open and no reversal has been posted y"
+    },
+    {
+      "case_id": "case_user_212",
+      "user_id": "user_212",
+      "message_ids": [
+        "message_165"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "salary_change"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Ada informasi baru dari Greenfield Foods tentang gaji Anda. Gaji yang sudah dikonfirmasi kini diperkirakan masuk pada {n",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Ada informasi baru dari Greenfield Foods tentang gaji Anda. Gaji yang sudah dikonfirmasi kini diperkirakan masuk pada 2025-02-23. Tanggal ini menggantikan tanggal penggajian pada pemberitahuan sebelumnya. Gunakan tanggal"
+    },
+    {
+      "case_id": "case_user_213",
+      "user_id": "user_213",
+      "message_ids": [
+        "message_166"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "ended_income"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "HarborWorks payroll has posted a new update. The current seasonal contract has ended. No off-season income or renewal ha",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "HarborWorks payroll has posted a new update. The current seasonal contract has ended. No off-season income or renewal has been confirmed. We’ll contact you separately if another shift block or contract is approved. Payro"
+    },
+    {
+      "case_id": "case_user_214",
+      "user_id": "user_214",
+      "message_ids": [
+        "message_167"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "fx"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "BrightBasket has new information about your payment or refund. The foreign-currency refund is still processing. The fina",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "BrightBasket has new information about your payment or refund. The foreign-currency refund is still processing. The final home-currency credit will be calculated when the refund settles. The home-currency credit may chan"
+    },
+    {
+      "case_id": "case_user_215",
+      "user_id": "user_215",
+      "message_ids": [
+        "message_168"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "pending_income"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Hi, QuickCrew here. The next QuickCrew payout is still pending. The weekly earnings shown in the QuickCrew app can chang",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Hi, QuickCrew here. The next QuickCrew payout is still pending. The weekly earnings shown in the QuickCrew app can change until the payout is closed. The balance isn’t withdrawable until the payout shows as completed. Ca"
+    },
+    {
+      "case_id": "case_user_216",
+      "user_id": "user_216",
+      "message_ids": [
+        "message_169"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "salary_change"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Here’s the latest payroll information from Cobalt Systems. Your monthly salary has increased to USD {n}. The change appl",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Here’s the latest payroll information from Cobalt Systems. Your monthly salary has increased to USD 2424. The change applies from 2026-07-15. The revised amount will appear on your next payslip. Payroll ref EMP-0169."
+    },
+    {
+      "case_id": "case_user_219",
+      "user_id": "user_219",
+      "message_ids": [
+        "message_170"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "other"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "A quick update from the payroll team at BrightPath Media. Regular salary of EUR {n} resumes on {n}-{n}-{n}. A new recurr",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "A quick update from the payroll team at BrightPath Media. Regular salary of EUR 1914 resumes on 2026-04-15. A new recurring childcare payment begins in the same month. The updated pay and deductions will appear from the "
+    },
+    {
+      "case_id": "case_user_220",
+      "user_id": "user_220",
+      "message_ids": [
+        "message_171"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "temporary_pay"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "A quick update from the payroll team at HarborWorks. Your temporary monthly pay is EUR {n}.{n}. The reduced amount conti",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "A quick update from the payroll team at HarborWorks. Your temporary monthly pay is EUR 1346.40. The reduced amount continues for the next payroll. This is the amount currently scheduled for the affected pay cycle. Payrol"
+    },
+    {
+      "case_id": "case_user_221",
+      "user_id": "user_221",
+      "message_ids": [
+        "message_172"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [
+        "event_20379"
+      ],
+      "families": [
+        "refund"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Here’s the latest payment status from Everyday Store. Your refund has been initiated but has not reached your account ye",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Here’s the latest payment status from Everyday Store. Your refund has been initiated but has not reached your account yet. Most refunds are completed within ten business days. We’ll send another update when the credit is"
+    },
+    {
+      "case_id": "case_user_222",
+      "user_id": "user_222",
+      "message_ids": [
+        "message_173"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "invoice"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "There’s a new account update from ClientDesk. The client approved an invoice payment of ZAR {n}. Settlement is expected ",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "There’s a new account update from ClientDesk. The client approved an invoice payment of ZAR 35200. Settlement is expected on 2026-01-15; the other submitted invoices are still awaiting approval. Only invoices marked as c"
+    },
+    {
+      "case_id": "case_user_224",
+      "user_id": "user_224",
+      "message_ids": [
+        "message_174"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [
+        "event_20615"
+      ],
+      "families": [
+        "other"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Ada informasi baru dari BrightPath Media tentang gaji Anda. Dana terbaru dari perusahaan adalah penggantian atas biaya k",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Ada informasi baru dari BrightPath Media tentang gaji Anda. Dana terbaru dari perusahaan adalah penggantian atas biaya kerja Anda sebelumnya. Klaim sudah ditutup dan tidak ada penggantian tambahan yang dijadwalkan. Pemba"
+    },
+    {
+      "case_id": "case_user_225",
+      "user_id": "user_225",
+      "message_ids": [
+        "message_175"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "salary_change",
+        "rent"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "HomePortal memiliki informasi baru tentang pembayaran berikutnya. Perpanjangan sewa menaikkan biaya sewa bulanan sebesar",
+      "contamination": false,
+      "difficulty": "high",
+      "description": "HomePortal memiliki informasi baru tentang pembayaran berikutnya. Perpanjangan sewa menaikkan biaya sewa bulanan sebesar 12%. Jumlah baru berlaku mulai pembayaran sewa berikutnya. Jumlah baru akan digunakan untuk pembaya"
+    },
+    {
+      "case_id": "case_user_226",
+      "user_id": "user_226",
+      "message_ids": [
+        "message_176"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "arrears"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Greenfield Foods has updated your payroll record. Your regular salary for the next payroll is INR {n}. The same payroll ",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Greenfield Foods has updated your payroll record. Your regular salary for the next payroll is INR 260000. The same payroll includes a one-time arrears adjustment of INR 117000. Your next payslip will show the regular pay"
+    },
+    {
+      "case_id": "case_user_227",
+      "user_id": "user_227",
+      "message_ids": [
+        "message_177"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "other"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Hi, Cobalt Systems payroll here. Your quarterly bonus is still subject to the final performance review. The final amount",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Hi, Cobalt Systems payroll here. Your quarterly bonus is still subject to the final performance review. The final amount and payment date have not been approved yet. We’ll send another update once payroll confirms the am"
+    },
+    {
+      "case_id": "case_user_228",
+      "user_id": "user_228",
+      "message_ids": [
+        "message_178"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "salary_change"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Ada informasi baru dari Northstar Labs tentang gaji Anda. Gaji pertama Anda sebesar IDR {n}. Tanggal kredit yang dikonfi",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Ada informasi baru dari Northstar Labs tentang gaji Anda. Gaji pertama Anda sebesar IDR 30400000. Tanggal kredit yang dikonfirmasi adalah 2026-04-15. Dana akan terlihat setelah bank mencatat kreditnya. Ref payroll EMP-01"
+    },
+    {
+      "case_id": "case_user_229",
+      "user_id": "user_229",
+      "message_ids": [
+        "message_179"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [
+        "event_21101"
+      ],
+      "families": [
+        "failed_retry"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "A note from Northfield Bank about recent activity on your account. The previous debit attempt failed. The bill is still ",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "A note from Northfield Bank about recent activity on your account. The previous debit attempt failed. The bill is still outstanding and another debit will be attempted. The bill is still open and another debit may be att"
+    },
+    {
+      "case_id": "case_user_230",
+      "user_id": "user_230",
+      "message_ids": [
+        "message_180"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "ended_income"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Northstar Labs has updated your payroll record. One household employment record has ended. The remaining confirmed month",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Northstar Labs has updated your payroll record. One household employment record has ended. The remaining confirmed monthly salary is EUR 2827. Any income that has ended should be removed from future estimates. Payroll re"
+    },
+    {
+      "case_id": "case_user_232",
+      "user_id": "user_232",
+      "message_ids": [
+        "message_181"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "salary_change"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "A note from Cobalt Systems about your upcoming pay. Your first salary will be EUR {n}. The confirmed credit date is {n}-",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "A note from Cobalt Systems about your upcoming pay. Your first salary will be EUR 2772. The confirmed credit date is 2024-06-15. The money will appear after the bank posts the credit. Payroll ref EMP-0181."
+    },
+    {
+      "case_id": "case_user_233",
+      "user_id": "user_233",
+      "message_ids": [
+        "message_182"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "other"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Berikut informasi penggajian terbaru dari Northstar Labs. Gaji pertama Anda sebesar IDR {n} dijadwalkan pada {n}-{n}-{n}",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Berikut informasi penggajian terbaru dari Northstar Labs. Gaji pertama Anda sebesar IDR 16910000 dijadwalkan pada 2025-11-15. Tim payroll sudah menyetujui pembayaran dan mengirimkannya untuk diproses. Dana baru akan terl"
+    },
+    {
+      "case_id": "case_user_234",
+      "user_id": "user_234",
+      "message_ids": [
+        "message_183"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [
+        "event_21582"
+      ],
+      "families": [
+        "other"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Summit Bank has reviewed the transaction on your account. The extra card charge is still being investigated. A reversal ",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Summit Bank has reviewed the transaction on your account. The extra card charge is still being investigated. A reversal has not been posted to the account yet. The dispute is open and no reversal has been posted yet. Txn"
+    },
+    {
+      "case_id": "case_user_235",
+      "user_id": "user_235",
+      "message_ids": [
+        "message_184"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "fx"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Hi, MarketDock here with an update on your payment. The foreign-currency refund is still processing. The final home-curr",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Hi, MarketDock here with an update on your payment. The foreign-currency refund is still processing. The final home-currency credit will be calculated when the refund settles. The home-currency credit may change with the"
+    },
+    {
+      "case_id": "case_user_236",
+      "user_id": "user_236",
+      "message_ids": [
+        "message_185"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [
+        "event_21785"
+      ],
+      "families": [
+        "salary_change",
+        "investment_noncash"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Ada pembaruan baru untuk akun PocketVest Anda. Nilai investasi yang ditampilkan telah turun. Investasi tersebut belum di",
+      "contamination": false,
+      "difficulty": "high",
+      "description": "Ada pembaruan baru untuk akun PocketVest Anda. Nilai investasi yang ditampilkan telah turun. Investasi tersebut belum dijual dan tidak ada transaksi tunai. Nilai yang ditampilkan akan terus berubah mengikuti harga pasar."
+    },
+    {
+      "case_id": "case_user_237",
+      "user_id": "user_237",
+      "message_ids": [
+        "message_186"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "other"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Ada pembaruan singkat dari tim payroll BrightPath Media. Kontrak musiman saat ini telah berakhir. Belum ada pendapatan d",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Ada pembaruan singkat dari tim payroll BrightPath Media. Kontrak musiman saat ini telah berakhir. Belum ada pendapatan di luar musim atau perpanjangan kontrak yang dikonfirmasi. Kami akan menghubungi Anda jika jadwal ker"
+    },
+    {
+      "case_id": "case_user_238",
+      "user_id": "user_238",
+      "message_ids": [
+        "message_187"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "salary_change",
+        "ended_income"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Your payroll details at Northstar Labs have changed. One household employment record has ended. The remaining confirmed ",
+      "contamination": false,
+      "difficulty": "high",
+      "description": "Your payroll details at Northstar Labs have changed. One household employment record has ended. The remaining confirmed monthly salary is USD 912. Any income that has ended should be removed from future estimates. Payrol"
+    },
+    {
+      "case_id": "case_user_240",
+      "user_id": "user_240",
+      "message_ids": [
+        "message_188"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "salary_change"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Cobalt Systems payroll has posted a new update. Your first salary will be INR {n}. The confirmed credit date is {n}-{n}-",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Cobalt Systems payroll has posted a new update. Your first salary will be INR 62000. The confirmed credit date is 2026-01-15. The money will appear after the bank posts the credit. Payroll ref EMP-0188."
+    },
+    {
+      "case_id": "case_user_241",
+      "user_id": "user_241",
+      "message_ids": [
+        "message_189"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "salary_change"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Riverline Retail telah memperbarui catatan penggajian Anda. Kontrak musiman saat ini telah berakhir. Belum ada pendapata",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Riverline Retail telah memperbarui catatan penggajian Anda. Kontrak musiman saat ini telah berakhir. Belum ada pendapatan di luar musim atau perpanjangan kontrak yang dikonfirmasi. Kami akan menghubungi Anda jika jadwal "
+    },
+    {
+      "case_id": "case_user_242",
+      "user_id": "user_242",
+      "message_ids": [
+        "message_190"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "other"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Hi, Riverline Retail payroll here. Your first salary of EUR {n} is scheduled for {n}-{n}-{n}. Payroll has approved the p",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Hi, Riverline Retail payroll here. Your first salary of EUR 968 is scheduled for 2025-08-15. Payroll has approved the payment and sent it for processing. The credit will show only after the bank processes the payroll fil"
+    },
+    {
+      "case_id": "case_user_245",
+      "user_id": "user_245",
+      "message_ids": [
+        "message_191"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "salary_change"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "A quick update from the payroll team at Cedar Health. Your salary of USD {n} is confirmed for {n}-{n}-{n}. The receiving",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "A quick update from the payroll team at Cedar Health. Your salary of USD 1680 is confirmed for 2025-11-15. The receiving bank will convert it using the rate applied on the settlement date. The amount received in your hom"
+    },
+    {
+      "case_id": "case_user_246",
+      "user_id": "user_246",
+      "message_ids": [
+        "message_192"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "ended_income"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Here’s the latest payroll information from Cedar Health. Your employment has ended. There are no regular salary payments",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Here’s the latest payroll information from Cedar Health. Your employment has ended. There are no regular salary payments scheduled after the final settlement. Details of any final settlement will be sent separately. Payr"
+    },
+    {
+      "case_id": "case_user_247",
+      "user_id": "user_247",
+      "message_ids": [
+        "message_193"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "temporary_pay"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Northstar Labs payroll has posted a new update. Your temporary monthly pay is EUR {n}.{n}. The reduced amount continues ",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Northstar Labs payroll has posted a new update. Your temporary monthly pay is EUR 1528.56. The reduced amount continues for the next payroll. This is the amount currently scheduled for the affected pay cycle. Payroll ref"
+    },
+    {
+      "case_id": "case_user_248",
+      "user_id": "user_248",
+      "message_ids": [
+        "message_194"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "pending_income"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Riverline Retail payroll has posted a new update. Your confirmed base salary is USD {n}. The commission shown for open d",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Riverline Retail payroll has posted a new update. Your confirmed base salary is USD 1548. The commission shown for open deals is still pending approval. Open deals will stay out of the payout until the commission is mark"
+    },
+    {
+      "case_id": "case_user_249",
+      "user_id": "user_249",
+      "message_ids": [
+        "message_195"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "temporary_pay"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Here’s the latest payroll information from Greenfield Foods. Your next salary is reduced to USD {n}. The adjustment is d",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Here’s the latest payroll information from Greenfield Foods. Your next salary is reduced to USD 702. The adjustment is due to approved unpaid leave. The adjustment will be visible on your next payslip. Payroll ref EMP-01"
+    },
+    {
+      "case_id": "case_user_250",
+      "user_id": "user_250",
+      "message_ids": [
+        "message_196"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "salary_change"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "A note from Cobalt Systems about your upcoming pay. Your first salary from the new employer is ZAR {n}. It is confirmed ",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "A note from Cobalt Systems about your upcoming pay. Your first salary from the new employer is ZAR 53680. It is confirmed for 2024-12-15. Bank processing may take the usual time after the payroll is released. Payroll ref"
+    },
+    {
+      "case_id": "case_user_252",
+      "user_id": "user_252",
+      "message_ids": [
+        "message_197"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [
+        "event_23203"
+      ],
+      "families": [
+        "other"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Summit Bank memiliki informasi baru tentang salah satu transaksi Anda. Tagihan kartu tambahan masih dalam penyelidikan. ",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Summit Bank memiliki informasi baru tentang salah satu transaksi Anda. Tagihan kartu tambahan masih dalam penyelidikan. Dana pembalikannya belum tercatat di rekening. Sengketa masih terbuka dan dana pembalikan belum terc"
+    },
+    {
+      "case_id": "case_user_253",
+      "user_id": "user_253",
+      "message_ids": [
+        "message_198"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [
+        "event_23306"
+      ],
+      "families": [
+        "failed_retry"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Oakline Bank has reviewed the transaction on your account. The previous debit attempt failed. The bill is still outstand",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Oakline Bank has reviewed the transaction on your account. The previous debit attempt failed. The bill is still outstanding and another debit will be attempted. The bill is still open and another debit may be attempted. "
+    },
+    {
+      "case_id": "case_user_254",
+      "user_id": "user_254",
+      "message_ids": [
+        "message_199"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "salary_change"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Your payroll details at Greenfield Foods have changed. Your quarterly bonus is still subject to the final performance re",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Your payroll details at Greenfield Foods have changed. Your quarterly bonus is still subject to the final performance review. The final amount and payment date have not been approved yet. We’ll send another update once p"
+    },
+    {
+      "case_id": "case_user_256",
+      "user_id": "user_256",
+      "message_ids": [
+        "message_200"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "salary_change"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Hi, Riverline Retail payroll here. Your first salary will be INR {n}. The confirmed credit date is {n}-{n}-{n}. The mone",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Hi, Riverline Retail payroll here. Your first salary will be INR 214000. The confirmed credit date is 2024-06-15. The money will appear after the bank posts the credit. Payroll ref EMP-0200."
+    },
+    {
+      "case_id": "case_user_259",
+      "user_id": "user_259",
+      "message_ids": [
+        "message_201"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [
+        "event_23855"
+      ],
+      "families": [
+        "failed_retry"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "BluePeak Bank has reviewed the transaction on your account. The previous debit attempt failed. The bill is still outstan",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "BluePeak Bank has reviewed the transaction on your account. The previous debit attempt failed. The bill is still outstanding and another debit will be attempted. The bill is still open and another debit may be attempted."
+    },
+    {
+      "case_id": "case_user_261",
+      "user_id": "user_261",
+      "message_ids": [
+        "message_202"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "transfer"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Hi, Summit Bank here. The matching debit and credit came from a transfer between your two accounts. Both accounts are re",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Hi, Summit Bank here. The matching debit and credit came from a transfer between your two accounts. Both accounts are registered under the same account holder. Both entries will remain visible in your transaction history"
+    },
+    {
+      "case_id": "case_user_262",
+      "user_id": "user_262",
+      "message_ids": [
+        "message_203"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "salary_change",
+        "ended_income"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Tim payroll Cedar Health telah mengirim pembaruan. Salah satu sumber pendapatan kerja rumah tangga telah berakhir. Sisa ",
+      "contamination": false,
+      "difficulty": "high",
+      "description": "Tim payroll Cedar Health telah mengirim pembaruan. Salah satu sumber pendapatan kerja rumah tangga telah berakhir. Sisa gaji bulanan yang dikonfirmasi adalah IDR 48260000. Pendapatan yang sudah berakhir harus dikeluarkan"
+    },
+    {
+      "case_id": "case_user_263",
+      "user_id": "user_263",
+      "message_ids": [
+        "message_204"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "salary_change"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Your payroll details at Riverline Retail have changed. Your salary of EUR {n} is confirmed for {n}-{n}-{n}. The receivin",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Your payroll details at Riverline Retail have changed. Your salary of EUR 1485 is confirmed for 2025-05-15. The receiving bank will convert it using the rate applied on the settlement date. The amount received in your ho"
+    },
+    {
+      "case_id": "case_user_264",
+      "user_id": "user_264",
+      "message_ids": [
+        "message_205"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [
+        "event_24352"
+      ],
+      "families": [
+        "investment_noncash"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Nova Securities has shared an update about your funds. The displayed value of the investment has fallen. The holding has",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Nova Securities has shared an update about your funds. The displayed value of the investment has fallen. The holding has not been sold and there has been no cash transaction. The displayed value will continue to move wit"
+    },
+    {
+      "case_id": "case_user_265",
+      "user_id": "user_265",
+      "message_ids": [
+        "message_206"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "ended_income"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "A note from Greenfield Foods about your upcoming pay. The current seasonal contract has ended. No off-season income or r",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "A note from Greenfield Foods about your upcoming pay. The current seasonal contract has ended. No off-season income or renewal has been confirmed. We’ll contact you separately if another shift block or contract is approv"
+    },
+    {
+      "case_id": "case_user_266",
+      "user_id": "user_266",
+      "message_ids": [
+        "message_207"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [
+        "event_24534"
+      ],
+      "families": [
+        "salary_change",
+        "investment_noncash"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Northstar Funds has shared an update about your funds. Your portfolio’s displayed market value has increased substantial",
+      "contamination": false,
+      "difficulty": "high",
+      "description": "Northstar Funds has shared an update about your funds. Your portfolio’s displayed market value has increased substantially. No units have been sold and no cash proceeds have been generated. The displayed value will conti"
+    },
+    {
+      "case_id": "case_user_267",
+      "user_id": "user_267",
+      "message_ids": [
+        "message_208"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "other"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "A note from CartLane about your recent purchase. The bill was charged in a foreign currency. Your bank will confirm the ",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "A note from CartLane about your recent purchase. The bill was charged in a foreign currency. Your bank will confirm the final home-currency amount when the transaction settles. The final home-currency amount will use the"
+    },
+    {
+      "case_id": "case_user_268",
+      "user_id": "user_268",
+      "message_ids": [
+        "message_209"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "pending_income",
+        "prize"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Here’s the latest account information from PrizeLine. Your prize claim has been verified and is still in payment process",
+      "contamination": false,
+      "difficulty": "high",
+      "description": "Here’s the latest account information from PrizeLine. Your prize claim has been verified and is still in payment processing. The payment has not been credited to your account yet. We’ll confirm again if and when the mone"
+    },
+    {
+      "case_id": "case_user_269",
+      "user_id": "user_269",
+      "message_ids": [
+        "message_210"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "salary_change"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Your payroll details at Northstar Labs have changed. Your first salary of ZAR {n} is scheduled for {n}-{n}-{n}. Payroll ",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Your payroll details at Northstar Labs have changed. Your first salary of ZAR 38280 is scheduled for 2025-11-15. Payroll has approved the payment and sent it for processing. The credit will show only after the bank proce"
+    },
+    {
+      "case_id": "case_user_271",
+      "user_id": "user_271",
+      "message_ids": [
+        "message_211"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "arrears"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Hi, Greenfield Foods payroll here. Your regular salary for the next payroll is INR {n}. The same payroll includes a one-",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Hi, Greenfield Foods payroll here. Your regular salary for the next payroll is INR 103000. The same payroll includes a one-time arrears adjustment of INR 46350. Your next payslip will show the regular pay and any one-off"
+    },
+    {
+      "case_id": "case_user_272",
+      "user_id": "user_272",
+      "message_ids": [
+        "message_212"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "pending_income"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Tim payroll Cobalt Systems telah mengirim pembaruan. Bonus kuartalan Anda masih menunggu hasil akhir penilaian kinerja. ",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Tim payroll Cobalt Systems telah mengirim pembaruan. Bonus kuartalan Anda masih menunggu hasil akhir penilaian kinerja. Jumlah akhir dan tanggal pembayaran belum disetujui. Kami akan mengirim pembaruan setelah tim payrol"
+    },
+    {
+      "case_id": "case_user_273",
+      "user_id": "user_273",
+      "message_ids": [
+        "message_213"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "transfer"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Harbor Bank telah meninjau transaksi pada rekening Anda. Debit dan kredit dengan jumlah yang sama berasal dari transfer ",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Harbor Bank telah meninjau transaksi pada rekening Anda. Debit dan kredit dengan jumlah yang sama berasal dari transfer antara dua rekening Anda. Kedua rekening terdaftar atas nama pemilik yang sama. Kedua transaksi akan"
+    },
+    {
+      "case_id": "case_user_274",
+      "user_id": "user_274",
+      "message_ids": [
+        "message_214"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "families": [
+        "fx"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "Everyday Store has new information about your payment or refund. The foreign-currency refund is still processing. The fi",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "Everyday Store has new information about your payment or refund. The foreign-currency refund is still processing. The final home-currency credit will be calculated when the refund settles. The home-currency credit may ch"
+    },
+    {
+      "case_id": "case_user_275",
+      "user_id": "user_275",
+      "message_ids": [
+        "message_215"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [
+        "event_25342"
+      ],
+      "families": [
+        "refund"
+      ],
+      "modalities": [
+        "message"
+      ],
+      "template_family": "UrbanCart memiliki informasi baru tentang pembayaran atau pengembalian dana Anda. Pengembalian dana sudah diproses, teta",
+      "contamination": false,
+      "difficulty": "medium",
+      "description": "UrbanCart memiliki informasi baru tentang pembayaran atau pengembalian dana Anda. Pengembalian dana sudah diproses, tetapi belum masuk ke rekening Anda. Sebagian besar pengembalian dana selesai dalam sepuluh hari kerja. "
+    }
+  ],
+  "notes": "Candidates only; no split frozen, no model outputs or sample labels used."
+}

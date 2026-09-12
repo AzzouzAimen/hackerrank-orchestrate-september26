@@ -1,0 +1,15 @@
+{
+  "started_at": "2026-09-12T17:36:06.811564+00:00",
+  "source": "code\\prototype\\extraction_artifacts\\rent_run_01\\01_control_attempt1_request.json",
+  "source_sha256": "d75a1df6d01c54134df807434a2160e7a3d1291af39132b9893f11c838be7409",
+  "sequence": [
+    "high",
+    "low",
+    "high",
+    "low"
+  ],
+  "calls": 4,
+  "retries": 0,
+  "support_source": "https://webflowcms.featherless.ai/blog/glm-5-3-flash-is-live-on-featherless",
+  "decision_rule": "Compare nonempty final content and strict schema validity separately. Two calls per arm are diagnostic only; a low-effort failure prevents calling it stable."
+}

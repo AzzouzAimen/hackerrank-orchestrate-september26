@@ -1,0 +1,24 @@
+{
+  "id": "430f9d55-1999-4dfe-b965-e78abdd19ee0",
+  "object": "chat.completion",
+  "created": 1789234616,
+  "model": "zai-org/GLM-5.3-Flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "reasoning": "Extract facts:\n\n1. Salary income stream: monthly payroll credits of 173000 INR, settled, fixed. Could emit stream_status (ongoing) \u2014 but evidence shows 5 monthly settled events; recurrence duration/permanence \u2014 monthly cadence is supported by dates. Stream status: ongoing? The events show a pattern; but \"do not invent permanence\". A stream_status fact with status=ongoing for salary stream \u2014 evidence supports recurring monthly salary. I'll include with confirmation_state confirmed, effective_from 2023-03-15, effective_until 2023-07-15? Hmm, effective range of evidence. Safer: stream_status ongoing with effective_from 2023-03-15, effective_until null? That implies permanence. Maybe scope unknown. I'll include stream_status with status=ongoing, effective_from 2023-03-15, effective_until null, unresolved_fields noting end date unknown. Actually maybe safer to include a schedule amendment? No \u2014 schedule amendment is for changes. The salary stream: monthly cadence supported. I could emit a stream_status fact.\n\n2. Amount amendment: message_12 says renewed lease increases monthly rent by 12%, new amount used for next rent payment. Affects event_1442 (scheduled rent). percent_increase \"12\", money null (no new amount given), scope: \"The new amount will be used for the next rent payment\" \u2014 suggests one_cycle? \"next rent payment\" \u2014 one_cycle. Confirmation: service provider message \u2014 confirmed? It's a service provider notification; confirmation_state confirmed seems fine, but could be uncertain. I'll say confirmed since it's from service provider. Effective from: next rent payment \u2014 event_1442 settlement 2023-08-16, event date 2023-08-11. effective_from 2023-08-11? The message sent 2023-08-01; next rent payment is event_1442. I'll set effective_from null or 2023-08-11. Use null to avoid inventing? The event date is 2023-08-11; \"next rent payment\" maps to event_1442. I'll set effective_from 2023-08-11 with affected_event_ids [\"event_1442\"]. Scope: one_cycle per message text (\"will be used for the next rent payment\"). Hmm, but lease renewal increases monthly rent \u2014 ongoing? The message says new amount used for next payment; lease renewal implies ongoing but text only says next payment. Preserve ambiguity: scope could be \"one_cycle\" per explicit text. I'll use one_cycle.\n\n3. Image: rent receipt image_02 linked to event_1442. Values: Total Amount to be Received 2,00,000.00 INR; Amount Received 1,00,000.00; Balance Due 1,00,000.00. ImagePayload value_type options: net_pay, balance_due, current_amount_due, amount_paid. So:\n- balance_due: 100000.00 INR (Balance Due field)\n- amount_paid: 100000.00 INR (Amount Received)\n- current_amount_due: 200000.00 (Total Amount to be Received)? That's total due. Could include as current_amount_due. I'll include balance_due and amount_paid, and current_amount_due for total 200000. Selected field names: \"Balance Due\", \"Amount Received\", \"Total Amount to be Received\".\n\nNote receipt date 11/08/23, period April 2022\u2013September 2022 \u2014 historical. Could add cash_classification? The receipt covers past period; but event_1442 is \"Outstanding rent balance\" scheduled. Maybe not needed. Keep it simple.\n\nAlso possible lifecycle: image relates to event_1442 via related_event_id \u2014 not a lifecycle relationship type.\n\nFacts array:\n1. stream_status salary ongoing\n2. amount_amendment rent +12%\n3. image values (3 facts)\n\nFor stream_status selector: user_16, category salary, direction credit, currency INR, description \"Payroll credit\". affected_event_ids: the five events. effective_from 2023-03-15, effective_until 2023-07-15? effective_until is when the status holds until \u2014 unknown end. I'll use null and unresolved_fields [\"stream_end_date\"]. Confirmation confirmed.\n\nAmount amendment evidence_ids: [\"message_12\"]. affected_event_ids [\"event_1442\"].",
+        "content": ""
+      },
+      "finish_reason": "stop"
+    }
+  ],
+  "system_fingerprint": "fp1-nst-nes",
+  "usage": {
+    "prompt_tokens": 6611,
+    "completion_tokens": 1323,
+    "total_tokens": 7934,
+    "cached_tokens": 6611
+  }
+}

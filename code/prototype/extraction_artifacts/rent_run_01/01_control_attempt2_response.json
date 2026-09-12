@@ -1,0 +1,27 @@
+{
+  "response": {
+    "id": "d8201c6f-e7db-4394-9979-ced7d5686bb6",
+    "object": "chat.completion",
+    "created": 1789233889,
+    "model": "zai-org/GLM-5.3-Flash",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "reasoning": "The previous response had an amount_amendment with both money null and percent_increase \"12\" — wait, error says payload had money value None and percent... Actually error: \"Supply an absolute amount OR a percentage\" — input had money: {value: None...} and percent_increase '12'? The input shows {'money': {'value': None,...12', 'scope': 'ongoing'} — truncated. Likely money null and percent_increase \"12\" — but that should be valid? The validator requires either money.value not null OR percent_increase not null. Hmm, maybe both were null? Or the validator requires money to have a value when percent is given? The error says \"Supply an absolute amount OR a percentage\" — meaning neither was supplied. Possibly money.value was null and percent_increase was null. The fix: supply percent_increase \"12\" with money null, or compute absolute? We must not invent amounts. The message says rent increases by 12%, new amount used for next rent payment. We don't know base rent amount, so we can't compute absolute. So percent_increase \"12\", money null, scope: ongoing? The message says \"renewed lease increases monthly rent by 12%. The new amount will be used for the next rent payment.\" That suggests ongoing (monthly rent increase). But \"next rent payment\" — could be one_cycle? A lease renewal increase is ongoing. Scope=ongoing seems reasonable; but ambiguity — the message says the new amount will be used for the next rent payment, which could imply just next payment. Hmm. Renewed lease increases monthly rent by 12% — lease renewal implies ongoing. I'll use ongoing with confirmation_state confirmed? The message is from service provider — confirmed. But maybe uncertain since it's a notification. I'll say confirmed.\n\nAlso include other facts: image_financial_value for balance_due 1,00,000.00 INR from image_02 linked to event_1442. Also amount_received 1,00,000.00 — value_type amount_paid. Also future_event_confirmation for event_1442? Amount is empty in event; image shows total 2,00,000 but balance due 1,00,000. The scheduled event has no amount. Future confirmation requires money — we don't know the payment amount for event_1442. Could use balance due 1,00,000? That would be inventing? The image shows balance due 1,00,000.00 INR. But the rent receipt covers April–Sept 2022, dated 11/08/23 — historical. The event_1442 is \"Outstanding rent balance\" scheduled. The image is related to event_1442. Hmm, the receipt is dated 2022 period but receipt date 11/08/23. Ambiguous. Safer: report image values as facts: balance_due 100000 INR and amount_paid 100000 INR, with confirmation uncertain? The image is evidence; values are stated. I'd mark confirmed as image values but note the receipt period is 2022 — could be historical_only. Cash classification: the receipt is historical. Keep it simple.\n\nFacts:\n1. amount_amendment: percent_increase \"12\", money null, scope ongoing, evidence [message_12], affected [event_1442], effective_from null (unknown), confirmation confirmed? The message states it; I'll use confirmed. Unresolved_fields: [\"absolute_amount\"] maybe. Actually unresolved_fields could include \"money\". Fine.\n\n2. image_financial_value: balance_due 100000.00 INR, image_02, selected_field \"Balance Due\", affected [event_1442], evidence [image_02].\n\n3. image_financial_value: amount_paid 100000.00 INR, selected_field \"Amount Received\".\n\nMaybe also stream_status for salary income ongoing? Five monthly payroll credits — possible recurring but not confirmed permanent. Could add stream_status uncertain ongoing? Risky; previous response had 3+ facts (error at facts.2). Keep minimal: the correction only needs fixing facts.2. But I don't know what facts 0 and 1 were. I'll produce a clean set: amount_amendment, two image values. That's safe.\n\nEffective dates: amount amendment effective from? \"next rent payment\" — event_1442 settlement 2023-08-16. Could set effective_from 2023-08-16? Not stated explicitly. Leave null.",
+          "content": ""
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "system_fingerprint": "fp1-nst-nes",
+    "usage": {
+      "prompt_tokens": 6701,
+      "completion_tokens": 658,
+      "total_tokens": 7359,
+      "cached_tokens": 0
+    }
+  },
+  "latency_seconds": 29.20589370000016
+}

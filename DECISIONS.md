@@ -281,3 +281,90 @@ The 49 engine/boundary, 19 extraction/audit, and 6 ledger tests pass after reloc
 
 Tradeoff:
 Old root-level research import paths and commands are replaced by code/ paths. Git displays the unstaged moves as deletions plus new paths until a later stage/commit; historical artifacts remain byte-preserved and no final prediction runner is claimed.
+
+## 2026-09-12 — Implement the controlled rent-context diagnostic
+
+Decision:
+Add a separate shadow runner with offline preparation, three alternating runs per arm, one existing retry per run, and explicit narrow rubric approval for live execution.
+
+Reason:
+The review identified a verified six-row input omission and required separating target recovery, abstention, availability, retry recovery and whole-bundle quality.
+
+Alternative:
+Tune the extraction prompt or automatically score against the historical reference.
+
+Rejected because:
+Those approaches confound missing context with model behavior and repeat the prior annotation problems.
+
+Evidence:
+24 targeted extraction/audit/experiment tests pass, including capped calls, retry feedback, failure retention, immutable artifact creation and key redaction. No live API calls were made.
+
+Tradeoff:
+Semantic adjudication remains a separately recorded review; the new harness does not establish model accuracy or trusted integration readiness.
+
+## 2026-09-12 — Stop rent-history comparison as operationally inconclusive
+
+Decision:
+Do not claim a targeting improvement or promote model facts. Propose a small output-availability diagnostic next, without executing it.
+
+Reason:
+Only one control and two treatments were usable, below the two-per-arm rule. All usable amendments still explicitly target event_1442.
+
+Alternative:
+Declare both arms equivalent/failing from usable-only counts, or repeat until enough outputs appear.
+
+Rejected because:
+Unavailable outputs prevent the planned comparison, and the user capped the experiment at six logical runs.
+
+Evidence:
+code/prototype/reports/RENT_HISTORY_RESULT.md and extraction_artifacts/rent_run_01: nine calls, five empty responses, one nonempty schema-invalid response, no provider exceptions. All 16 usable facts reviewed.
+
+Tradeoff:
+The targeting hypothesis remains unresolved; observed targeting and gross-debt errors remain documented. No frozen component changed.
+
+## 2026-09-12 — Adopt provisional generous plain-JSON transport
+
+Decision:
+Use 32768 output tokens and 600-second timeout, omit API response_format, retain unchanged JSON prompt and strict local schema validation. Version the transport explicitly.
+
+Reason:
+Low reasoning did not restore output (0/2 versus high 0/2). At generous limits, API JSON mode produced 0/2 valid final outputs and omission produced 2/2.
+
+Alternative:
+Switch models immediately, only raise the token cap, or parse reasoning as final output.
+
+Rejected because:
+Same-model API-mode evidence warrants a narrower workaround; larger limits alone failed, and reasoning is not final JSON.
+
+Evidence:
+OUTPUT_RELIABILITY_RESULT.md and INTEGRATION_BUDGET_RESULT.md; eight total diagnostic inference calls across the two experiments; 25 targeted tests pass.
+
+Tradeoff:
+Two successes are not a reliability guarantee. Rent/debt semantic errors persist. Historical experiment configurations are preserved in artifacts; future runs identify a new integration version.
+
+## 2026-09-12T18:41:13.744619+00:00 — Plain-JSON rent rerun
+
+Decision: Keep provisional integration and propose one gross-versus-balance definition experiment; do not execute it yet.
+Reason: Six of six final outputs usable, but five gross-debt errors; rent targeting mixed (control0/3, treatment1/3).
+Alternative: Switch models or broadly rewrite prompt.
+Rejected because: Output delivery is now usable on this case and a single semantic definition remains cleanly testable.
+Evidence: code/prototype/reports/RENT_HISTORY_RESULT_V2.md and rent_run_02 artifacts; seven calls, one retry, no empty finals.
+Tradeoff: Small historical comparison cannot establish general reliability; one response required286.73 seconds.
+
+## 2026-09-12T18:50:30+00:00 — Semantic image clarification
+
+Decision: Treat the one-sentence image definition as a targeted improvement and keep it out of trusted integration pending broader validation.
+Reason: Gross-total-as-current-debt fell from 1/3 control to 0/3 treatment with six usable outputs and no availability regression.
+Alternative: Switch models or broaden the prompt rewrite.
+Rejected because: The current model responds to a narrow definition; rent targeting remains a separate failure cluster suitable for its own one-variable test.
+Evidence: code/prototype/reports/SEMANTIC_PROMPT_RESULT.md and semantic_prompt_01 artifacts; all claims reviewed, six calls, strict validation.
+Tradeoff: Six runs on one frozen input do not establish generalization; targeting and scope errors remain.
+
+## 2026-09-12T19:12:50+00:00 — Stream/event targeting definition
+
+Decision: Keep the targeting clarification as a promising but unconfirmed semantic intervention; do not promote it or switch models.
+Reason: Usable treatment outputs targeted Monthly rent 2/2 versus control 0/3, but one treatment run failed strict validation twice.
+Alternative: Combine prompt changes immediately or benchmark stronger models.
+Rejected because: The paired result is mixed and treatment availability regressed; composition needs a controlled confirmation first.
+Evidence: code/prototype/reports/SEMANTIC_TARGET_RESULT.md and semantic_target_01 artifacts; seven attempts, five usable outputs, all claims reviewed.
+Tradeoff: Conditional targeting improvement is encouraging, while gross-debt errors persisted and the incomplete treatment denominator limits confidence.

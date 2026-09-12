@@ -1,0 +1,11 @@
+{
+  "six_logical_runs": 6,
+  "api_calls": 7,
+  "reviewed_usable_facts": 37,
+  "requests_match_frozen_inputs_and_retry_correction": true,
+  "historical_artifacts_match_baseline_hashes": true,
+  "rubric_unchanged": true,
+  "images_unchanged": true,
+  "all_finish_reasons": "stop",
+  "reasoning_never_used_for_validation": true
+}

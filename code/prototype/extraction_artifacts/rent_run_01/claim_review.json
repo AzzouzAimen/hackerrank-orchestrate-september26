@@ -1,0 +1,815 @@
+{
+  "rubric_sha256": "f8301f44dbf1fd64e538690804f42e4aff23970401053ee7d2529bf69634ae8d",
+  "reviewer": "Codex assistant",
+  "human_approval_scope": "Scoring conventions only, per user message",
+  "attempt_reviews": [
+    {
+      "arm": "control",
+      "logical_run": 1,
+      "attempt": 1,
+      "usable": false,
+      "target_outcome": null,
+      "allowed_target_outcomes": [
+        "correct_supported_stream",
+        "unsupported_balance_linkage",
+        "ambiguous_target",
+        "abstention"
+      ],
+      "percentage": null,
+      "scope": null,
+      "bounds": null,
+      "image_value_and_target": null,
+      "harmful_extra_assertions": null,
+      "supported_extras": null,
+      "whole_bundle_assessment": null,
+      "evidence_and_rationale": "Nonempty schema-invalid output: money object and percent_increase supplied together. Preserved for diagnosis; not counted as usable semantics.",
+      "reviewer": "Codex assistant; user-approved rubric, assistant adjudication",
+      "review_status": "output unavailable; excluded from primary semantic comparison"
+    },
+    {
+      "arm": "control",
+      "logical_run": 1,
+      "attempt": 2,
+      "usable": false,
+      "target_outcome": null,
+      "allowed_target_outcomes": [
+        "correct_supported_stream",
+        "unsupported_balance_linkage",
+        "ambiguous_target",
+        "abstention"
+      ],
+      "percentage": null,
+      "scope": null,
+      "bounds": null,
+      "image_value_and_target": null,
+      "harmful_extra_assertions": null,
+      "supported_extras": null,
+      "whole_bundle_assessment": null,
+      "evidence_and_rationale": "Empty final content.",
+      "reviewer": "Codex assistant; user-approved rubric, assistant adjudication",
+      "review_status": "output unavailable; excluded from primary semantic comparison"
+    },
+    {
+      "arm": "treatment",
+      "logical_run": 2,
+      "attempt": 1,
+      "usable": true,
+      "target_outcome": "unsupported_balance_linkage",
+      "allowed_target_outcomes": [
+        "correct_supported_stream",
+        "unsupported_balance_linkage",
+        "ambiguous_target",
+        "abstention"
+      ],
+      "percentage": "Correct 12; money null; no computed absolute rent.",
+      "scope": "ongoing (acceptable)",
+      "bounds": "Lease bounds null (acceptable).",
+      "image_value_and_target": "Correct balance_due INR 100000 for image_02/event_1442, but incorrect additional current_amount_due INR 200000. No replacement of settlement date with historical receipt period.",
+      "harmful_extra_assertions": [
+        "Gross Total Amount to be Received 200000 misclassified as current_amount_due."
+      ],
+      "supported_extras": [
+        "Amount Received INR 100000 correctly typed amount_paid; not authorization to fill outstanding debt."
+      ],
+      "whole_bundle_assessment": "Not acceptable: incorrect amendment target and false current-debt assertion.",
+      "evidence_and_rationale": "message_12 amends renewed monthly rent. All usable amendments explicitly target event_1442. finance.py targets() uses explicit IDs when present, so treatment Monthly rent description does not override this wrong target. image_02 has Balance Due 100000, Amount Received 100000 and gross total 200000. Metadata links event_1442, whose settlement is 2023-08-16.",
+      "reviewer": "Codex assistant; user-approved rubric, assistant adjudication",
+      "review_status": "assistant reviewed",
+      "fact_reviews": [
+        {
+          "fact_id": "amount_amendment_rent_increase_12pct",
+          "fact": {
+            "schema_version": "1.0",
+            "fact_id": "amount_amendment_rent_increase_12pct",
+            "evidence_ids": [
+              "message_12"
+            ],
+            "affected_event_ids": [
+              "event_1442"
+            ],
+            "stream_selector": {
+              "user_id": "user_16",
+              "category": "rent",
+              "direction": "debit",
+              "currency": "INR",
+              "description": "Monthly rent"
+            },
+            "effective_from": null,
+            "effective_until": null,
+            "confirmation_state": "confirmed",
+            "unresolved_fields": [
+              "effective_from",
+              "money"
+            ],
+            "fact_type": "amount_amendment",
+            "payload": {
+              "money": null,
+              "percent_increase": "12",
+              "scope": "ongoing"
+            }
+          },
+          "judgment": "incorrect target; correct percentage; acceptable scope",
+          "evidence_ids": [
+            "message_12"
+          ],
+          "rationale": "Explicit event_1442 targets the outstanding balance. Treatment selector recognizes Monthly rent lexically but remains operationally contradictory."
+        },
+        {
+          "fact_id": "image_02_balance_due",
+          "fact": {
+            "schema_version": "1.0",
+            "fact_id": "image_02_balance_due",
+            "evidence_ids": [
+              "image_02"
+            ],
+            "affected_event_ids": [
+              "event_1442"
+            ],
+            "stream_selector": null,
+            "effective_from": null,
+            "effective_until": null,
+            "confirmation_state": "confirmed",
+            "unresolved_fields": [],
+            "fact_type": "image_financial_value",
+            "payload": {
+              "value_type": "balance_due",
+              "money": {
+                "value": "100000.00",
+                "currency": "INR"
+              },
+              "image_id": "image_02",
+              "selected_field": "Balance Due"
+            }
+          },
+          "judgment": "supported image field",
+          "evidence_ids": [
+            "image_02"
+          ],
+          "rationale": "Visible Balance Due 100000 INR and supplied event_1442 image link are correct."
+        },
+        {
+          "fact_id": "image_02_amount_paid",
+          "fact": {
+            "schema_version": "1.0",
+            "fact_id": "image_02_amount_paid",
+            "evidence_ids": [
+              "image_02"
+            ],
+            "affected_event_ids": [
+              "event_1442"
+            ],
+            "stream_selector": null,
+            "effective_from": null,
+            "effective_until": null,
+            "confirmation_state": "confirmed",
+            "unresolved_fields": [],
+            "fact_type": "image_financial_value",
+            "payload": {
+              "value_type": "amount_paid",
+              "money": {
+                "value": "100000.00",
+                "currency": "INR"
+              },
+              "image_id": "image_02",
+              "selected_field": "Amount Received"
+            }
+          },
+          "judgment": "supported image field",
+          "evidence_ids": [
+            "image_02"
+          ],
+          "rationale": "Visible Amount Received 100000 is supported, but cannot be used to overwrite the outstanding obligation."
+        },
+        {
+          "fact_id": "image_02_total_due",
+          "fact": {
+            "schema_version": "1.0",
+            "fact_id": "image_02_total_due",
+            "evidence_ids": [
+              "image_02"
+            ],
+            "affected_event_ids": [
+              "event_1442"
+            ],
+            "stream_selector": null,
+            "effective_from": null,
+            "effective_until": null,
+            "confirmation_state": "confirmed",
+            "unresolved_fields": [],
+            "fact_type": "image_financial_value",
+            "payload": {
+              "value_type": "current_amount_due",
+              "money": {
+                "value": "200000.00",
+                "currency": "INR"
+              },
+              "image_id": "image_02",
+              "selected_field": "Total Amount to be Received"
+            }
+          },
+          "judgment": "incorrect",
+          "evidence_ids": [
+            "image_02"
+          ],
+          "rationale": "Gross 200000 is not current debt; Balance Due is separately 100000."
+        }
+      ]
+    },
+    {
+      "arm": "control",
+      "logical_run": 3,
+      "attempt": 1,
+      "usable": false,
+      "target_outcome": null,
+      "allowed_target_outcomes": [
+        "correct_supported_stream",
+        "unsupported_balance_linkage",
+        "ambiguous_target",
+        "abstention"
+      ],
+      "percentage": null,
+      "scope": null,
+      "bounds": null,
+      "image_value_and_target": null,
+      "harmful_extra_assertions": null,
+      "supported_extras": null,
+      "whole_bundle_assessment": null,
+      "evidence_and_rationale": "Empty final content.",
+      "reviewer": "Codex assistant; user-approved rubric, assistant adjudication",
+      "review_status": "output unavailable; excluded from primary semantic comparison"
+    },
+    {
+      "arm": "control",
+      "logical_run": 3,
+      "attempt": 2,
+      "usable": false,
+      "target_outcome": null,
+      "allowed_target_outcomes": [
+        "correct_supported_stream",
+        "unsupported_balance_linkage",
+        "ambiguous_target",
+        "abstention"
+      ],
+      "percentage": null,
+      "scope": null,
+      "bounds": null,
+      "image_value_and_target": null,
+      "harmful_extra_assertions": null,
+      "supported_extras": null,
+      "whole_bundle_assessment": null,
+      "evidence_and_rationale": "Empty final content.",
+      "reviewer": "Codex assistant; user-approved rubric, assistant adjudication",
+      "review_status": "output unavailable; excluded from primary semantic comparison"
+    },
+    {
+      "arm": "treatment",
+      "logical_run": 4,
+      "attempt": 1,
+      "usable": false,
+      "target_outcome": null,
+      "allowed_target_outcomes": [
+        "correct_supported_stream",
+        "unsupported_balance_linkage",
+        "ambiguous_target",
+        "abstention"
+      ],
+      "percentage": null,
+      "scope": null,
+      "bounds": null,
+      "image_value_and_target": null,
+      "harmful_extra_assertions": null,
+      "supported_extras": null,
+      "whole_bundle_assessment": null,
+      "evidence_and_rationale": "Empty final content.",
+      "reviewer": "Codex assistant; user-approved rubric, assistant adjudication",
+      "review_status": "output unavailable; excluded from primary semantic comparison"
+    },
+    {
+      "arm": "treatment",
+      "logical_run": 4,
+      "attempt": 2,
+      "usable": false,
+      "target_outcome": null,
+      "allowed_target_outcomes": [
+        "correct_supported_stream",
+        "unsupported_balance_linkage",
+        "ambiguous_target",
+        "abstention"
+      ],
+      "percentage": null,
+      "scope": null,
+      "bounds": null,
+      "image_value_and_target": null,
+      "harmful_extra_assertions": null,
+      "supported_extras": null,
+      "whole_bundle_assessment": null,
+      "evidence_and_rationale": "Empty final content.",
+      "reviewer": "Codex assistant; user-approved rubric, assistant adjudication",
+      "review_status": "output unavailable; excluded from primary semantic comparison"
+    },
+    {
+      "arm": "control",
+      "logical_run": 5,
+      "attempt": 1,
+      "usable": true,
+      "target_outcome": "unsupported_balance_linkage",
+      "allowed_target_outcomes": [
+        "correct_supported_stream",
+        "unsupported_balance_linkage",
+        "ambiguous_target",
+        "abstention"
+      ],
+      "percentage": "Correct 12; money null; no computed absolute rent.",
+      "scope": "ongoing (acceptable)",
+      "bounds": "Lease effective_from 2023-08-16 is unsupported applicability: it copies the outstanding settlement date, not an established lease effective date.",
+      "image_value_and_target": "Correct balance_due INR 100000 for image_02/event_1442, but incorrect additional current_amount_due INR 200000. No replacement of settlement date with historical receipt period.",
+      "harmful_extra_assertions": [
+        "Gross Total Amount to be Received 200000 misclassified as current_amount_due.",
+        "Unsupported lease effective date 2023-08-16."
+      ],
+      "supported_extras": [
+        "Amount Received INR 100000 correctly typed amount_paid; not authorization to fill outstanding debt."
+      ],
+      "whole_bundle_assessment": "Not acceptable: incorrect amendment target and false current-debt assertion.",
+      "evidence_and_rationale": "message_12 amends renewed monthly rent. All usable amendments explicitly target event_1442. finance.py targets() uses explicit IDs when present, so treatment Monthly rent description does not override this wrong target. image_02 has Balance Due 100000, Amount Received 100000 and gross total 200000. Metadata links event_1442, whose settlement is 2023-08-16.",
+      "reviewer": "Codex assistant; user-approved rubric, assistant adjudication",
+      "review_status": "assistant reviewed",
+      "fact_reviews": [
+        {
+          "fact_id": "salary_stream_status_user16",
+          "fact": {
+            "schema_version": "1.0",
+            "fact_id": "salary_stream_status_user16",
+            "evidence_ids": [
+              "event_1336",
+              "event_1343",
+              "event_1350",
+              "event_1357",
+              "event_1364"
+            ],
+            "affected_event_ids": [
+              "event_1336",
+              "event_1343",
+              "event_1350",
+              "event_1357",
+              "event_1364"
+            ],
+            "stream_selector": {
+              "user_id": "user_16",
+              "category": "salary",
+              "direction": "credit",
+              "currency": "INR",
+              "description": "Payroll credit"
+            },
+            "effective_from": "2023-03-15",
+            "effective_until": null,
+            "confirmation_state": "uncertain",
+            "unresolved_fields": [
+              "end_date"
+            ],
+            "fact_type": "stream_status",
+            "payload": {
+              "status": "ongoing"
+            }
+          },
+          "judgment": "supported recurring observations with conservative uncertainty",
+          "evidence_ids": [
+            "event_1336",
+            "event_1343",
+            "event_1350",
+            "event_1357",
+            "event_1364"
+          ],
+          "rationale": "Five salary observations support recurring history. Uncertain future continuation is not fabricated certainty; confirmed eligibility is outside the rent rubric. First observed date is not proof of stream inception."
+        },
+        {
+          "fact_id": "salary_cash_classification_user16",
+          "fact": {
+            "schema_version": "1.0",
+            "fact_id": "salary_cash_classification_user16",
+            "evidence_ids": [
+              "event_1336",
+              "event_1343",
+              "event_1350",
+              "event_1357",
+              "event_1364"
+            ],
+            "affected_event_ids": [
+              "event_1336",
+              "event_1343",
+              "event_1350",
+              "event_1357",
+              "event_1364"
+            ],
+            "stream_selector": {
+              "user_id": "user_16",
+              "category": "salary",
+              "direction": "credit",
+              "currency": "INR",
+              "description": "Payroll credit"
+            },
+            "effective_from": "2023-03-15",
+            "effective_until": null,
+            "confirmation_state": "confirmed",
+            "unresolved_fields": [],
+            "fact_type": "cash_classification",
+            "payload": {
+              "classification": "cash"
+            }
+          },
+          "judgment": "supported redundant structured cash restatement",
+          "evidence_ids": [
+            "event_1336",
+            "event_1343",
+            "event_1350",
+            "event_1357",
+            "event_1364"
+          ],
+          "rationale": "Five targeted payroll credits are settled; cash classification restates structured evidence."
+        },
+        {
+          "fact_id": "rent_increase_12pct_user16",
+          "fact": {
+            "schema_version": "1.0",
+            "fact_id": "rent_increase_12pct_user16",
+            "evidence_ids": [
+              "message_12"
+            ],
+            "affected_event_ids": [
+              "event_1442"
+            ],
+            "stream_selector": {
+              "user_id": "user_16",
+              "category": "rent",
+              "direction": "debit",
+              "currency": "INR",
+              "description": "Outstanding rent balance"
+            },
+            "effective_from": "2023-08-16",
+            "effective_until": null,
+            "confirmation_state": "confirmed",
+            "unresolved_fields": [
+              "new_amount"
+            ],
+            "fact_type": "amount_amendment",
+            "payload": {
+              "money": null,
+              "percent_increase": "12",
+              "scope": "ongoing"
+            }
+          },
+          "judgment": "incorrect target; correct percentage; acceptable scope",
+          "evidence_ids": [
+            "message_12"
+          ],
+          "rationale": "Targets Outstanding rent balance/event_1442 and asserts unsupported lease effective_from 2023-08-16."
+        },
+        {
+          "fact_id": "scheduled_rent_payment_user16",
+          "fact": {
+            "schema_version": "1.0",
+            "fact_id": "scheduled_rent_payment_user16",
+            "evidence_ids": [
+              "event_1442"
+            ],
+            "affected_event_ids": [
+              "event_1442"
+            ],
+            "stream_selector": {
+              "user_id": "user_16",
+              "category": "rent",
+              "direction": "debit",
+              "currency": "INR",
+              "description": "Outstanding rent balance"
+            },
+            "effective_from": "2023-08-16",
+            "effective_until": null,
+            "confirmation_state": "confirmed",
+            "unresolved_fields": [
+              "amount"
+            ],
+            "fact_type": "future_event_confirmation",
+            "payload": {
+              "money": {
+                "value": null,
+                "currency": "INR"
+              },
+              "payment_date": "2023-08-16",
+              "direction": "debit"
+            }
+          },
+          "judgment": "supported raw-row restatement; incomplete consolidated representation",
+          "evidence_ids": [
+            "event_1442"
+          ],
+          "rationale": "event_1442 supplies scheduled debit and settlement 2023-08-16, with raw amount blank. Null restatement coexists with quantified image evidence; do not call the whole bundle resolver-equivalent or resolved. Effective_from copies an event/settlement date, not proof of lease applicability."
+        },
+        {
+          "fact_id": "receipt_balance_due_user16",
+          "fact": {
+            "schema_version": "1.0",
+            "fact_id": "receipt_balance_due_user16",
+            "evidence_ids": [
+              "image_02"
+            ],
+            "affected_event_ids": [
+              "event_1442"
+            ],
+            "stream_selector": null,
+            "effective_from": "2023-08-11",
+            "effective_until": null,
+            "confirmation_state": "confirmed",
+            "unresolved_fields": [],
+            "fact_type": "image_financial_value",
+            "payload": {
+              "value_type": "balance_due",
+              "money": {
+                "value": "100000.00",
+                "currency": "INR"
+              },
+              "image_id": "image_02",
+              "selected_field": "Balance Due"
+            }
+          },
+          "judgment": "supported image field",
+          "evidence_ids": [
+            "image_02"
+          ],
+          "rationale": "Visible Balance Due 100000 INR and supplied event_1442 image link are correct. The 2023-08-11 bound copies the receipt date; it does not change the structured settlement date and is not an invented date."
+        },
+        {
+          "fact_id": "receipt_amount_paid_user16",
+          "fact": {
+            "schema_version": "1.0",
+            "fact_id": "receipt_amount_paid_user16",
+            "evidence_ids": [
+              "image_02"
+            ],
+            "affected_event_ids": [
+              "event_1442"
+            ],
+            "stream_selector": null,
+            "effective_from": "2023-08-11",
+            "effective_until": null,
+            "confirmation_state": "confirmed",
+            "unresolved_fields": [],
+            "fact_type": "image_financial_value",
+            "payload": {
+              "value_type": "amount_paid",
+              "money": {
+                "value": "100000.00",
+                "currency": "INR"
+              },
+              "image_id": "image_02",
+              "selected_field": "Amount Received"
+            }
+          },
+          "judgment": "supported image field",
+          "evidence_ids": [
+            "image_02"
+          ],
+          "rationale": "Visible Amount Received 100000 is supported, but cannot be used to overwrite the outstanding obligation. The 2023-08-11 bound copies the receipt date; it does not change the structured settlement date and is not an invented date."
+        },
+        {
+          "fact_id": "receipt_total_due_user16",
+          "fact": {
+            "schema_version": "1.0",
+            "fact_id": "receipt_total_due_user16",
+            "evidence_ids": [
+              "image_02"
+            ],
+            "affected_event_ids": [
+              "event_1442"
+            ],
+            "stream_selector": null,
+            "effective_from": "2023-08-11",
+            "effective_until": null,
+            "confirmation_state": "confirmed",
+            "unresolved_fields": [],
+            "fact_type": "image_financial_value",
+            "payload": {
+              "value_type": "current_amount_due",
+              "money": {
+                "value": "200000.00",
+                "currency": "INR"
+              },
+              "image_id": "image_02",
+              "selected_field": "Total Amount to be Received"
+            }
+          },
+          "judgment": "incorrect",
+          "evidence_ids": [
+            "image_02"
+          ],
+          "rationale": "Gross 200000 is not current debt; Balance Due is separately 100000. The 2023-08-11 bound copies the receipt date; it does not change the structured settlement date and is not an invented date."
+        }
+      ]
+    },
+    {
+      "arm": "treatment",
+      "logical_run": 6,
+      "attempt": 1,
+      "usable": true,
+      "target_outcome": "unsupported_balance_linkage",
+      "allowed_target_outcomes": [
+        "correct_supported_stream",
+        "unsupported_balance_linkage",
+        "ambiguous_target",
+        "abstention"
+      ],
+      "percentage": "Correct 12; money null; no computed absolute rent.",
+      "scope": "unknown (acceptable)",
+      "bounds": "Lease bounds null (acceptable).",
+      "image_value_and_target": "Correct balance_due INR 100000 for image_02/event_1442, but incorrect additional current_amount_due INR 200000. No replacement of settlement date with historical receipt period.",
+      "harmful_extra_assertions": [
+        "Gross Total Amount to be Received 200000 misclassified as current_amount_due."
+      ],
+      "supported_extras": [
+        "Amount Received INR 100000 correctly typed amount_paid; not authorization to fill outstanding debt."
+      ],
+      "whole_bundle_assessment": "Not acceptable: incorrect amendment target and false current-debt assertion.",
+      "evidence_and_rationale": "message_12 amends renewed monthly rent. All usable amendments explicitly target event_1442. finance.py targets() uses explicit IDs when present, so treatment Monthly rent description does not override this wrong target. image_02 has Balance Due 100000, Amount Received 100000 and gross total 200000. Metadata links event_1442, whose settlement is 2023-08-16.",
+      "reviewer": "Codex assistant; user-approved rubric, assistant adjudication",
+      "review_status": "assistant reviewed",
+      "fact_reviews": [
+        {
+          "fact_id": "amt_amend_rent_12pct_ser0012",
+          "fact": {
+            "schema_version": "1.0",
+            "fact_id": "amt_amend_rent_12pct_ser0012",
+            "evidence_ids": [
+              "message_12"
+            ],
+            "affected_event_ids": [
+              "event_1442"
+            ],
+            "stream_selector": {
+              "user_id": "user_16",
+              "category": "rent",
+              "direction": "debit",
+              "currency": "INR",
+              "description": "Monthly rent"
+            },
+            "effective_from": null,
+            "effective_until": null,
+            "confirmation_state": "confirmed",
+            "unresolved_fields": [
+              "scope",
+              "new_amount_value"
+            ],
+            "fact_type": "amount_amendment",
+            "payload": {
+              "money": null,
+              "percent_increase": "12",
+              "scope": "unknown"
+            }
+          },
+          "judgment": "incorrect target; correct percentage; acceptable scope",
+          "evidence_ids": [
+            "message_12"
+          ],
+          "rationale": "Explicit event_1442 targets the outstanding balance. Treatment selector recognizes Monthly rent lexically but remains operationally contradictory."
+        },
+        {
+          "fact_id": "future_conf_outstanding_rent_1442",
+          "fact": {
+            "schema_version": "1.0",
+            "fact_id": "future_conf_outstanding_rent_1442",
+            "evidence_ids": [
+              "event_1442"
+            ],
+            "affected_event_ids": [
+              "event_1442"
+            ],
+            "stream_selector": {
+              "user_id": "user_16",
+              "category": "rent",
+              "direction": "debit",
+              "currency": "INR",
+              "description": "Outstanding rent balance"
+            },
+            "effective_from": "2023-08-11",
+            "effective_until": null,
+            "confirmation_state": "confirmed",
+            "unresolved_fields": [
+              "amount"
+            ],
+            "fact_type": "future_event_confirmation",
+            "payload": {
+              "money": {
+                "value": null,
+                "currency": "INR"
+              },
+              "payment_date": "2023-08-16",
+              "direction": "debit"
+            }
+          },
+          "judgment": "supported raw-row restatement; incomplete consolidated representation",
+          "evidence_ids": [
+            "event_1442"
+          ],
+          "rationale": "event_1442 supplies scheduled debit and settlement 2023-08-16, with raw amount blank. Null restatement coexists with quantified image evidence; do not call the whole bundle resolver-equivalent or resolved. Effective_from copies an event/settlement date, not proof of lease applicability."
+        },
+        {
+          "fact_id": "img02_balance_due",
+          "fact": {
+            "schema_version": "1.0",
+            "fact_id": "img02_balance_due",
+            "evidence_ids": [
+              "image_02"
+            ],
+            "affected_event_ids": [
+              "event_1442"
+            ],
+            "stream_selector": null,
+            "effective_from": null,
+            "effective_until": null,
+            "confirmation_state": "confirmed",
+            "unresolved_fields": [],
+            "fact_type": "image_financial_value",
+            "payload": {
+              "value_type": "balance_due",
+              "money": {
+                "value": "100000.00",
+                "currency": "INR"
+              },
+              "image_id": "image_02",
+              "selected_field": "Balance Due"
+            }
+          },
+          "judgment": "supported image field",
+          "evidence_ids": [
+            "image_02"
+          ],
+          "rationale": "Visible Balance Due 100000 INR and supplied event_1442 image link are correct."
+        },
+        {
+          "fact_id": "img02_amount_paid",
+          "fact": {
+            "schema_version": "1.0",
+            "fact_id": "img02_amount_paid",
+            "evidence_ids": [
+              "image_02"
+            ],
+            "affected_event_ids": [
+              "event_1442"
+            ],
+            "stream_selector": null,
+            "effective_from": null,
+            "effective_until": null,
+            "confirmation_state": "confirmed",
+            "unresolved_fields": [],
+            "fact_type": "image_financial_value",
+            "payload": {
+              "value_type": "amount_paid",
+              "money": {
+                "value": "100000.00",
+                "currency": "INR"
+              },
+              "image_id": "image_02",
+              "selected_field": "Amount Received"
+            }
+          },
+          "judgment": "supported image field",
+          "evidence_ids": [
+            "image_02"
+          ],
+          "rationale": "Visible Amount Received 100000 is supported, but cannot be used to overwrite the outstanding obligation."
+        },
+        {
+          "fact_id": "img02_total_amount_due",
+          "fact": {
+            "schema_version": "1.0",
+            "fact_id": "img02_total_amount_due",
+            "evidence_ids": [
+              "image_02"
+            ],
+            "affected_event_ids": [
+              "event_1442"
+            ],
+            "stream_selector": null,
+            "effective_from": null,
+            "effective_until": null,
+            "confirmation_state": "confirmed",
+            "unresolved_fields": [],
+            "fact_type": "image_financial_value",
+            "payload": {
+              "value_type": "current_amount_due",
+              "money": {
+                "value": "200000.00",
+                "currency": "INR"
+              },
+              "image_id": "image_02",
+              "selected_field": "Total Amount to be Received"
+            }
+          },
+          "judgment": "incorrect",
+          "evidence_ids": [
+            "image_02"
+          ],
+          "rationale": "Gross 200000 is not current debt; Balance Due is separately 100000."
+        }
+      ]
+    }
+  ]
+}

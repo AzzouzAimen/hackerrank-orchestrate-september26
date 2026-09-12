@@ -1,0 +1,14 @@
+{
+  "high": {
+    "calls": 2,
+    "nonempty_final": 0,
+    "schema_valid": 0,
+    "provider_failures": 0
+  },
+  "low": {
+    "calls": 2,
+    "nonempty_final": 0,
+    "schema_valid": 0,
+    "provider_failures": 0
+  }
+}

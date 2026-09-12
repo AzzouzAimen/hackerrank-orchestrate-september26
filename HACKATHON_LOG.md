@@ -96,3 +96,25 @@ Concise project history for review and interview preparation. Record the action,
 - Result: code/main.py replays five reviewed cases; code/evaluation/main.py reads saved audit usage/availability. The final usage report is a clearly marked pending template. No online evaluation or full-dataset runner was added.
 - Verification: 74 unique tests pass. Existing fact bundles, saved API artifacts, analysis artifacts, and the five-case representative CSV retain their pre-move hashes. Offline audit regeneration succeeds without model calls.
 - Next: Continue from the organized code layout; review the previously prepared evidence annotations before the separate proposed input-only experiment.
+
+## 2026-09-12 — Implement reviewed rent-history experiment
+
+- Action: Added offline preparation and capped shadow execution with attempt snapshots and a narrow review template.
+- Result: 24 targeted tests pass; frozen extractor, schema, engine and saved outputs remain unchanged. No live inference executed.
+- Next: Approve the three documented rubric conventions before a separately invoked live run.
+
+## 2026-09-12 — Execute approved rent-history diagnostic
+
+- Action: Ran six alternating logical runs, nine API calls; reviewed all three usable bundles.
+- Result: Operationally inconclusive (control 1/3, treatment 2/3); all usable bundles mislink rent amendment and assert gross total as debt.
+- Next: Consider only a small output-availability diagnostic; stopped without further calls or trusted integration.
+
+## 2026-09-12 — Diagnose empty output and adjust transport
+
+- Action: Four high/low reasoning calls, then four generous-budget JSON-mode comparisons.
+- Result: Reasoning effort alone failed; omitted response_format produced 2/2 valid outputs versus JSON-mode 0/2 at 32768 tokens. Applied versioned transport update; 25 tests pass.
+- Next: Validate availability beyond this small diagnostic before interpreting trusted semantic quality; no rent rerun performed.
+
+- 2026-09-12T18:41:13.744619+00:00: Completed six alternating rent trials under provisional plain-JSON integration (seven calls). Final availability6/6; target separation control0/3, treatment1/3; gross-debt error5/6. Preserved envelopes and reviewed all37 usable facts. Next: propose one image-value definition change, not executed.
+- 2026-09-12T18:50:30+00:00: Ran six frozen-input prompt comparison calls with one general image-value clarification. Availability6/6; gross-debt error control1/3 versus treatment0/3; no material availability or 12% regression. Next: one narrow stream/event targeting definition experiment may be considered; not executed.
+- 2026-09-12T19:12:50+00:00: Ran six frozen-input targeting-definition calls. Control availability3/3, treatment2/3; usable targeting control0/3 versus treatment2/2; gross-debt errors persisted. Next: controlled composition confirmation only if desired; no trusted integration.

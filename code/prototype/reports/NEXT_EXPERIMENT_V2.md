@@ -1,5 +1,10 @@
 # Proposed controlled experiment: restore rent history
 
+Implementation follow-up: [Reviewed execution design](RENT_HISTORY_EXPERIMENT.md)
+documents the new offline preparation and capped runner. The historical proposal
+below is retained; its scoring design is refined by that follow-up. No live run
+has been performed as part of implementation.
+
 **Status: proposal only; no model calls authorized or executed.**
 
 Observation: `rep_user16` omitted all Monthly rent history but required a Monthly rent

@@ -1,0 +1,38 @@
+{
+  "arm": "control",
+  "logical_run": 1,
+  "run": {
+    "usable": false,
+    "bundle": null,
+    "attempts": [
+      {
+        "attempt": 1,
+        "latency_seconds": 29.643666799998755,
+        "usage": {
+          "prompt_tokens": 6610,
+          "completion_tokens": 2242,
+          "total_tokens": 8852,
+          "cached_tokens": 0
+        },
+        "finish_reason": "stop",
+        "raw_content": "{\n  \"facts\": [\n    {\n      \"schema_version\": \"1.0\",\n      \"fact_id\": \"fact_salary_stream_status_user16\",\n      \"evidence_ids\": [\"event_1336\", \"event_1343\", \"event_1350\", \"event_1357\", \"event_1364\"],\n      \"affected_event_ids\": [\"event_1336\", \"event_1343\", \"event_1350\", \"event_1357\", \"event_1364\"],\n      \"stream_selector\": {\n        \"user_id\": \"user_16\",\n        \"category\": \"salary\",\n        \"direction\": \"credit\",\n        \"currency\": \"INR\",\n        \"description\": \"Payroll credit\"\n      },\n      \"effective_from\": \"2023-03-15\",\n      \"effective_until\": null,\n      \"confirmation_state\": \"uncertain\",\n      \"unresolved_fields\": [\"end_date\", \"recurrence_duration\"],\n      \"fact_type\": \"stream_status\",\n      \"payload\": {\n        \"status\": \"ongoing\"\n      }\n    },\n    {\n      \"schema_version\": \"1.0\",\n      \"fact_id\": \"fact_salary_cash_classification_user16\",\n      \"evidence_ids\": [\"event_1336\", \"event_1343\", \"event_1350\", \"event_1357\", \"event_1364\"],\n      \"affected_event_ids\": [\"event_1336\", \"event_1343\", \"event_1350\", \"event_1357\", \"event_1364\"],\n      \"stream_selector\": {\n        \"user_id\": \"user_16\",\n        \"category\": \"salary\",\n        \"direction\": \"credit\",\n        \"currency\": \"INR\",\n        \"description\": \"Payroll credit\"\n      },\n      \"effective_from\": \"2023-03-15\",\n      \"effective_until\": null,\n      \"confirmation_state\": \"confirmed\",\n      \"unresolved_fields\": [],\n      \"fact_type\": \"cash_classification\",\n      \"payload\": {\n        \"classification\": \"cash\"\n      }\n    },\n    {\n      \"schema_version\": \"1.0\",\n      \"fact_id\": \"fact_rent_increase_amendment_user16\",\n      \"evidence_ids\": [\"message_12\"],\n      \"affected_event_ids\": [\"event_1442\"],\n      \"stream_selector\": {\n        \"user_id\": \"user_16\",\n        \"category\": \"rent\",\n        \"direction\": \"debit\",\n        \"currency\": \"INR\",\n        \"description\": \"Outstanding rent balance\"\n      },\n      \"effective_from\": \"2023-08-16\",\n      \"effective_until\": null,\n      \"confirmation_state\": \"uncertain\",\n      \"unresolved_fields\": [\"new_amount_value\", \"duration_of_increase\"],\n      \"fact_type\": \"amount_amendment\",\n      \"payload\": {\n        \"money\": {\n          \"value\": null,\n          \"currency\": \"INR\"\n        },\n        \"percent_increase\": \"12\",\n        \"scope\": \"ongoing\"\n      }\n    },\n    {\n      \"schema_version\": \"1.0\",\n      \"fact_id\": \"fact_rent_payment_future_confirmation_user16\",\n      \"evidence_ids\": [\"event_1442\"],\n      \"affected_event_ids\": [\"event_1442\"],\n      \"stream_selector\": {\n        \"user_id\": \"user_16\",\n        \"category\": \"rent\",\n        \"direction\": \"debit\",\n        \"currency\": \"INR\",\n        \"description\": \"Outstanding rent balance\"\n      },\n      \"effective_from\": \"2023-08-16\",\n      \"effective_until\": null,\n      \"confirmation_state\": \"uncertain\",\n      \"unresolved_fields\": [\"amount_value\"],\n      \"fact_type\": \"future_event_confirmation\",\n      \"payload\": {\n        \"money\": {\n          \"value\": null,\n          \"currency\": \"INR\"\n        },\n        \"payment_date\": \"2023-08-16\",\n        \"direction\": \"debit\"\n      }\n    },\n    {\n      \"schema_version\": \"1.0\",\n      \"fact_id\": \"fact_receipt_total_due_user16\",\n      \"evidence_ids\": [\"image_02\"],\n      \"affected_event_ids\": [\"event_1442\"],\n      \"stream_selector\": null,\n      \"effective_from\": null,\n      \"effective_until\": null,\n      \"confirmation_state\": \"confirmed\",\n      \"unresolved_fields\": [],\n      \"fact_type\": \"image_financial_value\",\n      \"payload\": {\n        \"value_type\": \"current_amount_due\",\n        \"money\": {\n          \"value\": \"200000.00\",\n          \"currency\": \"INR\"\n        },\n        \"image_id\": \"image_02\",\n        \"selected_field\": \"Total Amount to be Received\"\n      }\n    },\n    {\n      \"schema_version\": \"1.0\",\n      \"fact_id\": \"fact_receipt_amount_paid_user16\",\n      \"evidence_ids\": [\"image_02\"],\n      \"affected_event_ids\": [\"event_1442\"],\n      \"stream_selector\": null,\n      \"effective_from\": null,\n      \"effective_until\": null,\n      \"confirmation_state\": \"confirmed\",\n      \"unresolved_fields\": [],\n      \"fact_type\": \"image_financial_value\",\n      \"payload\": {\n        \"value_type\": \"amount_paid\",\n        \"money\": {\n          \"value\": \"100000.00\",\n          \"currency\": \"INR\"\n        },\n        \"image_id\": \"image_02\",\n        \"selected_field\": \"Amount Received\"\n      }\n    },\n    {\n      \"schema_version\": \"1.0\",\n      \"fact_id\": \"fact_receipt_balance_due_user16\",\n      \"evidence_ids\": [\"image_02\"],\n      \"affected_event_ids\": [\"event_1442\"],\n      \"stream_selector\": null,\n      \"effective_from\": null,\n      \"effective_until\": null,\n      \"confirmation_state\": \"confirmed\",\n      \"unresolved_fields\": [],\n      \"fact_type\": \"image_financial_value\",\n      \"payload\": {\n        \"value_type\": \"balance_due\",\n        \"money\": {\n          \"value\": \"100000.00\",\n          \"currency\": \"INR\"\n        },\n        \"image_id\": \"image_02\",\n        \"selected_field\": \"Balance Due\"\n      }\n    }\n  ]\n}",
+        "schema_valid": false,
+        "validation_error": "1 validation error for EvidenceBundle\nfacts.2.amount_amendment.payload\n  Value error, Supply an absolute amount OR a percentage [type=value_error, input_value={'money': {'value': None,...12', 'scope': 'ongoing'}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/value_error"
+      },
+      {
+        "attempt": 2,
+        "latency_seconds": 29.20589370000016,
+        "usage": {
+          "prompt_tokens": 6701,
+          "completion_tokens": 658,
+          "total_tokens": 7359,
+          "cached_tokens": 0
+        },
+        "finish_reason": "stop",
+        "raw_content": "",
+        "schema_valid": false,
+        "validation_error": "Expecting value: line 1 column 1 (char 0)"
+      }
+    ]
+  }
+}

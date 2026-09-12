@@ -10,6 +10,21 @@ from .extraction_experiment import build_cases, core, fingerprint, load_env, sco
 
 
 class ExtractionExperimentTests(unittest.TestCase):
+    def test_transport_uses_generous_budget_without_api_json_mode(self):
+        from . import extraction_experiment as extractor
+        case = next(c for c in build_cases() if c['case_id'] == 'rep_user16')
+        from io import BytesIO
+        response = BytesIO(b'{"choices":[{"message":{"content":"{\\"facts\\":[]}"},"finish_reason":"stop"}]}')
+        with patch.dict(os.environ, {'FEATHERLESS_API_KEY': 'test-only'}), patch.object(
+                extractor.urllib.request, 'urlopen', return_value=response) as call:
+            extractor.call_model(case)
+        request = call.call_args.args[0]
+        body = json.loads(request.data)
+        self.assertEqual(body['max_tokens'], 32768)
+        self.assertNotIn('response_format', body)
+        self.assertEqual(call.call_args.kwargs['timeout'], 600)
+        self.assertEqual(body['messages'][0]['content'], extractor.SYSTEM_PROMPT)
+
     def test_all_references_are_schema_valid_and_ids_unique(self):
         cases = build_cases()
         self.assertEqual(len(cases), 10)

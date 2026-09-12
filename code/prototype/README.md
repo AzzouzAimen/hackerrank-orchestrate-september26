@@ -1,5 +1,9 @@
 # Representative financial prototype
 
+The controlled rent-history follow-up now has an offline preparation command and
+a capped shadow runner. See [the reviewed experiment instructions](reports/RENT_HISTORY_EXPERIMENT.md).
+The live experiment remains unexecuted; runtime prompt, schema and engine are unchanged.
+
 The stable implementation and its engine/boundary tests now live directly in
 [`code/`](../../README.md). Local `evidence.py`, `finance.py`, `plans.py`
 and old test modules are compatibility imports only. The canonical schema is
