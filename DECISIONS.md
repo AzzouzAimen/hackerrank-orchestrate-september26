@@ -368,3 +368,63 @@ Alternative: Combine prompt changes immediately or benchmark stronger models.
 Rejected because: The paired result is mixed and treatment availability regressed; composition needs a controlled confirmation first.
 Evidence: code/prototype/reports/SEMANTIC_TARGET_RESULT.md and semantic_target_01 artifacts; seven attempts, five usable outputs, all claims reviewed.
 Tradeoff: Conditional targeting improvement is encouraging, while gross-debt errors persisted and the incomplete treatment denominator limits confidence.
+
+## 2026-09-12 — Create a frozen semantic evaluation benchmark
+
+Decision:
+Create a source-verified development/holdout split and development-only reference annotation drafts for evaluating semantic extraction independently of the deterministic financial engine.
+
+Reason:
+The project needs reviewable, real-data evidence references before semantic model quality can be measured.
+
+Alternative:
+Use sample labels, model outputs, or end-to-end recommendation results as evaluation data.
+
+Rejected because:
+Those sources would mix semantic evidence with labels, model behavior, or downstream affordability decisions.
+
+Evidence:
+The frozen v5 split contains 14 development and 8 holdout cases with canonical source IDs and zero template overlap. Development drafts map evidence to the seven contract fact types and pass offline Pydantic/evidence-integrity validation.
+
+Tradeoff:
+Only development references are drafted now; holdout remains unseen and semantic ground truth, model scoring, inference, and end-to-end evaluation are intentionally deferred.
+
+## 2026-09-12 — Freeze development semantic references with quoted source targets
+
+Decision:
+Approve a 14-case development reference v4 bound to exact runtime-input v2 hashes. Add an optional quoted source target and nullable unresolved lifecycle parent while keeping the seven fact types.
+
+Reason:
+Five meaningful development cases lacked an event or currency-bearing structured stream target; requiring empty facts would make semantic misses look successful, while guessing currencies or event IDs would fabricate evidence.
+
+Alternative:
+Assign profile currency or unrelated event IDs to those meanings, or leave them unscoreable.
+
+Rejected because:
+Neither follows the supplied evidence, and vacuous references cannot measure extraction quality.
+
+Evidence:
+The source-verified messages, event history, image_02, saved request hashes, offline validator, and 127 passing Python tests are summarized in code/prototype/reports/SEMANTIC_DEV_REFERENCE_COMPLETION.md.
+
+Tradeoff:
+Source-only facts with unresolved financial details remain semantically scoreable but cannot identify or remove a concrete transfer event; actual model quality and holdout generalization remain unmeasured.
+
+## 2026-09-12 — Freeze the eight holdout semantic references
+
+Decision:
+Annotate all eight frozen holdout cases under the unchanged development conventions, with byte-exact offline inputs and one required semantic fact per case.
+
+Reason:
+The holdout must evaluate the same seven-type semantic contract without selecting easier cases or borrowing currencies and targets from unrelated streams.
+
+Alternative:
+Use only split-linked events or choose case-specific history after writing references.
+
+Rejected because:
+Several cases have no linked event; a case-neutral all-same-user event selection avoids reference-driven evidence cherry-picking while preserving the exact extractor request format.
+
+Evidence:
+The frozen holdout manifest, source/image hashes, reference validator, and 132 passing offline tests are recorded in code/prototype/reports/SEMANTIC_HOLDOUT_REFERENCE_COMPLETION.md.
+
+Tradeoff:
+Holdout requests contain more unrelated same-user history than development requests; the validator therefore requires precise targets and preserves unknown FX/prize details. Model performance remains unmeasured.

@@ -1,0 +1,628 @@
+{
+  "version": "semantic-reference-annotations-holdout-20260912-v1-frozen",
+  "scope": "holdout_only",
+  "review_status": "approved_for_holdout_benchmark",
+  "ground_truth": false,
+  "model_calls": 0,
+  "benchmark_conventions": {
+    "semantic_meanings_are_independent_of_serialization": true,
+    "minimum_required_facts_per_case": 1,
+    "empty_facts_never_pass_meaningful_evidence": true,
+    "equivalent_valid_seven_fact_representations_allowed": true,
+    "raw_event_restatements_not_required": true,
+    "unresolved_values_must_remain_unknown": true,
+    "harmful_interpretations_rejected": true
+  },
+  "contract_fact_types": [
+    "stream_status",
+    "amount_amendment",
+    "date_or_schedule_amendment",
+    "future_event_confirmation",
+    "lifecycle_relationship",
+    "image_financial_value",
+    "cash_classification"
+  ],
+  "source_sha256": {
+    "split": "a1c2a4251cd68642793c2f1d745e6bff2654115fd9d96ec605d435ebdd68bd51",
+    "frozen_development_reference": "5cb962ed7062a9d1c0e177aea10d95f9581d30c0e445faafc0480ac0e982f396",
+    "runtime_manifest": "763d62ae82b31b1566a8bfe75ab98e783f7200a47d7c86175df281fe5af93480",
+    "financial_events": "b6c3f43a8ad3a80ca11c72cce6f2818eea06621a3582d2851886fd9127b1229d",
+    "messages": "7b9db27a4546a850a76d3475ebf65de80fb9fe374e26d469586f62f537eac9a6",
+    "images": "6b5428565ca98e4b71e182f8a8fa3fd3013727399bdea847f3e4a3d2c129dfc9",
+    "schema": "bd7b525c7f1fbc8c1177d47e6c7bb9d6b4a36370dcf6338ba7a37dc952c996cd",
+    "exported_schema": "bace9452a63fe9ddfd002e1bde246b548ca55bfe5d9a731c8070e2596676ba16",
+    "extractor": "3d39e583ddd1d2a6d12bb9a2aea144f9f55a9daca22bba715a0246e32bf2668e"
+  },
+  "annotations": [
+    {
+      "case_id": "holdout_user_02",
+      "user_id": "user_02",
+      "supporting_evidence": {
+        "message_ids": [
+          "message_01"
+        ],
+        "image_ids": [],
+        "event_ids": [],
+        "history_event_ids": [
+          "event_104",
+          "event_112",
+          "event_120",
+          "event_128",
+          "event_136"
+        ]
+      },
+      "required_semantic_meanings": [
+        {
+          "statement": "Monthly salary rises to IDR 42750000 effective 2025-08-15; this is a stream amendment, not a separate bonus or a guaranteed payday.",
+          "source_ids": [
+            "message_01",
+            "event_136"
+          ]
+        }
+      ],
+      "required_contract_facts": [
+        {
+          "schema_version": "1.0",
+          "fact_id": "holdout_user_02.salary_increase",
+          "evidence_ids": [
+            "message_01",
+            "event_136"
+          ],
+          "affected_event_ids": [],
+          "stream_selector": {
+            "user_id": "user_02",
+            "category": "salary",
+            "direction": "credit",
+            "currency": "IDR",
+            "description": "Payroll credit"
+          },
+          "effective_from": "2025-08-15",
+          "effective_until": null,
+          "confirmation_state": "confirmed",
+          "unresolved_fields": [
+            "next_payment_date"
+          ],
+          "fact_type": "amount_amendment",
+          "payload": {
+            "money": {
+              "value": "42750000",
+              "currency": "IDR"
+            },
+            "percent_increase": null,
+            "scope": "ongoing"
+          }
+        }
+      ],
+      "contextual_assertions": [
+        {
+          "meaning": "Five settled payroll credits establish the existing IDR monthly stream, not the new amount.",
+          "source_ids": [
+            "event_104",
+            "event_112",
+            "event_120",
+            "event_128",
+            "event_136"
+          ],
+          "status": "raw_event_context"
+        }
+      ],
+      "acceptable_alternates": [],
+      "unsupported_or_harmful": [
+        "Do not apply the new amount to historical payroll, turn the effective date into a guaranteed settlement date, or calculate an unsupported percentage."
+      ],
+      "ambiguity_notes": "The employer states the amount and effective date; the next actual credit date is not separately confirmed.",
+      "review_status": "approved_for_holdout_benchmark",
+      "runtime_input": {
+        "manifest": "holdout_runtime_inputs_v1/manifest.json",
+        "request_file": "holdout_user_02.request.json",
+        "serialized_payload_sha256": "7809be77e8034f61848976f58637e00df19cc51637381735e4ef9ad6046da14e",
+        "serialized_payload_bytes": 53419
+      },
+      "semantic_pass_requires_nonempty_facts": true
+    },
+    {
+      "case_id": "holdout_user_235",
+      "user_id": "user_235",
+      "supporting_evidence": {
+        "message_ids": [
+          "message_184"
+        ],
+        "image_ids": [],
+        "event_ids": [],
+        "history_event_ids": []
+      },
+      "required_semantic_meanings": [
+        {
+          "statement": "The foreign-currency refund remains in processing and is not an available settled credit.",
+          "source_ids": [
+            "message_184"
+          ]
+        },
+        {
+          "statement": "The final home-currency credit depends on the rate at actual settlement; currency, amounts, rate, and date remain unknown.",
+          "source_ids": [
+            "message_184"
+          ]
+        }
+      ],
+      "required_contract_facts": [
+        {
+          "schema_version": "1.0",
+          "fact_id": "holdout_user_235.fx_refund_pending",
+          "evidence_ids": [
+            "message_184"
+          ],
+          "affected_event_ids": [],
+          "stream_selector": null,
+          "source_target": {
+            "evidence_id": "message_184",
+            "quoted_text": "foreign-currency refund"
+          },
+          "effective_from": null,
+          "effective_until": null,
+          "confirmation_state": "confirmed",
+          "unresolved_fields": [
+            "refund_event_id",
+            "refund_currency",
+            "foreign_amount",
+            "home_currency_amount",
+            "settlement_date",
+            "settlement_fx_rate"
+          ],
+          "fact_type": "cash_classification",
+          "payload": {
+            "classification": "pending_credit"
+          }
+        }
+      ],
+      "contextual_assertions": [],
+      "acceptable_alternates": [],
+      "unsupported_or_harmful": [
+        "Do not count the refund before settlement, copy an unrelated payroll/purchase currency, or calculate a home-currency credit from an unstated rate."
+      ],
+      "ambiguity_notes": "No refund event, source currency, foreign amount, settlement date, or applicable settlement rate is supplied in this runtime input.",
+      "review_status": "approved_for_holdout_benchmark",
+      "runtime_input": {
+        "manifest": "holdout_runtime_inputs_v1/manifest.json",
+        "request_file": "holdout_user_235.request.json",
+        "serialized_payload_sha256": "ccb013f6d060703024b0f6bca1950944b1bd2599ea455541de9d5e50469e032a",
+        "serialized_payload_bytes": 68972
+      },
+      "semantic_pass_requires_nonempty_facts": true
+    },
+    {
+      "case_id": "holdout_user_48",
+      "user_id": "user_48",
+      "supporting_evidence": {
+        "message_ids": [
+          "message_35"
+        ],
+        "image_ids": [
+          "image_08"
+        ],
+        "event_ids": [
+          "event_4535"
+        ],
+        "history_event_ids": []
+      },
+      "required_semantic_meanings": [
+        {
+          "statement": "The property-maintenance bill was paid on 2026-07-24 and the receipt's Total Amount Received is INR 15339.",
+          "source_ids": [
+            "message_35",
+            "image_08",
+            "event_4535"
+          ]
+        }
+      ],
+      "required_contract_facts": [
+        {
+          "schema_version": "1.0",
+          "fact_id": "holdout_user_48.maintenance_paid",
+          "evidence_ids": [
+            "image_08",
+            "message_35",
+            "event_4535"
+          ],
+          "affected_event_ids": [
+            "event_4535"
+          ],
+          "stream_selector": null,
+          "effective_from": null,
+          "effective_until": null,
+          "confirmation_state": "confirmed",
+          "unresolved_fields": [],
+          "fact_type": "image_financial_value",
+          "payload": {
+            "value_type": "amount_paid",
+            "money": {
+              "value": "15339.00",
+              "currency": "INR"
+            },
+            "image_id": "image_08",
+            "selected_field": "Total Amount Received"
+          }
+        }
+      ],
+      "contextual_assertions": [
+        {
+          "meaning": "The linked event is settled on 2026-07-24 with a blank structured amount; image line items sum to INR 15339 and show original due date 2026-08-30.",
+          "source_ids": [
+            "event_4535",
+            "image_08"
+          ],
+          "status": "raw_event_and_image_context"
+        }
+      ],
+      "acceptable_alternates": [
+        "An additional cash classification on the linked settled event is permitted but does not replace the receipt's total-paid image fact."
+      ],
+      "unsupported_or_harmful": [
+        "Do not treat INR 15339 as currently due on 2026-08-30, create another debit from the receipt, or confuse an individual line item with the total paid."
+      ],
+      "ambiguity_notes": "The receipt says Total Amount Received; its later printed due date is historical invoice context after payment.",
+      "review_status": "approved_for_holdout_benchmark",
+      "runtime_input": {
+        "manifest": "holdout_runtime_inputs_v1/manifest.json",
+        "request_file": "holdout_user_48.request.json",
+        "serialized_payload_sha256": "028b5721810a55b4ece9c2e625db1cc815d6ca9e6133c4f60a4c1d1663cff846",
+        "serialized_payload_bytes": 340227
+      },
+      "semantic_pass_requires_nonempty_facts": true
+    },
+    {
+      "case_id": "holdout_user_24",
+      "user_id": "user_24",
+      "supporting_evidence": {
+        "message_ids": [
+          "message_17"
+        ],
+        "image_ids": [],
+        "event_ids": [
+          "event_2165"
+        ],
+        "history_event_ids": []
+      },
+      "required_semantic_meanings": [
+        {
+          "statement": "The prize proceeds reached the account after withholding and the claim is closed with no further scheduled payment.",
+          "source_ids": [
+            "message_17",
+            "event_2165"
+          ]
+        }
+      ],
+      "required_contract_facts": [
+        {
+          "schema_version": "1.0",
+          "fact_id": "holdout_user_24.prize_closed",
+          "evidence_ids": [
+            "message_17",
+            "event_2165"
+          ],
+          "affected_event_ids": [
+            "event_2165"
+          ],
+          "stream_selector": null,
+          "effective_from": null,
+          "effective_until": null,
+          "confirmation_state": "confirmed",
+          "unresolved_fields": [],
+          "fact_type": "stream_status",
+          "payload": {
+            "status": "one_time"
+          }
+        }
+      ],
+      "contextual_assertions": [
+        {
+          "meaning": "The INR 33550 prize event is already settled; its amount and settlement date need no model restatement.",
+          "source_ids": [
+            "event_2165"
+          ],
+          "status": "raw_event_context"
+        }
+      ],
+      "acceptable_alternates": [
+        "A precise windfall stream selector grounded in event_2165 may represent the same one-time closed claim."
+      ],
+      "unsupported_or_harmful": [
+        "Do not forecast recurring prize income, invent another payout, or treat the settled credit as still pending."
+      ],
+      "ambiguity_notes": "The message confirms closure, while the linked structured event supplies the settled cash amount.",
+      "review_status": "approved_for_holdout_benchmark",
+      "runtime_input": {
+        "manifest": "holdout_runtime_inputs_v1/manifest.json",
+        "request_file": "holdout_user_24.request.json",
+        "serialized_payload_sha256": "1d284f0b36f630638806fccab9f796c561caf5ac0c59fedeb0661b2f284df85c",
+        "serialized_payload_bytes": 71024
+      },
+      "semantic_pass_requires_nonempty_facts": true
+    },
+    {
+      "case_id": "holdout_user_246",
+      "user_id": "user_246",
+      "supporting_evidence": {
+        "message_ids": [
+          "message_192"
+        ],
+        "image_ids": [],
+        "event_ids": [],
+        "history_event_ids": [
+          "event_22585",
+          "event_22591",
+          "event_22597",
+          "event_22603",
+          "event_22609"
+        ]
+      },
+      "required_semantic_meanings": [
+        {
+          "statement": "Employment and the regular salary stream have ended; no salary after the final settled payroll is scheduled, and any separate final settlement remains unspecified.",
+          "source_ids": [
+            "message_192",
+            "event_22603",
+            "event_22609"
+          ]
+        }
+      ],
+      "required_contract_facts": [
+        {
+          "schema_version": "1.0",
+          "fact_id": "holdout_user_246.salary_ended",
+          "evidence_ids": [
+            "message_192",
+            "event_22603",
+            "event_22609"
+          ],
+          "affected_event_ids": [],
+          "stream_selector": {
+            "user_id": "user_246",
+            "category": "salary",
+            "direction": "credit",
+            "currency": "ZAR",
+            "description": "Payroll credit"
+          },
+          "effective_from": null,
+          "effective_until": null,
+          "confirmation_state": "confirmed",
+          "unresolved_fields": [
+            "employment_end_date",
+            "any_separate_final_settlement_amount",
+            "any_separate_final_settlement_date"
+          ],
+          "fact_type": "stream_status",
+          "payload": {
+            "status": "ended"
+          }
+        }
+      ],
+      "contextual_assertions": [
+        {
+          "meaning": "Four regular ZAR credits and a distinct final employer payroll are settled history, not a promise of new income.",
+          "source_ids": [
+            "event_22585",
+            "event_22591",
+            "event_22597",
+            "event_22603",
+            "event_22609"
+          ],
+          "status": "raw_event_context"
+        }
+      ],
+      "acceptable_alternates": [
+        "A status fact targeting the supplied regular payroll history IDs is equivalent if it does not erase the distinct settled final payroll."
+      ],
+      "unsupported_or_harmful": [
+        "Do not forecast normal salary after employment ended or invent a further final-settlement amount or date."
+      ],
+      "ambiguity_notes": "The exact employment end day and any separate final-settlement details are not supplied.",
+      "review_status": "approved_for_holdout_benchmark",
+      "runtime_input": {
+        "manifest": "holdout_runtime_inputs_v1/manifest.json",
+        "request_file": "holdout_user_246.request.json",
+        "serialized_payload_sha256": "0e43f49e6946158985097655d3fa28fa815739a59d946fdef7742398e41c09ab",
+        "serialized_payload_bytes": 47440
+      },
+      "semantic_pass_requires_nonempty_facts": true
+    },
+    {
+      "case_id": "holdout_user_267",
+      "user_id": "user_267",
+      "supporting_evidence": {
+        "message_ids": [
+          "message_208"
+        ],
+        "image_ids": [],
+        "event_ids": [],
+        "history_event_ids": []
+      },
+      "required_semantic_meanings": [
+        {
+          "statement": "A singular purchase was charged in an unspecified foreign currency; its final home-currency amount is unresolved until the transaction settles at the settlement-date rate.",
+          "source_ids": [
+            "message_208"
+          ]
+        }
+      ],
+      "required_contract_facts": [
+        {
+          "schema_version": "1.0",
+          "fact_id": "holdout_user_267.unfinalized_fx_charge",
+          "evidence_ids": [
+            "message_208"
+          ],
+          "affected_event_ids": [],
+          "stream_selector": null,
+          "source_target": {
+            "evidence_id": "message_208",
+            "quoted_text": "final home-currency amount"
+          },
+          "effective_from": null,
+          "effective_until": null,
+          "confirmation_state": "confirmed",
+          "unresolved_fields": [
+            "purchase_event_id",
+            "charge_currency",
+            "foreign_amount",
+            "home_currency_amount",
+            "settlement_date",
+            "settlement_fx_rate"
+          ],
+          "fact_type": "amount_amendment",
+          "payload": {
+            "money": null,
+            "percent_increase": null,
+            "scope": "one_cycle"
+          }
+        }
+      ],
+      "contextual_assertions": [],
+      "acceptable_alternates": [],
+      "unsupported_or_harmful": [
+        "Do not borrow EUR from past shopping debits or USD from payroll, infer a foreign amount/rate, or present a final home-currency debit before settlement."
+      ],
+      "ambiguity_notes": "No matching purchase event or source currency is supplied. Within the frozen seven types, amount_amendment with null money captures that the final converted amount is still unresolved; it does not assert a numeric change.",
+      "review_status": "approved_for_holdout_benchmark",
+      "runtime_input": {
+        "manifest": "holdout_runtime_inputs_v1/manifest.json",
+        "request_file": "holdout_user_267.request.json",
+        "serialized_payload_sha256": "1aec61918ef35a77b59a0daa27fc1649f31d93f0a174d34bc0b757d5ce17c65a",
+        "serialized_payload_bytes": 68947
+      },
+      "semantic_pass_requires_nonempty_facts": true
+    },
+    {
+      "case_id": "holdout_user_268",
+      "user_id": "user_268",
+      "supporting_evidence": {
+        "message_ids": [
+          "message_209"
+        ],
+        "image_ids": [],
+        "event_ids": [],
+        "history_event_ids": []
+      },
+      "required_semantic_meanings": [
+        {
+          "statement": "The verified prize claim is still processing and no proceeds have credited; amount, currency, date, and event ID remain unknown.",
+          "source_ids": [
+            "message_209"
+          ]
+        }
+      ],
+      "required_contract_facts": [
+        {
+          "schema_version": "1.0",
+          "fact_id": "holdout_user_268.prize_pending",
+          "evidence_ids": [
+            "message_209"
+          ],
+          "affected_event_ids": [],
+          "stream_selector": null,
+          "source_target": {
+            "evidence_id": "message_209",
+            "quoted_text": "prize claim"
+          },
+          "effective_from": null,
+          "effective_until": null,
+          "confirmation_state": "confirmed",
+          "unresolved_fields": [
+            "amount",
+            "currency",
+            "payment_date",
+            "event_id"
+          ],
+          "fact_type": "cash_classification",
+          "payload": {
+            "classification": "pending_credit"
+          }
+        }
+      ],
+      "contextual_assertions": [],
+      "acceptable_alternates": [],
+      "unsupported_or_harmful": [
+        "Do not count verification as a settled credit or assign the EUR currency of unrelated salary to the prize."
+      ],
+      "ambiguity_notes": "The message supplies neither a prize cash event nor its currency or amount.",
+      "review_status": "approved_for_holdout_benchmark",
+      "runtime_input": {
+        "manifest": "holdout_runtime_inputs_v1/manifest.json",
+        "request_file": "holdout_user_268.request.json",
+        "serialized_payload_sha256": "cd5892936f53352f641cee3c2d272ca9df9bd8d137b6d8bad7b7a366edca920f",
+        "serialized_payload_bytes": 43937
+      },
+      "semantic_pass_requires_nonempty_facts": true
+    },
+    {
+      "case_id": "holdout_user_274",
+      "user_id": "user_274",
+      "supporting_evidence": {
+        "message_ids": [
+          "message_214"
+        ],
+        "image_ids": [],
+        "event_ids": [],
+        "history_event_ids": []
+      },
+      "required_semantic_meanings": [
+        {
+          "statement": "The foreign-currency refund remains in processing and is not an available settled credit.",
+          "source_ids": [
+            "message_214"
+          ]
+        },
+        {
+          "statement": "The final home-currency credit depends on the rate at actual settlement; currency, amounts, rate, and date remain unknown.",
+          "source_ids": [
+            "message_214"
+          ]
+        }
+      ],
+      "required_contract_facts": [
+        {
+          "schema_version": "1.0",
+          "fact_id": "holdout_user_274.fx_refund_pending",
+          "evidence_ids": [
+            "message_214"
+          ],
+          "affected_event_ids": [],
+          "stream_selector": null,
+          "source_target": {
+            "evidence_id": "message_214",
+            "quoted_text": "foreign-currency refund"
+          },
+          "effective_from": null,
+          "effective_until": null,
+          "confirmation_state": "confirmed",
+          "unresolved_fields": [
+            "refund_event_id",
+            "refund_currency",
+            "foreign_amount",
+            "home_currency_amount",
+            "settlement_date",
+            "settlement_fx_rate"
+          ],
+          "fact_type": "cash_classification",
+          "payload": {
+            "classification": "pending_credit"
+          }
+        }
+      ],
+      "contextual_assertions": [],
+      "acceptable_alternates": [],
+      "unsupported_or_harmful": [
+        "Do not count the refund before settlement, copy an unrelated payroll/purchase currency, or calculate a home-currency credit from an unstated rate."
+      ],
+      "ambiguity_notes": "No refund event, source currency, foreign amount, settlement date, or applicable settlement rate is supplied in this runtime input.",
+      "review_status": "approved_for_holdout_benchmark",
+      "runtime_input": {
+        "manifest": "holdout_runtime_inputs_v1/manifest.json",
+        "request_file": "holdout_user_274.request.json",
+        "serialized_payload_sha256": "9595cd971bb38a6097d0cfebef575749eebd85b678963785cb8779fb29d37793",
+        "serialized_payload_bytes": 68836
+      },
+      "semantic_pass_requires_nonempty_facts": true
+    }
+  ]
+}

@@ -16,7 +16,7 @@ from typing import Any
 
 from pydantic import ValidationError
 
-from evidence import EvidenceBundle
+from evidence import EvidenceBundle, validate_source_targets
 
 ROOT = Path(__file__).resolve().parents[2]
 HERE = Path(__file__).resolve().parent
@@ -45,7 +45,9 @@ plans. Do not invent amounts, dates, currencies, recurrence duration, permanence
 or targets. Preserve ambiguity: use null, scope=unknown, confirmation_state=uncertain, and
 unresolved_fields as the schema permits. A one-time change is not permanent without evidence.
 Possible duplicates stay possible. amount_paid is not balance_due. Use exact evidence IDs and
-only supplied event IDs or a precise supplied stream selector. Return only one JSON object with a
+only supplied event IDs, a precise supplied stream selector, or an exact quoted
+source target when IDs/currency are absent. An unidentified relationship keeps
+related_event_id null and event_ids unresolved. Return only one JSON object with a
 top-level facts array. Do not include commentary or markdown."""
 
 
@@ -233,10 +235,14 @@ def extract_once(case: dict[str, Any]) -> dict[str, Any]:
             try:
                 decoded = json.loads(content)
                 bundle = EvidenceBundle.model_validate(decoded)
+                evidence_index = {r[key]: r for field, key in
+                                  (("events", "event_id"), ("messages", "message_id"), ("images", "image_id"))
+                                  for r in case["evidence"][field]}
+                validate_source_targets(bundle.facts, evidence_index)
                 attempt["schema_valid"] = True
                 attempts.append(attempt)
                 return {"usable": True, "bundle": bundle.model_dump(mode="json"), "attempts": attempts}
-            except (json.JSONDecodeError, ValidationError) as exc:
+            except (json.JSONDecodeError, ValidationError, ValueError) as exc:
                 correction = str(exc)
                 attempt["validation_error"] = correction
                 attempts.append(attempt)
@@ -270,11 +276,15 @@ def core(f: dict[str, Any]) -> str:
 
 
 def target(f: dict[str, Any]) -> str:
-    return json.dumps({"affected_event_ids": sorted(f["affected_event_ids"]), "stream_selector": f["stream_selector"]}, sort_keys=True)
+    return json.dumps({"affected_event_ids": sorted(f["affected_event_ids"]),
+                       "stream_selector": f["stream_selector"],
+                       "source_target": f.get("source_target")}, sort_keys=True)
 
 
 def targets_equivalent(reference: dict[str, Any], actual: dict[str, Any],
                        events: list[dict[str, Any]] | None = None) -> bool:
+    if reference.get("source_target") != actual.get("source_target"):
+        return False
     if set(reference["affected_event_ids"]) != set(actual["affected_event_ids"]):
         return False
     left, right = reference["stream_selector"], actual["stream_selector"]

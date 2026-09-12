@@ -2,7 +2,9 @@
 
 The controlled rent-history follow-up now has an offline preparation command and
 a capped shadow runner. See [the reviewed experiment instructions](reports/RENT_HISTORY_EXPERIMENT.md).
-The live experiment remains unexecuted; runtime prompt, schema and engine are unchanged.
+The live experiment remains unexecuted. The development semantic benchmark now
+uses the compatible source-quote target extension in the schema and extractor
+request; no model calls or financial decision-rule changes were made.
 
 The stable implementation and its engine/boundary tests now live directly in
 [`code/`](../../README.md). Local `evidence.py`, `finance.py`, `plans.py`
@@ -31,6 +33,28 @@ extra fields. Dates are strict ISO dates; money is a nonnegative decimal string 
 currency. Unknown money/date/duration stays null. No decisions, computed balances or
 executable fields are accepted. `percent_increase` preserves a quoted percentage without
 inventing an absolute amount. Effective bounds are required nullable fields.
+
+The frozen development references are in
+`extraction_artifacts/semantic_inventory_01/semantic_reference_annotations_dev_20260912_v4_frozen.json`.
+Each of the 14 cases binds to a byte-exact request in `development_runtime_inputs_v2/`.
+Check them offline from the repository root with:
+
+```text
+python code/prototype/build_semantic_dev_inputs.py --check
+python code/prototype/freeze_semantic_dev_references.py --check
+python code/prototype/validate_semantic_reference_annotations.py
+```
+
+The same frozen conventions now cover the eight holdout cases in
+`extraction_artifacts/semantic_inventory_01/semantic_reference_annotations_holdout_20260912_v1_frozen.json`.
+The holdout requests and hashes are in `holdout_runtime_inputs_v1/`.
+Validate them offline with:
+
+```text
+python code/prototype/build_semantic_holdout_inputs.py --check
+python code/prototype/freeze_semantic_holdout_references.py --check
+python code/prototype/validate_semantic_holdout_references.py
+```
 
 `facts/` contains session-extracted and reviewed facts. The assistant inspected raw
 records/messages and image_02 directly, then recorded these facts. This is a replayable
@@ -103,6 +127,27 @@ overlap block output. This is not complete support for all semantic facts in all
 See [results](REPORT.md), [comparison](../artifacts/comparison.csv), and per-user JSON artifacts
 for semantic facts, raw-to-resolved differences, projected flows, provenance, daily
 minima, candidate checks and validated output.
+
+## Frozen semantic benchmark scorer
+
+The deterministic scorer compares saved `EvidenceBundle` JSON with the frozen semantic
+references. It validates the seven-fact Pydantic contract and exact reference/runtime
+hashes, matches required meanings, and reports target, value, status/lifecycle, image,
+unknown, unsupported-claim, harmful-claim, schema, and availability failures separately.
+No model call is made. The frozen holdout is accessed only by an explicit `holdout`
+command or `case --split holdout`.
+
+```text
+python code/prototype/score_semantic_benchmark.py --json-out score.json --report-out score.txt case dev_user_16 output.json
+python code/prototype/score_semantic_benchmark.py --json-out dev_score.json --report-out dev_score.txt development outputs_dir
+python code/prototype/score_semantic_benchmark.py --json-out holdout_score.json --report-out holdout_score.txt holdout outputs_dir
+```
+
+Batch directories use `<case_id>.json` filenames. A missing file scores as unavailable.
+The CLI exits 0 only when every scored case passes, 1 for semantic failures, and 2 for
+benchmark input errors. Without `--json-out`, structured JSON goes to stdout and the
+short report goes to stderr. See
+[the scorer completion report](reports/SEMANTIC_BENCHMARK_SCORER_COMPLETION.md).
 
 The subsequent [boundary challenge report](BOUNDARY_REPORT.md) documents 21 additional
 tests and the small resolver fixes they required. The seven-fact schema is unchanged.

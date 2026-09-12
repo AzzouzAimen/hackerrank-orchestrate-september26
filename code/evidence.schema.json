@@ -43,6 +43,17 @@
             }
           ]
         },
+        "source_target": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/SourceTarget"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
         "effective_from": {
           "anyOf": [
             {
@@ -193,6 +204,17 @@
             }
           ]
         },
+        "source_target": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/SourceTarget"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
         "effective_from": {
           "anyOf": [
             {
@@ -320,6 +342,17 @@
               "type": "null"
             }
           ]
+        },
+        "source_target": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/SourceTarget"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
         },
         "effective_from": {
           "anyOf": [
@@ -500,6 +533,17 @@
             }
           ]
         },
+        "source_target": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/SourceTarget"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
         "effective_from": {
           "anyOf": [
             {
@@ -607,6 +651,17 @@
             }
           ]
         },
+        "source_target": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/SourceTarget"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
         "effective_from": {
           "anyOf": [
             {
@@ -687,10 +742,17 @@
           "type": "string"
         },
         "related_event_id": {
-          "minLength": 1,
-          "pattern": "^[A-Za-z0-9_.:-]+$",
-          "title": "Related Event Id",
-          "type": "string"
+          "anyOf": [
+            {
+              "minLength": 1,
+              "pattern": "^[A-Za-z0-9_.:-]+$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Related Event Id"
         }
       },
       "required": [
@@ -770,6 +832,17 @@
               "type": "null"
             }
           ]
+        },
+        "source_target": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/SourceTarget"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
         },
         "effective_from": {
           "anyOf": [
@@ -946,6 +1019,28 @@
       "title": "Selector",
       "type": "object"
     },
+    "SourceTarget": {
+      "additionalProperties": false,
+      "properties": {
+        "evidence_id": {
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_.:-]+$",
+          "title": "Evidence Id",
+          "type": "string"
+        },
+        "quoted_text": {
+          "minLength": 1,
+          "title": "Quoted Text",
+          "type": "string"
+        }
+      },
+      "required": [
+        "evidence_id",
+        "quoted_text"
+      ],
+      "title": "SourceTarget",
+      "type": "object"
+    },
     "StatusPayload": {
       "additionalProperties": false,
       "properties": {
@@ -1008,6 +1103,17 @@
               "type": "null"
             }
           ]
+        },
+        "source_target": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/SourceTarget"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
         },
         "effective_from": {
           "anyOf": [

@@ -41,6 +41,13 @@ class Selector(Strict):
     description: str | None
 
 
+class SourceTarget(Strict):
+    # A quoted entity in supplied evidence when no event or currency-bearing
+    # structured stream exists. It never supplies a missing event ID/currency.
+    evidence_id: Identifier
+    quoted_text: Annotated[str, Field(min_length=1)]
+
+
 class StatusPayload(Strict):
     status: Literal['ongoing', 'ended', 'one_time', 'contingent']
 
@@ -80,7 +87,7 @@ class FuturePayload(Strict):
 class LifecyclePayload(Strict):
     relationship: Literal['cancellation', 'refund_of', 'retry_of', 'settlement_of',
                           'possible_duplicate_of', 'internal_transfer']
-    related_event_id: Identifier
+    related_event_id: Identifier | None
 
 
 class ImagePayload(Strict):
@@ -101,6 +108,7 @@ class FactBase(Strict):
     evidence_ids: Annotated[list[Identifier], Field(min_length=1)]
     affected_event_ids: list[Identifier]
     stream_selector: Selector | None
+    source_target: SourceTarget | None = None
     effective_from: Day | None
     effective_until: Day | None
     confirmation_state: Literal['confirmed', 'uncertain']
@@ -108,8 +116,12 @@ class FactBase(Strict):
 
     @model_validator(mode='after')
     def target_and_range(self):
-        if not self.affected_event_ids and self.stream_selector is None:
-            raise ValueError('An event or structured stream target is required')
+        if not self.affected_event_ids and self.stream_selector is None and self.source_target is None:
+            raise ValueError('An event, structured stream, or quoted source target is required')
+        if self.source_target and self.source_target.evidence_id not in self.evidence_ids:
+            raise ValueError('Quoted target source must be in evidence_ids')
+        if self.source_target and (self.affected_event_ids or self.stream_selector is not None):
+            raise ValueError('Quoted source target is only for facts without event or stream targets')
         if self.effective_from and self.effective_until and self.effective_from > self.effective_until:
             raise ValueError('Reversed effective range')
         if len(self.evidence_ids) != len(set(self.evidence_ids)):
@@ -141,6 +153,15 @@ class Lifecycle(FactBase):
     fact_type: Literal['lifecycle_relationship']
     payload: LifecyclePayload
 
+    @model_validator(mode='after')
+    def relationship_target(self):
+        if self.payload.related_event_id is None:
+            if self.affected_event_ids or self.source_target is None or 'event_ids' not in self.unresolved_fields:
+                raise ValueError('Unidentified relationship requires a quoted target and unresolved event_ids')
+        elif not self.affected_event_ids:
+            raise ValueError('Identified relationship requires a child event ID')
+        return self
+
 
 class ImageValue(FactBase):
     fact_type: Literal['image_financial_value']
@@ -165,3 +186,14 @@ class EvidenceBundle(Strict):
         if len({f.fact_id for f in self.facts}) != len(self.facts):
             raise ValueError('Duplicate fact IDs')
         return self
+
+
+def validate_source_targets(facts, evidence_index: dict) -> None:
+    """Check that each source-only target is an exact quote of evidence."""
+    for fact in facts:
+        target = fact.source_target
+        if target is None:
+            continue
+        source = evidence_index.get(target.evidence_id)
+        if source is None or target.quoted_text not in source.get('message_text', ''):
+            raise ValueError('Unquoted source target')

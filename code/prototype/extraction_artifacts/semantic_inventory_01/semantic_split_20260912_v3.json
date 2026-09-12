@@ -1,0 +1,441 @@
+{
+  "version": "semantic-split-20260912-v3",
+  "frozen": true,
+  "purpose": "final reviewed split before semantic annotation",
+  "development": [
+    {
+      "case_id": "dev_user16",
+      "user_id": "user16",
+      "split": "dev",
+      "message_ids": [
+        "message_12"
+      ],
+      "image_ids": [
+        "image_02"
+      ],
+      "linked_event_ids": [
+        "event_1442"
+      ],
+      "semantic_family": "rent",
+      "inclusion_reason": "rent_stream_vs_balance",
+      "template_family": "rent::service_provider",
+      "contamination": "contaminated",
+      "annotation_difficulty": "high",
+      "ambiguity_notes": "REJECT: user/message not found",
+      "source": "real_dataset",
+      "message_template_id": "tmpl_c5cb76be1fe5"
+    },
+    {
+      "case_id": "dev_user03",
+      "user_id": "user03",
+      "split": "dev",
+      "message_ids": [
+        "message_02"
+      ],
+      "image_ids": [
+        "image_01"
+      ],
+      "linked_event_ids": [
+        "event_253"
+      ],
+      "semantic_family": "salary_arrears",
+      "inclusion_reason": "salary plus one-off adjustment",
+      "template_family": "salary_arrears::employer",
+      "contamination": "clean",
+      "annotation_difficulty": "medium",
+      "ambiguity_notes": "REJECT: user/message not found",
+      "source": "real_dataset",
+      "message_template_id": "tmpl_ca168ad5d63f"
+    },
+    {
+      "case_id": "dev_user06",
+      "user_id": "user06",
+      "split": "dev",
+      "message_ids": [
+        "message_04"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "semantic_family": "temporary_pay",
+      "inclusion_reason": "temporary reduced pay",
+      "template_family": "temporary_pay::employer",
+      "contamination": "clean",
+      "annotation_difficulty": "medium",
+      "ambiguity_notes": "REJECT: user/message not found",
+      "source": "real_dataset",
+      "message_template_id": "tmpl_5e79521b3cf9"
+    },
+    {
+      "case_id": "dev_user12",
+      "user_id": "user12",
+      "split": "dev",
+      "message_ids": [
+        "message_09"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "semantic_family": "ended_income",
+      "inclusion_reason": "seasonal income ended",
+      "template_family": "ended_income::employer",
+      "contamination": "clean",
+      "annotation_difficulty": "medium",
+      "ambiguity_notes": "REJECT: user/message not found",
+      "source": "real_dataset",
+      "message_template_id": "tmpl_351fe496c4d0"
+    },
+    {
+      "case_id": "dev_user28",
+      "user_id": "user28",
+      "split": "dev",
+      "message_ids": [
+        "message_20"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "semantic_family": "arrears",
+      "inclusion_reason": "regular salary plus arrears",
+      "template_family": "arrears::employer",
+      "contamination": "clean",
+      "annotation_difficulty": "medium",
+      "ambiguity_notes": "REJECT: user/message not found",
+      "source": "real_dataset",
+      "message_template_id": "tmpl_d11599b3fe96"
+    },
+    {
+      "case_id": "dev_user04",
+      "user_id": "user04",
+      "split": "dev",
+      "message_ids": [
+        "message_03"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "semantic_family": "pending_income",
+      "inclusion_reason": "bonus amount/date unknown",
+      "template_family": "pending_income::employer",
+      "contamination": "clean",
+      "annotation_difficulty": "medium",
+      "ambiguity_notes": "REJECT: user/message not found",
+      "source": "real_dataset",
+      "message_template_id": "tmpl_ce00b7288a36"
+    },
+    {
+      "case_id": "dev_user10",
+      "user_id": "user10",
+      "split": "dev",
+      "message_ids": [
+        "message_07"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "semantic_family": "pending_payout",
+      "inclusion_reason": "withdrawability pending",
+      "template_family": "pending_payout::service_provider",
+      "contamination": "clean",
+      "annotation_difficulty": "medium",
+      "ambiguity_notes": "REJECT: user/message not found",
+      "source": "real_dataset",
+      "message_template_id": "tmpl_7dacdcfb0916"
+    },
+    {
+      "case_id": "dev_user26",
+      "user_id": "user26",
+      "split": "dev",
+      "message_ids": [
+        "message_18"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "semantic_family": "invoice",
+      "inclusion_reason": "approved invoice settlement",
+      "template_family": "invoice::service_provider",
+      "contamination": "clean",
+      "annotation_difficulty": "medium",
+      "ambiguity_notes": "REJECT: user/message not found",
+      "source": "real_dataset",
+      "message_template_id": "tmpl_b3f446db830d"
+    },
+    {
+      "case_id": "dev_user20",
+      "user_id": "user20",
+      "split": "dev",
+      "message_ids": [
+        "message_14"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [
+        "event_1785"
+      ],
+      "semantic_family": "refund",
+      "inclusion_reason": "refund initiated not credited",
+      "template_family": "refund::merchant",
+      "contamination": "clean",
+      "annotation_difficulty": "high",
+      "ambiguity_notes": "REJECT: user/message not found",
+      "source": "real_dataset",
+      "message_template_id": "tmpl_87c6e197100e"
+    },
+    {
+      "case_id": "dev_user18",
+      "user_id": "user18",
+      "split": "dev",
+      "message_ids": [
+        "message_13"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "semantic_family": "transfer",
+      "inclusion_reason": "same-owner internal transfer",
+      "template_family": "transfer::bank",
+      "contamination": "clean",
+      "annotation_difficulty": "medium",
+      "ambiguity_notes": "REJECT: user/message not found",
+      "source": "real_dataset",
+      "message_template_id": "tmpl_b2189d97d39e"
+    },
+    {
+      "case_id": "dev_user229",
+      "user_id": "user229",
+      "split": "dev",
+      "message_ids": [
+        "message_179"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [
+        "event_21101"
+      ],
+      "semantic_family": "failed_retry",
+      "inclusion_reason": "failed debit remains open",
+      "template_family": "failed_retry::bank",
+      "contamination": "clean",
+      "annotation_difficulty": "high",
+      "ambiguity_notes": "REJECT: user/message not found",
+      "source": "real_dataset",
+      "message_template_id": "tmpl_120946af31bc"
+    },
+    {
+      "case_id": "dev_user22",
+      "user_id": "user22",
+      "split": "dev",
+      "message_ids": [
+        "message_15"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [
+        "event_1960"
+      ],
+      "semantic_family": "investment_noncash",
+      "inclusion_reason": "market value no cash",
+      "template_family": "investment_noncash::financial_service",
+      "contamination": "clean",
+      "annotation_difficulty": "medium",
+      "ambiguity_notes": "REJECT: user/message not found",
+      "source": "real_dataset",
+      "message_template_id": "tmpl_fe80229adfc1"
+    },
+    {
+      "case_id": "dev_user23",
+      "user_id": "user23",
+      "split": "dev",
+      "message_ids": [
+        "message_16"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "semantic_family": "prize_pending",
+      "inclusion_reason": "verified prize not credited",
+      "template_family": "prize_pending::financial_service",
+      "contamination": "clean",
+      "annotation_difficulty": "medium",
+      "ambiguity_notes": "REJECT: user/message not found",
+      "source": "real_dataset",
+      "message_template_id": "tmpl_31fc0344434c"
+    },
+    {
+      "case_id": "dev_user14",
+      "user_id": "user14",
+      "split": "dev",
+      "message_ids": [
+        "message_10"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "semantic_family": "recurring_expense",
+      "inclusion_reason": "salary resumes plus childcare",
+      "template_family": "recurring_expense::employer",
+      "contamination": "clean",
+      "annotation_difficulty": "high",
+      "ambiguity_notes": "REJECT: user/message not found",
+      "source": "real_dataset",
+      "message_template_id": "tmpl_e50e6c435f58"
+    }
+  ],
+  "holdout": [
+    {
+      "case_id": "holdout_user_02",
+      "user_id": "user_02",
+      "split": "holdout_candidate",
+      "message_ids": [
+        "message_01"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "semantic_family": "review_required",
+      "inclusion_reason": "distinct normalized template",
+      "template_family": "normalized_message_skeleton",
+      "message_template_id": "tmpl_92229850fc72",
+      "contamination": "clean",
+      "annotation_difficulty": "medium",
+      "ambiguity_notes": "No obvious ambiguity; inspect linked event lifecycle and image fields before annotation.",
+      "source": "real_dataset"
+    },
+    {
+      "case_id": "holdout_user_235",
+      "user_id": "user_235",
+      "split": "holdout_candidate",
+      "message_ids": [
+        "message_184"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "semantic_family": "review_required",
+      "inclusion_reason": "distinct normalized template",
+      "template_family": "normalized_message_skeleton",
+      "message_template_id": "tmpl_c50a5f7bfde4",
+      "contamination": "clean",
+      "annotation_difficulty": "medium",
+      "ambiguity_notes": "No obvious ambiguity; inspect linked event lifecycle and image fields before annotation.",
+      "source": "real_dataset"
+    },
+    {
+      "case_id": "holdout_user_48",
+      "user_id": "user_48",
+      "split": "holdout_candidate",
+      "message_ids": [
+        "message_35"
+      ],
+      "image_ids": [
+        "image_08"
+      ],
+      "linked_event_ids": [
+        "event_4535"
+      ],
+      "semantic_family": "review_required",
+      "inclusion_reason": "distinct normalized template",
+      "template_family": "normalized_message_skeleton",
+      "message_template_id": "tmpl_3664afe8f660",
+      "contamination": "clean",
+      "annotation_difficulty": "medium",
+      "ambiguity_notes": "No obvious ambiguity; inspect linked event lifecycle and image fields before annotation.",
+      "source": "real_dataset"
+    },
+    {
+      "case_id": "holdout_user_24",
+      "user_id": "user_24",
+      "split": "holdout_candidate",
+      "message_ids": [
+        "message_17"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [
+        "event_2165"
+      ],
+      "semantic_family": "review_required",
+      "inclusion_reason": "distinct normalized template",
+      "template_family": "normalized_message_skeleton",
+      "message_template_id": "tmpl_6c1110f9f97d",
+      "contamination": "clean",
+      "annotation_difficulty": "medium",
+      "ambiguity_notes": "No obvious ambiguity; inspect linked event lifecycle and image fields before annotation.",
+      "source": "real_dataset"
+    },
+    {
+      "case_id": "holdout_user_246",
+      "user_id": "user_246",
+      "split": "holdout_candidate",
+      "message_ids": [
+        "message_192"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "semantic_family": "review_required",
+      "inclusion_reason": "distinct normalized template",
+      "template_family": "normalized_message_skeleton",
+      "message_template_id": "tmpl_749f0b60ea0c",
+      "contamination": "clean",
+      "annotation_difficulty": "medium",
+      "ambiguity_notes": "No obvious ambiguity; inspect linked event lifecycle and image fields before annotation.",
+      "source": "real_dataset"
+    },
+    {
+      "case_id": "holdout_user_267",
+      "user_id": "user_267",
+      "split": "holdout_candidate",
+      "message_ids": [
+        "message_208"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "semantic_family": "review_required",
+      "inclusion_reason": "distinct normalized template",
+      "template_family": "normalized_message_skeleton",
+      "message_template_id": "tmpl_8ecb4b5be0b3",
+      "contamination": "clean",
+      "annotation_difficulty": "medium",
+      "ambiguity_notes": "No obvious ambiguity; inspect linked event lifecycle and image fields before annotation.",
+      "source": "real_dataset"
+    },
+    {
+      "case_id": "holdout_user_268",
+      "user_id": "user_268",
+      "split": "holdout_candidate",
+      "message_ids": [
+        "message_209"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "semantic_family": "review_required",
+      "inclusion_reason": "distinct normalized template",
+      "template_family": "normalized_message_skeleton",
+      "message_template_id": "tmpl_857c624f70b2",
+      "contamination": "clean",
+      "annotation_difficulty": "medium",
+      "ambiguity_notes": "No obvious ambiguity; inspect linked event lifecycle and image fields before annotation.",
+      "source": "real_dataset"
+    },
+    {
+      "case_id": "holdout_user_274",
+      "user_id": "user_274",
+      "split": "holdout_candidate",
+      "message_ids": [
+        "message_214"
+      ],
+      "image_ids": [],
+      "linked_event_ids": [],
+      "semantic_family": "review_required",
+      "inclusion_reason": "distinct normalized template",
+      "template_family": "normalized_message_skeleton",
+      "message_template_id": "tmpl_7a6451c783b5",
+      "contamination": "clean",
+      "annotation_difficulty": "medium",
+      "ambiguity_notes": "No obvious ambiguity; inspect linked event lifecycle and image fields before annotation.",
+      "source": "real_dataset"
+    }
+  ],
+  "rejected": [],
+  "alternates": [],
+  "source_hashes": {
+    "financial_events.csv": "b6c3f43a8ad3a80ca11c72cce6f2818eea06621a3582d2851886fd9127b1229d",
+    "messages.csv": "7b9db27a4546a850a76d3475ebf65de80fb9fe374e26d469586f62f537eac9a6",
+    "images.csv": "6b5428565ca98e4b71e182f8a8fa3fd3013727399bdea847f3e4a3d2c129dfc9",
+    "financial_profiles.csv": "fa173608f8ec99c8d9d633eace762695aeaa2d276a509989f0edd8e123c07964"
+  },
+  "checks": {
+    "model_calls": 0,
+    "sample_labels_used": false,
+    "dataset_mutated": false,
+    "holdout_selected_by_model_performance": false,
+    "cross_split_template_families": [],
+    "template_identity": "normalized message skeleton (dates, numbers, references replaced) SHA1"
+  }
+}

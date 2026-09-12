@@ -118,3 +118,21 @@ Concise project history for review and interview preparation. Record the action,
 - 2026-09-12T18:41:13.744619+00:00: Completed six alternating rent trials under provisional plain-JSON integration (seven calls). Final availability6/6; target separation control0/3, treatment1/3; gross-debt error5/6. Preserved envelopes and reviewed all37 usable facts. Next: propose one image-value definition change, not executed.
 - 2026-09-12T18:50:30+00:00: Ran six frozen-input prompt comparison calls with one general image-value clarification. Availability6/6; gross-debt error control1/3 versus treatment0/3; no material availability or 12% regression. Next: one narrow stream/event targeting definition experiment may be considered; not executed.
 - 2026-09-12T19:12:50+00:00: Ran six frozen-input targeting-definition calls. Control availability3/3, treatment2/3; usable targeting control0/3 versus treatment2/2; gross-debt errors persisted. Next: controlled composition confirmation only if desired; no trusted integration.
+
+## 2026-09-12 — Build semantic evaluation data
+
+- Action: Created a source-verified frozen split and drafted semantic reference records for the 14 development cases using the seven-fact contract.
+- Result: Evidence IDs, ownership, schema shape, and unknown values validate offline; the 8-case holdout remains untouched.
+- Next: Review development references before any future semantic scoring or model evaluation. No model inference, sample labels, affordability outputs, or end-to-end evaluation were included in this milestone.
+
+## 2026-09-12 — Freeze development semantic references
+
+- Action: Resolved five source-target gaps, corrected user_12/user_04 empty references, and bound all 14 cases to exact offline extractor requests.
+- Result: Approved development reference v4 passes provenance, Pydantic, unknown-preservation, and 127 Python tests without model calls or holdout access.
+- Next: A later task may build a semantic scorer or run model inference; neither was done here.
+
+## 2026-09-12 — Freeze holdout semantic references
+
+- Action: Bound the eight frozen holdout cases to byte-exact offline requests and annotated them with unchanged development conventions.
+- Result: All eight have nonempty grounded facts; provenance and 132 Python tests pass. Development reference hash is unchanged.
+- Next: A later task may score model extraction against the frozen development and holdout references; no inference or scorer was run here.

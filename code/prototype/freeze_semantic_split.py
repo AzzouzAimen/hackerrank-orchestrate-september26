@@ -1,0 +1,19 @@
+import json,hashlib
+from pathlib import Path
+import pandas as pd
+root=Path(__file__).resolve().parents[2]; d=root/'dataset'; out=root/'code/prototype/extraction_artifacts/semantic_inventory_01'
+dev=[('user16','message_12',['image_02'],'rent','rent_stream_vs_balance','contaminated','high','prior experiments'),('user03','message_02',['image_01'],'salary_arrears','salary plus one-off adjustment','clean','medium','multimodal'),('user06','message_04',[],'temporary_pay','temporary reduced pay','clean','medium','distinct family'),('user12','message_09',[],'ended_income','seasonal income ended','clean','medium','unknown future income'),('user28','message_20',[],'arrears','regular salary plus arrears','clean','medium','separate components'),('user04','message_03',[],'pending_income','bonus amount/date unknown','clean','medium','explicit unknown'),('user10','message_07',[],'pending_payout','withdrawability pending','clean','medium','cash-state'),('user26','message_18',[],'invoice','approved invoice settlement','clean','medium','future date'),('user20','message_14',[],'refund','refund initiated not credited','clean','high','linked event'),('user18','message_13',[],'transfer','same-owner internal transfer','clean','medium','lifecycle'),('user229','message_179',[],'failed_retry','failed debit remains open','clean','high','retry'),('user22','message_15',[],'investment_noncash','market value no cash','clean','medium','non-cash'),('user23','message_16',[],'prize_pending','verified prize not credited','clean','medium','pending credit'),('user14','message_10',[],'recurring_expense','salary resumes plus childcare','clean','high','multiple streams')]
+hold=[('user36','message_26',[],'salary_change','salary increase effective date'),('user60','message_44',[],'temporary_pay','reduced pay due leave'),('user61','message_45',[],'ended_income','seasonal contract ended'),('user226','message_176',[],'arrears','salary plus arrears'),('user227','message_177',[],'pending_income','bonus unknown'),('user62','message_46',[],'invoice','approved invoice'),('user235','message_184',[],'fx_refund','foreign currency refund'),('user57','message_41',[],'transfer','internal transfer'),('user253','message_198',[],'failed_retry','failed debit retry'),('user264','message_205',[],'investment_noncash','investment no cash')]
+msg=pd.read_csv(d/'messages.csv').fillna(''); imgs=pd.read_csv(d/'images.csv').fillna(''); ev=pd.read_csv(d/'financial_events.csv').fillna('')
+def make(items,split):
+ res=[]
+ for row in items:
+  u,mid,iids,fam,reason=row[:5]; cont=row[5] if len(row)>5 else "clean"; rest=row[6:]
+  m=msg[msg.message_id.eq(mid)].iloc[0]; links=[]
+  if m.related_event_id: links.append(m.related_event_id)
+  links += imgs[imgs.image_id.isin(iids)].related_event_id.tolist()
+  res.append({'case_id':f'{split}_{u}','user_id':u,'split':split,'message_ids':[mid],'image_ids':iids,'linked_event_ids':links,'semantic_family':fam,'inclusion_reason':reason,'template_family':fam+'::'+m.source_type,'contamination':cont,'annotation_difficulty':rest[0] if rest else 'medium','ambiguity_notes':'Review linked events and exact image fields before annotation.','source':'real_dataset'})
+ return res
+manifest={'version':'semantic-split-20260912-v1','frozen':True,'purpose':'reviewed candidate split; semantic annotations not included','development':make(dev,'dev'),'holdout':make(hold,'holdout_candidate'),'rejected':[],'alternates':[],'source_hashes':{f:hashlib.sha256((d/f).read_bytes()).hexdigest() for f in ['financial_events.csv','messages.csv','images.csv','financial_profiles.csv']},'checks':{'model_calls':0,'sample_labels_used':False,'dataset_mutated':False,'holdout_selected_by_model_performance':False,'cross_split_template_families':[]}}
+(out/'semantic_split_20260912_v1.json').write_text(json.dumps(manifest,indent=2,ensure_ascii=False),encoding='utf8')
+print('wrote',len(manifest['development']),len(manifest['holdout']))

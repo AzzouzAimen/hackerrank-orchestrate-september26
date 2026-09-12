@@ -6,7 +6,8 @@ from decimal import Decimal, ROUND_DOWN
 import calendar
 
 from evidence import (StreamStatus, AmountAmendment, ScheduleAmendment,
-                       FutureConfirmation, Lifecycle, ImageValue, CashClassification)
+                       FutureConfirmation, Lifecycle, ImageValue, CashClassification,
+                       validate_source_targets)
 
 D = Decimal
 ZERO = D('0')
@@ -123,6 +124,7 @@ def applicable(fact, when):
 
 def resolve(raw, profile, request, facts, evidence_index):
     facts=sorted(facts,key=lambda f:f.fact_id)
+    validate_source_targets(facts, evidence_index)
     events = [Event(e['event_id'], e['user_id'], e['category'], e['description'], e['direction'],
                     decimal(e['amount']) if e['amount'] else None, e['currency'],
                     day(e['event_date']), day(e['settlement_date']) if e['settlement_date'] else None,
@@ -218,6 +220,11 @@ def resolve(raw, profile, request, facts, evidence_index):
                 e.amount=decimal(f.payload.money.value);e.settlement=day(f.payload.payment_date)
                 e.facts.append(f.fact_id);e.evidence.extend(f.evidence_ids)
         if isinstance(f, Lifecycle):
+            if f.payload.related_event_id is None:
+                # The evidence describes a relationship, but cannot identify
+                # the actual event pair. Never apply it to unrelated events.
+                state.issues.append(f'{f.fact_id}: relationship event IDs unresolved')
+                continue
             parent = ids.get(f.payload.related_event_id)
             if parent is None: raise ValueError('Unknown lifecycle parent')
             relation = f.payload.relationship

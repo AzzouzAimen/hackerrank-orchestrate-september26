@@ -91,7 +91,9 @@ class AuditTests(unittest.TestCase):
                 for attempt in run['attempts']:
                     if attempt['schema_valid']:
                         parsed = ex.EvidenceBundle.model_validate_json(attempt['raw_content'])
-                        valid.append(parsed.model_dump(mode='json'))
+                        # Legacy artifacts predate the optional source_target
+                        # field; preserve their original serialized shape.
+                        valid.append(parsed.model_dump(mode='json', exclude_unset=True))
                 self.assertEqual(bool(valid), run['usable'])
                 if valid:
                     self.assertEqual(valid[-1], run['bundle'])
