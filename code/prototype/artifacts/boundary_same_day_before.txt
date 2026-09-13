@@ -1,6 +1,0 @@
-test_broad_selector_cannot_merge_same_day_streams (prototype.test_boundary.BoundaryTests.test_broad_selector_cannot_merge_same_day_streams) ... ok
-
-----------------------------------------------------------------------
-Ran 1 test in 0.001s
-
-OK

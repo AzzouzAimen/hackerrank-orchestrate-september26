@@ -8,6 +8,7 @@ import calendar
 from evidence import (StreamStatus, AmountAmendment, ScheduleAmendment,
                        FutureConfirmation, Lifecycle, ImageValue, CashClassification,
                        validate_source_targets)
+from target_identity import validate_target_identity
 
 D = Decimal
 ZERO = D('0')
@@ -125,6 +126,11 @@ def applicable(fact, when):
 def resolve(raw, profile, request, facts, evidence_index):
     facts=sorted(facts,key=lambda f:f.fact_id)
     validate_source_targets(facts, evidence_index)
+    # Enforce the same exact-event / existing-stream / new-unidentified target
+    # convention used by the extractor and development scorer before any
+    # financial state is materialized.
+    validate_target_identity(facts, raw, evidence_index,
+                             allow_redundant_exact_selector=True)
     events = [Event(e['event_id'], e['user_id'], e['category'], e['description'], e['direction'],
                     decimal(e['amount']) if e['amount'] else None, e['currency'],
                     day(e['event_date']), day(e['settlement_date']) if e['settlement_date'] else None,
@@ -197,8 +203,17 @@ def resolve(raw, profile, request, facts, evidence_index):
                 if e.amount is not None and e.amount != value:
                     state.blockers.append(f'{f.fact_id}: conflicting structured/image amount')
                     continue
-                if f.payload.value_type=='amount_paid' and (e.status!='settled' or e.settlement is None or e.settlement>=state.start):
-                    state.blockers.append(f'{f.fact_id}: amount_paid does not establish an outstanding obligation')
+                if f.payload.value_type=='amount_paid':
+                    # Paid/received is an informational historical component,
+                    # never the amount of a current obligation. Preserve its
+                    # provenance without mutating or blocking a separately
+                    # supported balance_due/current_amount_due value.
+                    if e.status == 'settled' and e.settlement is not None and e.settlement < state.start:
+                        e.amount = value
+                        e.evidence.extend(f.evidence_ids); e.facts.append(f.fact_id)
+                        state.changes.append(f'{e.id}: missing historical amount resolved from {f.payload.selected_field}')
+                    else:
+                        state.issues.append(f'{f.fact_id}: amount_paid retained as informational evidence')
                     continue
                 e.amount = value; e.evidence.extend(f.evidence_ids); e.facts.append(f.fact_id)
                 state.changes.append(f'{e.id}: missing amount resolved from {f.payload.selected_field}')
@@ -382,11 +397,14 @@ def project(state, rates):
         if e.direction=='debit' and e.status in ('pending','scheduled'):
             future=True
         elif e.direction=='credit' and e.status=='scheduled':
-            # Only confirmed ongoing income stream membership supports scheduled credit.
-            future=bool(future and any(isinstance(f,StreamStatus) and f.payload.status=='ongoing'
-                                      and f.confirmation_state=='confirmed' and targets(f,e) and applicable(f,e.settlement) for f in state.facts))
-            future=bool(future or (e.settlement and e.settlement>=state.start and any(
-                isinstance(f,FutureConfirmation) and f.confirmation_state=='confirmed' and e.id in f.affected_event_ids for f in state.facts)))
+            # A structured scheduled salary is the contract's confirmed salary and
+            # settles on its supplied date. Other scheduled credits (bonus,
+            # commission, refund, etc.) still require explicit semantic confirmation.
+            if e.category!='salary':
+                future=bool(future and any(isinstance(f,StreamStatus) and f.payload.status=='ongoing'
+                                          and f.confirmation_state=='confirmed' and targets(f,e) and applicable(f,e.settlement) for f in state.facts))
+                future=bool(future or (e.settlement and e.settlement>=state.start and any(
+                    isinstance(f,FutureConfirmation) and f.confirmation_state=='confirmed' and e.id in f.affected_event_ids for f in state.facts)))
         elif e.status!='settled': future=False
         if not future: continue
         if e.settlement and e.settlement>state.end and e.status!='pending': continue

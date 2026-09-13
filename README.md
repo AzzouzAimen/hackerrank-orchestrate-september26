@@ -35,14 +35,20 @@ Your solution must:
 - Generate one prediction for every request
 - Write the final predictions to `output.csv` in the repository root
 
-The current Python entry point can replay five reviewed research cases:
+The Python entry point can preflight inputs, generate the guarded submission, and
+audit the persisted result:
 
 ```bash
-python code/main.py representative
+python -m pip install -r code/requirements.txt
+python code/main.py preflight
+python code/main.py run --artifact run_artifacts/final --workers 4
+python code/main.py audit --artifact run_artifacts/final --output output.csv
 ```
 
-This replay writes only research artifacts. Full-dataset prediction and a root-level
-`output.csv` remain later implementation steps; see [code/README.md](code/README.md).
+Set `FEATHERLESS_API_KEY` in the environment or a repository-root `.env` before the
+run command. Completed request artifacts are cached, so the same command resumes an
+interrupted run. See [code/README.md](code/README.md) for the final architecture,
+limitations, and test commands.
 
 ## Important File Locations
 

@@ -6,7 +6,7 @@ from dataclasses import asdict
 from datetime import date
 from itertools import permutations
 import unittest
-from .test_prototype import event, fact, parse, profile, request, history
+from .test_finance_and_plans import event, fact, parse, profile, request, history
 from finance import resolve, project, capacity, daily_path, D
 
 
@@ -90,14 +90,16 @@ class BoundaryTests(unittest.TestCase):
     def test_unknown_new_obligation_confirmed_and_uncertain(self):
         for confirmation in ('confirmed','uncertain'):
             f=parse(fact('future_event_confirmation',dict(money=dict(value=None,currency='USD'),payment_date='2026-04-08',direction='debit'),
-                         affected_event_ids=[],stream_selector=selector(),evidence_ids=['message'],confirmation_state=confirmation))
-            s=build([], [f],{'message':dict(user_id='u',sent_at='2026-03-30')})
+                         affected_event_ids=[],stream_selector=None,source_target=dict(evidence_id='message',quoted_text='new bill'),
+                         unresolved_fields=['event_id','amount'],evidence_ids=['message'],confirmation_state=confirmation))
+            s=build([], [f],{'message':dict(user_id='u',sent_at='2026-03-30',message_text='new bill')})
             with self.subTest(confirmation=confirmation):self.assertBlocked(s)
 
     def test_unknown_new_obligation_date(self):
         f=parse(fact('future_event_confirmation',dict(money=dict(value='30',currency='USD'),payment_date=None,direction='debit'),
-                     affected_event_ids=[],stream_selector=selector(),evidence_ids=['message']))
-        self.assertBlocked(build([], [f],{'message':dict(user_id='u')}))
+                     affected_event_ids=[],stream_selector=None,source_target=dict(evidence_id='message',quoted_text='new bill'),
+                     unresolved_fields=['event_id','payment_date'],evidence_ids=['message']))
+        self.assertBlocked(build([], [f],{'message':dict(user_id='u',message_text='new bill')}))
 
     def test_precise_stream_amendment_does_not_change_neighbor(self):
         es=history()+[event('b'+str(m),f'2026-{m:02}-12',amount='40',status='settled',description='Second dining plan') for m in (1,2,3)]

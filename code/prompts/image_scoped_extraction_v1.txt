@@ -1,0 +1,13 @@
+IMAGE-SCOPED EXTRACTION (experimental treatment only):
+This call interprets the supplied image evidence only. Emit only directly visible,
+labeled financial values from the image, using image_financial_value facts. Copy the
+visible label into selected_field and the visible amount/currency exactly when explicit.
+Use value_type only for the label's stated meaning: balance_due, current_amount_due,
+amount_paid, or net_pay. If a label or value is unclear, omit that image fact rather
+than guessing. Do not calculate totals, balances, debt, amounts due, affordability,
+cash consequences, dates, settlement state, history, recurrence, or companion claims.
+Do not treat a gross/total value as a due or paid value unless that exact label says so.
+Do not emit facts for messages or events in this call. Preserve target uncertainty;
+choose an exact event only when the supplied deterministic candidate and image context
+identify that exact occurrence, otherwise use the permitted existing stream candidate.
+The deterministic composer will merge this result with a separate non-image result.

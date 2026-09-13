@@ -1,0 +1,251 @@
+request_id,amount_safe_to_pay,affordability_status,recommended_payment_method,payment_plan,earliest_date_for_full_payment,spending_changes_needed,decision_explanation
+request_26,15656000.00,affordable_now,full_payment,2025-08-03:15656000,2025-08-03,none,Verified payments against the 90-day ledger and reserve.
+request_27,6670.00,affordable_now,full_payment,2026-07-05:6670,2026-07-05,none,Verified payments against the 90-day ledger and reserve.
+request_28,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_29,3221.57,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_30,282.03,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_31,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_32,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_33,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_34,72904.63,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_35,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_36,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_37,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_38,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_39,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_40,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_41,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_42,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_43,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_44,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_45,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_46,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_47,1221224.89,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_48,0,not_affordable,not_recommended,none,,none,Blocked unresolved financial evidence: semantic_guard:text__fact_48_amount_event_4535: unresolved possible obligation
+request_49,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_50,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_51,2169453.40,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_52,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_53,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_54,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_55,0,not_affordable,not_recommended,none,,none,Blocked unresolved financial evidence: text__fact_future_settlement_5169: uncertain obligation amount
+request_56,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_57,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_58,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_59,132758.52,affordable_with_plan,installments,2025-05-07:48741.33|2025-06-04:48741.33|2025-07-02:48741.33,,stop:event_5473|stop:event_5471,Verified supplied schedule and 90-day reserve.
+request_60,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_61,29062.00,affordable_with_plan,installments,2024-03-17:10074.83|2024-04-17:10074.83|2024-05-18:10074.83,2024-03-03,none,Verified supplied schedule and 90-day reserve.
+request_62,404.23,affordable_now,full_payment,2025-08-05:404.23,2025-08-05,none,Verified payments against the 90-day ledger and reserve.
+request_63,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_64,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_65,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_66,22200.00,affordable_now,full_payment,2026-04-03:22200,2026-04-03,none,Verified payments against the 90-day ledger and reserve.
+request_67,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_68,0,not_affordable,not_recommended,none,,none,Blocked unresolved financial evidence: text__fact_50_payroll_date_revision: uncertain schedule retained unresolved
+request_69,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_70,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_71,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_72,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_73,0,not_affordable,not_recommended,none,,none,Blocked unresolved financial evidence: image__image_11_amount_payable_current_amount_due: uncertain obligation amount; image__image_11_balance_due: uncertain obligation amount; event_6859: unresolved future amount/date
+request_74,5010.00,affordable_now,full_payment,2025-08-04:5010,2025-08-04,none,Verified payments against the 90-day ledger and reserve.
+request_75,13211.67,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_76,0,not_affordable,not_recommended,none,,none,Blocked unresolved financial evidence: text__fact_base_salary_confirmed_3072: amendment stream not established
+request_77,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_78,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_79,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_80,0,not_affordable,not_recommended,none,,none,Blocked unresolved financial evidence: text__fact_80_base_salary_confirmed_amount: amendment stream not established
+request_81,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_82,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_83,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_84,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_85,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_86,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_87,0,not_affordable,not_recommended,none,,none,Blocked unresolved financial evidence: text__fact_new_childcare_payment: uncertain obligation amount
+request_88,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_89,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_90,726.26,affordable_with_plan,full_payment,2026-07-06:2560,,stop:event_8437|reduce_to:event_8439:234.96|reduce_to:event_8438:193.6,Verified payments against the 90-day ledger and reserve.
+request_91,0,not_affordable,not_recommended,none,,none,Blocked unresolved financial evidence: text__fact_91_future_retry_debit: uncertain obligation amount
+request_92,0,not_affordable,not_recommended,none,,none,Blocked unresolved financial evidence: text__fact_base_salary_confirmed_amount: amendment stream not established
+request_93,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_94,178.91,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_95,0,not_affordable,not_recommended,none,,none,Blocked unresolved financial evidence: text__fact_95_payroll_date_2025_05_23: uncertain schedule retained unresolved
+request_96,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_97,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_98,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_99,6703.00,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_100,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_101,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_102,1364.86,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_103,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_104,0,not_affordable,not_recommended,none,,none,Blocked unresolved financial evidence: text__fact_104_salary_amount_update: amendment stream not established
+request_105,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_106,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_107,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_108,0,not_affordable,not_recommended,none,,none,Blocked unresolved financial evidence: text__fact_108_salary_amount_amendment: amendment stream not established
+request_109,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_110,17912.15,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_111,16625000.00,affordable_now,full_payment,2026-04-03:16625000,2026-04-03,none,Verified payments against the 90-day ledger and reserve.
+request_112,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_113,0,not_affordable,not_recommended,none,,none,Blocked unresolved financial evidence: semantic_guard:text__fact_113_ev_charge_amount_unknown: unresolved possible obligation
+request_114,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_115,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_116,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_117,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_118,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_119,0,not_affordable,not_recommended,none,,none,Blocked unresolved financial evidence: text__fact_119_new_childcare_recurring: uncertain schedule retained unresolved
+request_120,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_121,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_122,20558000.00,affordable_with_plan,installments,2025-08-05:7126773.33|2025-09-02:7126773.33|2025-09-30:7126773.33,2025-08-05,stop:event_11267|stop:event_11268,Verified supplied schedule and 90-day reserve.
+request_123,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_124,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_125,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_126,12560.82,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_127,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_128,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_129,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_130,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_131,0,not_affordable,not_recommended,none,,none,Blocked unresolved financial evidence: text__fact_101_salary_schedule_amendment: uncertain schedule retained unresolved
+request_132,0,not_affordable,not_recommended,none,,none,Blocked unresolved financial evidence: text__fact_132_salary_next_reduction: amendment stream not established
+request_133,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_134,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_135,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_136,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_137,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_138,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_139,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_140,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_141,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_142,625.75,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_143,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_144,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_145,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_146,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_147,0,not_affordable,not_recommended,none,,none,Blocked unresolved financial evidence: text__fact_147_childcare_new_recurring: uncertain schedule retained unresolved
+request_148,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_149,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_150,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_151,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_152,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_153,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_154,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_155,13179.19,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_156,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_157,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_158,199967.11,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_159,376.62,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_160,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_161,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_162,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_163,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_164,0,not_affordable,not_recommended,none,,none,Blocked unresolved financial evidence: text__fact_164_base_salary_confirmed_44270000: amendment stream not established
+request_165,68752.32,affordable_with_plan,full_payment,2026-04-06:80600,,stop:event_15134|reduce_to:event_15136:1048|stop:event_15135,Verified payments against the 90-day ledger and reserve.
+request_166,2907.60,affordable_with_plan,installments,2024-12-03:1007.97|2025-01-03:1007.97|2025-02-03:1007.97,2024-12-03,none,Verified supplied schedule and 90-day reserve.
+request_167,0,not_affordable,not_recommended,none,,none,Blocked unresolved financial evidence: text__fact_167_payroll_date_revision_1: uncertain schedule retained unresolved
+request_168,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_169,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_170,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_171,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_172,0,not_affordable,not_recommended,none,,none,Blocked unresolved financial evidence: text__fact_card_minimum_due_1: uncertain obligation amount; text__fact_card_minimum_due_2: uncertain obligation amount
+request_173,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_174,1146.20,affordable_with_plan,installments,2026-04-04:397.35|2026-05-04:397.35|2026-06-03:397.35,2026-04-04,none,Verified supplied schedule and 90-day reserve.
+request_175,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_176,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_177,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_178,2694.35,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_179,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_180,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_181,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_182,6301.39,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_183,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_184,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_185,0,not_affordable,not_recommended,none,,none,Blocked unresolved financial evidence: text__fact_rent_increase_12pct: uncertain obligation amount
+request_186,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_187,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_188,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_189,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_190,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_191,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_192,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_193,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_194,0,not_affordable,not_recommended,none,,none,Blocked unresolved financial evidence: text__fact_194_payroll_date_revision: uncertain schedule retained unresolved
+request_195,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_196,616.66,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_197,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_198,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_199,23674000.00,affordable_with_plan,installments,2024-09-07:8206986.67|2024-10-08:8206986.67|2024-11-08:8206986.67,2024-09-04,none,Verified supplied schedule and 90-day reserve.
+request_200,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_201,23997000.00,affordable_now,full_payment,2026-04-03:23997000,2026-04-03,none,Verified payments against the 90-day ledger and reserve.
+request_202,0,not_affordable,not_recommended,none,,none,Blocked unresolved financial evidence: text__fact_202_card_minimum_due_1: uncertain obligation amount; text__fact_202_card_minimum_due_2: uncertain obligation amount
+request_203,861.02,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_204,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_205,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_206,1404.70,affordable_with_plan,installments,2025-08-03:486.96|2025-08-31:486.96|2025-09-28:486.96,2025-08-03,none,Verified supplied schedule and 90-day reserve.
+request_207,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_208,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_209,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_210,0,not_affordable,not_recommended,none,,none,Blocked unresolved financial evidence: semantic extraction unavailable
+request_211,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_212,0,not_affordable,not_recommended,none,,none,Blocked unresolved financial evidence: text__fact_212_payroll_date_amendment: uncertain schedule retained unresolved
+request_213,2496.43,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_214,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_215,29986.00,affordable_with_plan,installments,2025-05-09:10395.15|2025-06-06:10395.15|2025-07-04:10395.15,2025-05-06,none,Verified supplied schedule and 90-day reserve.
+request_216,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_217,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_218,9782381.43,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_219,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_220,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_221,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_222,31792.26,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_223,380.87,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_224,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_225,0,not_affordable,not_recommended,none,,none,Blocked unresolved financial evidence: semantic_guard:text__fact_rent_increase_12pct: unresolved possible obligation
+request_226,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_227,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_228,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_229,0,not_affordable,not_recommended,none,,none,Blocked unresolved financial evidence: text__fact_future_debit_attempt_msg179: uncertain obligation amount
+request_230,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_231,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_232,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_233,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_234,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_235,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_236,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_237,22228678.74,affordable_with_plan,full_payment,2026-04-05:23826000,,reduce_to:event_21813:548720|reduce_to:event_21812:382850,Verified payments against the 90-day ledger and reserve.
+request_238,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_239,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_240,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_241,21052000.00,affordable_with_plan,installments,2024-03-17:7298026.67|2024-04-17:7298026.67|2024-05-18:7298026.67,2024-03-03,none,Verified supplied schedule and 90-day reserve.
+request_242,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_243,15776.42,affordable_with_plan,full_payment,2026-07-07:17468,,stop:event_22314,Verified payments against the 90-day ledger and reserve.
+request_244,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_245,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_246,64086.00,affordable_with_plan,installments,2026-04-03:22216.48|2026-05-03:22216.48|2026-06-02:22216.48,2026-04-03,none,Verified supplied schedule and 90-day reserve.
+request_247,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_248,0,not_affordable,not_recommended,none,,none,Blocked unresolved financial evidence: text__fact_base_salary_confirmed_1548: amendment stream not established
+request_249,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_250,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_251,79.87,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_252,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_253,0,not_affordable,not_recommended,none,,none,Blocked unresolved financial evidence: text__fact_253_future_debit_outstanding_bill: uncertain obligation amount
+request_254,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_255,750746.02,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_256,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_257,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_258,111.65,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_259,0,not_affordable,not_recommended,none,,none,Blocked unresolved financial evidence: text__fact_259_retry_debit_scheduled: uncertain obligation amount
+request_260,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_261,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_262,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_263,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_264,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_265,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_266,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_267,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_268,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_269,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_270,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_271,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_272,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_273,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_274,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
+request_275,0,not_affordable,not_recommended,none,,none,No eligible plan passes the deadline and reserve checks.
